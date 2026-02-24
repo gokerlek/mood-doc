@@ -1,185 +1,563 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-02-24T14:13:15.219Z",
+    "last_updated": "2026-02-24T00:00:00Z",
     "changelog": [
       {
         "date": "2026-02-24",
-        "summary": "KB güncellendi"
-      },
-      {
-        "date": "2026-02-24",
-        "summary": "KB güncellendi"
-      },
-      {
-        "date": "2026-02-24",
-        "summary": "KB güncellendi"
-      },
-      {
-        "date": "2026-02-24",
-        "summary": "Initial v2 KB structure"
+        "summary": "Add all client-ui pages and update module names to English"
       }
     ]
   },
   "platform": {
     "name": "Moodivation",
-    "description": "Moodivation, çalışanların iş tatmini, motivasyonu ve bağlılığını ölçen ve geliştiren bir İK platformudur.",
-    "target_users": "Çalışanlar ve İK ekipleri",
+    "description": "Moodivation is an HR platform that measures and improves employee engagement, motivation, and satisfaction.",
+    "target_users": "Employees and HR teams",
     "key_benefits": [
-      "Çalışan memnuniyetini ölçer",
-      "Geri bildirimleri anonim toplar",
-      "Çalışan bağlılığını artırır",
-      "İK kararlarını veriye dayalı hale getirir"
+      "Measures employee satisfaction",
+      "Collects feedback anonymously",
+      "Increases employee engagement",
+      "Makes HR decisions data-driven"
     ]
   },
   "modules": [
     {
-      "id": "engagement",
-      "name": "Nabız",
-      "description": "Çalışanların genel motivasyon ve bağlılık düzeyini ölçer.",
-      "who_uses": "Tüm çalışanlar ve İK yöneticileri",
+      "id": "reports",
+      "name": "Reports",
+      "description": "Analytics and reporting for engagement, experience, and exit surveys.",
+      "who_uses": "HR managers and department managers",
       "key_features": [
-        "Günlük nabız sorusu",
-        "Trend grafikleri",
-        "Departman bazlı karşılaştırma"
+        "Engagement score trends",
+        "Experience dimension reports",
+        "Exit survey analytics",
+        "Comment analysis"
       ],
-      "nav_path": "/engagement",
-      "faq": [
-        {
-          "id": "faq_1771942392385",
-          "question": "test",
-          "answer": "mest",
-          "tags": []
-        }
-      ]
+      "nav_path": "/reports/engagement",
+      "faq": []
     },
     {
       "id": "surveys",
-      "name": "Anketler",
-      "description": "Özelleştirilebilir anketlerle çalışanlardan geri bildirim toplar.",
-      "who_uses": "İK yöneticileri ve departman yöneticileri",
+      "name": "Surveys",
+      "description": "Survey builder and management — create, schedule, and publish surveys.",
+      "who_uses": "HR managers",
       "key_features": [
-        "Anket oluşturma",
-        "Otomatik gönderim",
-        "Sonuç raporları"
+        "Survey builder with step-by-step flow",
+        "Template library",
+        "Participant targeting and scheduling",
+        "Simulation before publish"
       ],
-      "nav_path": "/surveys",
+      "nav_path": "/surveys/create-new-survey",
+      "faq": []
+    },
+    {
+      "id": "survey",
+      "name": "Survey (Participation)",
+      "description": "The survey-taking experience for employees — overview, questions, completion.",
+      "who_uses": "All employees",
+      "key_features": [
+        "Survey overview page",
+        "Question flow",
+        "Completion confirmation",
+        "Open link surveys (no login required)"
+      ],
+      "nav_path": "/survey/overview",
       "faq": []
     },
     {
       "id": "onboarding",
-      "name": "Oryantasyon",
-      "description": "Yeni çalışanların şirkete adaptasyon sürecini yönetir.",
-      "who_uses": "İK ekibi ve yeni çalışanlar",
+      "name": "Onboarding",
+      "description": "Manages the onboarding journey for new employees.",
+      "who_uses": "HR team and new employees",
       "key_features": [
-        "Adım adım oryantasyon planı",
-        "Görev takibi",
-        "İlerleme raporları"
+        "Onboarding phases",
+        "Employee progress tracking",
+        "New employee list",
+        "Onboarding report"
       ],
-      "nav_path": "/onboarding",
-      "faq": []
-    },
-    {
-      "id": "experience",
-      "name": "Deneyim",
-      "description": "Çalışan deneyimini boyutlarıyla ölçer ve raporlar.",
-      "who_uses": "İK yöneticileri",
-      "key_features": [
-        "Çok boyutlu ölçüm",
-        "Kıyaslama",
-        "Eylem planları"
-      ],
-      "nav_path": "/experience",
-      "faq": []
-    },
-    {
-      "id": "feedback",
-      "name": "Geri Bildirim",
-      "description": "360 derece geri bildirim ve performans değerlendirme araçları sunar.",
-      "who_uses": "Yöneticiler ve çalışanlar",
-      "key_features": [
-        "360° değerlendirme",
-        "Anlık geri bildirim",
-        "Performans takibi"
-      ],
-      "nav_path": "/feedback",
+      "nav_path": "/onboarding/phases",
       "faq": []
     },
     {
       "id": "people",
-      "name": "Çalışanlar",
-      "description": "Çalışan profillerini ve organizasyon yapısını yönetir.",
-      "who_uses": "İK ekibi",
+      "name": "People",
+      "description": "Employee list management and bulk import.",
+      "who_uses": "HR team",
       "key_features": [
-        "Çalışan profilleri",
-        "Organizasyon şeması",
-        "Grup yönetimi"
+        "Employee directory",
+        "Bulk import via file upload"
       ],
       "nav_path": "/people",
       "faq": []
     },
     {
-      "id": "exit_survey",
-      "name": "Çıkış Anketi",
-      "description": "Ayrılan çalışanlardan geri bildirim toplar.",
-      "who_uses": "İK ekibi",
+      "id": "feedbacks",
+      "name": "Feedbacks",
+      "description": "Feedback reporting — view and analyze employee feedback submissions.",
+      "who_uses": "HR managers and department managers",
       "key_features": [
-        "Otomatik çıkış anketi",
-        "Sebep analizi",
-        "Trend raporları"
+        "Feedback report overview",
+        "Filter by department and date"
       ],
-      "nav_path": "/exit-survey",
+      "nav_path": "/feedbacks",
       "faq": []
     },
     {
       "id": "settings",
-      "name": "Ayarlar",
-      "description": "Platform ayarlarını ve kullanıcı tercihlerini yönetir.",
-      "who_uses": "Platform yöneticileri",
+      "name": "Settings",
+      "description": "Platform configuration and account settings.",
+      "who_uses": "Platform administrators",
       "key_features": [
-        "Kullanıcı yönetimi",
-        "Bildirim ayarları",
-        "Entegrasyonlar"
+        "Account settings",
+        "Notification preferences",
+        "Integrations"
       ],
       "nav_path": "/settings",
       "faq": []
     }
   ],
-  "pages": [],
-  "glossary": [
+  "pages": [
     {
-      "id": "nabiz",
-      "term": "Nabız",
-      "definition": "Çalışanların anlık motivasyon ve memnuniyet düzeyini ölçen kısa sondaj sorusu."
+      "id": "engagement_report",
+      "name": "Engagement Report",
+      "module_id": "reports",
+      "path": "/reports/engagement",
+      "description": "Main engagement dashboard showing the overall engagement score and trends over time.",
+      "how_to_access": "Navigate to Reports → Engagement Report from the sidebar.",
+      "key_actions": [
+        "View overall engagement score",
+        "Filter by department, role, or date range",
+        "Drill into a specific survey period"
+      ],
+      "tips": [
+        "A score below 60 is a signal to investigate further.",
+        "Use the date range filter to compare periods."
+      ]
     },
     {
-      "id": "anonim",
-      "term": "Anonimlik",
-      "definition": "Sistem, belirli bir katılım eşiğinin altında bireysel yanıtları gizler. Varsayılan eşik 5 kişidir."
+      "id": "engagement_report_detail",
+      "name": "Engagement Report Detail",
+      "module_id": "reports",
+      "path": "/reports/engagement/:id",
+      "description": "Detailed view of a specific engagement survey round — shows question-level results.",
+      "how_to_access": "Click on a survey period from the Engagement Report page.",
+      "key_actions": [
+        "View per-question scores",
+        "Compare with previous period",
+        "Export results"
+      ],
+      "tips": []
+    },
+    {
+      "id": "comments",
+      "name": "Comments",
+      "module_id": "reports",
+      "path": "/comments/:id/:surveyKey",
+      "description": "Open-ended comment responses for a specific survey question.",
+      "how_to_access": "Click a comment icon on any question in the Engagement Report Detail page.",
+      "key_actions": [
+        "Read employee comments",
+        "Filter comments by sentiment or keyword"
+      ],
+      "tips": [
+        "Comments are anonymous — no individual is identifiable."
+      ]
+    },
+    {
+      "id": "exit_survey_report",
+      "name": "Exit Survey Report",
+      "module_id": "reports",
+      "path": "/reports/exit-survey",
+      "description": "Overview report for all exit survey responses — tracks why employees are leaving.",
+      "how_to_access": "Navigate to Reports → Exit Report from the sidebar.",
+      "key_actions": [
+        "View top reasons for leaving",
+        "Filter by date and department"
+      ],
+      "tips": []
+    },
+    {
+      "id": "exit_survey_good_sides",
+      "name": "Exit Survey — Good Sides of Working",
+      "module_id": "reports",
+      "path": "/reports/exit-survey/good-sides-of-working",
+      "description": "Lists what departing employees say they appreciated about working at the company.",
+      "how_to_access": "From the Exit Survey Report, click the 'Good Sides' tab.",
+      "key_actions": [
+        "Browse positive feedback themes"
+      ],
+      "tips": []
+    },
+    {
+      "id": "exit_survey_reasons_leaving",
+      "name": "Exit Survey — Reasons of Leaving",
+      "module_id": "reports",
+      "path": "/reports/exit-survey/reasons-of-leaving",
+      "description": "Lists the primary reasons departing employees gave for leaving.",
+      "how_to_access": "From the Exit Survey Report, click the 'Reasons of Leaving' tab.",
+      "key_actions": [
+        "Browse leaving reason themes"
+      ],
+      "tips": []
+    },
+    {
+      "id": "exit_survey_employee_list",
+      "name": "Exit Survey — Employee List",
+      "module_id": "reports",
+      "path": "/reports/exit-survey/:id/employee-list",
+      "description": "Shows the list of employees who completed the exit survey for a given period.",
+      "how_to_access": "Click on a period in the Exit Survey Report to see its employee list.",
+      "key_actions": [
+        "View individual exit survey completions"
+      ],
+      "tips": []
+    },
+    {
+      "id": "experience_report",
+      "name": "Experience Reports",
+      "module_id": "reports",
+      "path": "/experience",
+      "description": "Multi-dimensional employee experience overview covering key work-life dimensions.",
+      "how_to_access": "Navigate to Reports → Experience from the sidebar.",
+      "key_actions": [
+        "View experience dimensions",
+        "Compare scores by team or role"
+      ],
+      "tips": []
+    },
+    {
+      "id": "experience_report_detail",
+      "name": "Experience Report Detail",
+      "module_id": "reports",
+      "path": "/experience/:id/:surveyKey",
+      "description": "Detailed breakdown of a specific experience survey dimension.",
+      "how_to_access": "Click a dimension card on the Experience Reports page.",
+      "key_actions": [
+        "View per-question breakdown",
+        "See trends"
+      ],
+      "tips": []
+    },
+    {
+      "id": "surveys_create",
+      "name": "New Survey",
+      "module_id": "surveys",
+      "path": "/surveys/create-new-survey",
+      "description": "Starting point for creating a new survey — choose type or start from scratch.",
+      "how_to_access": "Navigate to Surveys → New Survey, or click 'Create New Survey' button.",
+      "key_actions": [
+        "Choose survey type (engagement, experience, custom)",
+        "Start from a template or blank"
+      ],
+      "tips": []
+    },
+    {
+      "id": "surveys_templates",
+      "name": "Survey Templates",
+      "module_id": "surveys",
+      "path": "/surveys/templates",
+      "description": "Browse the library of pre-built survey templates.",
+      "how_to_access": "From New Survey, click 'Choose a Template'.",
+      "key_actions": [
+        "Browse templates by category",
+        "Preview a template before using it"
+      ],
+      "tips": []
+    },
+    {
+      "id": "surveys_builder_details",
+      "name": "Survey Builder — Details",
+      "module_id": "surveys",
+      "path": "/surveys/builder/details",
+      "description": "Step 1 of the survey builder: enter the survey name, description, and basic settings.",
+      "how_to_access": "Start a new survey and you land on this step automatically.",
+      "key_actions": [
+        "Set survey name",
+        "Set survey language",
+        "Configure anonymity"
+      ],
+      "tips": []
+    },
+    {
+      "id": "surveys_builder_questions",
+      "name": "Survey Builder — Questions",
+      "module_id": "surveys",
+      "path": "/surveys/builder/questions",
+      "description": "Step 2: add, reorder, and edit questions for the survey.",
+      "how_to_access": "Complete Step 1 (Details) and click Next.",
+      "key_actions": [
+        "Add new questions",
+        "Reorder questions via drag and drop",
+        "Set question type (scale, multiple choice, open-ended)"
+      ],
+      "tips": [
+        "Keep surveys under 10 questions for higher completion rates."
+      ]
+    },
+    {
+      "id": "surveys_builder_participants",
+      "name": "Survey Builder — Participants & Schedule",
+      "module_id": "surveys",
+      "path": "/surveys/builder/participants-and-schedule",
+      "description": "Step 3: select who receives the survey and when it runs.",
+      "how_to_access": "Complete Step 2 (Questions) and click Next.",
+      "key_actions": [
+        "Select target audience (all employees, specific departments, roles)",
+        "Set start and end dates",
+        "Configure reminder schedule"
+      ],
+      "tips": []
+    },
+    {
+      "id": "surveys_builder_summary",
+      "name": "Survey Builder — Summary",
+      "module_id": "surveys",
+      "path": "/surveys/builder/summary",
+      "description": "Step 4: final review before publishing the survey.",
+      "how_to_access": "Complete Step 3 and click Next.",
+      "key_actions": [
+        "Review all survey settings",
+        "Go back to edit any step",
+        "Publish the survey"
+      ],
+      "tips": []
+    },
+    {
+      "id": "surveys_builder_simulation",
+      "name": "Survey Builder — Simulation",
+      "module_id": "surveys",
+      "path": "/surveys/builder/simulation",
+      "description": "Preview the survey exactly as employees will see it before publishing.",
+      "how_to_access": "From the Summary step, click 'Preview'.",
+      "key_actions": [
+        "Walk through the survey as a test respondent"
+      ],
+      "tips": [
+        "Always simulate before publishing to catch any wording issues."
+      ]
+    },
+    {
+      "id": "survey_overview",
+      "name": "Survey Overview",
+      "module_id": "survey",
+      "path": "/survey/overview",
+      "description": "Landing page shown to employees before starting a survey — shows survey info and estimated time.",
+      "how_to_access": "Employees receive a survey notification and click the link.",
+      "key_actions": [
+        "Start the survey"
+      ],
+      "tips": []
+    },
+    {
+      "id": "survey_questions",
+      "name": "Survey Questions",
+      "module_id": "survey",
+      "path": "/survey/questions",
+      "description": "The main survey-taking screen where employees answer questions one by one.",
+      "how_to_access": "Click 'Start' on the Survey Overview page.",
+      "key_actions": [
+        "Answer questions",
+        "Navigate forward and backward",
+        "Submit answers"
+      ],
+      "tips": [
+        "Employees can go back and change answers before submitting."
+      ]
+    },
+    {
+      "id": "survey_complete",
+      "name": "Survey Complete",
+      "module_id": "survey",
+      "path": "/survey/complete",
+      "description": "Confirmation page shown after an employee successfully submits a survey.",
+      "how_to_access": "Automatically shown after submitting the last question.",
+      "key_actions": [],
+      "tips": []
+    },
+    {
+      "id": "onboarding_report",
+      "name": "Onboarding Report",
+      "module_id": "onboarding",
+      "path": "/reports/onboarding",
+      "description": "Aggregate report showing onboarding completion rates and scores.",
+      "how_to_access": "Navigate to Reports → Onboarding from the sidebar.",
+      "key_actions": [
+        "View overall onboarding completion rate",
+        "Filter by department or start date"
+      ],
+      "tips": []
+    },
+    {
+      "id": "onboarding_phases",
+      "name": "Onboarding Phases",
+      "module_id": "onboarding",
+      "path": "/onboarding/phases",
+      "description": "Overview of all onboarding phases and their configuration.",
+      "how_to_access": "Navigate to Onboarding → Phases from the sidebar.",
+      "key_actions": [
+        "View and manage onboarding phases",
+        "Edit phase content and timing"
+      ],
+      "tips": []
+    },
+    {
+      "id": "onboarding_phase_detail",
+      "name": "Onboarding Phase Detail",
+      "module_id": "onboarding",
+      "path": "/onboarding/phase/:phase",
+      "description": "Detailed view of a single onboarding phase — shows tasks, surveys, and completion status.",
+      "how_to_access": "Click on a phase from the Onboarding Phases page.",
+      "key_actions": [
+        "View tasks within the phase",
+        "Edit phase settings"
+      ],
+      "tips": []
+    },
+    {
+      "id": "onboarding_employee_list",
+      "name": "Onboarding Employee List",
+      "module_id": "onboarding",
+      "path": "/onboarding/employee-list",
+      "description": "List of all employees currently in an onboarding program.",
+      "how_to_access": "Navigate to Onboarding → Employee List.",
+      "key_actions": [
+        "View onboarding progress per employee",
+        "Filter by phase or status"
+      ],
+      "tips": []
+    },
+    {
+      "id": "onboarding_new_employee_list",
+      "name": "New Employee List",
+      "module_id": "onboarding",
+      "path": "/onboarding/new-employee-list",
+      "description": "List of newly added employees who are about to start or have just started onboarding.",
+      "how_to_access": "Navigate to Onboarding → New Employee List.",
+      "key_actions": [
+        "View upcoming new hires",
+        "Initiate onboarding manually"
+      ],
+      "tips": []
+    },
+    {
+      "id": "onboarding_employee_detail",
+      "name": "Onboarding Employee Detail",
+      "module_id": "onboarding",
+      "path": "/onboarding/employee/:id",
+      "description": "Individual employee's onboarding progress — shows completed and pending tasks by phase.",
+      "how_to_access": "Click on an employee name in the Onboarding Employee List.",
+      "key_actions": [
+        "View task completion status",
+        "Send reminders",
+        "Override phase status"
+      ],
+      "tips": []
+    },
+    {
+      "id": "people_list",
+      "name": "People",
+      "module_id": "people",
+      "path": "/people",
+      "description": "Complete employee directory — view, search, and manage all employees in the platform.",
+      "how_to_access": "Navigate to People from the sidebar.",
+      "key_actions": [
+        "Search employees by name or email",
+        "Filter by department or role",
+        "Edit individual employee profiles"
+      ],
+      "tips": []
+    },
+    {
+      "id": "people_import",
+      "name": "People Import",
+      "module_id": "people",
+      "path": "/people/import",
+      "description": "Bulk-import employees by uploading a CSV or Excel file.",
+      "how_to_access": "On the People page, click 'Import'.",
+      "key_actions": [
+        "Download the import template",
+        "Upload filled template",
+        "Review and confirm imported employees"
+      ],
+      "tips": [
+        "Use the provided template to avoid import errors.",
+        "Duplicate emails are automatically skipped."
+      ]
+    },
+    {
+      "id": "feedbacks_report",
+      "name": "Feedbacks Report",
+      "module_id": "feedbacks",
+      "path": "/feedbacks",
+      "description": "Report of all employee feedback submissions — structured and free-form responses.",
+      "how_to_access": "Navigate to Feedbacks from the sidebar.",
+      "key_actions": [
+        "Filter feedback by date, department, or type",
+        "View individual feedback details"
+      ],
+      "tips": [
+        "Feedback is anonymous — responses cannot be traced back to individuals."
+      ]
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "module_id": "settings",
+      "path": "/settings",
+      "description": "Platform-wide configuration including account info, notifications, and integrations.",
+      "how_to_access": "Navigate to Settings from the sidebar.",
+      "key_actions": [
+        "Update company profile",
+        "Manage notification preferences",
+        "Configure integrations"
+      ],
+      "tips": []
+    }
+  ],
+  "glossary": [
+    {
+      "id": "engagement_score",
+      "term": "Engagement Score",
+      "definition": "A numeric score (0–100) representing the overall level of employee motivation and connection to the company."
+    },
+    {
+      "id": "enps",
+      "term": "eNPS",
+      "definition": "Employee Net Promoter Score. Measures how likely employees are to recommend the company as a place to work. Range: -100 to +100."
+    },
+    {
+      "id": "anonymity",
+      "term": "Anonymity",
+      "definition": "Individual responses are hidden when participation is below the anonymity threshold (default: 5 respondents). This protects employee privacy."
+    },
+    {
+      "id": "pulse",
+      "term": "Pulse Survey",
+      "definition": "A short, frequent survey (typically 1–5 questions) used to track employee sentiment in real-time."
     }
   ],
   "global_rules": {
     "anonymity_limit": {
       "value": 5,
-      "description": "Raporlarda bireysel yanıtlar gösterilmeden önce gereken minimum katılımcı sayısı."
+      "description": "Minimum number of respondents required before individual answers are shown in reports."
     },
     "reporting_limit": {
       "value": 3,
-      "description": "İstatistiksel anlamlılık için gereken minimum yanıt sayısı."
+      "description": "Minimum number of responses required for statistical significance in reports."
     },
     "other_rules": []
   },
   "faq": [],
   "agent_behavior": {
-    "tone": "Yardımsever, net ve nazik",
-    "fallback_message": "Bu konuda size yardımcı olamıyorum. Lütfen İK ekibiyle iletişime geçin.",
-    "escalation_message": "Bu sorunuzu İK yöneticinize yönlendirmenizi öneririm.",
+    "tone": "Helpful, clear, and friendly",
+    "fallback_message": "I'm sorry, I couldn't find an answer to that. Please contact your HR team for help.",
+    "escalation_message": "I recommend reaching out to your HR manager for this topic.",
     "max_answer_sentences": 4,
     "escalation_triggers": [
-      "şikâyet",
-      "hukuki",
-      "ayrılmak istiyorum",
-      "istifa"
+      "complaint",
+      "legal",
+      "resignation",
+      "harassment",
+      "discrimination"
     ]
   }
 }
