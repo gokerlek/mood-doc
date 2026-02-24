@@ -1,0 +1,117 @@
+{
+  "_meta": {
+    "schema_version": "1.0",
+    "description": "Moodivation platform knowledge base",
+    "owner": "gokerlek",
+    "last_updated": "2026-02-24T00:00:00.000Z",
+    "last_updated_by": "gokerlek",
+    "changelog": [
+      {
+        "version": "1.0",
+        "date": "2026-02-24",
+        "author": "gokerlek",
+        "summary": "Initial knowledge base"
+      }
+    ]
+  },
+  "platform": {
+    "name": "Moodivation",
+    "tagline": "Çalışan deneyimini ölçün ve geliştirin",
+    "version": "1.0"
+  },
+  "global_rules": {
+    "anonymity": {
+      "filtering_limit": {
+        "value": 5,
+        "unit": "kişi",
+        "description": "Filtreleme yapılabilmesi için minimum kişi sayısı",
+        "error_message": "Bu filtreyi uygulamak için yeterli katılımcı yok."
+      },
+      "reporting_limit": {
+        "value": 10,
+        "unit": "kişi",
+        "description": "Rapor oluşturulabilmesi için minimum kişi sayısı",
+        "error_message": "Rapor oluşturmak için yeterli veri yok."
+      },
+      "anonymity_modes": {}
+    },
+    "reporting": {
+      "company_schema": {
+        "hierarchy_levels": [
+          "Şirket",
+          "Departman",
+          "Takım"
+        ],
+        "demographic_fields": [
+          "cinsiyet",
+          "yasgrubu",
+          "kidem"
+        ]
+      },
+      "report_formats": [
+        "PDF",
+        "Excel",
+        "Dashboard"
+      ],
+      "scheduled_reports": {
+        "available": false,
+        "frequencies": []
+      },
+      "benchmark": {
+        "available": false,
+        "scope": ""
+      }
+    },
+    "group_exclusion": {
+      "exclusion_criteria": [],
+      "can_exclude_individuals": false,
+      "exclusion_applies_to": [],
+      "note": ""
+    }
+  },
+  "modules": {
+    "onboarding": {
+      "id": "onboarding",
+      "display_name": "İşe Alım (Onboarding)",
+      "description": "Yeni çalışanların şirkete adaptasyon sürecini değerlendiren modül.",
+      "respondents": [
+        "new_employee",
+        "manager",
+        "mentor"
+      ],
+      "templates": [
+        {
+          "id": "ONB_tpl_001",
+          "name": "Standart İşe Alım Anketi",
+          "respondent": "new_employee",
+          "question_count": 20,
+          "dimensions": [
+            "adaptasyon",
+            "egitim",
+            "yonetici_destek"
+          ],
+          "customizable": true,
+          "description": "Yeni çalışan için standart işe alım değerlendirmesi"
+        }
+      ],
+      "faq": [],
+      "guide_steps": []
+    }
+  },
+  "technical": {},
+  "security_compliance": {},
+  "pricing": {},
+  "support": {},
+  "agent_behavior": {
+    "fallback_message": "Bu konuda size yardımcı olamıyorum. Lütfen İK ekibinizle iletişime geçin.",
+    "tone": "profesyonel, empatik ve yardımsever",
+    "max_answer_length_sentences": 4,
+    "escalation_triggers": [
+      "şikayet",
+      "sorun",
+      "hata",
+      "yardım"
+    ],
+    "escalation_message": "Bu konuyu İK ekibimize iletiyorum. En kısa sürede size geri dönecekler."
+  }
+}
