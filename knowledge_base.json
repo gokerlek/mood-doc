@@ -1,14 +1,11 @@
 {
   "_meta": {
-    "version": "2.0.0",
-    "schema": "moodivation-kb-v2",
+    "schema_version": "2.0.0",
     "last_updated": "2026-02-24T00:00:00Z",
-    "updated_by": "KB Manager",
     "changelog": [
       {
-        "date": "2026-02-24T00:00:00Z",
-        "message": "Initial v2 KB structure",
-        "by": "KB Manager"
+        "date": "2026-02-24",
+        "summary": "Initial v2 KB structure"
       }
     ]
   },
@@ -27,73 +24,105 @@
     {
       "id": "engagement",
       "name": "Nabız",
-      "slug": "engagement",
       "description": "Çalışanların genel motivasyon ve bağlılık düzeyini ölçer.",
-      "icon": "heart",
-      "order": 1,
+      "who_uses": "Tüm çalışanlar ve İK yöneticileri",
+      "key_features": [
+        "Günlük nabız sorusu",
+        "Trend grafikleri",
+        "Departman bazlı karşılaştırma"
+      ],
+      "nav_path": "/engagement",
       "faq": []
     },
     {
       "id": "surveys",
       "name": "Anketler",
-      "slug": "surveys",
       "description": "Özelleştirilebilir anketlerle çalışanlardan geri bildirim toplar.",
-      "icon": "clipboard",
-      "order": 2,
+      "who_uses": "İK yöneticileri ve departman yöneticileri",
+      "key_features": [
+        "Anket oluşturma",
+        "Otomatik gönderim",
+        "Sonuç raporları"
+      ],
+      "nav_path": "/surveys",
       "faq": []
     },
     {
       "id": "onboarding",
       "name": "Oryantasyon",
-      "slug": "onboarding",
       "description": "Yeni çalışanların şirkete adaptasyon sürecini yönetir.",
-      "icon": "user-plus",
-      "order": 3,
+      "who_uses": "İK ekibi ve yeni çalışanlar",
+      "key_features": [
+        "Adım adım oryantasyon planı",
+        "Görev takibi",
+        "İlerleme raporları"
+      ],
+      "nav_path": "/onboarding",
       "faq": []
     },
     {
       "id": "experience",
       "name": "Deneyim",
-      "slug": "experience",
       "description": "Çalışan deneyimini boyutlarıyla ölçer ve raporlar.",
-      "icon": "star",
-      "order": 4,
+      "who_uses": "İK yöneticileri",
+      "key_features": [
+        "Çok boyutlu ölçüm",
+        "Kıyaslama",
+        "Eylem planları"
+      ],
+      "nav_path": "/experience",
       "faq": []
     },
     {
       "id": "feedback",
       "name": "Geri Bildirim",
-      "slug": "feedback",
       "description": "360 derece geri bildirim ve performans değerlendirme araçları sunar.",
-      "icon": "message",
-      "order": 5,
+      "who_uses": "Yöneticiler ve çalışanlar",
+      "key_features": [
+        "360° değerlendirme",
+        "Anlık geri bildirim",
+        "Performans takibi"
+      ],
+      "nav_path": "/feedback",
       "faq": []
     },
     {
       "id": "people",
       "name": "Çalışanlar",
-      "slug": "people",
       "description": "Çalışan profillerini ve organizasyon yapısını yönetir.",
-      "icon": "users",
-      "order": 6,
+      "who_uses": "İK ekibi",
+      "key_features": [
+        "Çalışan profilleri",
+        "Organizasyon şeması",
+        "Grup yönetimi"
+      ],
+      "nav_path": "/people",
       "faq": []
     },
     {
       "id": "exit_survey",
       "name": "Çıkış Anketi",
-      "slug": "exit-survey",
       "description": "Ayrılan çalışanlardan geri bildirim toplar.",
-      "icon": "door-exit",
-      "order": 7,
+      "who_uses": "İK ekibi",
+      "key_features": [
+        "Otomatik çıkış anketi",
+        "Sebep analizi",
+        "Trend raporları"
+      ],
+      "nav_path": "/exit-survey",
       "faq": []
     },
     {
       "id": "settings",
       "name": "Ayarlar",
-      "slug": "settings",
       "description": "Platform ayarlarını ve kullanıcı tercihlerini yönetir.",
-      "icon": "settings",
-      "order": 8,
+      "who_uses": "Platform yöneticileri",
+      "key_features": [
+        "Kullanıcı yönetimi",
+        "Bildirim ayarları",
+        "Entegrasyonlar"
+      ],
+      "nav_path": "/settings",
       "faq": []
     }
   ],
@@ -102,14 +131,12 @@
     {
       "id": "nabiz",
       "term": "Nabız",
-      "definition": "Çalışanların anlık motivasyon ve memnuniyet düzeyini ölçen kısa sondaj sorusu.",
-      "related_module_id": "engagement"
+      "definition": "Çalışanların anlık motivasyon ve memnuniyet düzeyini ölçen kısa sondaj sorusu."
     },
     {
       "id": "anonim",
       "term": "Anonimlik",
-      "definition": "Sistem, belirli bir katılım eşiğinin altında bireysel yanıtları gizler. Varsayılan eşik 5 kişidir.",
-      "related_module_id": null
+      "definition": "Sistem, belirli bir katılım eşiğinin altında bireysel yanıtları gizler. Varsayılan eşik 5 kişidir."
     }
   ],
   "global_rules": {
