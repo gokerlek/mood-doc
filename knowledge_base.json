@@ -147,7 +147,8 @@
       ],
       "tips": [],
       "connections": [
-        "comments"
+        "comments",
+        "other_answers"
       ]
     },
     {
@@ -163,7 +164,8 @@
       ],
       "tips": [
         "Comments are anonymous — no individual is identifiable."
-      ]
+      ],
+      "connections": []
     },
     {
       "id": "exit_survey_report",
@@ -178,7 +180,11 @@
       ],
       "tips": [],
       "connections": [
-        "exit_survey_employee_list"
+        "exit_survey_employee_list",
+        "exit_survey_good_sides",
+        "exit_survey_reasons_leaving",
+        "exit_survey_publish",
+        "other_answers"
       ]
     },
     {
@@ -248,7 +254,11 @@
         "View per-question breakdown",
         "See trends"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "comments",
+        "other_answers"
+      ]
     },
     {
       "id": "surveys_create",
@@ -279,6 +289,7 @@
       ],
       "tips": [],
       "connections": [
+        "surveys_template_preview",
         "surveys_create"
       ]
     },
@@ -332,7 +343,8 @@
       ],
       "tips": [],
       "connections": [
-        "surveys_builder_summary"
+        "surveys_builder_summary",
+        "exit_survey_publish"
       ]
     },
     {
@@ -349,8 +361,9 @@
       ],
       "tips": [],
       "connections": [
-        "surveys_builder_simulation",
-        "survey_overview"
+        "engagement_report",
+        "experience_report_detail",
+        "surveys_create"
       ]
     },
     {
@@ -367,7 +380,7 @@
         "Always simulate before publishing to catch any wording issues."
       ],
       "connections": [
-        "survey_overview"
+        "surveys_builder_summary"
       ]
     },
     {
@@ -489,7 +502,8 @@
       ],
       "tips": [],
       "connections": [
-        "onboarding_employee_detail"
+        "onboarding_employee_detail",
+        "surveys_templates"
       ]
     },
     {
@@ -566,6 +580,72 @@
         "Update company profile",
         "Manage notification preferences",
         "Configure integrations"
+      ],
+      "tips": []
+    },
+    {
+      "id": "surveys_template_preview",
+      "name": "Survey Template Preview",
+      "module_id": "surveys",
+      "path": "/surveys/template-preview/:id",
+      "description": "A read-only preview of a survey template showing all questions and structure before deciding to use it.",
+      "how_to_access": "Click 'Explore' on any template card in Survey Templates.",
+      "key_actions": [
+        "Preview all questions",
+        "Use template to start Survey Builder"
+      ],
+      "tips": [
+        "Use preview to evaluate a template before committing to it"
+      ],
+      "connections": [
+        "surveys_builder_details"
+      ]
+    },
+    {
+      "id": "other_answers",
+      "name": "Other Answers",
+      "module_id": "reports",
+      "path": "/reports/answers/:surveyId/other/:questionId",
+      "description": "Shows all free-text 'Other' option responses for a specific question in a survey report. Accessible from any report page that has open-ended or 'other' answer options.",
+      "how_to_access": "Click on 'Other' answer option in any report chart or question breakdown.",
+      "key_actions": [
+        "Browse all 'other' text responses",
+        "Filter by date or participant group"
+      ],
+      "tips": [
+        "Useful for discovering unexpected themes not captured by fixed answer options"
+      ]
+    },
+    {
+      "id": "exit_survey_publish",
+      "name": "Exit Survey — Publish",
+      "module_id": "exit_survey",
+      "path": "/surveys/builder/exit-survey-publish",
+      "description": "Configuration and publish step specific to exit surveys. Sets up automated sending rules for departing employees.",
+      "how_to_access": "Click 'Send Exit Survey' button on the Exit Survey Report page.",
+      "key_actions": [
+        "Configure exit survey sending rules",
+        "Set notification timing",
+        "Publish exit survey"
+      ],
+      "tips": [
+        "Exit surveys are sent automatically when an employee is marked as departing in People"
+      ],
+      "connections": [
+        "exit_survey_update"
+      ]
+    },
+    {
+      "id": "exit_survey_update",
+      "name": "Exit Survey — Update",
+      "module_id": "exit_survey",
+      "path": "/surveys/builder/exit-survey-update",
+      "description": "Update and modify an already-published exit survey configuration.",
+      "how_to_access": "Navigated to automatically after publishing an exit survey.",
+      "key_actions": [
+        "Update exit survey questions",
+        "Modify sending schedule",
+        "Save changes"
       ],
       "tips": []
     }
