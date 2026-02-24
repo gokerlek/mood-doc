@@ -1,8 +1,12 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-02-24T00:00:00Z",
+    "last_updated": "2026-02-24T14:08:53.048Z",
     "changelog": [
+      {
+        "date": "2026-02-24",
+        "summary": "KB güncellendi"
+      },
       {
         "date": "2026-02-24",
         "summary": "Initial v2 KB structure"
@@ -137,6 +141,11 @@
       "id": "anonim",
       "term": "Anonimlik",
       "definition": "Sistem, belirli bir katılım eşiğinin altında bireysel yanıtları gizler. Varsayılan eşik 5 kişidir."
+    },
+    {
+      "id": "term_1771942125697",
+      "term": "test",
+      "definition": "mest"
     }
   ],
   "global_rules": {
