@@ -1,117 +1,139 @@
 {
   "_meta": {
-    "schema_version": "1.0",
-    "description": "Moodivation platform knowledge base",
-    "owner": "gokerlek",
-    "last_updated": "2026-02-24T00:00:00.000Z",
-    "last_updated_by": "gokerlek",
+    "version": "2.0.0",
+    "schema": "moodivation-kb-v2",
+    "last_updated": "2026-02-24T00:00:00Z",
+    "updated_by": "KB Manager",
     "changelog": [
       {
-        "version": "1.0",
-        "date": "2026-02-24",
-        "author": "gokerlek",
-        "summary": "Initial knowledge base"
+        "date": "2026-02-24T00:00:00Z",
+        "message": "Initial v2 KB structure",
+        "by": "KB Manager"
       }
     ]
   },
   "platform": {
     "name": "Moodivation",
-    "tagline": "Çalışan deneyimini ölçün ve geliştirin",
-    "version": "1.0"
+    "description": "Moodivation, çalışanların iş tatmini, motivasyonu ve bağlılığını ölçen ve geliştiren bir İK platformudur.",
+    "target_users": "Çalışanlar ve İK ekipleri",
+    "key_benefits": [
+      "Çalışan memnuniyetini ölçer",
+      "Geri bildirimleri anonim toplar",
+      "Çalışan bağlılığını artırır",
+      "İK kararlarını veriye dayalı hale getirir"
+    ]
   },
-  "global_rules": {
-    "anonymity": {
-      "filtering_limit": {
-        "value": 5,
-        "unit": "kişi",
-        "description": "Filtreleme yapılabilmesi için minimum kişi sayısı",
-        "error_message": "Bu filtreyi uygulamak için yeterli katılımcı yok."
-      },
-      "reporting_limit": {
-        "value": 10,
-        "unit": "kişi",
-        "description": "Rapor oluşturulabilmesi için minimum kişi sayısı",
-        "error_message": "Rapor oluşturmak için yeterli veri yok."
-      },
-      "anonymity_modes": {}
+  "modules": [
+    {
+      "id": "engagement",
+      "name": "Nabız",
+      "slug": "engagement",
+      "description": "Çalışanların genel motivasyon ve bağlılık düzeyini ölçer.",
+      "icon": "heart",
+      "order": 1,
+      "faq": []
     },
-    "reporting": {
-      "company_schema": {
-        "hierarchy_levels": [
-          "Şirket",
-          "Departman",
-          "Takım"
-        ],
-        "demographic_fields": [
-          "cinsiyet",
-          "yasgrubu",
-          "kidem"
-        ]
-      },
-      "report_formats": [
-        "PDF",
-        "Excel",
-        "Dashboard"
-      ],
-      "scheduled_reports": {
-        "available": false,
-        "frequencies": []
-      },
-      "benchmark": {
-        "available": false,
-        "scope": ""
-      }
+    {
+      "id": "surveys",
+      "name": "Anketler",
+      "slug": "surveys",
+      "description": "Özelleştirilebilir anketlerle çalışanlardan geri bildirim toplar.",
+      "icon": "clipboard",
+      "order": 2,
+      "faq": []
     },
-    "group_exclusion": {
-      "exclusion_criteria": [],
-      "can_exclude_individuals": false,
-      "exclusion_applies_to": [],
-      "note": ""
-    }
-  },
-  "modules": {
-    "onboarding": {
+    {
       "id": "onboarding",
-      "display_name": "İşe Alım (Onboarding)",
-      "description": "Yeni çalışanların şirkete adaptasyon sürecini değerlendiren modül.",
-      "respondents": [
-        "new_employee",
-        "manager",
-        "mentor"
-      ],
-      "templates": [
-        {
-          "id": "ONB_tpl_001",
-          "name": "Standart İşe Alım Anketi",
-          "respondent": "new_employee",
-          "question_count": 20,
-          "dimensions": [
-            "adaptasyon",
-            "egitim",
-            "yonetici_destek"
-          ],
-          "customizable": true,
-          "description": "Yeni çalışan için standart işe alım değerlendirmesi"
-        }
-      ],
-      "faq": [],
-      "guide_steps": []
+      "name": "Oryantasyon",
+      "slug": "onboarding",
+      "description": "Yeni çalışanların şirkete adaptasyon sürecini yönetir.",
+      "icon": "user-plus",
+      "order": 3,
+      "faq": []
+    },
+    {
+      "id": "experience",
+      "name": "Deneyim",
+      "slug": "experience",
+      "description": "Çalışan deneyimini boyutlarıyla ölçer ve raporlar.",
+      "icon": "star",
+      "order": 4,
+      "faq": []
+    },
+    {
+      "id": "feedback",
+      "name": "Geri Bildirim",
+      "slug": "feedback",
+      "description": "360 derece geri bildirim ve performans değerlendirme araçları sunar.",
+      "icon": "message",
+      "order": 5,
+      "faq": []
+    },
+    {
+      "id": "people",
+      "name": "Çalışanlar",
+      "slug": "people",
+      "description": "Çalışan profillerini ve organizasyon yapısını yönetir.",
+      "icon": "users",
+      "order": 6,
+      "faq": []
+    },
+    {
+      "id": "exit_survey",
+      "name": "Çıkış Anketi",
+      "slug": "exit-survey",
+      "description": "Ayrılan çalışanlardan geri bildirim toplar.",
+      "icon": "door-exit",
+      "order": 7,
+      "faq": []
+    },
+    {
+      "id": "settings",
+      "name": "Ayarlar",
+      "slug": "settings",
+      "description": "Platform ayarlarını ve kullanıcı tercihlerini yönetir.",
+      "icon": "settings",
+      "order": 8,
+      "faq": []
     }
+  ],
+  "pages": [],
+  "glossary": [
+    {
+      "id": "nabiz",
+      "term": "Nabız",
+      "definition": "Çalışanların anlık motivasyon ve memnuniyet düzeyini ölçen kısa sondaj sorusu.",
+      "related_module_id": "engagement"
+    },
+    {
+      "id": "anonim",
+      "term": "Anonimlik",
+      "definition": "Sistem, belirli bir katılım eşiğinin altında bireysel yanıtları gizler. Varsayılan eşik 5 kişidir.",
+      "related_module_id": null
+    }
+  ],
+  "global_rules": {
+    "anonymity_limit": {
+      "value": 5,
+      "description": "Raporlarda bireysel yanıtlar gösterilmeden önce gereken minimum katılımcı sayısı."
+    },
+    "reporting_limit": {
+      "value": 3,
+      "description": "İstatistiksel anlamlılık için gereken minimum yanıt sayısı."
+    },
+    "other_rules": []
   },
-  "technical": {},
-  "security_compliance": {},
-  "pricing": {},
-  "support": {},
+  "faq": [],
   "agent_behavior": {
-    "fallback_message": "Bu konuda size yardımcı olamıyorum. Lütfen İK ekibinizle iletişime geçin.",
-    "tone": "profesyonel, empatik ve yardımsever",
-    "max_answer_length_sentences": 4,
+    "tone": "Yardımsever, net ve nazik",
+    "fallback_message": "Bu konuda size yardımcı olamıyorum. Lütfen İK ekibiyle iletişime geçin.",
+    "escalation_message": "Bu sorunuzu İK yöneticinize yönlendirmenizi öneririm.",
+    "max_answer_sentences": 4,
     "escalation_triggers": [
-      "şikayet",
-      "sorun",
-      "hata",
-      "yardım"
-    ],
-    "escalation_message": "Bu konuyu İK ekibimize iletiyorum. En kısa sürede size geri dönecekler."
+      "şikâyet",
+      "hukuki",
+      "ayrılmak istiyorum",
+      "istifa"
+    ]
   }
 }
