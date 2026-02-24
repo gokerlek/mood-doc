@@ -5,6 +5,10 @@
     "changelog": [
       {
         "date": "2026-02-24",
+        "summary": "Restructure FAQ: module_id + page_id + tags; remove embedded module.faq"
+      },
+      {
+        "date": "2026-02-24",
         "summary": "Add all client-ui pages and update module names to English"
       }
     ]
@@ -32,8 +36,7 @@
         "Exit survey analytics",
         "Comment analysis"
       ],
-      "nav_path": "/reports/engagement",
-      "faq": []
+      "nav_path": "/reports/engagement"
     },
     {
       "id": "surveys",
@@ -46,8 +49,7 @@
         "Participant targeting and scheduling",
         "Simulation before publish"
       ],
-      "nav_path": "/surveys/create-new-survey",
-      "faq": []
+      "nav_path": "/surveys/create-new-survey"
     },
     {
       "id": "survey",
@@ -60,8 +62,7 @@
         "Completion confirmation",
         "Open link surveys (no login required)"
       ],
-      "nav_path": "/survey/overview",
-      "faq": []
+      "nav_path": "/survey/overview"
     },
     {
       "id": "onboarding",
@@ -74,8 +75,7 @@
         "New employee list",
         "Onboarding report"
       ],
-      "nav_path": "/onboarding/phases",
-      "faq": []
+      "nav_path": "/onboarding/phases"
     },
     {
       "id": "people",
@@ -86,8 +86,7 @@
         "Employee directory",
         "Bulk import via file upload"
       ],
-      "nav_path": "/people",
-      "faq": []
+      "nav_path": "/people"
     },
     {
       "id": "feedbacks",
@@ -98,8 +97,7 @@
         "Feedback report overview",
         "Filter by department and date"
       ],
-      "nav_path": "/feedbacks",
-      "faq": []
+      "nav_path": "/feedbacks"
     },
     {
       "id": "settings",
@@ -111,8 +109,7 @@
         "Notification preferences",
         "Integrations"
       ],
-      "nav_path": "/settings",
-      "faq": []
+      "nav_path": "/settings"
     }
   ],
   "pages": [
