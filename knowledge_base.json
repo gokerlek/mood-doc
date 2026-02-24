@@ -128,6 +128,9 @@
       "tips": [
         "A score below 60 is a signal to investigate further.",
         "Use the date range filter to compare periods."
+      ],
+      "connections": [
+        "engagement_report_detail"
       ]
     },
     {
@@ -142,7 +145,10 @@
         "Compare with previous period",
         "Export results"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "comments"
+      ]
     },
     {
       "id": "comments",
@@ -170,7 +176,10 @@
         "View top reasons for leaving",
         "Filter by date and department"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "exit_survey_employee_list"
+      ]
     },
     {
       "id": "exit_survey_good_sides",
@@ -206,7 +215,11 @@
       "key_actions": [
         "View individual exit survey completions"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "exit_survey_good_sides",
+        "exit_survey_reasons_leaving"
+      ]
     },
     {
       "id": "experience_report",
@@ -219,7 +232,10 @@
         "View experience dimensions",
         "Compare scores by team or role"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "experience_report_detail"
+      ]
     },
     {
       "id": "experience_report_detail",
@@ -245,7 +261,10 @@
         "Choose survey type (engagement, experience, custom)",
         "Start from a template or blank"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "surveys_builder_details"
+      ]
     },
     {
       "id": "surveys_templates",
@@ -258,7 +277,10 @@
         "Browse templates by category",
         "Preview a template before using it"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "surveys_create"
+      ]
     },
     {
       "id": "surveys_builder_details",
@@ -272,7 +294,10 @@
         "Set survey language",
         "Configure anonymity"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "surveys_builder_questions"
+      ]
     },
     {
       "id": "surveys_builder_questions",
@@ -288,6 +313,9 @@
       ],
       "tips": [
         "Keep surveys under 10 questions for higher completion rates."
+      ],
+      "connections": [
+        "surveys_builder_participants"
       ]
     },
     {
@@ -302,7 +330,10 @@
         "Set start and end dates",
         "Configure reminder schedule"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "surveys_builder_summary"
+      ]
     },
     {
       "id": "surveys_builder_summary",
@@ -316,7 +347,11 @@
         "Go back to edit any step",
         "Publish the survey"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "surveys_builder_simulation",
+        "survey_overview"
+      ]
     },
     {
       "id": "surveys_builder_simulation",
@@ -330,6 +365,9 @@
       ],
       "tips": [
         "Always simulate before publishing to catch any wording issues."
+      ],
+      "connections": [
+        "survey_overview"
       ]
     },
     {
@@ -342,7 +380,10 @@
       "key_actions": [
         "Start the survey"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "survey_questions"
+      ]
     },
     {
       "id": "survey_questions",
@@ -358,6 +399,9 @@
       ],
       "tips": [
         "Employees can go back and change answers before submitting."
+      ],
+      "connections": [
+        "survey_complete"
       ]
     },
     {
@@ -381,7 +425,10 @@
         "View overall onboarding completion rate",
         "Filter by department or start date"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "onboarding_phases"
+      ]
     },
     {
       "id": "onboarding_phases",
@@ -394,7 +441,11 @@
         "View and manage onboarding phases",
         "Edit phase content and timing"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "onboarding_phase_detail",
+        "onboarding_employee_list"
+      ]
     },
     {
       "id": "onboarding_phase_detail",
@@ -420,7 +471,10 @@
         "View onboarding progress per employee",
         "Filter by phase or status"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "onboarding_employee_detail"
+      ]
     },
     {
       "id": "onboarding_new_employee_list",
@@ -433,7 +487,10 @@
         "View upcoming new hires",
         "Initiate onboarding manually"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "onboarding_employee_detail"
+      ]
     },
     {
       "id": "onboarding_employee_detail",
@@ -461,7 +518,10 @@
         "Filter by department or role",
         "Edit individual employee profiles"
       ],
-      "tips": []
+      "tips": [],
+      "connections": [
+        "people_import"
+      ]
     },
     {
       "id": "people_import",
