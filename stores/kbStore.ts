@@ -16,6 +16,9 @@ interface KbState {
   deleteModule: (id: string) => void;
   upsertPage: (page: KbPage) => void;
   deletePage: (id: string) => void;
+  updatePagePosition: (id: string, x: number, y: number) => void;
+  addPageConnection: (fromId: string, toId: string) => void;
+  removePageConnection: (fromId: string, toId: string) => void;
   upsertGlossaryTerm: (term: KbGlossaryTerm) => void;
   deleteGlossaryTerm: (id: string) => void;
   updateGlobalRules: (patch: Partial<KnowledgeBase['global_rules']>) => void;
@@ -54,6 +57,33 @@ const useKbStoreBase = create<KbState>()(
         }),
       deletePage: (id) =>
         set((s) => s.data ? { isDirty: true, data: { ...s.data, pages: s.data.pages.filter(p => p.id !== id) } } : s),
+      updatePagePosition: (id, x, y) =>
+        set((s) => {
+          if (!s.data) return s;
+          const pages = s.data.pages.map(p => p.id === id ? { ...p, x, y } : p);
+          return { isDirty: true, data: { ...s.data, pages } };
+        }),
+      addPageConnection: (fromId, toId) =>
+        set((s) => {
+          if (!s.data) return s;
+          const pages = s.data.pages.map(p => {
+            if (p.id !== fromId) return p;
+            const conns = p.connections ?? [];
+            if (conns.includes(toId)) return p;
+            return { ...p, connections: [...conns, toId] };
+          });
+          return { isDirty: true, data: { ...s.data, pages } };
+        }),
+      removePageConnection: (fromId, toId) =>
+        set((s) => {
+          if (!s.data) return s;
+          const pages = s.data.pages.map(p =>
+            p.id === fromId
+              ? { ...p, connections: (p.connections ?? []).filter(c => c !== toId) }
+              : p
+          );
+          return { isDirty: true, data: { ...s.data, pages } };
+        }),
       upsertGlossaryTerm: (term) =>
         set((s) => {
           if (!s.data) return s;

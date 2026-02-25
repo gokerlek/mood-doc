@@ -31,6 +31,10 @@ export interface KbPage {
   how_to_access: string;
   key_actions: string[];
   tips: string[];
+  // Canvas fields (visual map)
+  x?: number;
+  y?: number;
+  connections?: string[]; // page IDs this page navigates to
 }
 
 export interface KbGlossaryTerm {
