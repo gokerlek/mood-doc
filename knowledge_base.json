@@ -1,8 +1,12 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-02-24T00:00:00Z",
+    "last_updated": "2026-02-25T09:28:58.544Z",
     "changelog": [
+      {
+        "date": "2026-02-25",
+        "summary": "KB updated"
+      },
       {
         "date": "2026-02-24",
         "summary": "Restructure FAQ: module_id + page_id + tags; remove embedded module.faq"
@@ -131,7 +135,9 @@
       ],
       "connections": [
         "engagement_report_detail"
-      ]
+      ],
+      "x": 294,
+      "y": 36
     },
     {
       "id": "engagement_report_detail",
@@ -149,7 +155,9 @@
       "connections": [
         "comments",
         "other_answers"
-      ]
+      ],
+      "x": 294,
+      "y": 192
     },
     {
       "id": "comments",
@@ -165,7 +173,9 @@
       "tips": [
         "Comments are anonymous — no individual is identifiable."
       ],
-      "connections": []
+      "connections": [],
+      "x": 0,
+      "y": 348
     },
     {
       "id": "exit_survey_report",
@@ -185,7 +195,9 @@
         "exit_survey_reasons_leaving",
         "exit_survey_publish",
         "other_answers"
-      ]
+      ],
+      "x": 631.5,
+      "y": 192
     },
     {
       "id": "exit_survey_good_sides",
@@ -197,7 +209,9 @@
       "key_actions": [
         "Browse positive feedback themes"
       ],
-      "tips": []
+      "tips": [],
+      "x": 220.5,
+      "y": 504
     },
     {
       "id": "exit_survey_reasons_leaving",
@@ -209,7 +223,9 @@
       "key_actions": [
         "Browse leaving reason themes"
       ],
-      "tips": []
+      "tips": [],
+      "x": 735,
+      "y": 504
     },
     {
       "id": "exit_survey_employee_list",
@@ -225,7 +241,9 @@
       "connections": [
         "exit_survey_good_sides",
         "exit_survey_reasons_leaving"
-      ]
+      ],
+      "x": 651.5,
+      "y": 348
     },
     {
       "id": "experience_report",
@@ -241,7 +259,9 @@
       "tips": [],
       "connections": [
         "experience_report_detail"
-      ]
+      ],
+      "x": 20,
+      "y": 36
     },
     {
       "id": "experience_report_detail",
@@ -258,7 +278,9 @@
       "connections": [
         "comments",
         "other_answers"
-      ]
+      ],
+      "x": 20,
+      "y": 192
     },
     {
       "id": "surveys_create",
@@ -274,7 +296,9 @@
       "tips": [],
       "connections": [
         "surveys_builder_details"
-      ]
+      ],
+      "x": 1059,
+      "y": 192
     },
     {
       "id": "surveys_templates",
@@ -291,7 +315,9 @@
       "connections": [
         "surveys_template_preview",
         "surveys_create"
-      ]
+      ],
+      "x": 1259.5,
+      "y": 36
     },
     {
       "id": "surveys_builder_details",
@@ -308,7 +334,9 @@
       "tips": [],
       "connections": [
         "surveys_builder_questions"
-      ]
+      ],
+      "x": 1470,
+      "y": 348
     },
     {
       "id": "surveys_builder_questions",
@@ -327,7 +355,9 @@
       ],
       "connections": [
         "surveys_builder_participants"
-      ]
+      ],
+      "x": 1470,
+      "y": 504
     },
     {
       "id": "surveys_builder_participants",
@@ -345,7 +375,9 @@
       "connections": [
         "surveys_builder_summary",
         "exit_survey_publish"
-      ]
+      ],
+      "x": 1470,
+      "y": 660
     },
     {
       "id": "surveys_builder_summary",
@@ -364,7 +396,9 @@
         "engagement_report",
         "experience_report_detail",
         "surveys_create"
-      ]
+      ],
+      "x": 1196,
+      "y": 816
     },
     {
       "id": "surveys_builder_simulation",
@@ -381,7 +415,9 @@
       ],
       "connections": [
         "surveys_builder_summary"
-      ]
+      ],
+      "x": 1196,
+      "y": 660
     },
     {
       "id": "survey_overview",
@@ -396,7 +432,9 @@
       "tips": [],
       "connections": [
         "survey_questions"
-      ]
+      ],
+      "x": 1804,
+      "y": 36
     },
     {
       "id": "survey_questions",
@@ -415,7 +453,9 @@
       ],
       "connections": [
         "survey_complete"
-      ]
+      ],
+      "x": 1804,
+      "y": 192
     },
     {
       "id": "survey_complete",
@@ -425,7 +465,9 @@
       "description": "Confirmation page shown after an employee successfully submits a survey.",
       "how_to_access": "Automatically shown after submitting the last question.",
       "key_actions": [],
-      "tips": []
+      "tips": [],
+      "x": 1804,
+      "y": 348
     },
     {
       "id": "onboarding_report",
@@ -441,7 +483,9 @@
       "tips": [],
       "connections": [
         "onboarding_phases"
-      ]
+      ],
+      "x": 137,
+      "y": 1068
     },
     {
       "id": "onboarding_phases",
@@ -458,7 +502,9 @@
       "connections": [
         "onboarding_phase_detail",
         "onboarding_employee_list"
-      ]
+      ],
+      "x": 137,
+      "y": 1224
     },
     {
       "id": "onboarding_phase_detail",
@@ -471,7 +517,9 @@
         "View tasks within the phase",
         "Edit phase settings"
       ],
-      "tips": []
+      "tips": [],
+      "x": 274,
+      "y": 1380
     },
     {
       "id": "onboarding_employee_list",
@@ -487,7 +535,9 @@
       "tips": [],
       "connections": [
         "onboarding_employee_detail"
-      ]
+      ],
+      "x": 0,
+      "y": 1380
     },
     {
       "id": "onboarding_new_employee_list",
@@ -504,7 +554,9 @@
       "connections": [
         "onboarding_employee_detail",
         "surveys_templates"
-      ]
+      ],
+      "x": 548,
+      "y": 1380
     },
     {
       "id": "onboarding_employee_detail",
@@ -518,7 +570,9 @@
         "Send reminders",
         "Override phase status"
       ],
-      "tips": []
+      "tips": [],
+      "x": 274,
+      "y": 1536
     },
     {
       "id": "people_list",
@@ -535,7 +589,9 @@
       "tips": [],
       "connections": [
         "people_import"
-      ]
+      ],
+      "x": 1454,
+      "y": 1070
     },
     {
       "id": "people_import",
@@ -552,7 +608,9 @@
       "tips": [
         "Use the provided template to avoid import errors.",
         "Duplicate emails are automatically skipped."
-      ]
+      ],
+      "x": 1710,
+      "y": 1070
     },
     {
       "id": "feedbacks_report",
@@ -567,7 +625,9 @@
       ],
       "tips": [
         "Feedback is anonymous — responses cannot be traced back to individuals."
-      ]
+      ],
+      "x": 1196,
+      "y": 1068
     },
     {
       "id": "settings",
@@ -581,7 +641,9 @@
         "Manage notification preferences",
         "Configure integrations"
       ],
-      "tips": []
+      "tips": [],
+      "x": 0,
+      "y": 1788
     },
     {
       "id": "surveys_template_preview",
@@ -599,7 +661,9 @@
       ],
       "connections": [
         "surveys_builder_details"
-      ]
+      ],
+      "x": 1480,
+      "y": 192
     },
     {
       "id": "other_answers",
@@ -614,7 +678,9 @@
       ],
       "tips": [
         "Useful for discovering unexpected themes not captured by fixed answer options"
-      ]
+      ],
+      "x": 377.5,
+      "y": 348
     },
     {
       "id": "exit_survey_publish",
@@ -633,7 +699,9 @@
       ],
       "connections": [
         "exit_survey_update"
-      ]
+      ],
+      "x": -36,
+      "y": 786
     },
     {
       "id": "exit_survey_update",
@@ -647,7 +715,9 @@
         "Modify sending schedule",
         "Save changes"
       ],
-      "tips": []
+      "tips": [],
+      "x": 342,
+      "y": 786
     }
   ],
   "glossary": [
