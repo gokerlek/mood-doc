@@ -1,8 +1,12 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-02-25T09:28:58.544Z",
+    "last_updated": "2026-02-25T09:29:06.464Z",
     "changelog": [
+      {
+        "date": "2026-02-25",
+        "summary": "KB updated"
+      },
       {
         "date": "2026-02-25",
         "summary": "KB updated"
@@ -590,8 +594,8 @@
       "connections": [
         "people_import"
       ],
-      "x": 1454,
-      "y": 1070
+      "x": 872,
+      "y": 1068
     },
     {
       "id": "people_import",
@@ -609,8 +613,8 @@
         "Use the provided template to avoid import errors.",
         "Duplicate emails are automatically skipped."
       ],
-      "x": 1710,
-      "y": 1070
+      "x": 872,
+      "y": 1224
     },
     {
       "id": "feedbacks_report",
@@ -700,8 +704,8 @@
       "connections": [
         "exit_survey_update"
       ],
-      "x": -36,
-      "y": 786
+      "x": 324,
+      "y": 1788
     },
     {
       "id": "exit_survey_update",
@@ -716,8 +720,8 @@
         "Save changes"
       ],
       "tips": [],
-      "x": 342,
-      "y": 786
+      "x": 324,
+      "y": 1944
     }
   ],
   "glossary": [
