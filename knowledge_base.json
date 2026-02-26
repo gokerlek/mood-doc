@@ -788,6 +788,15 @@
         "x": 74.5,
         "y": 62,
         "parentId": "group-1772143015131"
+      },
+      {
+        "id": "group-1772145079292",
+        "label": "Group",
+        "x": 373.5,
+        "y": 241.5,
+        "nodeType": "group",
+        "width": 320,
+        "height": 200
       }
     ],
     "edges": []
