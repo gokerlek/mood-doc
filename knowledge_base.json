@@ -795,15 +795,15 @@
         "x": -199.5,
         "y": 230.5,
         "nodeType": "group",
-        "width": 320,
-        "height": 200,
+        "width": 232,
+        "height": 119,
         "description": "vsdfvbsd"
       },
       {
         "id": "node-1772145098669",
         "label": "Support",
-        "x": 69,
-        "y": 69,
+        "x": 20,
+        "y": 56,
         "parentId": "group-1772145079292",
         "color": "#eab308"
       }
