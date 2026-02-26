@@ -781,6 +781,12 @@
         "nodeType": "group",
         "width": 320,
         "height": 200
+      },
+      {
+        "id": "node-1772145051826",
+        "label": "Dashboard",
+        "x": 744.5,
+        "y": 292.5
       }
     ],
     "edges": []
