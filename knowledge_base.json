@@ -792,6 +792,15 @@
       {
         "id": "group-1772145079292",
         "label": "Group",
+        "x": -77.5,
+        "y": 237.5,
+        "nodeType": "group",
+        "width": 320,
+        "height": 200
+      },
+      {
+        "id": "group-1772145082740",
+        "label": "Group",
         "x": 373.5,
         "y": 241.5,
         "nodeType": "group",
