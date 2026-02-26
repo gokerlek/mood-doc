@@ -797,15 +797,6 @@
         "nodeType": "group",
         "width": 320,
         "height": 200
-      },
-      {
-        "id": "group-1772145082740",
-        "label": "Group",
-        "x": 515.5,
-        "y": 177.5,
-        "nodeType": "group",
-        "width": 320,
-        "height": 200
       }
     ],
     "edges": []
