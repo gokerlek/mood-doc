@@ -803,7 +803,8 @@
         "label": "Support",
         "x": 69,
         "y": 69,
-        "parentId": "group-1772145079292"
+        "parentId": "group-1772145079292",
+        "color": "#eab308"
       }
     ],
     "edges": [
