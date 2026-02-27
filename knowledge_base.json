@@ -774,22 +774,6 @@
   "map": {
     "nodes": [
       {
-        "id": "group-1772143015131",
-        "label": "Groupfgfgb",
-        "x": 240,
-        "y": 201.5,
-        "nodeType": "group",
-        "width": 320,
-        "height": 200
-      },
-      {
-        "id": "node-1772145051826",
-        "label": "Dashboard",
-        "x": 76.5,
-        "y": 75,
-        "parentId": "group-1772143015131"
-      },
-      {
         "id": "group-1772145079292",
         "label": "Group",
         "x": -199.5,
@@ -808,12 +792,6 @@
         "color": "#eab308"
       }
     ],
-    "edges": [
-      {
-        "id": "node-1772145098669->node-1772145051826",
-        "source": "node-1772145098669",
-        "target": "node-1772145051826"
-      }
-    ]
+    "edges": []
   }
 }
