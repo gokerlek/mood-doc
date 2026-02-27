@@ -772,7 +772,23 @@
     ]
   },
   "map": {
-    "nodes": [],
+    "nodes": [
+      {
+        "id": "group-1772179170256",
+        "label": "Group",
+        "x": 580,
+        "y": 336.5,
+        "nodeType": "group",
+        "width": 320,
+        "height": 200
+      },
+      {
+        "id": "node-1772179171872",
+        "label": "Feedback",
+        "x": 742.5,
+        "y": 406.5
+      }
+    ],
     "edges": []
   }
 }
