@@ -1,3 +1,26 @@
+// --- Map Canvas ---
+
+export interface MapNodeData {
+  id: string;
+  label: string;
+  description?: string;
+  color?: string;
+  x: number;
+  y: number;
+  parentId?: string;
+  nodeType?: 'group';
+  width?: number;
+  height?: number;
+}
+
+export interface MapEdgeData {
+  id: string;
+  source: string;
+  target: string;
+}
+
+// --- Knowledge Base ---
+
 export interface KbMeta {
   schema_version: string;
   last_updated: string;
@@ -9,8 +32,7 @@ export interface KbFaq {
   question: string;
   answer: string;
   tags: string[];
-  module_id?: string; // which module this FAQ belongs to
-  page_id?: string;   // which page this FAQ belongs to (more specific)
+  module_id?: string;
 }
 
 export interface KbModule {
@@ -20,21 +42,6 @@ export interface KbModule {
   who_uses: string;
   key_features: string[];
   nav_path: string;
-}
-
-export interface KbPage {
-  id: string;
-  name: string;
-  module_id: string;
-  path: string;
-  description: string;
-  how_to_access: string;
-  key_actions: string[];
-  tips: string[];
-  // Canvas fields (visual map)
-  x?: number;
-  y?: number;
-  connections?: string[]; // page IDs this page navigates to
 }
 
 export interface KbGlossaryTerm {
@@ -51,6 +58,7 @@ export interface KbRule {
 
 export interface KnowledgeBase {
   _meta: KbMeta;
+  map?: { nodes: MapNodeData[]; edges: MapEdgeData[] };
   platform: {
     name: string;
     description: string;
@@ -58,7 +66,6 @@ export interface KnowledgeBase {
     key_benefits: string[];
   };
   modules: KbModule[];
-  pages: KbPage[];
   glossary: KbGlossaryTerm[];
   global_rules: {
     anonymity_limit: { value: number; description: string };

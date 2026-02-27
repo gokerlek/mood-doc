@@ -243,6 +243,16 @@
   }
 }
 
+/* React Flow — floating edge animation */
+@keyframes flow {
+  from { stroke-dashoffset: 30; }
+  to   { stroke-dashoffset: 0; }
+}
+.animate-flow {
+  stroke-dasharray: 6 3;
+  animation: flow 0.6s linear infinite;
+}
+
 @media print {
   header, footer, nav { display: none !important; }
   body { font-size: 12pt; color: black; background: white; }

@@ -5,7 +5,6 @@ import { useKbStore } from '@/stores/kbStore';
 
 interface Props {
   moduleId?: string;
-  pageId?: string;
 }
 
 function TagInput({ tags, onChange }: { tags: string[]; onChange: (t: string[]) => void }) {
@@ -43,7 +42,7 @@ function TagInput({ tags, onChange }: { tags: string[]; onChange: (t: string[]) 
   );
 }
 
-export function QuickAddFaq({ moduleId, pageId }: Props) {
+export function QuickAddFaq({ moduleId }: Props) {
   const upsertFaq = useKbStore.useUpsertFaq();
   const [open, setOpen] = useState(false);
   const [question, setQuestion] = useState('');
@@ -60,7 +59,6 @@ export function QuickAddFaq({ moduleId, pageId }: Props) {
       answer: answer.trim(),
       tags,
       module_id: moduleId,
-      page_id: pageId,
     });
     reset();
   };

@@ -9,8 +9,8 @@ export interface GitHubConfig {
   filePath: string;
 }
 
-export interface GitHubFetchResult {
-  content: KnowledgeBase;
+export interface GitHubFetchResult<T = KnowledgeBase> {
+  content: T;
   sha: string;
 }
 
@@ -28,7 +28,7 @@ async function ghFetch(url: string, options?: RequestInit): Promise<Response> {
   return res;
 }
 
-export async function fetchKnowledgeBase(config: GitHubConfig): Promise<GitHubFetchResult> {
+export async function fetchGitHubFile<T>(config: GitHubConfig): Promise<GitHubFetchResult<T>> {
   const url = `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${config.filePath}?ref=${config.branch}`;
   const res = await ghFetch(url, {
     headers: {
@@ -43,14 +43,14 @@ export async function fetchKnowledgeBase(config: GitHubConfig): Promise<GitHubFe
   const data = (await res.json()) as GitHubContentsResponse;
   const content = JSON.parse(
     Buffer.from(data.content.replace(/\n/g, ''), 'base64').toString('utf-8'),
-  ) as KnowledgeBase;
+  ) as T;
   return { content, sha: data.sha };
 }
 
-export async function saveKnowledgeBase(
+export async function saveGitHubFile<T>(
   config: GitHubConfig,
   sha: string,
-  content: KnowledgeBase,
+  content: T,
   message: string,
 ): Promise<string> {
   const url = `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${config.filePath}`;
@@ -65,7 +65,7 @@ export async function saveKnowledgeBase(
     body: JSON.stringify({
       message,
       content: Buffer.from(JSON.stringify(content, null, 2)).toString('base64'),
-      sha,
+      ...(sha ? { sha } : {}), // yeni dosya oluştururken sha olmayabilir
       branch: config.branch,
     }),
   });
@@ -74,3 +74,14 @@ export async function saveKnowledgeBase(
   const data = (await res.json()) as GitHubPutResponse;
   return data.content.sha;
 }
+
+// Geriye dönük uyumluluk
+export const fetchKnowledgeBase = (config: GitHubConfig) =>
+  fetchGitHubFile<KnowledgeBase>(config);
+
+export const saveKnowledgeBase = (
+  config: GitHubConfig,
+  sha: string,
+  content: KnowledgeBase,
+  message: string,
+) => saveGitHubFile(config, sha, content, message);

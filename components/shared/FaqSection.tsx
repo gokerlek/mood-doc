@@ -15,12 +15,11 @@ import { Badge } from '@/components/ui/badge';
 interface InlineFormProps {
   initial?: KbFaq;
   moduleId?: string;
-  pageId?: string;
   onSave: (f: KbFaq) => void;
   onCancel: () => void;
 }
 
-function InlineForm({ initial, moduleId, pageId, onSave, onCancel }: InlineFormProps) {
+function InlineForm({ initial, moduleId, onSave, onCancel }: InlineFormProps) {
   const [question, setQuestion] = useState(initial?.question ?? '');
   const [answer, setAnswer] = useState(initial?.answer ?? '');
   const [tags, setTags] = useState<string[]>(initial?.tags ?? []);
@@ -34,7 +33,6 @@ function InlineForm({ initial, moduleId, pageId, onSave, onCancel }: InlineFormP
       answer: answer.trim(),
       tags,
       module_id: moduleId,
-      page_id: pageId,
     });
   };
 
@@ -74,11 +72,10 @@ function InlineForm({ initial, moduleId, pageId, onSave, onCancel }: InlineFormP
 
 interface FaqSectionProps {
   moduleId?: string;
-  pageId?: string;
   isNew?: boolean;
 }
 
-export function FaqSection({ moduleId, pageId, isNew }: FaqSectionProps) {
+export function FaqSection({ moduleId, isNew }: FaqSectionProps) {
   const data = useKbStore.useData();
   const upsertFaq = useKbStore.useUpsertFaq();
   const deleteFaq = useKbStore.useDeleteFaq();
@@ -87,9 +84,7 @@ export function FaqSection({ moduleId, pageId, isNew }: FaqSectionProps) {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [pendingDelete, setPendingDelete] = useState<KbFaq | null>(null);
 
-  const faqs = (data?.faq ?? []).filter(f =>
-    pageId ? f.page_id === pageId : (f.module_id === moduleId && !f.page_id)
-  );
+  const faqs = (data?.faq ?? []).filter(f => f.module_id === moduleId);
 
   const handleSave = (f: KbFaq) => {
     upsertFaq(f);
@@ -126,7 +121,6 @@ export function FaqSection({ moduleId, pageId, isNew }: FaqSectionProps) {
       {adding && (
         <InlineForm
           moduleId={moduleId}
-          pageId={pageId}
           onSave={handleSave}
           onCancel={() => setAdding(false)}
         />
@@ -143,7 +137,6 @@ export function FaqSection({ moduleId, pageId, isNew }: FaqSectionProps) {
               key={faq.id}
               initial={faq}
               moduleId={moduleId}
-              pageId={pageId}
               onSave={handleSave}
               onCancel={() => setEditingId(null)}
             />

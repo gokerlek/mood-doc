@@ -1,14 +1,13 @@
 'use client';
 import { IconPencil, IconTrash } from '@tabler/icons-react';
 import { FaqForm } from './FaqForm';
-import type { KbFaq, KbModule, KbPage } from '@/lib/types';
+import type { KbFaq, KbModule } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 export interface FaqRowProps {
   faq: KbFaq;
   modules: KbModule[];
-  pages: KbPage[];
   onEdit: () => void;
   onDelete: () => void;
   editingId: string | null;
@@ -16,9 +15,9 @@ export interface FaqRowProps {
   onCancelEdit: () => void;
 }
 
-export function FaqRow({ faq, modules, pages, onEdit, onDelete, editingId, onSave, onCancelEdit }: FaqRowProps) {
+export function FaqRow({ faq, modules, onEdit, onDelete, editingId, onSave, onCancelEdit }: FaqRowProps) {
   if (editingId === faq.id) {
-    return <FaqForm initial={faq} modules={modules} pages={pages} onSave={onSave} onCancel={onCancelEdit} />;
+    return <FaqForm initial={faq} modules={modules} onSave={onSave} onCancel={onCancelEdit} />;
   }
   return (
     <div className="bg-card border border-border rounded-xl px-5 py-4 group">

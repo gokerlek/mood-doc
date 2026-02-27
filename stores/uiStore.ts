@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { createSelectorHooks } from 'auto-zustand-selectors-hook';
 
-type Section = 'platform' | 'modules' | 'pages' | 'glossary' | 'rules' | 'faq' | 'agent';
+type Section = 'platform' | 'modules' | 'glossary' | 'rules' | 'faq' | 'agent';
 
 interface UiState {
   activeSection: Section;

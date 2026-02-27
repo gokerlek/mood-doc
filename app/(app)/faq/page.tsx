@@ -31,14 +31,10 @@ export default function FaqPage() {
 
   const filtered = activeTag ? data.faq.filter(f => f.tags.includes(activeTag)) : data.faq;
   const general = filtered.filter(f => !f.module_id);
-  const moduleGroups = data.modules.map(mod => {
-    const modFaqs = filtered.filter(f => f.module_id === mod.id && !f.page_id);
-    const pageGroups = data.pages
-      .filter(p => p.module_id === mod.id)
-      .map(page => ({ page, faqs: filtered.filter(f => f.page_id === page.id) }))
-      .filter(g => g.faqs.length > 0);
-    return { mod, modFaqs, pageGroups };
-  }).filter(g => g.modFaqs.length > 0 || g.pageGroups.length > 0);
+  const moduleGroups = data.modules.map(mod => ({
+    mod,
+    faqs: filtered.filter(f => f.module_id === mod.id),
+  })).filter(g => g.faqs.length > 0);
 
   const handleSave = (f: KbFaq) => {
     upsertFaq({ ...f, id: f.id || `faq_${Date.now()}` });
@@ -49,7 +45,6 @@ export default function FaqPage() {
   const rowProps = (faq: KbFaq) => ({
     faq,
     modules: data.modules,
-    pages: data.pages,
     onEdit: () => setEditingId(faq.id),
     onDelete: () => setPendingDelete(faq),
     editingId,
@@ -64,7 +59,7 @@ export default function FaqPage() {
         <div>
           <h1 className="text-xl font-bold text-foreground">FAQ</h1>
           <p className="text-sm text-muted-foreground mt-0.5">
-            {data.faq.length} question{data.faq.length !== 1 ? 's' : ''} across all modules and pages.
+            {data.faq.length} question{data.faq.length !== 1 ? 's' : ''} across all modules.
           </p>
         </div>
         {!adding && (
@@ -99,7 +94,6 @@ export default function FaqPage() {
         <FaqForm
           initial={emptyFaq()}
           modules={data.modules}
-          pages={data.pages}
           onSave={handleSave}
           onCancel={() => setAdding(false)}
         />
@@ -123,18 +117,9 @@ export default function FaqPage() {
               {general.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
             </CollapsibleSection>
           )}
-          {moduleGroups.map(({ mod, modFaqs, pageGroups }) => (
-            <CollapsibleSection key={mod.id} title={mod.name} count={modFaqs.length + pageGroups.reduce((a, g) => a + g.faqs.length, 0)}>
-              {modFaqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
-              {pageGroups.map(({ page, faqs }) => (
-                <div key={page.id} className="space-y-2">
-                  <p className="text-xs font-medium text-muted-foreground pl-1 flex items-center gap-1">
-                    <span className="font-mono">{page.path}</span>
-                    <span className="font-sans">— {page.name}</span>
-                  </p>
-                  {faqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
-                </div>
-              ))}
+          {moduleGroups.map(({ mod, faqs }) => (
+            <CollapsibleSection key={mod.id} title={mod.name} count={faqs.length}>
+              {faqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
             </CollapsibleSection>
           ))}
         </div>

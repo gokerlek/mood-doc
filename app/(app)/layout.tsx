@@ -6,9 +6,9 @@ import { useSaveKb } from '@/hooks/useKb';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import {
-  IconBook2, IconLayout2, IconListDetails, IconAlphabetLatin,
+  IconBook2, IconAlphabetLatin,
   IconShieldCheck, IconHelp, IconRobot, IconDeviceFloppy,
-  IconLoader2, IconAlertCircle, IconSitemap, IconBrandGithub,
+  IconLoader2, IconAlertCircle, IconBrandGithub, IconSitemap,
 } from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -18,8 +18,6 @@ const NAV_GROUPS = [
     label: 'Content',
     items: [
       { label: 'Platform', icon: IconBook2, href: '/' },
-      { label: 'Modules', icon: IconLayout2, href: '/modules' },
-      { label: 'Pages', icon: IconListDetails, href: '/pages' },
       { label: 'Glossary', icon: IconAlphabetLatin, href: '/glossary' },
       { label: 'Rules', icon: IconShieldCheck, href: '/rules' },
       { label: 'FAQ', icon: IconHelp, href: '/faq' },

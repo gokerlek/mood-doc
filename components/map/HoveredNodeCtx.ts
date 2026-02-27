@@ -1,6 +1,13 @@
-import { createContext } from 'react';
+import { createContext, useContext } from 'react';
 
-export const HoveredNodeCtx = createContext<{
+interface HoveredNodeCtxValue {
   hoveredId: string | null;
   setHoveredId: (id: string | null) => void;
-}>({ hoveredId: null, setHoveredId: () => {} });
+}
+
+export const HoveredNodeCtx = createContext<HoveredNodeCtxValue>({
+  hoveredId: null,
+  setHoveredId: () => {},
+});
+
+export const useHoveredNode = () => useContext(HoveredNodeCtx);
