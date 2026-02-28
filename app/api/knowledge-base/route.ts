@@ -1,6 +1,7 @@
 import { fetchKnowledgeBase, saveKnowledgeBase } from '@/lib/github';
 import type { KnowledgeBase } from '@/lib/types';
 import { toAppError } from '@/lib/errors';
+import { emptyKnowledgeBase } from '@/lib/defaults';
 
 const config = {
   pat: process.env.GITHUB_PAT ?? '',
@@ -28,7 +29,11 @@ function isPostBody(v: unknown): v is PostBody {
 const ok = () => Boolean(config.pat && config.owner && config.repo);
 
 export async function GET() {
-  if (!ok()) return Response.json({ error: 'GitHub config missing' }, { status: 503 });
+  if (!ok()) {
+    return Response.json(emptyKnowledgeBase(), {
+      headers: { 'Cache-Control': 'no-store', 'Access-Control-Allow-Origin': '*' },
+    });
+  }
   try {
     const { content } = await fetchKnowledgeBase(config);
     return Response.json(content, {

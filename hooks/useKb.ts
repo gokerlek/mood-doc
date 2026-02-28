@@ -7,7 +7,6 @@ export function useLoadKb() {
   return useQuery<KnowledgeBase>({
     queryKey: ['kb'],
     queryFn: async () => {
-      // If there are unsaved local changes, use localStorage data instead of fetching
       const state = useKbStore.getState();
       if (state.isDirty && state.data) {
         return state.data;
@@ -39,10 +38,6 @@ export function useSaveKb() {
         _meta: {
           ...data._meta,
           last_updated: new Date().toISOString(),
-          changelog: [
-            { date: new Date().toISOString().split('T')[0] ?? '', summary: message },
-            ...data._meta.changelog.slice(0, 19),
-          ],
         },
       };
       useKbStore.getState().setData(updated);
