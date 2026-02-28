@@ -14,14 +14,15 @@ export default function GlossaryPage() {
   const upsertGlossaryTerm = useKbStore.useUpsertGlossaryTerm();
   const deleteGlossaryTerm = useKbStore.useDeleteGlossaryTerm();
   const [adding, setAdding] = useState(false);
-  const [draft, setDraft] = useState<KbGlossaryTerm>(emptyGlossaryTerm);
+  const [draft, setDraft] = useState<KbGlossaryTerm>(() => emptyGlossaryTerm());
   const [pendingDelete, setPendingDelete] = useState<KbGlossaryTerm | null>(null);
 
   if (!data) return null;
+
   const add = () => {
     if (!draft.term || !draft.definition) return;
     upsertGlossaryTerm({ ...draft, id: `term_${Date.now()}` });
-    setDraft(emptyGlossaryTerm);
+    setDraft(emptyGlossaryTerm());
     setAdding(false);
   };
 

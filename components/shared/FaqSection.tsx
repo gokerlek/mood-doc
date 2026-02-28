@@ -4,7 +4,7 @@ import { useKbStore } from '@/stores/kbStore';
 import { IconPlus, IconTrash, IconPencil, IconCheck, IconX, IconTag } from '@tabler/icons-react';
 import { ConfirmModal } from '@/components/shared/ConfirmModal';
 import { TagInput } from '@/components/shared/TagInput';
-import type { KbFaq } from '@/lib/types';
+import type { KbFaq, KbItemContext } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -14,16 +14,16 @@ import { Badge } from '@/components/ui/badge';
 
 interface InlineFormProps {
   initial?: KbFaq;
-  moduleId?: string;
+  context: KbItemContext;
   onSave: (f: KbFaq) => void;
   onCancel: () => void;
 }
 
-function InlineForm({ initial, moduleId, onSave, onCancel }: InlineFormProps) {
+function InlineForm({ initial, context, onSave, onCancel }: InlineFormProps) {
   const [question, setQuestion] = useState(initial?.question ?? '');
   const [answer, setAnswer] = useState(initial?.answer ?? '');
-  const [tags, setTags] = useState<string[]>(initial?.tags ?? []);
-  const canSave = question.trim() && answer.trim();
+  const [tagIds, setTagIds] = useState<string[]>(initial?.tag_ids ?? []);
+  const canSave = question.trim() !== '' && answer.trim() !== '';
 
   const handleSave = () => {
     if (!canSave) return;
@@ -31,8 +31,8 @@ function InlineForm({ initial, moduleId, onSave, onCancel }: InlineFormProps) {
       id: initial?.id ?? `faq_${Date.now()}`,
       question: question.trim(),
       answer: answer.trim(),
-      tags,
-      module_id: moduleId,
+      tag_ids: tagIds,
+      context,
     });
   };
 
@@ -54,7 +54,7 @@ function InlineForm({ initial, moduleId, onSave, onCancel }: InlineFormProps) {
         <p className="text-xs text-muted-foreground mb-1 flex items-center gap-1">
           <IconTag size={10} />Tags
         </p>
-        <TagInput tags={tags} onChange={setTags} compact />
+        <TagInput tags={tagIds} onChange={setTagIds} compact />
       </div>
       <div className="flex gap-1.5">
         <Button type="button" size="sm" onClick={handleSave} disabled={!canSave}>
@@ -71,11 +71,11 @@ function InlineForm({ initial, moduleId, onSave, onCancel }: InlineFormProps) {
 // ── Main component ────────────────────────────────────────────────────────────
 
 interface FaqSectionProps {
-  moduleId?: string;
+  context: KbItemContext;
   isNew?: boolean;
 }
 
-export function FaqSection({ moduleId, isNew }: FaqSectionProps) {
+export function FaqSection({ context, isNew }: FaqSectionProps) {
   const data = useKbStore.useData();
   const upsertFaq = useKbStore.useUpsertFaq();
   const deleteFaq = useKbStore.useDeleteFaq();
@@ -84,7 +84,12 @@ export function FaqSection({ moduleId, isNew }: FaqSectionProps) {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [pendingDelete, setPendingDelete] = useState<KbFaq | null>(null);
 
-  const faqs = (data?.faq ?? []).filter(f => f.module_id === moduleId);
+  const faqs = (data?.faq ?? []).filter(f => {
+    if (context.type === 'global') return f.context.type === 'global';
+    if (context.type === 'page') return f.context.type === 'page' && f.context.node_id === context.node_id;
+    if (context.type === 'component') return f.context.type === 'component' && f.context.component_id === context.component_id;
+    return false;
+  });
 
   const handleSave = (f: KbFaq) => {
     upsertFaq(f);
@@ -120,7 +125,7 @@ export function FaqSection({ moduleId, isNew }: FaqSectionProps) {
 
       {adding && (
         <InlineForm
-          moduleId={moduleId}
+          context={context}
           onSave={handleSave}
           onCancel={() => setAdding(false)}
         />
@@ -136,7 +141,7 @@ export function FaqSection({ moduleId, isNew }: FaqSectionProps) {
             <InlineForm
               key={faq.id}
               initial={faq}
-              moduleId={moduleId}
+              context={context}
               onSave={handleSave}
               onCancel={() => setEditingId(null)}
             />
@@ -164,9 +169,9 @@ export function FaqSection({ moduleId, isNew }: FaqSectionProps) {
                 </div>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">{faq.answer}</p>
-              {faq.tags.length > 0 && (
+              {faq.tag_ids.length > 0 && (
                 <div className="flex flex-wrap gap-1 pt-0.5">
-                  {faq.tags.map(t => (
+                  {faq.tag_ids.map(t => (
                     <Badge key={t} variant="outline" className="text-xs">#{t}</Badge>
                   ))}
                 </div>

@@ -1,22 +1,22 @@
 'use client';
 import { IconPencil, IconTrash } from '@tabler/icons-react';
-import { FaqForm } from './FaqForm';
-import type { KbFaq, MapNodeData, KbComponent } from '@/lib/types';
+import { RuleForm } from './RuleForm';
+import type { KbRule, MapNodeData, KbComponent } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
-export interface FaqRowProps {
-  faq: KbFaq;
+export interface RuleRowProps {
+  rule: KbRule;
   leafNodes: MapNodeData[];
   components: KbComponent[];
   onEdit: () => void;
   onDelete: () => void;
   editingId: string | null;
-  onSave: (f: KbFaq) => void;
+  onSave: (r: KbRule) => void;
   onCancelEdit: () => void;
 }
 
-function contextLabel(context: KbFaq['context'], leafNodes: MapNodeData[], components: KbComponent[]): string | null {
+function contextLabel(context: KbRule['context'], leafNodes: MapNodeData[], components: KbComponent[]): string | null {
   if (context.type === 'global') return null;
   if (context.type === 'page') {
     const node = leafNodes.find(n => n.id === context.node_id);
@@ -29,11 +29,11 @@ function contextLabel(context: KbFaq['context'], leafNodes: MapNodeData[], compo
   return null;
 }
 
-export function FaqRow({ faq, leafNodes, components, onEdit, onDelete, editingId, onSave, onCancelEdit }: FaqRowProps) {
-  if (editingId === faq.id) {
+export function RuleRow({ rule, leafNodes, components, onEdit, onDelete, editingId, onSave, onCancelEdit }: RuleRowProps) {
+  if (editingId === rule.id) {
     return (
-      <FaqForm
-        initial={faq}
+      <RuleForm
+        initial={rule}
         leafNodes={leafNodes}
         components={components}
         onSave={onSave}
@@ -42,19 +42,19 @@ export function FaqRow({ faq, leafNodes, components, onEdit, onDelete, editingId
     );
   }
 
-  const ctxLabel = contextLabel(faq.context, leafNodes, components);
+  const ctxLabel = contextLabel(rule.context, leafNodes, components);
 
   return (
     <div className="bg-card border border-border rounded-xl px-5 py-4 group">
       <div className="flex items-start gap-3">
         <div className="flex-1 min-w-0">
-          <p className="font-medium text-foreground text-sm">{faq.question}</p>
-          <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{faq.answer}</p>
+          <p className="font-medium text-foreground text-sm">{rule.title}</p>
+          <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{rule.description}</p>
           <div className="flex flex-wrap gap-1 mt-2">
             {ctxLabel && (
               <Badge variant="outline">{ctxLabel}</Badge>
             )}
-            {faq.tag_ids.map(t => (
+            {rule.tag_ids.map(t => (
               <Badge key={t} variant="secondary">#{t}</Badge>
             ))}
           </div>

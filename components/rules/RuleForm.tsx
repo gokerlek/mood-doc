@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { IconCheck, IconTag } from '@tabler/icons-react';
 import { TagInput } from '@/components/shared/TagInput';
-import type { KbFaq, KbItemContext, MapNodeData, KbComponent } from '@/lib/types';
+import type { KbRule, KbItemContext, MapNodeData, KbComponent } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -12,11 +12,11 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from '@/components/ui/select';
 
-export interface FaqFormProps {
-  initial: KbFaq;
+export interface RuleFormProps {
+  initial: KbRule;
   leafNodes: MapNodeData[];
   components: KbComponent[];
-  onSave: (f: KbFaq) => void;
+  onSave: (r: KbRule) => void;
   onCancel: () => void;
 }
 
@@ -32,8 +32,8 @@ function getContextType(context: KbItemContext): ContextType {
   return context.type;
 }
 
-export function FaqForm({ initial, leafNodes, components, onSave, onCancel }: FaqFormProps) {
-  const [f, setF] = useState<KbFaq>(initial);
+export function RuleForm({ initial, leafNodes, components, onSave, onCancel }: RuleFormProps) {
+  const [r, setR] = useState<KbRule>(initial);
   const [contextType, setContextType] = useState<ContextType>(getContextType(initial.context));
   const [selectedNodeId, setSelectedNodeId] = useState<string>(
     initial.context.type === 'page' ? initial.context.node_id : ''
@@ -42,31 +42,32 @@ export function FaqForm({ initial, leafNodes, components, onSave, onCancel }: Fa
     initial.context.type === 'component' ? initial.context.component_id : ''
   );
 
-  const canSave = f.question.trim() !== '' && f.answer.trim() !== '';
+  const canSave = r.title.trim() !== '' && r.description.trim() !== '';
 
   const handleSave = () => {
     if (!canSave) return;
     const context = buildContext(contextType, selectedNodeId, selectedComponentId);
-    onSave({ ...f, context });
+    onSave({ ...r, context });
   };
 
   return (
     <Card>
       <CardContent className="space-y-4">
         <div className="space-y-1">
-          <Label>Question</Label>
+          <Label>Başlık</Label>
           <Input
-            placeholder="What is...?"
-            value={f.question}
-            onChange={e => setF(p => ({ ...p, question: e.target.value }))}
+            placeholder="Kural başlığı..."
+            value={r.title}
+            onChange={e => setR(p => ({ ...p, title: e.target.value }))}
           />
         </div>
         <div className="space-y-1">
-          <Label>Answer</Label>
+          <Label>Açıklama</Label>
           <Textarea
             rows={3}
-            value={f.answer}
-            onChange={e => setF(p => ({ ...p, answer: e.target.value }))}
+            placeholder="Kuralı açıklayın..."
+            value={r.description}
+            onChange={e => setR(p => ({ ...p, description: e.target.value }))}
           />
         </div>
 
@@ -122,13 +123,13 @@ export function FaqForm({ initial, leafNodes, components, onSave, onCancel }: Fa
 
         <div className="space-y-1">
           <Label className="flex items-center gap-1"><IconTag size={13} />Tags</Label>
-          <TagInput tags={f.tag_ids} onChange={tag_ids => setF(p => ({ ...p, tag_ids }))} />
+          <TagInput tags={r.tag_ids} onChange={tag_ids => setR(p => ({ ...p, tag_ids }))} />
         </div>
 
         <div className="flex gap-2 pt-1">
-          <Button variant="outline" onClick={onCancel} className="flex-1">Cancel</Button>
+          <Button variant="outline" onClick={onCancel} className="flex-1">İptal</Button>
           <Button onClick={handleSave} disabled={!canSave} className="flex-1">
-            <IconCheck size={14} />Save
+            <IconCheck size={14} />Kaydet
           </Button>
         </div>
       </CardContent>

@@ -7,7 +7,7 @@ import { FaqForm } from '@/components/faq/FaqForm';
 import { FaqRow } from '@/components/faq/FaqRow';
 import { CollapsibleSection } from '@/components/faq/CollapsibleSection';
 import { emptyFaq } from '@/lib/defaults';
-import type { KbFaq } from '@/lib/types';
+import type { KbFaq, MapNodeData } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 
 export default function FaqPage() {
@@ -20,21 +20,30 @@ export default function FaqPage() {
   const [pendingDelete, setPendingDelete] = useState<KbFaq | null>(null);
   const [activeTag, setActiveTag] = useState<string | null>(null);
 
+  const leafNodes = useMemo<MapNodeData[]>(() => {
+    if (!data) return [];
+    const parentIds = new Set(
+      data.map.nodes.map(n => n.parent_id).filter((id): id is string => id != null)
+    );
+    return data.map.nodes.filter(n => !parentIds.has(n.id));
+  }, [data]);
+
   const allTags = useMemo(() => {
     if (!data) return [];
     const tagSet = new Set<string>();
-    data.faq.forEach(f => f.tags.forEach(t => tagSet.add(t)));
+    data.faq.forEach(f => f.tag_ids.forEach(t => tagSet.add(t)));
     return [...tagSet].sort();
   }, [data]);
 
   if (!data) return null;
 
-  const filtered = activeTag ? data.faq.filter(f => f.tags.includes(activeTag)) : data.faq;
-  const general = filtered.filter(f => !f.module_id);
-  const moduleGroups = data.modules.map(mod => ({
-    mod,
-    faqs: filtered.filter(f => f.module_id === mod.id),
-  })).filter(g => g.faqs.length > 0);
+  const filtered = activeTag
+    ? data.faq.filter(f => f.tag_ids.includes(activeTag))
+    : data.faq;
+
+  const globalFaqs = filtered.filter(f => f.context.type === 'global');
+  const pageFaqs = filtered.filter(f => f.context.type === 'page');
+  const componentFaqs = filtered.filter(f => f.context.type === 'component');
 
   const handleSave = (f: KbFaq) => {
     upsertFaq({ ...f, id: f.id || `faq_${Date.now()}` });
@@ -44,7 +53,8 @@ export default function FaqPage() {
 
   const rowProps = (faq: KbFaq) => ({
     faq,
-    modules: data.modules,
+    leafNodes,
+    components: data.components,
     onEdit: () => setEditingId(faq.id),
     onDelete: () => setPendingDelete(faq),
     editingId,
@@ -59,7 +69,7 @@ export default function FaqPage() {
         <div>
           <h1 className="text-xl font-bold text-foreground">FAQ</h1>
           <p className="text-sm text-muted-foreground mt-0.5">
-            {data.faq.length} question{data.faq.length !== 1 ? 's' : ''} across all modules.
+            {data.faq.length} question{data.faq.length !== 1 ? 's' : ''} toplam.
           </p>
         </div>
         {!adding && (
@@ -72,7 +82,12 @@ export default function FaqPage() {
       {/* Tag filter */}
       {allTags.length > 0 && (
         <div className="flex flex-wrap gap-1.5">
-          <Button size="sm" variant={!activeTag ? 'default' : 'outline'} onClick={() => setActiveTag(null)} className="rounded-full">
+          <Button
+            size="sm"
+            variant={!activeTag ? 'default' : 'outline'}
+            onClick={() => setActiveTag(null)}
+            className="rounded-full"
+          >
             All
           </Button>
           {allTags.map(tag => (
@@ -93,7 +108,8 @@ export default function FaqPage() {
       {adding && (
         <FaqForm
           initial={emptyFaq()}
-          modules={data.modules}
+          leafNodes={leafNodes}
+          components={data.components}
           onSave={handleSave}
           onCancel={() => setAdding(false)}
         />
@@ -112,16 +128,21 @@ export default function FaqPage() {
       {/* Categorized list */}
       {filtered.length > 0 && (
         <div className="space-y-6">
-          {general.length > 0 && (
-            <CollapsibleSection title="General" count={general.length}>
-              {general.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
+          {globalFaqs.length > 0 && (
+            <CollapsibleSection title="Global" count={globalFaqs.length}>
+              {globalFaqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
             </CollapsibleSection>
           )}
-          {moduleGroups.map(({ mod, faqs }) => (
-            <CollapsibleSection key={mod.id} title={mod.name} count={faqs.length}>
-              {faqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
+          {pageFaqs.length > 0 && (
+            <CollapsibleSection title="Sayfaya Bağlı" count={pageFaqs.length}>
+              {pageFaqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
             </CollapsibleSection>
-          ))}
+          )}
+          {componentFaqs.length > 0 && (
+            <CollapsibleSection title="Component'e Bağlı" count={componentFaqs.length}>
+              {componentFaqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
+            </CollapsibleSection>
+          )}
         </div>
       )}
 
