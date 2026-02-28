@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
   Drawer,
   DrawerContent,
@@ -27,17 +27,9 @@ interface NodeDrawerProps {
 }
 
 export function NodeDrawer({ node, onClose, onSave }: NodeDrawerProps) {
-  const [label, setLabel] = useState('');
-  const [description, setDescription] = useState('');
-  const [color, setColor] = useState<string | undefined>(undefined);
-
-  useEffect(() => {
-    if (node) {
-      setLabel(node.label);
-      setDescription(node.description ?? '');
-      setColor(node.color);
-    }
-  }, [node]);
+  const [label, setLabel] = useState(node?.label ?? '');
+  const [description, setDescription] = useState(node?.description ?? '');
+  const [color, setColor] = useState<string | undefined>(node?.color);
 
   const handleSave = () => {
     onSave({ label: label.trim() || 'Node', description: description.trim() || undefined, color });

@@ -8,6 +8,10 @@ import {
 } from '@xyflow/react';
 import { useHoveredNode } from './HoveredNodeCtx';
 
+export interface FloatingEdgeData {
+  onDelete?: (id: string) => void;
+}
+
 export default function FloatingEdge({
   id,
   source,
@@ -23,7 +27,7 @@ export default function FloatingEdge({
   data,
 }: EdgeProps) {
   const { hoveredId } = useHoveredNode();
-  const onDeleteCb = (data as { onDelete?: (id: string) => void } | undefined)?.onDelete;
+  const onDeleteCb = (data as FloatingEdgeData | undefined)?.onDelete;
   const [edgeHovered, setEdgeHovered] = useState(false);
 
   const onDelete = useCallback(
