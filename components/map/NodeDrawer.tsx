@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import {
   Drawer,
   DrawerContent,
@@ -9,7 +10,7 @@ import {
   DrawerFooter,
 } from '@/components/ui/drawer';
 import { Button } from '@/components/ui/button';
-import type { MapNodeData } from '@/stores/mapStore';
+import type { MapNodeData } from '@/lib/types';
 
 const PRESET_COLORS = [
   '#ef4444', // red
@@ -23,16 +24,17 @@ const PRESET_COLORS = [
 interface NodeDrawerProps {
   node: MapNodeData | null;
   onClose: () => void;
-  onSave: (patch: Partial<Pick<MapNodeData, 'label' | 'description' | 'color'>>) => void;
+  onSave: (patch: Partial<Pick<MapNodeData, 'label' | 'color'>>) => void;
 }
 
 export function NodeDrawer({ node, onClose, onSave }: NodeDrawerProps) {
   const [label, setLabel] = useState(node?.label ?? '');
-  const [description, setDescription] = useState(node?.description ?? '');
   const [color, setColor] = useState<string | undefined>(node?.color);
 
+  const isLeaf = node?.node_type !== 'group';
+
   const handleSave = () => {
-    onSave({ label: label.trim() || 'Node', description: description.trim() || undefined, color });
+    onSave({ label: label.trim() || 'Node', color });
     onClose();
   };
 
@@ -54,18 +56,6 @@ export function NodeDrawer({ node, onClose, onSave }: NodeDrawerProps) {
               className="w-full h-8 px-3 rounded-md border border-input bg-background text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-ring"
               placeholder="Node name"
               autoFocus
-            />
-          </div>
-
-          {/* Description */}
-          <div className="space-y-1.5">
-            <label className="text-xs font-medium text-foreground">Description</label>
-            <textarea
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              rows={3}
-              className="w-full px-3 py-2 rounded-md border border-input bg-background text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-ring resize-none"
-              placeholder="Optional description..."
             />
           </div>
 
@@ -93,11 +83,24 @@ export function NodeDrawer({ node, onClose, onSave }: NodeDrawerProps) {
                   className="w-7 h-7 rounded-full border border-dashed border-border text-muted-foreground text-[10px] font-bold hover:bg-muted transition-colors"
                   title="Remove color"
                 >
-                  ✕
+                  x
                 </button>
               )}
             </div>
           </div>
+
+          {/* Page link for leaf nodes */}
+          {isLeaf && node && (
+            <div className="pt-1">
+              <Link
+                href={`/pages/${node.id}`}
+                className="inline-flex items-center gap-1 text-xs text-primary hover:underline font-medium"
+                onClick={onClose}
+              >
+                Sayfa Detayini Duzenle &rarr;
+              </Link>
+            </div>
+          )}
         </div>
 
         <DrawerFooter className="border-t border-border flex-row gap-2 pt-3">

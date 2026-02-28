@@ -3,7 +3,8 @@
 import { useEffect } from "react";
 import type { Node } from "@xyflow/react";
 import type { Dispatch, SetStateAction, MutableRefObject } from "react";
-import { useMapStore, type MapNodeData } from "@/stores/mapStore";
+import { useKbStore } from "@/stores/kbStore";
+import type { MapNodeData } from "@/lib/types";
 import type { AppNodeData } from "@/components/map/AppNode";
 import type { GroupNodeData } from "@/components/map/GroupNode";
 
@@ -14,15 +15,16 @@ interface Options {
 }
 
 /**
- * Store → RF senkronizasyonu: label/description/color değiştiğinde
- * React Flow node data'sını store ile hizalar.
+ * Store → RF senkronizasyonu: label/color değiştiğinde
+ * React Flow node data'sını kbStore ile hizalar.
  */
 export function useNodeSync({
   setNodes,
   hydrated,
   onAutoArrange,
 }: Options): MapNodeData[] {
-  const storeNodes = useMapStore.useNodes();
+  const kbData = useKbStore.useData();
+  const storeNodes: MapNodeData[] = kbData?.map?.nodes ?? [];
 
   useEffect(() => {
     if (!hydrated.current) return;
@@ -39,7 +41,6 @@ export function useNodeSync({
             data: {
               ...data,
               label: s.label,
-              description: s.description,
               color: s.color,
               onAutoArrange,
             },
@@ -51,7 +52,6 @@ export function useNodeSync({
           data: {
             ...data,
             label: s.label,
-            description: s.description,
             color: s.color,
           },
         };

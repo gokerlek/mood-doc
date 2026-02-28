@@ -8,8 +8,9 @@ import {
   type EdgeMouseHandler,
 } from '@xyflow/react';
 import type { Dispatch, SetStateAction } from 'react';
-import { useMapStore } from '@/stores/mapStore';
+import { useKbStore } from '@/stores/kbStore';
 import { storeEdgeToFlow } from '@/lib/map/flowBuilders';
+import type { MapEdgeData } from '@/lib/types';
 
 interface Options {
   setEdges: Dispatch<SetStateAction<Edge[]>>;
@@ -22,30 +23,31 @@ export interface EdgeActions {
 }
 
 export function useEdgeActions({ setEdges }: Options): EdgeActions {
-  const storeAddEdge = useMapStore.useAddEdge();
-  const storeDeleteEdge = useMapStore.useDeleteEdge();
+  const upsertEdge = useKbStore.useUpsertEdge();
+  const deleteEdge = useKbStore.useDeleteEdge();
 
   const handleDeleteEdge = useCallback(
     (id: string) => {
-      storeDeleteEdge(id);
+      deleteEdge(id);
       setEdges((es) => es.filter((e) => e.id !== id));
     },
-    [storeDeleteEdge, setEdges],
+    [deleteEdge, setEdges],
   );
 
   const onConnect: OnConnect = useCallback(
     (params) => {
-      storeAddEdge(params.source, params.target);
       const edgeId = `${params.source}->${params.target}`;
+      const newEdge: MapEdgeData = { id: edgeId, source: params.source, target: params.target };
+      upsertEdge(newEdge);
       setEdges((es) => {
         if (es.some((e) => e.id === edgeId)) return es;
         return addEdge(
-          { ...storeEdgeToFlow({ id: edgeId, source: params.source, target: params.target }, { onDelete: handleDeleteEdge }), ...params },
+          { ...storeEdgeToFlow(newEdge, { onDelete: handleDeleteEdge }), ...params },
           es,
         );
       });
     },
-    [storeAddEdge, setEdges, handleDeleteEdge],
+    [upsertEdge, setEdges, handleDeleteEdge],
   );
 
   const onEdgeDoubleClick: EdgeMouseHandler = useCallback(

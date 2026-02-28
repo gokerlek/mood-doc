@@ -3,7 +3,9 @@
 import { useCallback } from 'react';
 import { useReactFlow, type Node } from '@xyflow/react';
 import type { Dispatch, SetStateAction } from 'react';
-import { useMapStore } from '@/stores/mapStore';
+import { useKbStore } from '@/stores/kbStore';
+import { emptyPageData } from '@/lib/defaults';
+import type { MapNodeData } from '@/lib/types';
 import type { NodeCallbacks } from '@/lib/map/flowBuilders';
 import type { AppNodeData } from '@/components/map/AppNode';
 import type { GroupNodeData } from '@/components/map/GroupNode';
@@ -15,49 +17,67 @@ interface Options {
 
 export function useNodeCreation({ setNodes, callbacks }: Options) {
   const { getViewport } = useReactFlow();
-  const addNode = useMapStore.useAddNode();
-  const addGroup = useMapStore.useAddGroup();
+  const upsertNode = useKbStore.useUpsertNode();
 
   const handleAddNode = useCallback(() => {
     const { x, y, zoom } = getViewport();
-    const stored = addNode(
-      (-x + window.innerWidth / 2) / zoom - 96,
-      (-y + window.innerHeight / 2) / zoom - 30,
-    );
+    const nodeX = (-x + window.innerWidth / 2) / zoom - 96;
+    const nodeY = (-y + window.innerHeight / 2) / zoom - 30;
+
+    const newNode: MapNodeData = {
+      id: crypto.randomUUID(),
+      label: 'New Node',
+      x: nodeX,
+      y: nodeY,
+      page_data: emptyPageData(),
+    };
+
+    upsertNode(newNode);
+
     setNodes((ns) => [
       ...ns,
       {
-        id: stored.id,
+        id: newNode.id,
         type: 'appNode',
-        position: { x: stored.x, y: stored.y },
+        position: { x: newNode.x, y: newNode.y },
         data: {
-          label: stored.label,
-          description: stored.description,
-          color: stored.color,
+          label: newNode.label,
+          color: newNode.color,
           onEdit: callbacks.onEdit,
           onDelete: callbacks.onDelete,
         } as AppNodeData,
       },
     ]);
-  }, [getViewport, addNode, setNodes, callbacks]);
+  }, [getViewport, upsertNode, setNodes, callbacks]);
 
   const handleAddGroup = useCallback(() => {
     const { x, y, zoom } = getViewport();
-    const stored = addGroup(
-      (-x + window.innerWidth / 2) / zoom - 160,
-      (-y + window.innerHeight / 2) / zoom - 100,
-    );
+    const nodeX = (-x + window.innerWidth / 2) / zoom - 160;
+    const nodeY = (-y + window.innerHeight / 2) / zoom - 100;
+
+    const newGroup: MapNodeData = {
+      id: crypto.randomUUID(),
+      label: 'New Group',
+      x: nodeX,
+      y: nodeY,
+      node_type: 'group',
+      width: 320,
+      height: 200,
+    };
+
+    upsertNode(newGroup);
+
     setNodes((ns) => [
       ...ns,
       {
-        id: stored.id,
+        id: newGroup.id,
         type: 'groupNode',
-        position: { x: stored.x, y: stored.y },
-        style: { width: stored.width ?? 320, height: stored.height ?? 200 },
+        position: { x: newGroup.x, y: newGroup.y },
+        style: { width: newGroup.width ?? 320, height: newGroup.height ?? 200 },
         zIndex: -1,
         data: {
-          label: stored.label,
-          color: stored.color,
+          label: newGroup.label,
+          color: newGroup.color,
           onEdit: callbacks.onEdit,
           onDelete: callbacks.onDelete,
           onResize: callbacks.onResize,
@@ -65,7 +85,7 @@ export function useNodeCreation({ setNodes, callbacks }: Options) {
         } as GroupNodeData,
       },
     ]);
-  }, [getViewport, addGroup, setNodes, callbacks]);
+  }, [getViewport, upsertNode, setNodes, callbacks]);
 
   return { handleAddNode, handleAddGroup };
 }

@@ -3,7 +3,7 @@
 import { useState, useCallback } from 'react';
 import type { Node, Edge, OnBeforeDelete } from '@xyflow/react';
 import type { Dispatch, SetStateAction } from 'react';
-import { useMapStore } from '@/stores/mapStore';
+import { useKbStore } from '@/stores/kbStore';
 
 interface Options {
   nodes: Node[];
@@ -21,10 +21,10 @@ export interface DeleteFlow {
 
 /**
  * Delete tuşu / toolbar silme butonunu yakalar, onay modalı gösterir,
- * onaylanan silmeyi store + RF state'e uygular.
+ * onaylanan silmeyi kbStore + RF state'e uygular.
  */
 export function useDeleteFlow({ nodes, setNodes, setEdges }: Options): DeleteFlow {
-  const deleteNode = useMapStore.useDeleteNode();
+  const deleteNode = useKbStore.useDeleteNode();
   const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
 
   const requestDeleteNode = useCallback((id: string) => setPendingDeleteId(id), []);

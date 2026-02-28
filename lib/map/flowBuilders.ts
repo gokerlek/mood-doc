@@ -18,7 +18,6 @@ export interface EdgeCallbacks {
 export function storeNodeToFlow(n: MapNodeData, cbs: NodeCallbacks): Node {
   const baseData = {
     label: n.label,
-    description: n.description,
     color: n.color,
     onEdit: cbs.onEdit,
     onDelete: cbs.onDelete,
@@ -26,9 +25,9 @@ export function storeNodeToFlow(n: MapNodeData, cbs: NodeCallbacks): Node {
   const base = {
     id: n.id,
     position: { x: n.x, y: n.y },
-    ...(n.parentId ? { parentId: n.parentId } : {}),
+    ...(n.parent_id ? { parentId: n.parent_id } : {}),
   };
-  if (n.nodeType === 'group') {
+  if (n.node_type === 'group') {
     return {
       ...base,
       type: 'groupNode',

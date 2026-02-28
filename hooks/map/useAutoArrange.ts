@@ -3,7 +3,7 @@
 import { useCallback } from 'react';
 import { useReactFlow, type Node } from '@xyflow/react';
 import type { Dispatch, SetStateAction } from 'react';
-import { useMapStore } from '@/stores/mapStore';
+import { useKbStore } from '@/stores/kbStore';
 
 interface Options {
   setNodes: Dispatch<SetStateAction<Node[]>>;
@@ -15,8 +15,8 @@ const LABEL_HEIGHT = 36;
 
 export function useAutoArrange({ setNodes }: Options): { handleAutoArrange: (groupId: string) => void } {
   const { getNodes, getNode } = useReactFlow();
-  const moveNode = useMapStore.useMoveNode();
-  const resizeNode = useMapStore.useResizeNode();
+  const upsertNode = useKbStore.useUpsertNode();
+  const kbData = useKbStore.useData();
 
   const handleAutoArrange = useCallback(
     (groupId: string) => {
@@ -47,9 +47,16 @@ export function useAutoArrange({ setNodes }: Options): { handleAutoArrange: (gro
           return upd ? { ...n, position: { x: upd.x, y: upd.y } } : n;
         }),
       );
-      updates.forEach((u) => moveNode(u.id, u.x, u.y));
 
-      resizeNode(groupId, newWidth, totalHeight);
+      const storeNodes = kbData?.map?.nodes ?? [];
+      updates.forEach((u) => {
+        const existing = storeNodes.find((n) => n.id === u.id);
+        if (existing) upsertNode({ ...existing, x: u.x, y: u.y });
+      });
+
+      const existingGroup = storeNodes.find((n) => n.id === groupId);
+      if (existingGroup) upsertNode({ ...existingGroup, width: newWidth, height: totalHeight });
+
       setNodes((ns) =>
         ns.map((n) =>
           n.id === groupId
@@ -58,7 +65,7 @@ export function useAutoArrange({ setNodes }: Options): { handleAutoArrange: (gro
         ),
       );
     },
-    [getNodes, getNode, setNodes, moveNode, resizeNode],
+    [getNodes, getNode, setNodes, upsertNode, kbData],
   );
 
   return { handleAutoArrange };

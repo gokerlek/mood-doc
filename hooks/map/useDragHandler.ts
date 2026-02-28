@@ -3,7 +3,7 @@
 import { useCallback } from 'react';
 import { useReactFlow, type Node, type OnNodeDrag } from '@xyflow/react';
 import type { Dispatch, SetStateAction } from 'react';
-import { useMapStore } from '@/stores/mapStore';
+import { useKbStore } from '@/stores/kbStore';
 
 interface Options {
   setNodes: Dispatch<SetStateAction<Node[]>>;
@@ -15,13 +15,18 @@ interface Options {
  */
 export function useDragHandler({ setNodes }: Options): { onNodeDragStop: OnNodeDrag } {
   const { getIntersectingNodes, getNode } = useReactFlow();
-  const moveNode = useMapStore.useMoveNode();
-  const setNodeParent = useMapStore.useSetNodeParent();
+  const upsertNode = useKbStore.useUpsertNode();
+  const kbData = useKbStore.useData();
 
   const onNodeDragStop: OnNodeDrag = useCallback(
     (_event, node) => {
+      const storeNodes = kbData?.map?.nodes ?? [];
+      const existing = storeNodes.find((n) => n.id === node.id);
+
       if (node.type === 'groupNode') {
-        moveNode(node.id, node.position.x, node.position.y);
+        if (existing) {
+          upsertNode({ ...existing, x: node.position.x, y: node.position.y });
+        }
         return;
       }
 
@@ -38,7 +43,9 @@ export function useDragHandler({ setNodes }: Options): { onNodeDragStop: OnNodeD
             n.id === node.id ? { ...n, parentId: newParentId, position: { x: relX, y: relY } } : n,
           ),
         );
-        setNodeParent(node.id, newParentId, relX, relY);
+        if (existing) {
+          upsertNode({ ...existing, x: relX, y: relY, parent_id: newParentId });
+        }
       } else if (!newParentId && currentParentId) {
         const parent = getNode(currentParentId);
         const absX = (parent?.position.x ?? 0) + node.position.x;
@@ -48,12 +55,16 @@ export function useDragHandler({ setNodes }: Options): { onNodeDragStop: OnNodeD
             n.id === node.id ? { ...n, parentId: undefined, position: { x: absX, y: absY } } : n,
           ),
         );
-        setNodeParent(node.id, null, absX, absY);
+        if (existing) {
+          upsertNode({ ...existing, x: absX, y: absY, parent_id: null });
+        }
       } else {
-        moveNode(node.id, node.position.x, node.position.y);
+        if (existing) {
+          upsertNode({ ...existing, x: node.position.x, y: node.position.y });
+        }
       }
     },
-    [getIntersectingNodes, getNode, moveNode, setNodes, setNodeParent],
+    [getIntersectingNodes, getNode, upsertNode, kbData, setNodes],
   );
 
   return { onNodeDragStop };

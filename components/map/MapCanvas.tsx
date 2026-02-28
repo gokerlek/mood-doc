@@ -17,7 +17,7 @@ import {
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
-import { useMapStore } from '@/stores/mapStore';
+import { useKbStore } from '@/stores/kbStore';
 import { storeNodesToFlow, storeEdgeToFlow } from '@/lib/map/flowBuilders';
 import { useMapPersistence } from '@/hooks/map/useMapPersistence';
 import { useDeleteFlow } from '@/hooks/map/useDeleteFlow';
@@ -43,9 +43,7 @@ const defaultEdgeOptions = {
 } as const;
 
 function MapCanvasInner() {
-  const loadMapData = useMapStore.useLoadMapData();
-  const updateNode = useMapStore.useUpdateNode();
-  const resizeNode = useMapStore.useResizeNode();
+  const upsertNode = useKbStore.useUpsertNode();
 
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
@@ -63,10 +61,12 @@ function MapCanvasInner() {
 
   const handleResizeNode = useCallback(
     (id: string, width: number, height: number) => {
-      resizeNode(id, width, height);
+      const kbState = useKbStore.getState();
+      const existing = kbState.data?.map?.nodes.find((n) => n.id === id);
+      if (existing) upsertNode({ ...existing, width, height });
       setNodes((ns) => ns.map((n) => (n.id === id ? { ...n, style: { ...n.style, width, height } } : n)));
     },
-    [resizeNode, setNodes],
+    [upsertNode, setNodes],
   );
 
   const nodeCbs = useMemo(
@@ -76,7 +76,6 @@ function MapCanvasInner() {
 
   const hydrated = useMapPersistence({
     onLoad: (ns, es) => {
-      loadMapData(ns, es);
       setNodes(storeNodesToFlow(ns, nodeCbs));
       setEdges(es.map((e) => storeEdgeToFlow(e, { onDelete: handleDeleteEdge })));
     },
@@ -94,7 +93,7 @@ function MapCanvasInner() {
     [storeNodes, pendingDeleteId],
   );
   const pendingIsGroup = useMemo(
-    () => storeNodes.find((n) => n.id === pendingDeleteId)?.nodeType === 'group',
+    () => storeNodes.find((n) => n.id === pendingDeleteId)?.node_type === 'group',
     [storeNodes, pendingDeleteId],
   );
   const ctxValue = useMemo(() => ({ hoveredId, setHoveredId }), [hoveredId]);
@@ -142,7 +141,13 @@ function MapCanvasInner() {
           key={selectedNodeId ?? 'closed'}
           node={selectedNode}
           onClose={() => setSelectedNodeId(null)}
-          onSave={(patch) => { if (selectedNodeId) updateNode(selectedNodeId, patch); }}
+          onSave={(patch) => {
+            if (selectedNodeId) {
+              const kbState = useKbStore.getState();
+              const existing = kbState.data?.map?.nodes.find((n) => n.id === selectedNodeId);
+              if (existing) upsertNode({ ...existing, ...patch });
+            }
+          }}
         />
 
         <ConfirmModal
