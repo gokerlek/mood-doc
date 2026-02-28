@@ -4,19 +4,11 @@
 
 export type SectionType = 'text' | 'faq' | 'rules' | 'components';
 
-export interface PageSection {
-  id: string;
-  type: SectionType;
-  order: number;
-  // type === 'text'
-  content?: string;
-  // type === 'faq'
-  faq_ids?: string[];
-  // type === 'rules'
-  rule_ids?: string[];
-  // type === 'components'
-  component_ids?: string[];
-}
+export type PageSection =
+  | { id: string; type: 'text';       order: number; content: string }
+  | { id: string; type: 'faq';        order: number; faq_ids: string[] }
+  | { id: string; type: 'rules';      order: number; rule_ids: string[] }
+  | { id: string; type: 'components'; order: number; component_ids: string[] };
 
 export interface PageData {
   description: string;
@@ -68,34 +60,31 @@ export interface KbComponent {
   rule_ids: string[];
 }
 
-// --- FAQ ---
+// --- Shared Context ---
 
-export type FaqContext =
+export type KbItemContext =
   | { type: 'global' }
   | { type: 'page'; node_id: string }
   | { type: 'component'; component_id: string };
+
+// --- FAQ ---
 
 export interface KbFaq {
   id: string;
   question: string;
   answer: string;
   tag_ids: string[];
-  context: FaqContext;
+  context: KbItemContext;
 }
 
 // --- Rules ---
-
-export type RuleContext =
-  | { type: 'global' }
-  | { type: 'page'; node_id: string }
-  | { type: 'component'; component_id: string };
 
 export interface KbRule {
   id: string;
   title: string;
   description: string;
   tag_ids: string[];
-  context: RuleContext;
+  context: KbItemContext;
 }
 
 // --- Glossary ---
