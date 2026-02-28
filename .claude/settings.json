@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /Volumes/projects/mood-doc/.claude/hooks/block-css.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /Volumes/projects/mood-doc/.claude/hooks/typecheck.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
