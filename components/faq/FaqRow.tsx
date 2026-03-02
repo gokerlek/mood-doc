@@ -45,17 +45,19 @@ export function FaqRow({ faq, leafNodes, components, onEdit, onDelete, editingId
   const ctxLabel = contextLabel(faq.context, leafNodes, components);
 
   return (
-    <div className="bg-card border border-border rounded-xl px-5 py-4 group">
-      <div className="flex items-start gap-3">
-        <div className="flex-1 min-w-0">
-          <p className="font-medium text-foreground text-sm">{faq.question}</p>
-          <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{faq.answer}</p>
-          <div className="flex flex-wrap gap-1 mt-2">
+    <div className="bg-card border border-border border-l-4 border-l-primary/50 rounded-xl shadow-sm hover:shadow-md transition-all duration-150 group">
+      <div className="flex items-start gap-3 px-5 py-4">
+        <div className="flex-1 min-w-0 space-y-1.5">
+          <p className="font-semibold text-foreground text-sm leading-snug">{faq.question}</p>
+          <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
+          <div className="flex flex-wrap gap-1.5 pt-0.5">
             {ctxLabel && (
-              <Badge variant="outline">{ctxLabel}</Badge>
+              <Badge variant="secondary" className="text-[10px] font-medium">
+                {ctxLabel}
+              </Badge>
             )}
             {faq.tag_ids.map(t => (
-              <Badge key={t} variant="secondary">#{t}</Badge>
+              <Badge key={t} variant="outline" className="text-[10px]">#{t}</Badge>
             ))}
           </div>
         </div>
