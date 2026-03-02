@@ -51,7 +51,7 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
   };
 
   return (
-    <div className="flex flex-col gap-4 overflow-y-auto h-full px-4 py-4">
+    <div className="flex flex-col gap-4 overflow-y-auto h-full px-4 py-4 rounded-2xl shadow-lg">
       {/* Ad + Açıklama + Tags + Type */}
       <div className="space-y-3">
         <Input
@@ -100,6 +100,8 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
           </div>
         )}
       </div>
+
+      <div className="h-px bg-border" />
 
       {/* Tabs */}
       <Tabs defaultValue={isPrimitive ? 'faq' : 'yapi'} className="flex-1 min-h-0">
