@@ -1,8 +1,7 @@
 'use client';
 import { useState } from 'react';
-import { IconChevronDown, IconChevronRight } from '@tabler/icons-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { IconChevronDown } from '@tabler/icons-react';
+import { cn } from '@/lib/utils';
 
 export interface CollapsibleSectionProps {
   title: string;
@@ -20,22 +19,25 @@ export function CollapsibleSection({
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="space-y-2">
-      <Button
-        variant="ghost"
-        size="sm"
+    <div className="bg-muted/30 rounded-2xl overflow-hidden">
+      <button
         onClick={() => setOpen(o => !o)}
-        className="flex items-center gap-2 w-full justify-start h-auto py-1 px-0 hover:bg-transparent"
+        className="w-full flex items-center justify-between px-5 py-4 hover:bg-muted/50 transition-colors"
       >
-        {open
-          ? <IconChevronDown size={14} className="text-muted-foreground" />
-          : <IconChevronRight size={14} className="text-muted-foreground" />}
-        <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-          {title}
-        </span>
-        <Badge variant="secondary" className="text-xs font-normal">{count}</Badge>
-      </Button>
-      {open && <div className="space-y-2 pl-4">{children}</div>}
+        <div className="flex items-center gap-2">
+          <span className="text-[10px] font-bold uppercase tracking-[0.08em] text-muted-foreground">
+            {title}
+          </span>
+          <span className="text-[10px] bg-background text-muted-foreground px-1.5 py-0.5 rounded-full font-medium border border-border">
+            {count}
+          </span>
+        </div>
+        <IconChevronDown
+          size={14}
+          className={cn('text-muted-foreground transition-transform', open && 'rotate-180')}
+        />
+      </button>
+      {open && <div className="px-5 pb-5 space-y-2">{children}</div>}
     </div>
   );
 }
