@@ -173,44 +173,50 @@
   "hotPaths": [
     {
       "path": "lib/defaults.ts",
-      "accessCount": 22,
-      "lastAccessed": 1772406179876,
+      "accessCount": 25,
+      "lastAccessed": 1772439262150,
       "type": "file"
     },
     {
       "path": "stores/kbStore.ts",
-      "accessCount": 19,
-      "lastAccessed": 1772406184229,
-      "type": "file"
-    },
-    {
-      "path": "components/kb-components/ComponentSketchCanvas.tsx",
-      "accessCount": 15,
-      "lastAccessed": 1772406379536,
+      "accessCount": 23,
+      "lastAccessed": 1772444262351,
       "type": "file"
     },
     {
       "path": "app/(app)/components/[id]/page.tsx",
-      "accessCount": 14,
-      "lastAccessed": 1772392833732,
+      "accessCount": 17,
+      "lastAccessed": 1772439641790,
       "type": "file"
     },
     {
-      "path": "lib/types.ts",
-      "accessCount": 12,
-      "lastAccessed": 1772405449161,
-      "type": "directory"
+      "path": "components/kb-components/ComponentSketchCanvas.tsx",
+      "accessCount": 16,
+      "lastAccessed": 1772437095912,
+      "type": "file"
     },
     {
       "path": "",
-      "accessCount": 9,
-      "lastAccessed": 1772390086087,
+      "accessCount": 16,
+      "lastAccessed": 1772444220240,
+      "type": "directory"
+    },
+    {
+      "path": "lib/types.ts",
+      "accessCount": 14,
+      "lastAccessed": 1772439255910,
       "type": "directory"
     },
     {
       "path": "components/kb-components/ComponentSlotSection.tsx",
+      "accessCount": 8,
+      "lastAccessed": 1772437095615,
+      "type": "file"
+    },
+    {
+      "path": "app/(app)/layout.tsx",
       "accessCount": 7,
-      "lastAccessed": 1772389948701,
+      "lastAccessed": 1772444223940,
       "type": "file"
     },
     {
@@ -220,33 +226,27 @@
       "type": "file"
     },
     {
-      "path": "app/(app)/layout.tsx",
-      "accessCount": 6,
-      "lastAccessed": 1772390240600,
-      "type": "file"
-    },
-    {
       "path": "components/kb-components/ComponentFaqSection.tsx",
-      "accessCount": 5,
-      "lastAccessed": 1772390073871,
-      "type": "file"
-    },
-    {
-      "path": "components/kb-components/ComponentRuleSection.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1772390074500,
+      "accessCount": 6,
+      "lastAccessed": 1772439225796,
       "type": "file"
     },
     {
       "path": "components/kb-components/ComponentPalette.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1772392826801,
+      "accessCount": 5,
+      "lastAccessed": 1772437096074,
+      "type": "file"
+    },
+    {
+      "path": "components/kb-components/ComponentRuleSection.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1772439225809,
       "type": "file"
     },
     {
       "path": "components/kb-components/ComponentRightPanel.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1772406214951,
+      "accessCount": 5,
+      "lastAccessed": 1772439579474,
       "type": "file"
     },
     {
@@ -293,8 +293,26 @@
     },
     {
       "path": "components/pages/PageCard.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1772287781917,
+      "accessCount": 3,
+      "lastAccessed": 1772437083872,
+      "type": "file"
+    },
+    {
+      "path": "app/(app)/pages/[id]/page.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1772437155095,
+      "type": "file"
+    },
+    {
+      "path": "components/pages/PageRightPanel.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1772439642123,
+      "type": "file"
+    },
+    {
+      "path": "components/kb-components/ComponentPropEditList.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1772440251794,
       "type": "file"
     },
     {
@@ -322,15 +340,21 @@
       "type": "file"
     },
     {
-      "path": "components/kb-components/ComponentPropEditList.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1772390073563,
-      "type": "file"
-    },
-    {
       "path": "components/ui/tabs.tsx",
       "accessCount": 2,
       "lastAccessed": 1772390083389,
+      "type": "file"
+    },
+    {
+      "path": "components/pages/SectionList.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1772437083466,
+      "type": "file"
+    },
+    {
+      "path": "app/(app)/pages/page.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1772437096434,
       "type": "file"
     },
     {
@@ -352,33 +376,15 @@
       "type": "file"
     },
     {
-      "path": "components/pages/SectionList.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1772373071122,
-      "type": "file"
-    },
-    {
       "path": "components/map/FloatingEdge.tsx",
       "accessCount": 1,
       "lastAccessed": 1772373073074,
       "type": "file"
     },
     {
-      "path": "app/(app)/pages/page.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1772376345374,
-      "type": "file"
-    },
-    {
       "path": "app/(app)/page.tsx",
       "accessCount": 1,
       "lastAccessed": 1772376345568,
-      "type": "file"
-    },
-    {
-      "path": "app/(app)/pages/[id]/page.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1772376350563,
       "type": "file"
     },
     {
@@ -415,6 +421,54 @@
       "path": "hooks/useKb.ts",
       "accessCount": 1,
       "lastAccessed": 1772401445640,
+      "type": "file"
+    },
+    {
+      "path": "components/pages/AddSectionPalette.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1772437083577,
+      "type": "file"
+    },
+    {
+      "path": "components/pages/sections/TextSection.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1772437083887,
+      "type": "file"
+    },
+    {
+      "path": "components/pages/sections/ComponentsSection.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1772437084019,
+      "type": "file"
+    },
+    {
+      "path": "components/pages/sections/FaqSection.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1772437086240,
+      "type": "file"
+    },
+    {
+      "path": "components/pages/sections/RulesSection.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1772437086475,
+      "type": "file"
+    },
+    {
+      "path": "components/pages/PageFaqSection.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1772439274941,
+      "type": "file"
+    },
+    {
+      "path": "components/pages/PageRuleSection.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1772439283357,
+      "type": "file"
+    },
+    {
+      "path": "lib/github.ts",
+      "accessCount": 1,
+      "lastAccessed": 1772444207207,
       "type": "file"
     }
   ],

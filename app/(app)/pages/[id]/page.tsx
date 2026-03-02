@@ -1,14 +1,21 @@
 'use client';
-import { use } from 'react';
+import { use, useState } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import {
+  DndContext,
+  DragOverlay,
+  PointerSensor,
+  useSensor,
+  useSensors,
+  type DragStartEvent,
+} from '@dnd-kit/core';
 import { useKbStore } from '@/stores/kbStore';
 import { emptyPageData } from '@/lib/defaults';
-import { TagSelector } from '@/components/tags/TagSelector';
-import { SectionList } from '@/components/pages/SectionList';
-import { AddSectionPalette } from '@/components/pages/AddSectionPalette';
-import { Textarea } from '@/components/ui/textarea';
-import { Separator } from '@/components/ui/separator';
+import type { ComponentSlot } from '@/lib/types';
+import { ComponentPalette } from '@/components/kb-components/ComponentPalette';
+import { PageSketchCanvas } from '@/components/pages/PageSketchCanvas';
+import { PageRightPanel } from '@/components/pages/PageRightPanel';
 import { IconArrowLeft } from '@tabler/icons-react';
 
 interface PageDetailProps {
@@ -19,6 +26,8 @@ export default function PageDetailPage({ params }: PageDetailProps) {
   const { id } = use(params);
   const data = useKbStore.useData();
   const updatePageData = useKbStore.useUpdatePageData();
+  const [selectedSlotId, setSelectedSlotId] = useState<string | null>(null);
+  const [activeDragName, setActiveDragName] = useState<string>('');
 
   if (!data) return null;
 
@@ -26,47 +35,87 @@ export default function PageDetailPage({ params }: PageDetailProps) {
   if (!node) return notFound();
 
   const pageData = node.page_data ?? emptyPageData();
+  const slots: ComponentSlot[] = pageData.canvas_slots ?? [];
+  const frameWidth = pageData.frame_width ?? 480;
+  const frameHeight = pageData.frame_height ?? 320;
+
+  const pickable = data.components.filter(
+    c => c.component_type === 'primitive' || c.component_type === 'composite' || c.component_type === 'section'
+  );
+
+  const sensors = useSensors(useSensor(PointerSensor));
+
+  const handleDragStart = (event: DragStartEvent) => {
+    const name = event.active.data.current?.componentName as string | undefined;
+    setActiveDragName(name ?? '');
+  };
+
+  const handleDragEnd = () => {
+    setActiveDragName('');
+  };
 
   return (
-    <div className="p-6 max-w-2xl space-y-6">
-      <Link
-        href="/pages"
-        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+    <div className="flex flex-col flex-1 min-h-0">
+      {/* Top bar — DndContext dışında */}
+      <div className="shrink-0 px-4 py-2 border-b border-border flex items-center gap-3">
+        <Link
+          href="/pages"
+          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <IconArrowLeft size={14} />
+          Sayfalar
+        </Link>
+        <span className="text-sm font-semibold">{node.label}</span>
+      </div>
+
+      <DndContext
+        sensors={sensors}
+        onDragStart={handleDragStart}
+        onDragEnd={handleDragEnd}
       >
-        <IconArrowLeft size={14} />
-        Sayfalar
-      </Link>
+        <div className="flex flex-1 min-h-0 overflow-hidden">
+          {/* Left: Component palette */}
+          <div className="w-56 shrink-0 border-r border-border overflow-y-auto">
+            <ComponentPalette components={pickable} />
+          </div>
 
-      <h1 className="text-xl font-semibold">{node.label}</h1>
+          {/* Middle: Canvas */}
+          <div className="flex-1 min-w-0 overflow-y-auto">
+            <PageSketchCanvas
+              slots={slots}
+              frameWidth={frameWidth}
+              frameHeight={frameHeight}
+              selectedSlotId={selectedSlotId}
+              onSelectSlot={setSelectedSlotId}
+              onUpdateSlots={updated =>
+                updatePageData(id, { ...pageData, canvas_slots: updated })
+              }
+              onUpdateFrame={patch =>
+                updatePageData(id, { ...pageData, ...patch })
+              }
+            />
+          </div>
 
-      <div className="space-y-3">
-        <div>
-          <p className="text-xs font-medium text-muted-foreground mb-1">Sayfa Açıklaması</p>
-          <Textarea
-            value={pageData.description}
-            onChange={e => updatePageData(id, { ...pageData, description: e.target.value })}
-            placeholder="Bu sayfa ne işe yarar?..."
-            rows={3}
-          />
+          {/* Right: Page metadata + slot bindings + props */}
+          <div className="w-96 shrink-0 border-l border-border overflow-hidden">
+            <PageRightPanel
+              nodeId={id}
+              nodeLabel={node.label}
+              pageData={pageData}
+              selectedSlotId={selectedSlotId}
+              onSelectSlot={setSelectedSlotId}
+            />
+          </div>
         </div>
-        <div>
-          <p className="text-xs font-medium text-muted-foreground mb-1">Taglar</p>
-          <TagSelector
-            selectedIds={pageData.tag_ids}
-            onChange={tag_ids => updatePageData(id, { ...pageData, tag_ids })}
-          />
-        </div>
-      </div>
 
-      <Separator />
-
-      <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          <h2 className="font-medium text-sm">İçerik Section&apos;ları</h2>
-          <AddSectionPalette nodeId={id} currentSections={pageData.sections} />
-        </div>
-        <SectionList nodeId={id} sections={pageData.sections} />
-      </div>
+        <DragOverlay>
+          {activeDragName && (
+            <div className="px-2 py-1 bg-primary text-primary-foreground text-xs rounded shadow-lg">
+              {activeDragName}
+            </div>
+          )}
+        </DragOverlay>
+      </DndContext>
     </div>
   );
 }

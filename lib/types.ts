@@ -14,6 +14,12 @@ export interface PageData {
   description: string;
   tag_ids: string[];
   sections: PageSection[];
+  canvas_slots?: ComponentSlot[];
+  frame_width?: number;   // default 480
+  frame_height?: number;  // default 320
+  faq_ids?: string[];
+  rule_ids?: string[];
+  props?: ComponentPropDef[];
 }
 
 export interface MapNodeData {

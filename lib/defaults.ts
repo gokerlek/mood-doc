@@ -106,6 +106,12 @@ export const emptyPageData = (): PageData => ({
   description: '',
   tag_ids: [],
   sections: [],
+  canvas_slots: [],
+  frame_width: 480,
+  frame_height: 320,
+  faq_ids: [],
+  rule_ids: [],
+  props: [],
 });
 
 export const SEED_PRIMITIVES: KbComponent[] = [
