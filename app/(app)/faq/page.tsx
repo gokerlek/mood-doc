@@ -1,7 +1,8 @@
 'use client';
 import { useState, useMemo } from 'react';
 import { useKbStore } from '@/stores/kbStore';
-import { IconPlus } from '@tabler/icons-react';
+import { IconPlus, IconHelp } from '@tabler/icons-react';
+import { PageHeader } from '@/components/shared/PageHeader';
 import { ConfirmModal } from '@/components/shared/ConfirmModal';
 import { FaqForm } from '@/components/faq/FaqForm';
 import { FaqRow } from '@/components/faq/FaqRow';
@@ -63,21 +64,20 @@ export default function FaqPage() {
   });
 
   return (
-    <div className="max-w-2xl mx-auto p-8 space-y-6">
-      {/* Header */}
-      <div className="flex items-start justify-between">
-        <div>
-          <h1 className="text-xl font-bold text-foreground">FAQ</h1>
-          <p className="text-sm text-muted-foreground mt-0.5">
-            {data.faq.length} question{data.faq.length !== 1 ? 's' : ''} toplam.
-          </p>
-        </div>
-        {!adding && (
-          <Button onClick={() => { setAdding(true); setEditingId(null); }}>
-            <IconPlus size={15} />Add FAQ
-          </Button>
-        )}
-      </div>
+    <div className="p-6 max-w-4xl space-y-6">
+      <PageHeader
+        icon={<IconHelp size={22} className="text-primary" />}
+        title="FAQ"
+        description={`${data.faq.length} soru toplam`}
+        action={
+          !adding ? (
+            <Button onClick={() => { setAdding(true); setEditingId(null); }}>
+              <IconPlus size={15} />
+              FAQ Ekle
+            </Button>
+          ) : undefined
+        }
+      />
 
       {/* Tag filter */}
       {allTags.length > 0 && (
@@ -117,10 +117,11 @@ export default function FaqPage() {
 
       {/* Empty state */}
       {data.faq.length === 0 && !adding && (
-        <div className="text-center py-16 text-muted-foreground text-sm">
-          No FAQs yet.{' '}
-          <Button variant="link" onClick={() => setAdding(true)} className="p-0 h-auto">
-            Add first question →
+        <div className="text-center py-12 bg-muted/30 rounded-2xl border border-dashed border-border">
+          <IconHelp size={28} className="text-muted-foreground/40 mx-auto mb-2" />
+          <p className="text-sm text-muted-foreground">Henüz FAQ yok.</p>
+          <Button variant="link" onClick={() => setAdding(true)} className="mt-1 h-auto p-0 text-sm">
+            İlk soruyu ekle →
           </Button>
         </div>
       )}
@@ -148,9 +149,9 @@ export default function FaqPage() {
 
       {filtered.length === 0 && data.faq.length > 0 && (
         <p className="text-center py-8 text-sm text-muted-foreground">
-          No FAQs with tag <span className="font-mono">#{activeTag}</span>.{' '}
+          <span className="font-mono">#{activeTag}</span> etiketli FAQ yok.{' '}
           <Button variant="link" onClick={() => setActiveTag(null)} className="p-0 h-auto">
-            Clear filter
+            Filtreyi temizle
           </Button>
         </p>
       )}
