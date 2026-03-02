@@ -2,6 +2,7 @@
 import { useKbStore } from '@/stores/kbStore';
 import { emptyTagCategory } from '@/lib/defaults';
 import { TagCategorySection } from '@/components/tags/TagCategorySection';
+import { PageHeader } from '@/components/shared/PageHeader';
 import { Button } from '@/components/ui/button';
 import { IconPlus, IconTags } from '@tabler/icons-react';
 
@@ -18,25 +19,27 @@ export default function TagsPage() {
   };
 
   return (
-    <div className="p-6 max-w-2xl space-y-6">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <IconTags size={20} className="text-primary" />
-          <div>
-            <h1 className="text-lg font-semibold">Tag Yonetimi</h1>
-            <p className="text-sm text-muted-foreground">Tum tag kategorilerini ve etiketleri buradan yonetin.</p>
-          </div>
-        </div>
-        <Button size="sm" onClick={handleAddCategory}>
-          <IconPlus size={14} />
-          Kategori Ekle
-        </Button>
-      </div>
+    <div className="p-6 max-w-4xl space-y-6">
+      <PageHeader
+        icon={<IconTags size={22} className="text-primary" />}
+        title="Tag Yönetimi"
+        description="Tüm tag kategorilerini ve etiketleri buradan yönetin."
+        action={
+          <Button onClick={handleAddCategory}>
+            <IconPlus size={14} />
+            Kategori Ekle
+          </Button>
+        }
+      />
 
       {tag_categories.length === 0 ? (
-        <p className="text-sm text-muted-foreground py-8 text-center">
-          Henuz kategori yok. "Kategori Ekle" ile baslayin.
-        </p>
+        <div className="text-center py-12 bg-muted/30 rounded-2xl border border-dashed border-border">
+          <IconTags size={28} className="text-muted-foreground/40 mx-auto mb-2" />
+          <p className="text-sm text-muted-foreground">Henüz kategori yok.</p>
+          <Button variant="link" onClick={handleAddCategory} className="mt-1 h-auto p-0 text-sm">
+            İlk kategoriyi ekle →
+          </Button>
+        </div>
       ) : (
         <div className="space-y-3">
           {tag_categories.map(cat => (
