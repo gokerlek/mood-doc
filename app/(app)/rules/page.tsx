@@ -1,8 +1,10 @@
 'use client';
 import { useState, useMemo } from 'react';
 import { useKbStore } from '@/stores/kbStore';
-import { IconPlus } from '@tabler/icons-react';
+import { IconPlus, IconShieldCheck } from '@tabler/icons-react';
 import { ConfirmModal } from '@/components/shared/ConfirmModal';
+import { PageHeader } from '@/components/shared/PageHeader';
+import { CollapsibleSection } from '@/components/faq/CollapsibleSection';
 import { RuleForm } from '@/components/rules/RuleForm';
 import { RuleRow } from '@/components/rules/RuleRow';
 import { emptyRule } from '@/lib/defaults';
@@ -50,23 +52,21 @@ export default function RulesPage() {
   });
 
   return (
-    <div className="max-w-2xl mx-auto p-8 space-y-6">
-      {/* Header */}
-      <div className="flex items-start justify-between">
-        <div>
-          <h1 className="text-xl font-bold text-foreground">Kurallar</h1>
-          <p className="text-sm text-muted-foreground mt-0.5">
-            Platform genelinde geçerli ve bağlama özgü kurallar.
-          </p>
-        </div>
-        {!adding && (
-          <Button onClick={() => { setAdding(true); setEditingId(null); }}>
-            <IconPlus size={15} />Kural Ekle
-          </Button>
-        )}
-      </div>
+    <div className="p-6 max-w-4xl space-y-6">
+      <PageHeader
+        icon={<IconShieldCheck size={22} className="text-primary" />}
+        title="Kurallar"
+        description={`${data.rules.length} kural toplam`}
+        action={
+          !adding ? (
+            <Button onClick={() => { setAdding(true); setEditingId(null); }}>
+              <IconPlus size={15} />
+              Kural Ekle
+            </Button>
+          ) : undefined
+        }
+      />
 
-      {/* Add form */}
       {adding && (
         <RuleForm
           initial={emptyRule()}
@@ -77,36 +77,32 @@ export default function RulesPage() {
         />
       )}
 
-      {/* Empty state */}
       {data.rules.length === 0 && !adding && (
-        <div className="text-center py-16 text-muted-foreground text-sm">
-          Henüz kural eklenmemiş.{' '}
-          <Button variant="link" onClick={() => setAdding(true)} className="p-0 h-auto">
+        <div className="text-center py-12 bg-muted/30 rounded-2xl border border-dashed border-border">
+          <IconShieldCheck size={28} className="text-muted-foreground/40 mx-auto mb-2" />
+          <p className="text-sm text-muted-foreground">Henüz kural eklenmemiş.</p>
+          <Button variant="link" onClick={() => setAdding(true)} className="mt-1 h-auto p-0 text-sm">
             İlk kuralı ekle →
           </Button>
         </div>
       )}
 
-      {/* Categorized list */}
       {data.rules.length > 0 && (
-        <div className="space-y-6">
+        <div className="space-y-3">
           {globalRules.length > 0 && (
-            <div className="space-y-2">
-              <h2 className="text-sm font-semibold text-foreground">Global</h2>
+            <CollapsibleSection title="Global" count={globalRules.length}>
               {globalRules.map(rule => <RuleRow key={rule.id} {...rowProps(rule)} />)}
-            </div>
+            </CollapsibleSection>
           )}
           {pageRules.length > 0 && (
-            <div className="space-y-2">
-              <h2 className="text-sm font-semibold text-foreground">Sayfaya Bağlı</h2>
+            <CollapsibleSection title="Sayfaya Bağlı" count={pageRules.length}>
               {pageRules.map(rule => <RuleRow key={rule.id} {...rowProps(rule)} />)}
-            </div>
+            </CollapsibleSection>
           )}
           {componentRules.length > 0 && (
-            <div className="space-y-2">
-              <h2 className="text-sm font-semibold text-foreground">Component'e Bağlı</h2>
+            <CollapsibleSection title="Component'e Bağlı" count={componentRules.length}>
               {componentRules.map(rule => <RuleRow key={rule.id} {...rowProps(rule)} />)}
-            </div>
+            </CollapsibleSection>
           )}
         </div>
       )}

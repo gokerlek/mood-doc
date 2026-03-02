@@ -45,8 +45,8 @@ export function RuleRow({ rule, leafNodes, components, onEdit, onDelete, editing
   const ctxLabel = contextLabel(rule.context, leafNodes, components);
 
   return (
-    <div className="bg-card border border-border rounded-xl px-5 py-4 group">
-      <div className="flex items-start gap-3">
+    <div className="bg-card border border-border border-l-4 border-l-amber-500/60 rounded-xl shadow-sm hover:shadow-md transition-all duration-150 group">
+      <div className="flex items-start gap-3 px-5 py-4">
         <div className="flex-1 min-w-0">
           <p className="font-medium text-foreground text-sm">{rule.title}</p>
           <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{rule.description}</p>
