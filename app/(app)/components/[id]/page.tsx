@@ -1,15 +1,14 @@
 'use client';
-import { use } from 'react';
+import { use, useState } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { useKbStore } from '@/stores/kbStore';
-import { TagSelector } from '@/components/tags/TagSelector';
-import { ComponentFaqSection } from '@/components/kb-components/ComponentFaqSection';
-import { ComponentRuleSection } from '@/components/kb-components/ComponentRuleSection';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Separator } from '@/components/ui/separator';
-import { IconArrowLeft } from '@tabler/icons-react';
+import { DndContext, DragOverlay, type DragStartEvent } from '@dnd-kit/core';
+import { ComponentPalette } from '@/components/kb-components/ComponentPalette';
+import { ComponentSlotSection } from '@/components/kb-components/ComponentSlotSection';
+import { ComponentPrimitiveSection } from '@/components/kb-components/ComponentPrimitiveSection';
+import { ComponentRightPanel } from '@/components/kb-components/ComponentRightPanel';
+import { IconArrowLeft, IconCube } from '@tabler/icons-react';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -18,53 +17,102 @@ interface PageProps {
 export default function ComponentDetailPage({ params }: PageProps) {
   const { id } = use(params);
   const data = useKbStore.useData();
-  const upsertComponent = useKbStore.useUpsertComponent();
+  const [activeDragName, setActiveDragName] = useState('');
+  const [selectedSlotId, setSelectedSlotId] = useState<string | null>(null);
 
   if (!data) return null;
 
   const comp = data.components.find(c => c.id === id);
   if (!comp) return notFound();
 
-  const update = (patch: Partial<typeof comp>) =>
-    upsertComponent({ ...comp, ...patch });
+  const isPrimitive = comp.component_type === 'primitive';
+  const backHref = comp.component_type === 'section' ? '/sections' : '/components';
+  const backLabel = comp.component_type === 'section' ? 'Sections' : 'Componentler';
+
+  const pickable = data.components.filter(
+    c => c.component_type === 'primitive' || c.component_type === 'composite'
+  );
 
   return (
-    <div className="p-6 max-w-2xl space-y-6">
-      <Link
-        href="/components"
-        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
-      >
-        <IconArrowLeft size={14} />
-        Componentler
-      </Link>
-
-      <div className="space-y-4">
-        <Input
-          value={comp.name}
-          onChange={e => update({ name: e.target.value })}
-          placeholder="Component adı..."
-          className="text-lg font-semibold border-none px-0 focus-visible:ring-0 shadow-none"
-        />
-        <Textarea
-          value={comp.description}
-          onChange={e => update({ description: e.target.value })}
-          placeholder="Ne işe yarar, nasıl kullanılır..."
-          rows={3}
-        />
-        <div>
-          <p className="text-xs font-medium text-muted-foreground mb-1.5">Taglar</p>
-          <TagSelector
-            selectedIds={comp.tag_ids}
-            onChange={tag_ids => update({ tag_ids })}
-          />
-        </div>
+    <div className="flex flex-col flex-1 min-h-0">
+      {/* Top bar */}
+      <div className="px-4 py-2 border-b border-border shrink-0">
+        <Link
+          href={backHref}
+          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <IconArrowLeft size={14} />
+          {backLabel}
+        </Link>
       </div>
 
-      <Separator />
-      <ComponentFaqSection componentId={id} faqIds={comp.faq_ids} />
+      {/* 3-kolon */}
+      <div className="flex flex-1 min-h-0 overflow-hidden">
+        {isPrimitive ? (
+          <>
+            {/* Sol: atom info */}
+            <div className="w-56 shrink-0 border-r border-border flex flex-col items-center justify-center gap-2 text-center p-4">
+              <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
+                <IconCube size={20} className="text-muted-foreground" />
+              </div>
+              <p className="text-xs font-medium">Atom Bileşen</p>
+              <p className="text-[11px] text-muted-foreground leading-relaxed">
+                Bu bileşen standart bir atom&apos;dur. Composite bileşenlerin
+                paletinde görünür.
+              </p>
+            </div>
 
-      <Separator />
-      <ComponentRuleSection componentId={id} ruleIds={comp.rule_ids} />
+            {/* Orta: primitive props/variants/conditions */}
+            <div className="flex-1 overflow-y-auto p-4">
+              <ComponentPrimitiveSection comp={comp} />
+            </div>
+
+            {/* Sağ: metadata + tabs */}
+            <div className="w-80 shrink-0 border-l border-border overflow-hidden">
+              <ComponentRightPanel comp={comp} />
+            </div>
+          </>
+        ) : (
+          <DndContext
+            onDragStart={(e: DragStartEvent) =>
+              setActiveDragName(e.active.data.current?.componentName ?? '')
+            }
+            onDragEnd={() => setActiveDragName('')}
+            onDragCancel={() => setActiveDragName('')}
+          >
+            {/* Sol: palette */}
+            <div className="w-56 shrink-0 border-r border-border p-2 overflow-y-auto" style={{ scrollbarGutter: 'stable' }}>
+              <ComponentPalette components={pickable} />
+            </div>
+
+            {/* Orta: canvas */}
+            <div className="flex-1 overflow-y-auto">
+              <ComponentSlotSection
+                comp={comp}
+                selectedSlotId={selectedSlotId}
+                onSelectSlot={setSelectedSlotId}
+              />
+            </div>
+
+            {/* Sağ: metadata + tabs */}
+            <div className="w-96 shrink-0 border-l border-border overflow-hidden">
+              <ComponentRightPanel
+                comp={comp}
+                selectedSlotId={selectedSlotId}
+                onSelectSlot={setSelectedSlotId}
+              />
+            </div>
+
+            <DragOverlay>
+              {activeDragName && (
+                <div className="px-2 py-1 bg-primary text-primary-foreground text-xs rounded shadow-lg pointer-events-none">
+                  {activeDragName}
+                </div>
+              )}
+            </DragOverlay>
+          </DndContext>
+        )}
+      </div>
     </div>
   );
 }

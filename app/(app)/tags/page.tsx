@@ -11,7 +11,7 @@ export default function TagsPage() {
 
   if (!data) return null;
 
-  const { tag_categories, tags } = data;
+  const { tag_categories = [], tags = [] } = data;
 
   const handleAddCategory = () => {
     upsertTagCategory({ ...emptyTagCategory(), label: 'Yeni Kategori' });

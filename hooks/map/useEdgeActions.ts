@@ -37,7 +37,13 @@ export function useEdgeActions({ setEdges }: Options): EdgeActions {
   const onConnect: OnConnect = useCallback(
     (params) => {
       const edgeId = `${params.source}->${params.target}`;
-      const newEdge: MapEdgeData = { id: edgeId, source: params.source, target: params.target };
+      const newEdge: MapEdgeData = {
+        id: edgeId,
+        source: params.source,
+        target: params.target,
+        sourceHandle: params.sourceHandle,
+        targetHandle: params.targetHandle,
+      };
       upsertEdge(newEdge);
       setEdges((es) => {
         if (es.some((e) => e.id === edgeId)) return es;

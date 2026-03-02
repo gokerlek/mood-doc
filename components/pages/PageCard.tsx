@@ -11,7 +11,7 @@ interface PageCardProps {
 
 export function PageCard({ node }: PageCardProps) {
   const data = useKbStore.useData();
-  const tags = data?.tags.filter(t => node.page_data?.tag_ids.includes(t.id)) ?? [];
+  const tags = (data?.tags ?? []).filter(t => node.page_data?.tag_ids?.includes(t.id) ?? false);
   const sectionCount = node.page_data?.sections.length ?? 0;
 
   return (

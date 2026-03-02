@@ -15,7 +15,7 @@ export function TagSelector({ selectedIds, onChange, className }: TagSelectorPro
   const data = useKbStore.useData();
   if (!data) return null;
 
-  const { tags, tag_categories } = data;
+  const { tags = [], tag_categories = [] } = data;
 
   const toggle = (id: string) => {
     onChange(

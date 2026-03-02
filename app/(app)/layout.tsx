@@ -9,25 +9,34 @@ import {
   IconBook2, IconAlphabetLatin,
   IconShieldCheck, IconHelp, IconRobot, IconDeviceFloppy,
   IconLoader2, IconAlertCircle, IconBrandGithub, IconSitemap,
+  IconLayoutDashboard, IconPuzzle, IconTags, IconLayoutColumns,
 } from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
 const NAV_GROUPS = [
   {
-    label: 'Content',
+    label: 'Yapı',
     items: [
-      { label: 'Platform', icon: IconBook2, href: '/' },
-      { label: 'Glossary', icon: IconAlphabetLatin, href: '/glossary' },
-      { label: 'Rules', icon: IconShieldCheck, href: '/rules' },
-      { label: 'FAQ', icon: IconHelp, href: '/faq' },
+      { label: 'Harita', icon: IconSitemap, href: '/map' },
+      { label: 'Sayfalar', icon: IconLayoutDashboard, href: '/pages' },
+      { label: 'Sections', icon: IconLayoutColumns, href: '/sections' },
+      { label: 'Componentler', icon: IconPuzzle, href: '/components' },
     ],
   },
   {
-    label: 'Tools',
+    label: 'İçerik',
+    items: [
+      { label: 'FAQ', icon: IconHelp, href: '/faq' },
+      { label: 'Kurallar', icon: IconShieldCheck, href: '/rules' },
+      { label: 'Sözlük', icon: IconAlphabetLatin, href: '/glossary' },
+      { label: 'Taglar', icon: IconTags, href: '/tags' },
+    ],
+  },
+  {
+    label: 'Sistem',
     items: [
       { label: 'Agent', icon: IconRobot, href: '/agent' },
-      { label: 'Map', icon: IconSitemap, href: '/map' },
     ],
   },
 ] as const;

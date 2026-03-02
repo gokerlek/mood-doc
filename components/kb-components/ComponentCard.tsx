@@ -5,7 +5,7 @@ import { useKbStore } from '@/stores/kbStore';
 import type { KbComponent } from '@/lib/types';
 import { TagBadge } from '@/components/tags/TagBadge';
 import { ConfirmModal } from '@/components/shared/ConfirmModal';
-import { IconChevronRight, IconPuzzle, IconTrash } from '@tabler/icons-react';
+import { IconAtom, IconChevronRight, IconPuzzle, IconTrash } from '@tabler/icons-react';
 
 interface ComponentCardProps {
   component: KbComponent;
@@ -16,7 +16,8 @@ export function ComponentCard({ component }: ComponentCardProps) {
   const data = useKbStore.useData();
   const deleteComponent = useKbStore.useDeleteComponent();
 
-  const tags = data?.tags.filter(t => component.tag_ids.includes(t.id)) ?? [];
+  const isPrimitive = component.component_type === 'primitive';
+  const tags = (data?.tags ?? []).filter(t => component.tag_ids?.includes(t.id) ?? false);
   const faqCount = component.faq_ids.length;
   const ruleCount = component.rule_ids.length;
 
@@ -27,7 +28,10 @@ export function ComponentCard({ component }: ComponentCardProps) {
           href={`/components/${component.id}`}
           className="flex items-start gap-3 flex-1 min-w-0"
         >
-          <IconPuzzle size={18} className="text-primary mt-0.5 shrink-0" />
+          {isPrimitive
+            ? <IconAtom size={18} className="text-muted-foreground mt-0.5 shrink-0" />
+            : <IconPuzzle size={18} className="text-primary mt-0.5 shrink-0" />
+          }
           <div className="min-w-0 space-y-1">
             <p className="font-medium text-sm">
               {component.name || 'İsimsiz Component'}
@@ -48,28 +52,32 @@ export function ComponentCard({ component }: ComponentCardProps) {
           </div>
         </Link>
         <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-          <button
-            type="button"
-            onClick={() => setConfirmOpen(true)}
-            className="p-1.5 text-muted-foreground hover:text-destructive transition-colors"
-            aria-label="Component sil"
-          >
-            <IconTrash size={14} />
-          </button>
+          {!isPrimitive && (
+            <button
+              type="button"
+              onClick={() => setConfirmOpen(true)}
+              className="p-1.5 text-muted-foreground hover:text-destructive transition-colors"
+              aria-label="Component sil"
+            >
+              <IconTrash size={14} />
+            </button>
+          )}
           <IconChevronRight size={14} className="text-muted-foreground" />
         </div>
       </div>
 
-      <ConfirmModal
-        open={confirmOpen}
-        onCancel={() => setConfirmOpen(false)}
-        onConfirm={() => {
-          deleteComponent(component.id);
-          setConfirmOpen(false);
-        }}
-        title="Component silinsin mi?"
-        description="Bu işlem geri alınamaz. Bu component'e ait FAQ ve kurallar listede kalır."
-      />
+      {!isPrimitive && (
+        <ConfirmModal
+          open={confirmOpen}
+          onCancel={() => setConfirmOpen(false)}
+          onConfirm={() => {
+            deleteComponent(component.id);
+            setConfirmOpen(false);
+          }}
+          title="Component silinsin mi?"
+          description="Bu işlem geri alınamaz. Bu component'e ait FAQ ve kurallar listede kalır."
+        />
+      )}
     </>
   );
 }

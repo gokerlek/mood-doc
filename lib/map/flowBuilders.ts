@@ -52,6 +52,8 @@ export function storeEdgeToFlow(e: MapEdgeData, cbs: EdgeCallbacks): Edge {
     id: e.id,
     source: e.source,
     target: e.target,
+    ...(e.sourceHandle != null ? { sourceHandle: e.sourceHandle } : {}),
+    ...(e.targetHandle != null ? { targetHandle: e.targetHandle } : {}),
     type: 'floatingEdge',
     markerEnd: { type: MarkerType.ArrowClosed },
     data: { onDelete: cbs.onDelete } satisfies FloatingEdgeData,

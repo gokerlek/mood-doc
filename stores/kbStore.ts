@@ -7,7 +7,22 @@ import type {
   KbComponent, TagCategory, KbTag, MapNodeData, MapEdgeData,
   PageData, PageSection,
 } from '@/lib/types';
-import { emptyKnowledgeBase } from '@/lib/defaults';
+import { emptyKnowledgeBase, SEED_PRIMITIVES } from '@/lib/defaults';
+import type { ComponentSlot } from '@/lib/types';
+
+function migrateSlots(slots: ComponentSlot[], frameW = 480, frameH = 320): ComponentSlot[] {
+  return slots.map(s =>
+    (s.w ?? 0) < 2   // normalize değer heuristic: w < 2 ise normalize
+      ? { ...s,
+          zone: s.zone ?? 'body',
+          x: Math.round((s.x ?? 0.05) * frameW),
+          y: Math.round((s.y ?? 0.05) * frameH),
+          w: Math.round((s.w ?? 0.35) * frameW),
+          h: Math.round((s.h ?? 0.25) * frameH),
+        }
+      : { ...s, zone: s.zone ?? 'body' }
+  );
+}
 
 interface KbState {
   data: KnowledgeBase | null;
@@ -66,7 +81,27 @@ const useKbStoreBase = create<KbState>()(
       isDirty: false,
       isSaving: false,
 
-      setData: (data) => set({ data, isDirty: false }),
+      setData: (data) => {
+        const defaults = emptyKnowledgeBase();
+        const normalized: KnowledgeBase = {
+          ...defaults,
+          ...data,
+          components: Array.isArray(data.components) ? data.components : defaults.components,
+        };
+        normalized.components = normalized.components
+          .filter(c => c.id !== 'seed-prim-header' && c.id !== 'seed-prim-footer')
+          .map(c => ({
+            ...c,
+            frame_width:   c.frame_width   ?? 480,
+            frame_height:  c.frame_height  ?? 320,
+            has_header:    c.has_header    ?? false,
+            has_footer:    c.has_footer    ?? false,
+            header_height: c.header_height ?? 200,
+            footer_height: c.footer_height ?? 200,
+            slots: migrateSlots(c.slots ?? [], c.frame_width ?? 480, c.frame_height ?? 320),
+          }));
+        set({ data: normalized, isDirty: false });
+      },
       setIsSaving: (isSaving) => set({ isSaving }),
       resetDirty: () => set({ isDirty: false }),
 
@@ -252,6 +287,25 @@ const useKbStoreBase = create<KbState>()(
     {
       name: 'moodivation-kb-v3',
       partialize: (state) => ({ data: state.data, isDirty: state.isDirty }),
+      merge: (persisted, current) => {
+        const p = persisted as Partial<KbState>;
+        if (p.data) {
+          const defaults = emptyKnowledgeBase();
+          p.data = { ...defaults, ...p.data };
+          // Guard against undefined/null from stale persisted data
+          if (!Array.isArray(p.data.components)) p.data.components = defaults.components;
+          // Remove legacy Header/Footer seed primitives
+          const legacyIds = new Set(['seed-prim-header', 'seed-prim-footer']);
+          p.data.components = p.data.components.filter((c: KbComponent) => !legacyIds.has(c.id));
+          // Inject any missing seed primitives at the front
+          const existingIds = new Set(p.data.components.map((c: KbComponent) => c.id));
+          const missing = SEED_PRIMITIVES.filter(sp => !existingIds.has(sp.id));
+          if (missing.length > 0) {
+            p.data.components = [...missing, ...p.data.components];
+          }
+        }
+        return { ...current, ...p };
+      },
     }
   )
 );

@@ -34,6 +34,8 @@ export interface MapEdgeData {
   id: string;
   source: string;
   target: string;
+  sourceHandle?: string | null;
+  targetHandle?: string | null;
 }
 
 // --- Tags ---
@@ -51,13 +53,69 @@ export interface KbTag {
 
 // --- Components ---
 
+export type ComponentType = 'primitive' | 'composite' | 'section' | 'page';
+
+export interface ComponentPropDef {
+  id: string;
+  name: string;        // prop adı, örn. "title"
+  type: string;        // "string" | "boolean" | "ReactNode" | "fn" | serbest metin
+  required: boolean;
+  description: string; // ne yapar, ne zaman görünür
+}
+
+export interface ComponentVariant {
+  id: string;
+  name: string;        // "primary", "secondary", "ghost"
+  description: string; // bu variant görsel olarak nasıl görünür
+}
+
+export interface ComponentCondition {
+  id: string;
+  propId: string;      // ComponentPropDef.id'ye referans (comp.props listesinden)
+  propValue: string;   // "true", "false", "sm", "lg" vb. serbest metin
+  description: string; // bu koşulda görsel olarak ne değişir
+}
+
+export interface SlotPropBinding {
+  childPropName: string;  // child component'in prop adı, örn. "label"
+  parentPropId: string;   // parent KbComponent.props[i].id, örn. "uuid-count"
+}
+
+export interface ComponentSlot {
+  id: string;
+  name: string;        // bölge adı, örn. "Header", "Body", "Actions"
+  description: string;
+  props: ComponentPropDef[];
+  component_ids?: string[];   // bu slot'ta hangi bileşenler render edilir
+  prop_bindings?: SlotPropBinding[];
+  zone?: 'body' | 'header' | 'footer'; // default 'body'
+  // canvas koordinatları — PIXEL (px), normalize oran değil
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
 export interface KbComponent {
   id: string;
   name: string;
   description: string;
+  component_type: ComponentType;    // primitive | composite | section | page
   tag_ids: string[];
   faq_ids: string[];
   rule_ids: string[];
+  // Primitive'e özel
+  props: ComponentPropDef[];
+  variants: ComponentVariant[];
+  conditions: ComponentCondition[];
+  // Composite/Section/Page için
+  slots: ComponentSlot[];
+  has_header?: boolean;    // default false
+  has_footer?: boolean;    // default false
+  header_height?: number;  // default 48
+  footer_height?: number;  // default 48
+  frame_width?: number;    // default 480
+  frame_height?: number;   // default 320
 }
 
 // --- Shared Context ---
