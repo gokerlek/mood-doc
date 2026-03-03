@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import { useKbStore } from '@/stores/kbStore';
 import { emptyComponent } from '@/lib/defaults';
 import { ComponentCard } from '@/components/kb-components/ComponentCard';
+import { PageHeader } from '@/components/shared/PageHeader';
 import { Button } from '@/components/ui/button';
 import { IconLayoutColumns, IconPlus } from '@tabler/icons-react';
 
@@ -22,34 +23,43 @@ export default function SectionsPage() {
   const sections = data.components.filter(c => c.component_type === 'section');
 
   return (
-    <div className="p-6 max-w-2xl space-y-6">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <IconLayoutColumns size={20} className="text-primary" />
-          <div>
-            <h1 className="text-lg font-semibold">Sections</h1>
-            <p className="text-sm text-muted-foreground">
-              Sayfa bölümlerini (section) buradan tanımlayın.
-            </p>
-          </div>
-        </div>
-        <Button size="sm" onClick={handleCreate}>
-          <IconPlus size={14} />
-          Yeni Section
-        </Button>
-      </div>
+    <div className="p-6 max-w-5xl space-y-8">
+      <PageHeader
+        icon={<IconLayoutColumns size={22} className="text-primary" />}
+        title="Sections"
+        description="Sayfa bölümlerini (section) buradan tanımlayın."
+        action={
+          <Button onClick={handleCreate}>
+            <IconPlus size={14} />
+            Yeni Section
+          </Button>
+        }
+      />
 
       <div>
+        <div className="flex items-center gap-2 mb-4">
+          <IconLayoutColumns size={14} className="text-primary" />
+          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.08em]">
+            Sections
+          </p>
+          <span className="text-[10px] text-muted-foreground ml-1">{sections.length}</span>
+        </div>
         {sections.length > 0 ? (
-          <div className="space-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {sections.map(comp => (
               <ComponentCard key={comp.id} component={comp} />
             ))}
           </div>
         ) : (
-          <p className="text-sm text-muted-foreground py-8 text-center">
-            Henüz section yok. &ldquo;Yeni Section&rdquo; ile başlayın.
-          </p>
+          <div className="text-center py-12 bg-muted/30 rounded-2xl border border-dashed border-border">
+            <IconLayoutColumns size={28} className="text-muted-foreground/40 mx-auto mb-2" />
+            <p className="text-sm text-muted-foreground">
+              Henüz section yok.
+            </p>
+            <Button variant="link" onClick={handleCreate} className="mt-1 h-auto p-0 text-sm">
+              İlk section&apos;ı ekle →
+            </Button>
+          </div>
         )}
       </div>
     </div>
