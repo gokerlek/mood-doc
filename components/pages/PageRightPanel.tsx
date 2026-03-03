@@ -10,6 +10,7 @@ import { PageRuleSection } from './PageRuleSection';
 import { PagePropEditList } from './PagePropEditList';
 import { IconX } from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
+import { useSlotBindings } from '@/hooks/useSlotBindings';
 
 interface PageRightPanelProps {
   nodeId: string;
@@ -38,23 +39,12 @@ export function PageRightPanel({
   const slots: ComponentSlot[] = pageData.canvas_slots ?? [];
   const pageProps = pageData.props ?? [];
 
-  const updateBinding = (slotId: string, childPropName: string, pagePropId: string) => {
-    const updated = slots.map(s => {
-      if (s.id !== slotId) return s;
-      const existing = (s.prop_bindings ?? []).filter(b => b.childPropName !== childPropName);
-      const newBindings = pagePropId
-        ? [...existing, { childPropName, parentPropId: pagePropId }]
-        : existing;
-      return { ...s, prop_bindings: newBindings };
-    });
-    updatePageData(nodeId, { ...pageData, canvas_slots: updated });
-  };
-
-  const deleteSlot = (slotId: string) => {
-    const updated = slots.filter(s => s.id !== slotId);
-    updatePageData(nodeId, { ...pageData, canvas_slots: updated });
-    if (selectedSlotId === slotId) onSelectSlot(null);
-  };
+  const { updateBinding, deleteSlot } = useSlotBindings(
+    slots,
+    (updated) => updatePageData(nodeId, { ...pageData, canvas_slots: updated }),
+    selectedSlotId,
+    onSelectSlot,
+  );
 
   return (
     <div className="flex flex-col gap-4 overflow-y-auto h-full px-4 py-4">

@@ -13,8 +13,8 @@ import {
   sortableKeyboardCoordinates,
   useSortable,
   verticalListSortingStrategy,
-  arrayMove,
 } from '@dnd-kit/sortable';
+import { reorderWithIndex } from '@/lib/section-utils';
 import { CSS } from '@dnd-kit/utilities';
 import { useKbStore } from '@/stores/kbStore';
 import type { PageSection } from '@/lib/types';
@@ -113,11 +113,7 @@ export function SectionList({ nodeId, sections }: SectionListProps) {
     if (!over || active.id === over.id) return;
     const oldIndex = sorted.findIndex(s => s.id === active.id);
     const newIndex = sorted.findIndex(s => s.id === over.id);
-    const reordered = arrayMove(sorted, oldIndex, newIndex).map((s, i) => ({
-      ...s,
-      order: i,
-    }));
-    reorderPageSections(nodeId, reordered);
+    reorderPageSections(nodeId, reorderWithIndex(sorted, oldIndex, newIndex));
   };
 
   if (sorted.length === 0) {

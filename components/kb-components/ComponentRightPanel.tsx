@@ -10,6 +10,7 @@ import { ComponentRuleSection } from './ComponentRuleSection';
 import { ComponentPropEditList } from './ComponentPropEditList';
 import { IconLock, IconX } from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
+import { useSlotBindings } from '@/hooks/useSlotBindings';
 
 interface ComponentRightPanelProps {
   comp: KbComponent;
@@ -33,22 +34,12 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
 
   const slots = comp.slots ?? [];
 
-  const updateBinding = (slotId: string, childPropName: string, parentPropId: string) => {
-    const updated = slots.map(s => {
-      if (s.id !== slotId) return s;
-      const existing = (s.prop_bindings ?? []).filter(b => b.childPropName !== childPropName);
-      const newBindings = parentPropId
-        ? [...existing, { childPropName, parentPropId }]
-        : existing;
-      return { ...s, prop_bindings: newBindings };
-    });
-    upsertComponent({ ...comp, slots: updated });
-  };
-
-  const deleteSlot = (slotId: string) => {
-    upsertComponent({ ...comp, slots: slots.filter(s => s.id !== slotId) });
-    if (selectedSlotId === slotId) onSelectSlot?.(null);
-  };
+  const { updateBinding, deleteSlot } = useSlotBindings(
+    slots,
+    (updated) => upsertComponent({ ...comp, slots: updated }),
+    selectedSlotId,
+    onSelectSlot,
+  );
 
   return (
     <div className="flex flex-col gap-4 overflow-y-auto h-full px-4 py-4 rounded-2xl shadow-lg">
