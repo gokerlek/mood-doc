@@ -5,6 +5,8 @@ import { cn } from '@/lib/utils';
 import { IconGripVertical, IconX } from '@tabler/icons-react';
 import { useDndMonitor, useDroppable } from '@dnd-kit/core';
 import { emptySlot } from '@/lib/defaults';
+import { overlaps, clampToZone } from '@/lib/canvas-utils';
+import type { Rect } from '@/lib/canvas-utils';
 
 const SLOT_MIN_W = 60;
 const SLOT_MIN_H = 36;
@@ -18,12 +20,6 @@ export interface PageSketchCanvasProps {
   onUpdateSlots: (slots: ComponentSlot[]) => void;
   onUpdateFrame: (patch: { frame_width?: number; frame_height?: number }) => void;
 }
-
-type Rect = { x: number; y: number; w: number; h: number };
-
-const overlaps = (a: Rect, b: Rect) =>
-  a.x < b.x + b.w && a.x + a.w > b.x &&
-  a.y < b.y + b.h && a.y + a.h > b.y;
 
 export function PageSketchCanvas({
   slots,
@@ -105,19 +101,16 @@ export function PageSketchCanvas({
     const offsetX = e.clientX - zoneRect.left - slot.x;
     const offsetY = e.clientY - zoneRect.top - slot.y;
 
-    const clamp = (raw: number, size: number, max: number) =>
-      Math.max(0, Math.min(Math.max(0, max - size), Math.round(raw)));
-
     const onMove = (ev: MouseEvent) => {
-      const x = clamp(ev.clientX - zoneRect.left - offsetX, sw, zoneW);
-      const y = clamp(ev.clientY - zoneRect.top - offsetY, sh, zoneH);
+      const x = clampToZone(ev.clientX - zoneRect.left - offsetX, sw, zoneW);
+      const y = clampToZone(ev.clientY - zoneRect.top - offsetY, sh, zoneH);
       onUpdateSlots(slotsRef.current.map(s => s.id === slotId ? { ...s, x, y } : s));
     };
     const onUp = (ev: MouseEvent) => {
       document.removeEventListener('mousemove', onMove);
       document.removeEventListener('mouseup', onUp);
-      const x = clamp(ev.clientX - zoneRect.left - offsetX, sw, zoneW);
-      const y = clamp(ev.clientY - zoneRect.top - offsetY, sh, zoneH);
+      const x = clampToZone(ev.clientX - zoneRect.left - offsetX, sw, zoneW);
+      const y = clampToZone(ev.clientY - zoneRect.top - offsetY, sh, zoneH);
       const candidate: Rect = { x, y, w: sw, h: sh };
       if (hasConflict(candidate, slotId)) {
         onUpdateSlots(slotsRef.current.map(s => s.id === slotId ? { ...s, x: origX, y: origY } : s));

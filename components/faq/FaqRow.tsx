@@ -4,6 +4,7 @@ import { FaqForm } from './FaqForm';
 import type { KbFaq, MapNodeData, KbComponent } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { contextLabel } from '@/lib/context-utils';
 
 export interface FaqRowProps {
   faq: KbFaq;
@@ -14,19 +15,6 @@ export interface FaqRowProps {
   editingId: string | null;
   onSave: (f: KbFaq) => void;
   onCancelEdit: () => void;
-}
-
-function contextLabel(context: KbFaq['context'], leafNodes: MapNodeData[], components: KbComponent[]): string | null {
-  if (context.type === 'global') return null;
-  if (context.type === 'page') {
-    const node = leafNodes.find(n => n.id === context.node_id);
-    return node ? `Sayfa: ${node.label}` : `Sayfa: ${context.node_id}`;
-  }
-  if (context.type === 'component') {
-    const comp = components.find(c => c.id === context.component_id);
-    return comp ? `Component: ${comp.name}` : `Component: ${context.component_id}`;
-  }
-  return null;
 }
 
 export function FaqRow({ faq, leafNodes, components, onEdit, onDelete, editingId, onSave, onCancelEdit }: FaqRowProps) {

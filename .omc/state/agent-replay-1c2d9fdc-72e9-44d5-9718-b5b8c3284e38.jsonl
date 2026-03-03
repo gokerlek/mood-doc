@@ -1,3 +1,0 @@
-{"t":0,"agent":"system","event":"skill_invoked","skill_name":"superpowers:finishing-a-development-branch"}
-{"t":0,"agent":"ab83805","agent_type":"Explore","event":"agent_start","parent_mode":"none"}
-{"t":0,"agent":"ab83805","agent_type":"Explore","event":"agent_stop","success":true,"duration_ms":44951}
