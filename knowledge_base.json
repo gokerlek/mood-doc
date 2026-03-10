@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-10T13:35:54.382Z",
+    "last_updated": "2026-03-10T21:07:48.164Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -809,9 +809,9 @@
           ],
           "prop_bindings": [],
           "zone": "body",
-          "x": 15,
-          "y": 0,
-          "w": 160,
+          "x": 0,
+          "y": 40,
+          "w": 236,
           "h": 36
         },
         {
@@ -826,7 +826,7 @@
           "zone": "header",
           "x": 1,
           "y": 22,
-          "w": 160,
+          "w": 231,
           "h": 36
         },
         {
@@ -844,18 +844,37 @@
             }
           ],
           "zone": "body",
-          "x": 36,
-          "y": 85,
-          "w": 160,
+          "x": 0,
+          "y": 0,
+          "w": 236,
           "h": 36
         }
       ],
       "has_header": true,
       "has_footer": false,
+      "header_height": 66,
+      "footer_height": 200,
+      "frame_width": 256,
+      "frame_height": 162
+    },
+    {
+      "id": "3a1a00b8-bc67-405a-9519-d76407432bd5",
+      "name": "",
+      "description": "",
+      "component_type": "section",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "props": [],
+      "variants": [],
+      "conditions": [],
+      "slots": [],
+      "has_header": false,
+      "has_footer": false,
       "header_height": 200,
       "footer_height": 200,
       "frame_width": 480,
-      "frame_height": 520
+      "frame_height": 320
     }
   ],
   "map": {
