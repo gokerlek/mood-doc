@@ -12,6 +12,61 @@ BE-free: tüm veri GitHub'daki tek bir `knowledge_base.json` dosyasında yaşar.
 
 ---
 
+## Komutlar
+
+```bash
+bun dev                # Dev server (port 3000)
+bun run build          # Production build
+bun run test           # Vitest (tek geçiş)
+bun run test:watch     # Watch mode
+bun run test:coverage  # Coverage raporu
+bun run lint           # ESLint
+```
+
+## Environment Değişkenleri
+
+`.env.local` gerekli (yoksa GitHub yerine boş KB döner):
+
+```
+GITHUB_PAT=ghp_...
+GITHUB_OWNER=your-org
+GITHUB_REPO=your-repo
+GITHUB_BRANCH=main
+GITHUB_FILE_PATH=knowledge_base.json
+```
+
+## Anahtar Dosyalar
+
+| Dosya | Rol |
+|-------|-----|
+| `lib/types.ts` | Tüm TypeScript tipleri |
+| `lib/defaults.ts` | `emptyKnowledgeBase()`, `emptyComponent()` factory'leri |
+| `stores/kbStore.ts` | Tek global store |
+| `hooks/useKb.ts` | TanStack Query load/save hook'ları |
+| `app/api/knowledge-base/route.ts` | Tek API endpoint |
+
+## Kritik Pattern'ler
+
+**Store okuma — `auto-zustand-selectors-hook`:**
+```ts
+// DOĞRU
+const data = useKbStore.useData();
+// YANLIŞ — doğrudan useKbStore() kullanma
+```
+
+**Store mutation — immer ile:** Store action'ları `immer` produce kullanıyor, `state.data` üzerinde doğrudan mutasyon yapılabilir.
+
+**localStorage persist key:** `moodivation-kb-v3`
+(v2'den fark: slot koordinatları normalize oran → pixel cinsine geçti)
+
+## Test Notları
+
+- Framework: Vitest, testler `__tests__/` dizininde
+- `environment: 'node'` — React component testleri yok, sadece pure logic
+- `kbStore.test.ts` içinde bilinen strict TS hataları var (`slot` possibly undefined) — test mantığı doğru, `!` assertion eksik, production kodu temiz
+
+---
+
 ## Kodlama Kuralları (Sabit — İstisna Yok)
 
 ### 1. TypeSafety

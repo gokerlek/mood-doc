@@ -25,7 +25,7 @@ describe('updateBinding', () => {
     updateBinding('s1', 'label', 'prop-uuid-1');
 
     expect(committed).toHaveLength(1);
-    expect(committed[0][0].prop_bindings).toEqual([
+    expect(committed[0]![0]!.prop_bindings).toEqual([
       { childPropName: 'label', parentPropId: 'prop-uuid-1' },
     ]);
   });
@@ -40,7 +40,7 @@ describe('updateBinding', () => {
 
     updateBinding('s1', 'label', 'new-id');
 
-    expect(committed[0][0].prop_bindings).toEqual([
+    expect(committed[0]![0]!.prop_bindings).toEqual([
       { childPropName: 'label', parentPropId: 'new-id' },
     ]);
   });
@@ -55,7 +55,7 @@ describe('updateBinding', () => {
 
     updateBinding('s1', 'label', '');
 
-    expect(committed[0][0].prop_bindings).toEqual([]);
+    expect(committed[0]![0]!.prop_bindings).toEqual([]);
   });
 
   it('leaves other slots unchanged when updating a specific slot', () => {
@@ -66,7 +66,7 @@ describe('updateBinding', () => {
 
     updateBinding('s1', 'title', 'prop-x');
 
-    expect(committed[0][1]).toBe(s2); // s2 reference unchanged
+    expect(committed[0]![1]).toBe(s2); // s2 reference unchanged
   });
 
   it('does not call onCommit with a changed array when slotId not found', () => {

@@ -101,7 +101,7 @@ describe('setData', () => {
       }],
     }];
     useKbStore.getState().setData(kb);
-    const slot = useKbStore.getState().data!.components.find((c) => c.id === 'c1')!.slots[0];
+    const slot = useKbStore.getState().data!.components.find((c) => c.id === 'c1')!.slots[0]!;
     expect(slot.x).toBe(Math.round(0.1 * 480));
     expect(slot.y).toBe(Math.round(0.1 * 320));
     expect(slot.w).toBe(Math.round(0.5 * 480));
@@ -121,7 +121,7 @@ describe('setData', () => {
       }],
     }];
     useKbStore.getState().setData(kb);
-    const slot = useKbStore.getState().data!.components.find((c) => c.id === 'c1')!.slots[0];
+    const slot = useKbStore.getState().data!.components.find((c) => c.id === 'c1')!.slots[0]!;
     expect(slot.x).toBe(50);
     expect(slot.y).toBe(50);
     expect(slot.w).toBe(160);
@@ -141,7 +141,7 @@ describe('setData', () => {
       }],
     }];
     useKbStore.getState().setData(kb);
-    const slot = useKbStore.getState().data!.components.find((c) => c.id === 'c1')!.slots[0];
+    const slot = useKbStore.getState().data!.components.find((c) => c.id === 'c1')!.slots[0]!;
     // w=0 < 2 triggers migration; 0 ?? 0.35 = 0 (not null/undefined), so 0 * 480 = 0
     expect(slot.w).toBe(0);
     expect(slot.h).toBe(0);
@@ -160,7 +160,7 @@ describe('setData', () => {
       }],
     }];
     useKbStore.getState().setData(kb);
-    const slot = useKbStore.getState().data!.components.find((c) => c.id === 'c1')!.slots[0];
+    const slot = useKbStore.getState().data!.components.find((c) => c.id === 'c1')!.slots[0]!;
     expect(slot.zone).toBe('body');
   });
 });
@@ -274,7 +274,7 @@ describe('upsertTag', () => {
     useKbStore.getState().upsertTag({ id: 'tag-1', label: 'New', category_id: 'cat-1' });
     const tags = useKbStore.getState().data!.tags.filter((t) => t.id === 'tag-1');
     expect(tags.length).toBe(1);
-    expect(tags[0].label).toBe('New');
+    expect(tags[0]!.label).toBe('New');
   });
 });
 
@@ -310,7 +310,7 @@ describe('upsertComponent', () => {
     useKbStore.getState().upsertComponent({ ...comp, name: 'New' });
     const comps = useKbStore.getState().data!.components.filter((c) => c.id === 'comp-1');
     expect(comps.length).toBe(1);
-    expect(comps[0].name).toBe('New');
+    expect(comps[0]!.name).toBe('New');
   });
 });
 
@@ -345,7 +345,7 @@ describe('upsertNode', () => {
     useKbStore.getState().upsertNode(makeNode('n1', { label: 'New' }));
     const nodes = useKbStore.getState().data!.map.nodes.filter((n) => n.id === 'n1');
     expect(nodes.length).toBe(1);
-    expect(nodes[0].label).toBe('New');
+    expect(nodes[0]!.label).toBe('New');
   });
 });
 
@@ -409,7 +409,7 @@ describe('upsertPageSection', () => {
     expect(useKbStore.getState().isDirty).toBe(true);
     const node = useKbStore.getState().data!.map.nodes.find((n) => n.id === 'n1');
     expect(node?.page_data?.sections).toHaveLength(1);
-    expect(node?.page_data?.sections[0].id).toBe('sec-1');
+    expect(node?.page_data?.sections[0]!.id).toBe('sec-1');
   });
 
   it('updates an existing section', () => {
@@ -455,8 +455,8 @@ describe('reorderPageSections', () => {
     useKbStore.getState().reorderPageSections('n1', reordered);
     expect(useKbStore.getState().isDirty).toBe(true);
     const node = useKbStore.getState().data!.map.nodes.find((n) => n.id === 'n1');
-    expect(node?.page_data?.sections[0].id).toBe('sec-2');
-    expect(node?.page_data?.sections[1].id).toBe('sec-1');
+    expect(node?.page_data?.sections[0]!.id).toBe('sec-2');
+    expect(node?.page_data?.sections[1]!.id).toBe('sec-1');
   });
 });
 
@@ -479,7 +479,7 @@ describe('upsertEdge', () => {
     useKbStore.getState().upsertEdge(makeEdge('e1', 'n1', 'n3'));
     const edges = useKbStore.getState().data!.map.edges.filter((e) => e.id === 'e1');
     expect(edges.length).toBe(1);
-    expect(edges[0].target).toBe('n3');
+    expect(edges[0]!.target).toBe('n3');
   });
 });
 
@@ -515,7 +515,7 @@ describe('upsertFaq', () => {
     useKbStore.getState().upsertFaq({ ...faq, question: 'New?' });
     const faqs = useKbStore.getState().data!.faq.filter((f) => f.id === 'faq-1');
     expect(faqs.length).toBe(1);
-    expect(faqs[0].question).toBe('New?');
+    expect(faqs[0]!.question).toBe('New?');
   });
 });
 
@@ -551,7 +551,7 @@ describe('upsertRule', () => {
     useKbStore.getState().upsertRule({ ...rule, title: 'New' });
     const rules = useKbStore.getState().data!.rules.filter((r) => r.id === 'rule-1');
     expect(rules.length).toBe(1);
-    expect(rules[0].title).toBe('New');
+    expect(rules[0]!.title).toBe('New');
   });
 });
 
@@ -587,7 +587,7 @@ describe('upsertGlossaryTerm', () => {
     useKbStore.getState().upsertGlossaryTerm({ ...term, term: 'New' });
     const terms = useKbStore.getState().data!.glossary.filter((g) => g.id === 'gl-1');
     expect(terms.length).toBe(1);
-    expect(terms[0].term).toBe('New');
+    expect(terms[0]!.term).toBe('New');
   });
 });
 

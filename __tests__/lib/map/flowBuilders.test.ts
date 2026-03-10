@@ -78,10 +78,10 @@ describe('storeNodesToFlow', () => {
     ];
     const result = storeNodesToFlow(nodes, cbs);
     expect(result).toHaveLength(2);
-    expect(result[0].id).toBe('a');
-    expect(result[1].id).toBe('b');
-    expect(result[0].type).toBe('appNode');
-    expect(result[1].type).toBe('groupNode');
+    expect(result[0]!.id).toBe('a');
+    expect(result[1]!.id).toBe('b');
+    expect(result[0]!.type).toBe('appNode');
+    expect(result[1]!.type).toBe('groupNode');
   });
 
   it('returns empty array for empty input', () => {

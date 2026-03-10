@@ -42,3 +42,4 @@ next-env.d.ts
 
 # knowledge base
 .omc
+.idea
