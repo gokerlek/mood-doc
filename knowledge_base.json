@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-02-25T09:29:06.464Z",
+    "last_updated": "2026-03-10T13:35:54.382Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -21,707 +21,1168 @@
       }
     ]
   },
-  "platform": {
-    "name": "Moodivation",
-    "description": "Moodivation is an HR platform that measures and improves employee engagement, motivation, and satisfaction.",
-    "target_users": "Employees and HR teams",
-    "key_benefits": [
-      "Measures employee satisfaction",
-      "Collects feedback anonymously",
-      "Increases employee engagement",
-      "Makes HR decisions data-driven"
-    ]
-  },
-  "modules": [
+  "tag_categories": [],
+  "tags": [],
+  "components": [
     {
-      "id": "reports",
-      "name": "Reports",
-      "description": "Analytics and reporting for engagement, experience, and exit surveys.",
-      "who_uses": "HR managers and department managers",
-      "key_features": [
-        "Engagement score trends",
-        "Experience dimension reports",
-        "Exit survey analytics",
-        "Comment analysis"
+      "id": "seed-prim-button",
+      "name": "Button",
+      "description": "Tıklanabilir aksiyon tetikleyici.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [
+        {
+          "id": "seed-prim-button-v1",
+          "name": "primary",
+          "description": "Dolu arka plan, beyaz metin"
+        },
+        {
+          "id": "seed-prim-button-v2",
+          "name": "secondary",
+          "description": "Soluk arka plan, koyu metin"
+        },
+        {
+          "id": "seed-prim-button-v3",
+          "name": "ghost",
+          "description": "Saydam, hover'da arka plan belirir"
+        },
+        {
+          "id": "seed-prim-button-v4",
+          "name": "destructive",
+          "description": "Kırmızı ton, silme/tehlikeli aksiyonlar"
+        }
       ],
-      "nav_path": "/reports/engagement"
+      "props": [
+        {
+          "id": "seed-prim-button-p1",
+          "name": "label",
+          "type": "string",
+          "required": true,
+          "description": "Buton metni"
+        },
+        {
+          "id": "seed-prim-button-p2",
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "description": "Devre dışı durumu"
+        },
+        {
+          "id": "seed-prim-button-p3",
+          "name": "loading",
+          "type": "boolean",
+          "required": false,
+          "description": "Yükleme spinner'ı gösterir"
+        },
+        {
+          "id": "seed-prim-button-p4",
+          "name": "size",
+          "type": "string",
+          "required": false,
+          "description": "sm | md | lg"
+        },
+        {
+          "id": "seed-prim-button-p5",
+          "name": "onClick",
+          "type": "fn",
+          "required": false,
+          "description": "Tıklama handler'ı"
+        }
+      ],
+      "conditions": [
+        {
+          "id": "seed-prim-button-c1",
+          "propId": "seed-prim-button-p2",
+          "propValue": "true",
+          "description": "Opaklık azalır, tıklama engellenir"
+        },
+        {
+          "id": "seed-prim-button-c2",
+          "propId": "seed-prim-button-p3",
+          "propValue": "true",
+          "description": "Metin gizlenir, spinner görünür"
+        }
+      ],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
     },
     {
-      "id": "surveys",
-      "name": "Surveys",
-      "description": "Survey builder and management — create, schedule, and publish surveys.",
-      "who_uses": "HR managers",
-      "key_features": [
-        "Survey builder with step-by-step flow",
-        "Template library",
-        "Participant targeting and scheduling",
-        "Simulation before publish"
+      "id": "seed-prim-input",
+      "name": "Input",
+      "description": "Tek satır metin girişi.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [
+        {
+          "id": "seed-prim-input-v1",
+          "name": "default",
+          "description": "Normal kenarlık"
+        },
+        {
+          "id": "seed-prim-input-v2",
+          "name": "error",
+          "description": "Kırmızı kenarlık + hata mesajı"
+        }
       ],
-      "nav_path": "/surveys/create-new-survey"
+      "props": [
+        {
+          "id": "seed-prim-input-p1",
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "description": "Kontrollü değer"
+        },
+        {
+          "id": "seed-prim-input-p2",
+          "name": "placeholder",
+          "type": "string",
+          "required": false,
+          "description": "Boş hâlde gösterilen metin"
+        },
+        {
+          "id": "seed-prim-input-p3",
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "description": "Devre dışı durumu"
+        },
+        {
+          "id": "seed-prim-input-p4",
+          "name": "type",
+          "type": "string",
+          "required": false,
+          "description": "text | password | email | number"
+        },
+        {
+          "id": "seed-prim-input-p5",
+          "name": "onChange",
+          "type": "fn",
+          "required": false,
+          "description": "Değişim handler'ı"
+        }
+      ],
+      "conditions": [
+        {
+          "id": "seed-prim-input-c1",
+          "propId": "seed-prim-input-p3",
+          "propValue": "true",
+          "description": "Soluk görünüm, yazma engellenir"
+        }
+      ],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
     },
     {
-      "id": "survey",
-      "name": "Survey (Participation)",
-      "description": "The survey-taking experience for employees — overview, questions, completion.",
-      "who_uses": "All employees",
-      "key_features": [
-        "Survey overview page",
-        "Question flow",
-        "Completion confirmation",
-        "Open link surveys (no login required)"
+      "id": "seed-prim-textarea",
+      "name": "Textarea",
+      "description": "Çok satır metin girişi.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [],
+      "props": [
+        {
+          "id": "seed-prim-textarea-p1",
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "description": "Kontrollü değer"
+        },
+        {
+          "id": "seed-prim-textarea-p2",
+          "name": "placeholder",
+          "type": "string",
+          "required": false,
+          "description": "Boş hâlde gösterilen metin"
+        },
+        {
+          "id": "seed-prim-textarea-p3",
+          "name": "rows",
+          "type": "string",
+          "required": false,
+          "description": "Görünür satır sayısı"
+        },
+        {
+          "id": "seed-prim-textarea-p4",
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "description": "Devre dışı durumu"
+        }
       ],
-      "nav_path": "/survey/overview"
+      "conditions": [],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
     },
     {
-      "id": "onboarding",
-      "name": "Onboarding",
-      "description": "Manages the onboarding journey for new employees.",
-      "who_uses": "HR team and new employees",
-      "key_features": [
-        "Onboarding phases",
-        "Employee progress tracking",
-        "New employee list",
-        "Onboarding report"
+      "id": "seed-prim-select",
+      "name": "Select",
+      "description": "Açılır liste seçici.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [],
+      "props": [
+        {
+          "id": "seed-prim-select-p1",
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "description": "Seçili değer"
+        },
+        {
+          "id": "seed-prim-select-p2",
+          "name": "options",
+          "type": "string",
+          "required": true,
+          "description": "{ value, label }[] dizisi"
+        },
+        {
+          "id": "seed-prim-select-p3",
+          "name": "placeholder",
+          "type": "string",
+          "required": false,
+          "description": "Seçim yapılmamışken görünen metin"
+        },
+        {
+          "id": "seed-prim-select-p4",
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "description": "Devre dışı durumu"
+        },
+        {
+          "id": "seed-prim-select-p5",
+          "name": "onChange",
+          "type": "fn",
+          "required": false,
+          "description": "Seçim değişim handler'ı"
+        }
       ],
-      "nav_path": "/onboarding/phases"
+      "conditions": [],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
     },
     {
-      "id": "people",
-      "name": "People",
-      "description": "Employee list management and bulk import.",
-      "who_uses": "HR team",
-      "key_features": [
-        "Employee directory",
-        "Bulk import via file upload"
+      "id": "seed-prim-badge",
+      "name": "Badge",
+      "description": "Küçük durum veya etiket göstergesi.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [
+        {
+          "id": "seed-prim-badge-v1",
+          "name": "default",
+          "description": "Dolu arka plan"
+        },
+        {
+          "id": "seed-prim-badge-v2",
+          "name": "outline",
+          "description": "Kenarlıklı, saydam arka plan"
+        },
+        {
+          "id": "seed-prim-badge-v3",
+          "name": "secondary",
+          "description": "İkincil renk tonu"
+        },
+        {
+          "id": "seed-prim-badge-v4",
+          "name": "destructive",
+          "description": "Kırmızı ton"
+        }
       ],
-      "nav_path": "/people"
+      "props": [
+        {
+          "id": "seed-prim-badge-p1",
+          "name": "label",
+          "type": "string",
+          "required": true,
+          "description": "Rozet metni"
+        }
+      ],
+      "conditions": [],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
     },
     {
-      "id": "feedbacks",
-      "name": "Feedbacks",
-      "description": "Feedback reporting — view and analyze employee feedback submissions.",
-      "who_uses": "HR managers and department managers",
-      "key_features": [
-        "Feedback report overview",
-        "Filter by department and date"
+      "id": "seed-prim-checkbox",
+      "name": "Checkbox",
+      "description": "İşaretlenebilir onay kutusu.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [],
+      "props": [
+        {
+          "id": "seed-prim-checkbox-p1",
+          "name": "checked",
+          "type": "boolean",
+          "required": false,
+          "description": "İşaretli mi?"
+        },
+        {
+          "id": "seed-prim-checkbox-p2",
+          "name": "label",
+          "type": "string",
+          "required": false,
+          "description": "Yanındaki metin etiketi"
+        },
+        {
+          "id": "seed-prim-checkbox-p3",
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "description": "Devre dışı durumu"
+        },
+        {
+          "id": "seed-prim-checkbox-p4",
+          "name": "onChange",
+          "type": "fn",
+          "required": false,
+          "description": "Değişim handler'ı"
+        }
       ],
-      "nav_path": "/feedbacks"
+      "conditions": [],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
     },
     {
-      "id": "settings",
-      "name": "Settings",
-      "description": "Platform configuration and account settings.",
-      "who_uses": "Platform administrators",
-      "key_features": [
-        "Account settings",
-        "Notification preferences",
-        "Integrations"
+      "id": "seed-prim-switch",
+      "name": "Switch",
+      "description": "Açık/kapalı toggle anahtarı.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [],
+      "props": [
+        {
+          "id": "seed-prim-switch-p1",
+          "name": "checked",
+          "type": "boolean",
+          "required": false,
+          "description": "Açık mı?"
+        },
+        {
+          "id": "seed-prim-switch-p2",
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "description": "Devre dışı durumu"
+        },
+        {
+          "id": "seed-prim-switch-p3",
+          "name": "onChange",
+          "type": "fn",
+          "required": false,
+          "description": "Değişim handler'ı"
+        }
       ],
-      "nav_path": "/settings"
+      "conditions": [],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
+    },
+    {
+      "id": "seed-prim-avatar",
+      "name": "Avatar",
+      "description": "Kullanıcı profil fotoğrafı veya baş harf göstergesi.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [],
+      "props": [
+        {
+          "id": "seed-prim-avatar-p1",
+          "name": "src",
+          "type": "string",
+          "required": false,
+          "description": "Resim URL'i"
+        },
+        {
+          "id": "seed-prim-avatar-p2",
+          "name": "alt",
+          "type": "string",
+          "required": false,
+          "description": "Erişilebilirlik metni"
+        },
+        {
+          "id": "seed-prim-avatar-p3",
+          "name": "fallback",
+          "type": "string",
+          "required": false,
+          "description": "Resim yokken gösterilen baş harfler"
+        },
+        {
+          "id": "seed-prim-avatar-p4",
+          "name": "size",
+          "type": "string",
+          "required": false,
+          "description": "sm | md | lg"
+        }
+      ],
+      "conditions": [],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
+    },
+    {
+      "id": "seed-prim-tooltip",
+      "name": "Tooltip",
+      "description": "Hover'da açılan bağlam ipucu.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [],
+      "props": [
+        {
+          "id": "seed-prim-tooltip-p1",
+          "name": "content",
+          "type": "string",
+          "required": true,
+          "description": "Tooltip içeriği"
+        },
+        {
+          "id": "seed-prim-tooltip-p2",
+          "name": "side",
+          "type": "string",
+          "required": false,
+          "description": "top | right | bottom | left"
+        },
+        {
+          "id": "seed-prim-tooltip-p3",
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "description": "Tooltip'i tetikleyen element"
+        }
+      ],
+      "conditions": [],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
+    },
+    {
+      "id": "seed-prim-container",
+      "name": "Container",
+      "description": "Genel amaçlı layout sarmalayıcı. Children/slot içerir.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [
+        {
+          "id": "seed-prim-container-v1",
+          "name": "default",
+          "description": "Düz sarmalayıcı, görsel stil yok"
+        },
+        {
+          "id": "seed-prim-container-v2",
+          "name": "card",
+          "description": "Kenarlık + gölge, kart görünümü"
+        },
+        {
+          "id": "seed-prim-container-v3",
+          "name": "section",
+          "description": "Dikey padding ile bölüm alanı"
+        }
+      ],
+      "props": [
+        {
+          "id": "seed-prim-container-p1",
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "description": "İç içerik"
+        },
+        {
+          "id": "seed-prim-container-p2",
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "description": "Ek CSS sınıfları"
+        }
+      ],
+      "conditions": [],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
+    },
+    {
+      "id": "seed-prim-label",
+      "name": "Label",
+      "description": "Form alanı etiketi. Input, Select gibi form elemanlarının üstünde görünür.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [],
+      "props": [
+        {
+          "id": "seed-prim-label-p1",
+          "name": "text",
+          "type": "string",
+          "required": true,
+          "description": "Etiket metni"
+        },
+        {
+          "id": "seed-prim-label-p2",
+          "name": "htmlFor",
+          "type": "string",
+          "required": false,
+          "description": "Bağlı input'un id'si"
+        },
+        {
+          "id": "seed-prim-label-p3",
+          "name": "required",
+          "type": "boolean",
+          "required": false,
+          "description": "Zorunlu alanı belirtmek için * işareti ekler"
+        }
+      ],
+      "conditions": [
+        {
+          "id": "seed-prim-label-c1",
+          "propId": "seed-prim-label-p3",
+          "propValue": "true",
+          "description": "Metin yanında kırmızı * gösterilir"
+        }
+      ],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
+    },
+    {
+      "id": "seed-prim-description",
+      "name": "Description",
+      "description": "Yardımcı açıklama metni. Form alanı altında veya başlık altında kullanılır.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [
+        {
+          "id": "seed-prim-description-v1",
+          "name": "default",
+          "description": "Soluk, küçük boyutlu yardımcı metin"
+        },
+        {
+          "id": "seed-prim-description-v2",
+          "name": "error",
+          "description": "Kırmızı ton, hata açıklaması için"
+        },
+        {
+          "id": "seed-prim-description-v3",
+          "name": "hint",
+          "description": "İpucu tonu, bilgi verici"
+        }
+      ],
+      "props": [
+        {
+          "id": "seed-prim-description-p1",
+          "name": "text",
+          "type": "string",
+          "required": true,
+          "description": "Açıklama metni"
+        },
+        {
+          "id": "seed-prim-description-p2",
+          "name": "variant",
+          "type": "string",
+          "required": false,
+          "description": "default | error | hint"
+        }
+      ],
+      "conditions": [],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
+    },
+    {
+      "id": "seed-prim-title",
+      "name": "Title",
+      "description": "Sayfa veya bölüm başlığı. Hiyerarşik başlık seviyeleri destekler.",
+      "component_type": "primitive",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "slots": [],
+      "variants": [
+        {
+          "id": "seed-prim-title-v1",
+          "name": "h1",
+          "description": "Ana sayfa başlığı, en büyük"
+        },
+        {
+          "id": "seed-prim-title-v2",
+          "name": "h2",
+          "description": "Bölüm başlığı"
+        },
+        {
+          "id": "seed-prim-title-v3",
+          "name": "h3",
+          "description": "Alt bölüm başlığı"
+        },
+        {
+          "id": "seed-prim-title-v4",
+          "name": "h4",
+          "description": "Kart veya widget başlığı, en küçük"
+        }
+      ],
+      "props": [
+        {
+          "id": "seed-prim-title-p1",
+          "name": "text",
+          "type": "string",
+          "required": true,
+          "description": "Başlık metni"
+        },
+        {
+          "id": "seed-prim-title-p2",
+          "name": "level",
+          "type": "string",
+          "required": false,
+          "description": "h1 | h2 | h3 | h4"
+        },
+        {
+          "id": "seed-prim-title-p3",
+          "name": "subtitle",
+          "type": "string",
+          "required": false,
+          "description": "Başlık altında daha küçük açıklama satırı"
+        }
+      ],
+      "conditions": [],
+      "frame_width": 480,
+      "frame_height": 320,
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200
+    },
+    {
+      "id": "744a7c8e-fcee-455c-8cd8-ab9ac3c9d53b",
+      "name": "",
+      "description": "",
+      "component_type": "composite",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "props": [],
+      "variants": [],
+      "conditions": [],
+      "slots": [],
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200,
+      "frame_width": 480,
+      "frame_height": 320
+    },
+    {
+      "id": "c8aa5f47-96c6-4137-a204-f33a32122f8b",
+      "name": "",
+      "description": "",
+      "component_type": "section",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "props": [],
+      "variants": [],
+      "conditions": [],
+      "slots": [
+        {
+          "id": "c7dfc79d-a158-4687-a176-0cad19176013",
+          "name": "kerem",
+          "description": "",
+          "props": [],
+          "component_ids": [
+            "62846c5a-c527-4518-9f97-f499ecb37194"
+          ],
+          "prop_bindings": [],
+          "zone": "body",
+          "x": 105,
+          "y": 99,
+          "w": 160,
+          "h": 36
+        }
+      ],
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200,
+      "frame_width": 480,
+      "frame_height": 320
+    },
+    {
+      "id": "62846c5a-c527-4518-9f97-f499ecb37194",
+      "name": "kerem",
+      "description": "CEO",
+      "component_type": "composite",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "props": [
+        {
+          "id": "4e2c2f48-629c-4776-b346-84881866ca98",
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "variants": [],
+      "conditions": [],
+      "slots": [
+        {
+          "id": "19a4c89b-ecd9-43d3-b870-73bce2302c6f",
+          "name": "Input",
+          "description": "",
+          "props": [],
+          "component_ids": [
+            "seed-prim-input"
+          ],
+          "prop_bindings": [],
+          "zone": "body",
+          "x": 15,
+          "y": 0,
+          "w": 160,
+          "h": 36
+        },
+        {
+          "id": "f79b1bb2-506b-4af8-9cd4-5da4fc3b06c2",
+          "name": "Textarea",
+          "description": "",
+          "props": [],
+          "component_ids": [
+            "seed-prim-textarea"
+          ],
+          "prop_bindings": [],
+          "zone": "header",
+          "x": 1,
+          "y": 22,
+          "w": 160,
+          "h": 36
+        },
+        {
+          "id": "078cf30b-acd9-41f4-8e70-082c8164f9e0",
+          "name": "Label",
+          "description": "",
+          "props": [],
+          "component_ids": [
+            "seed-prim-label"
+          ],
+          "prop_bindings": [
+            {
+              "childPropName": "text",
+              "parentPropId": "4e2c2f48-629c-4776-b346-84881866ca98"
+            }
+          ],
+          "zone": "body",
+          "x": 36,
+          "y": 85,
+          "w": 160,
+          "h": 36
+        }
+      ],
+      "has_header": true,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200,
+      "frame_width": 480,
+      "frame_height": 520
     }
   ],
-  "pages": [
+  "map": {
+    "nodes": [
+      {
+        "id": "1d8b3067-7a82-4714-9204-a09a6b267cdb",
+        "label": "Engagement",
+        "x": 113,
+        "y": 52.5,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [
+            "24e999de-83bd-4ad3-af23-b0e379ccf69b"
+          ],
+          "rule_ids": [
+            "167b1b97-e998-461b-afc1-877bf6a7f428"
+          ],
+          "props": []
+        }
+      },
+      {
+        "id": "075442b7-31bd-478b-ad53-9f3cf51d8b9d",
+        "label": "Onboarding",
+        "x": 109,
+        "y": 190,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      },
+      {
+        "id": "0a5da42b-afdc-41bf-b51d-650808f31a42",
+        "label": "Exit",
+        "x": 112,
+        "y": 124,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      },
+      {
+        "id": "ee8c6f13-dbdd-437d-b146-da326ba7b704",
+        "label": "Experience Reports",
+        "x": 109,
+        "y": 258,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      },
+      {
+        "id": "b28f4d2a-c112-4aaa-905a-ab11282b7458",
+        "label": "New Survey",
+        "x": 109,
+        "y": 336,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      },
+      {
+        "id": "947f8728-e036-4963-9987-1973bf552542",
+        "label": "Feedback",
+        "x": 111,
+        "y": 408,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      },
+      {
+        "id": "8c25e34f-dbfe-48d4-8371-7c7e45c56787",
+        "label": "Settings",
+        "x": 113,
+        "y": 534,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      },
+      {
+        "id": "0263a5ab-1173-4609-8ba9-486097238e27",
+        "label": "People",
+        "x": 111,
+        "y": 467,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      },
+      {
+        "id": "332766f1-907f-47b3-8471-282b971f583a",
+        "label": "Report Detail",
+        "x": 491,
+        "y": 258,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      },
+      {
+        "id": "69606afa-1d0c-4335-8af3-93982a359e44",
+        "label": "Commnets",
+        "x": 834.2665530904544,
+        "y": 130.2324063636844,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      },
+      {
+        "id": "9f1ef007-d03b-4591-8721-8fcd9a394023",
+        "label": "Create New Survey",
+        "x": 483.6332765452272,
+        "y": 336.75,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      },
+      {
+        "id": "052e46a8-7add-4320-b91b-5a9bc0409276",
+        "label": "Other Answers",
+        "x": 832.0987183262943,
+        "y": 41.329987517770576,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      },
+      {
+        "id": "405922fd-c383-47aa-b3f5-8d5ef0eaef1b",
+        "label": "Tempalte list",
+        "x": 768.6332765452272,
+        "y": 336.1649937588852,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "ee8c6f13-dbdd-437d-b146-da326ba7b704->332766f1-907f-47b3-8471-282b971f583a",
+        "source": "ee8c6f13-dbdd-437d-b146-da326ba7b704",
+        "target": "332766f1-907f-47b3-8471-282b971f583a",
+        "sourceHandle": "right",
+        "targetHandle": "left"
+      },
+      {
+        "id": "1d8b3067-7a82-4714-9204-a09a6b267cdb->69606afa-1d0c-4335-8af3-93982a359e44",
+        "source": "1d8b3067-7a82-4714-9204-a09a6b267cdb",
+        "target": "69606afa-1d0c-4335-8af3-93982a359e44",
+        "sourceHandle": "right",
+        "targetHandle": "left"
+      },
+      {
+        "id": "332766f1-907f-47b3-8471-282b971f583a->69606afa-1d0c-4335-8af3-93982a359e44",
+        "source": "332766f1-907f-47b3-8471-282b971f583a",
+        "target": "69606afa-1d0c-4335-8af3-93982a359e44",
+        "sourceHandle": "right",
+        "targetHandle": "left"
+      },
+      {
+        "id": "b28f4d2a-c112-4aaa-905a-ab11282b7458->9f1ef007-d03b-4591-8721-8fcd9a394023",
+        "source": "b28f4d2a-c112-4aaa-905a-ab11282b7458",
+        "target": "9f1ef007-d03b-4591-8721-8fcd9a394023",
+        "sourceHandle": "right",
+        "targetHandle": "left"
+      },
+      {
+        "id": "332766f1-907f-47b3-8471-282b971f583a->052e46a8-7add-4320-b91b-5a9bc0409276",
+        "source": "332766f1-907f-47b3-8471-282b971f583a",
+        "target": "052e46a8-7add-4320-b91b-5a9bc0409276",
+        "sourceHandle": "right",
+        "targetHandle": "left"
+      },
+      {
+        "id": "075442b7-31bd-478b-ad53-9f3cf51d8b9d->052e46a8-7add-4320-b91b-5a9bc0409276",
+        "source": "075442b7-31bd-478b-ad53-9f3cf51d8b9d",
+        "target": "052e46a8-7add-4320-b91b-5a9bc0409276",
+        "sourceHandle": "right",
+        "targetHandle": "left"
+      },
+      {
+        "id": "0a5da42b-afdc-41bf-b51d-650808f31a42->052e46a8-7add-4320-b91b-5a9bc0409276",
+        "source": "0a5da42b-afdc-41bf-b51d-650808f31a42",
+        "target": "052e46a8-7add-4320-b91b-5a9bc0409276",
+        "sourceHandle": "right",
+        "targetHandle": "left"
+      },
+      {
+        "id": "1d8b3067-7a82-4714-9204-a09a6b267cdb->052e46a8-7add-4320-b91b-5a9bc0409276",
+        "source": "1d8b3067-7a82-4714-9204-a09a6b267cdb",
+        "target": "052e46a8-7add-4320-b91b-5a9bc0409276",
+        "sourceHandle": "right",
+        "targetHandle": "left"
+      },
+      {
+        "id": "9f1ef007-d03b-4591-8721-8fcd9a394023->405922fd-c383-47aa-b3f5-8d5ef0eaef1b",
+        "source": "9f1ef007-d03b-4591-8721-8fcd9a394023",
+        "target": "405922fd-c383-47aa-b3f5-8d5ef0eaef1b",
+        "sourceHandle": "right",
+        "targetHandle": "left"
+      }
+    ]
+  },
+  "faq": [
     {
-      "id": "engagement_report",
-      "name": "Engagement Report",
-      "module_id": "reports",
-      "path": "/reports/engagement",
-      "description": "Main engagement dashboard showing the overall engagement score and trends over time.",
-      "how_to_access": "Navigate to Reports → Engagement Report from the sidebar.",
-      "key_actions": [
-        "View overall engagement score",
-        "Filter by department, role, or date range",
-        "Drill into a specific survey period"
-      ],
-      "tips": [
-        "A score below 60 is a signal to investigate further.",
-        "Use the date range filter to compare periods."
-      ],
-      "connections": [
-        "engagement_report_detail"
-      ],
-      "x": 294,
-      "y": 36
+      "id": "fdd5e13a-0282-4821-89e8-a2aaa7f3e120",
+      "question": "fvsd",
+      "answer": "vsdf",
+      "tag_ids": [],
+      "context": {
+        "type": "global"
+      }
     },
     {
-      "id": "engagement_report_detail",
-      "name": "Engagement Report Detail",
-      "module_id": "reports",
-      "path": "/reports/engagement/:id",
-      "description": "Detailed view of a specific engagement survey round — shows question-level results.",
-      "how_to_access": "Click on a survey period from the Engagement Report page.",
-      "key_actions": [
-        "View per-question scores",
-        "Compare with previous period",
-        "Export results"
-      ],
-      "tips": [],
-      "connections": [
-        "comments",
-        "other_answers"
-      ],
-      "x": 294,
-      "y": 192
-    },
+      "id": "24e999de-83bd-4ad3-af23-b0e379ccf69b",
+      "question": "asfvsadf",
+      "answer": "vsfdv",
+      "tag_ids": [],
+      "context": {
+        "type": "page",
+        "node_id": "1d8b3067-7a82-4714-9204-a09a6b267cdb"
+      }
+    }
+  ],
+  "rules": [
     {
-      "id": "comments",
-      "name": "Comments",
-      "module_id": "reports",
-      "path": "/comments/:id/:surveyKey",
-      "description": "Open-ended comment responses for a specific survey question.",
-      "how_to_access": "Click a comment icon on any question in the Engagement Report Detail page.",
-      "key_actions": [
-        "Read employee comments",
-        "Filter comments by sentiment or keyword"
-      ],
-      "tips": [
-        "Comments are anonymous — no individual is identifiable."
-      ],
-      "connections": [],
-      "x": 0,
-      "y": 348
-    },
-    {
-      "id": "exit_survey_report",
-      "name": "Exit Survey Report",
-      "module_id": "reports",
-      "path": "/reports/exit-survey",
-      "description": "Overview report for all exit survey responses — tracks why employees are leaving.",
-      "how_to_access": "Navigate to Reports → Exit Report from the sidebar.",
-      "key_actions": [
-        "View top reasons for leaving",
-        "Filter by date and department"
-      ],
-      "tips": [],
-      "connections": [
-        "exit_survey_employee_list",
-        "exit_survey_good_sides",
-        "exit_survey_reasons_leaving",
-        "exit_survey_publish",
-        "other_answers"
-      ],
-      "x": 631.5,
-      "y": 192
-    },
-    {
-      "id": "exit_survey_good_sides",
-      "name": "Exit Survey — Good Sides of Working",
-      "module_id": "reports",
-      "path": "/reports/exit-survey/good-sides-of-working",
-      "description": "Lists what departing employees say they appreciated about working at the company.",
-      "how_to_access": "From the Exit Survey Report, click the 'Good Sides' tab.",
-      "key_actions": [
-        "Browse positive feedback themes"
-      ],
-      "tips": [],
-      "x": 220.5,
-      "y": 504
-    },
-    {
-      "id": "exit_survey_reasons_leaving",
-      "name": "Exit Survey — Reasons of Leaving",
-      "module_id": "reports",
-      "path": "/reports/exit-survey/reasons-of-leaving",
-      "description": "Lists the primary reasons departing employees gave for leaving.",
-      "how_to_access": "From the Exit Survey Report, click the 'Reasons of Leaving' tab.",
-      "key_actions": [
-        "Browse leaving reason themes"
-      ],
-      "tips": [],
-      "x": 735,
-      "y": 504
-    },
-    {
-      "id": "exit_survey_employee_list",
-      "name": "Exit Survey — Employee List",
-      "module_id": "reports",
-      "path": "/reports/exit-survey/:id/employee-list",
-      "description": "Shows the list of employees who completed the exit survey for a given period.",
-      "how_to_access": "Click on a period in the Exit Survey Report to see its employee list.",
-      "key_actions": [
-        "View individual exit survey completions"
-      ],
-      "tips": [],
-      "connections": [
-        "exit_survey_good_sides",
-        "exit_survey_reasons_leaving"
-      ],
-      "x": 651.5,
-      "y": 348
-    },
-    {
-      "id": "experience_report",
-      "name": "Experience Reports",
-      "module_id": "reports",
-      "path": "/experience",
-      "description": "Multi-dimensional employee experience overview covering key work-life dimensions.",
-      "how_to_access": "Navigate to Reports → Experience from the sidebar.",
-      "key_actions": [
-        "View experience dimensions",
-        "Compare scores by team or role"
-      ],
-      "tips": [],
-      "connections": [
-        "experience_report_detail"
-      ],
-      "x": 20,
-      "y": 36
-    },
-    {
-      "id": "experience_report_detail",
-      "name": "Experience Report Detail",
-      "module_id": "reports",
-      "path": "/experience/:id/:surveyKey",
-      "description": "Detailed breakdown of a specific experience survey dimension.",
-      "how_to_access": "Click a dimension card on the Experience Reports page.",
-      "key_actions": [
-        "View per-question breakdown",
-        "See trends"
-      ],
-      "tips": [],
-      "connections": [
-        "comments",
-        "other_answers"
-      ],
-      "x": 20,
-      "y": 192
-    },
-    {
-      "id": "surveys_create",
-      "name": "New Survey",
-      "module_id": "surveys",
-      "path": "/surveys/create-new-survey",
-      "description": "Starting point for creating a new survey — choose type or start from scratch.",
-      "how_to_access": "Navigate to Surveys → New Survey, or click 'Create New Survey' button.",
-      "key_actions": [
-        "Choose survey type (engagement, experience, custom)",
-        "Start from a template or blank"
-      ],
-      "tips": [],
-      "connections": [
-        "surveys_builder_details"
-      ],
-      "x": 1059,
-      "y": 192
-    },
-    {
-      "id": "surveys_templates",
-      "name": "Survey Templates",
-      "module_id": "surveys",
-      "path": "/surveys/templates",
-      "description": "Browse the library of pre-built survey templates.",
-      "how_to_access": "From New Survey, click 'Choose a Template'.",
-      "key_actions": [
-        "Browse templates by category",
-        "Preview a template before using it"
-      ],
-      "tips": [],
-      "connections": [
-        "surveys_template_preview",
-        "surveys_create"
-      ],
-      "x": 1259.5,
-      "y": 36
-    },
-    {
-      "id": "surveys_builder_details",
-      "name": "Survey Builder — Details",
-      "module_id": "surveys",
-      "path": "/surveys/builder/details",
-      "description": "Step 1 of the survey builder: enter the survey name, description, and basic settings.",
-      "how_to_access": "Start a new survey and you land on this step automatically.",
-      "key_actions": [
-        "Set survey name",
-        "Set survey language",
-        "Configure anonymity"
-      ],
-      "tips": [],
-      "connections": [
-        "surveys_builder_questions"
-      ],
-      "x": 1470,
-      "y": 348
-    },
-    {
-      "id": "surveys_builder_questions",
-      "name": "Survey Builder — Questions",
-      "module_id": "surveys",
-      "path": "/surveys/builder/questions",
-      "description": "Step 2: add, reorder, and edit questions for the survey.",
-      "how_to_access": "Complete Step 1 (Details) and click Next.",
-      "key_actions": [
-        "Add new questions",
-        "Reorder questions via drag and drop",
-        "Set question type (scale, multiple choice, open-ended)"
-      ],
-      "tips": [
-        "Keep surveys under 10 questions for higher completion rates."
-      ],
-      "connections": [
-        "surveys_builder_participants"
-      ],
-      "x": 1470,
-      "y": 504
-    },
-    {
-      "id": "surveys_builder_participants",
-      "name": "Survey Builder — Participants & Schedule",
-      "module_id": "surveys",
-      "path": "/surveys/builder/participants-and-schedule",
-      "description": "Step 3: select who receives the survey and when it runs.",
-      "how_to_access": "Complete Step 2 (Questions) and click Next.",
-      "key_actions": [
-        "Select target audience (all employees, specific departments, roles)",
-        "Set start and end dates",
-        "Configure reminder schedule"
-      ],
-      "tips": [],
-      "connections": [
-        "surveys_builder_summary",
-        "exit_survey_publish"
-      ],
-      "x": 1470,
-      "y": 660
-    },
-    {
-      "id": "surveys_builder_summary",
-      "name": "Survey Builder — Summary",
-      "module_id": "surveys",
-      "path": "/surveys/builder/summary",
-      "description": "Step 4: final review before publishing the survey.",
-      "how_to_access": "Complete Step 3 and click Next.",
-      "key_actions": [
-        "Review all survey settings",
-        "Go back to edit any step",
-        "Publish the survey"
-      ],
-      "tips": [],
-      "connections": [
-        "engagement_report",
-        "experience_report_detail",
-        "surveys_create"
-      ],
-      "x": 1196,
-      "y": 816
-    },
-    {
-      "id": "surveys_builder_simulation",
-      "name": "Survey Builder — Simulation",
-      "module_id": "surveys",
-      "path": "/surveys/builder/simulation",
-      "description": "Preview the survey exactly as employees will see it before publishing.",
-      "how_to_access": "From the Summary step, click 'Preview'.",
-      "key_actions": [
-        "Walk through the survey as a test respondent"
-      ],
-      "tips": [
-        "Always simulate before publishing to catch any wording issues."
-      ],
-      "connections": [
-        "surveys_builder_summary"
-      ],
-      "x": 1196,
-      "y": 660
-    },
-    {
-      "id": "survey_overview",
-      "name": "Survey Overview",
-      "module_id": "survey",
-      "path": "/survey/overview",
-      "description": "Landing page shown to employees before starting a survey — shows survey info and estimated time.",
-      "how_to_access": "Employees receive a survey notification and click the link.",
-      "key_actions": [
-        "Start the survey"
-      ],
-      "tips": [],
-      "connections": [
-        "survey_questions"
-      ],
-      "x": 1804,
-      "y": 36
-    },
-    {
-      "id": "survey_questions",
-      "name": "Survey Questions",
-      "module_id": "survey",
-      "path": "/survey/questions",
-      "description": "The main survey-taking screen where employees answer questions one by one.",
-      "how_to_access": "Click 'Start' on the Survey Overview page.",
-      "key_actions": [
-        "Answer questions",
-        "Navigate forward and backward",
-        "Submit answers"
-      ],
-      "tips": [
-        "Employees can go back and change answers before submitting."
-      ],
-      "connections": [
-        "survey_complete"
-      ],
-      "x": 1804,
-      "y": 192
-    },
-    {
-      "id": "survey_complete",
-      "name": "Survey Complete",
-      "module_id": "survey",
-      "path": "/survey/complete",
-      "description": "Confirmation page shown after an employee successfully submits a survey.",
-      "how_to_access": "Automatically shown after submitting the last question.",
-      "key_actions": [],
-      "tips": [],
-      "x": 1804,
-      "y": 348
-    },
-    {
-      "id": "onboarding_report",
-      "name": "Onboarding Report",
-      "module_id": "onboarding",
-      "path": "/reports/onboarding",
-      "description": "Aggregate report showing onboarding completion rates and scores.",
-      "how_to_access": "Navigate to Reports → Onboarding from the sidebar.",
-      "key_actions": [
-        "View overall onboarding completion rate",
-        "Filter by department or start date"
-      ],
-      "tips": [],
-      "connections": [
-        "onboarding_phases"
-      ],
-      "x": 137,
-      "y": 1068
-    },
-    {
-      "id": "onboarding_phases",
-      "name": "Onboarding Phases",
-      "module_id": "onboarding",
-      "path": "/onboarding/phases",
-      "description": "Overview of all onboarding phases and their configuration.",
-      "how_to_access": "Navigate to Onboarding → Phases from the sidebar.",
-      "key_actions": [
-        "View and manage onboarding phases",
-        "Edit phase content and timing"
-      ],
-      "tips": [],
-      "connections": [
-        "onboarding_phase_detail",
-        "onboarding_employee_list"
-      ],
-      "x": 137,
-      "y": 1224
-    },
-    {
-      "id": "onboarding_phase_detail",
-      "name": "Onboarding Phase Detail",
-      "module_id": "onboarding",
-      "path": "/onboarding/phase/:phase",
-      "description": "Detailed view of a single onboarding phase — shows tasks, surveys, and completion status.",
-      "how_to_access": "Click on a phase from the Onboarding Phases page.",
-      "key_actions": [
-        "View tasks within the phase",
-        "Edit phase settings"
-      ],
-      "tips": [],
-      "x": 274,
-      "y": 1380
-    },
-    {
-      "id": "onboarding_employee_list",
-      "name": "Onboarding Employee List",
-      "module_id": "onboarding",
-      "path": "/onboarding/employee-list",
-      "description": "List of all employees currently in an onboarding program.",
-      "how_to_access": "Navigate to Onboarding → Employee List.",
-      "key_actions": [
-        "View onboarding progress per employee",
-        "Filter by phase or status"
-      ],
-      "tips": [],
-      "connections": [
-        "onboarding_employee_detail"
-      ],
-      "x": 0,
-      "y": 1380
-    },
-    {
-      "id": "onboarding_new_employee_list",
-      "name": "New Employee List",
-      "module_id": "onboarding",
-      "path": "/onboarding/new-employee-list",
-      "description": "List of newly added employees who are about to start or have just started onboarding.",
-      "how_to_access": "Navigate to Onboarding → New Employee List.",
-      "key_actions": [
-        "View upcoming new hires",
-        "Initiate onboarding manually"
-      ],
-      "tips": [],
-      "connections": [
-        "onboarding_employee_detail",
-        "surveys_templates"
-      ],
-      "x": 548,
-      "y": 1380
-    },
-    {
-      "id": "onboarding_employee_detail",
-      "name": "Onboarding Employee Detail",
-      "module_id": "onboarding",
-      "path": "/onboarding/employee/:id",
-      "description": "Individual employee's onboarding progress — shows completed and pending tasks by phase.",
-      "how_to_access": "Click on an employee name in the Onboarding Employee List.",
-      "key_actions": [
-        "View task completion status",
-        "Send reminders",
-        "Override phase status"
-      ],
-      "tips": [],
-      "x": 274,
-      "y": 1536
-    },
-    {
-      "id": "people_list",
-      "name": "People",
-      "module_id": "people",
-      "path": "/people",
-      "description": "Complete employee directory — view, search, and manage all employees in the platform.",
-      "how_to_access": "Navigate to People from the sidebar.",
-      "key_actions": [
-        "Search employees by name or email",
-        "Filter by department or role",
-        "Edit individual employee profiles"
-      ],
-      "tips": [],
-      "connections": [
-        "people_import"
-      ],
-      "x": 872,
-      "y": 1068
-    },
-    {
-      "id": "people_import",
-      "name": "People Import",
-      "module_id": "people",
-      "path": "/people/import",
-      "description": "Bulk-import employees by uploading a CSV or Excel file.",
-      "how_to_access": "On the People page, click 'Import'.",
-      "key_actions": [
-        "Download the import template",
-        "Upload filled template",
-        "Review and confirm imported employees"
-      ],
-      "tips": [
-        "Use the provided template to avoid import errors.",
-        "Duplicate emails are automatically skipped."
-      ],
-      "x": 872,
-      "y": 1224
-    },
-    {
-      "id": "feedbacks_report",
-      "name": "Feedbacks Report",
-      "module_id": "feedbacks",
-      "path": "/feedbacks",
-      "description": "Report of all employee feedback submissions — structured and free-form responses.",
-      "how_to_access": "Navigate to Feedbacks from the sidebar.",
-      "key_actions": [
-        "Filter feedback by date, department, or type",
-        "View individual feedback details"
-      ],
-      "tips": [
-        "Feedback is anonymous — responses cannot be traced back to individuals."
-      ],
-      "x": 1196,
-      "y": 1068
-    },
-    {
-      "id": "settings",
-      "name": "Settings",
-      "module_id": "settings",
-      "path": "/settings",
-      "description": "Platform-wide configuration including account info, notifications, and integrations.",
-      "how_to_access": "Navigate to Settings from the sidebar.",
-      "key_actions": [
-        "Update company profile",
-        "Manage notification preferences",
-        "Configure integrations"
-      ],
-      "tips": [],
-      "x": 0,
-      "y": 1788
-    },
-    {
-      "id": "surveys_template_preview",
-      "name": "Survey Template Preview",
-      "module_id": "surveys",
-      "path": "/surveys/template-preview/:id",
-      "description": "A read-only preview of a survey template showing all questions and structure before deciding to use it.",
-      "how_to_access": "Click 'Explore' on any template card in Survey Templates.",
-      "key_actions": [
-        "Preview all questions",
-        "Use template to start Survey Builder"
-      ],
-      "tips": [
-        "Use preview to evaluate a template before committing to it"
-      ],
-      "connections": [
-        "surveys_builder_details"
-      ],
-      "x": 1480,
-      "y": 192
-    },
-    {
-      "id": "other_answers",
-      "name": "Other Answers",
-      "module_id": "reports",
-      "path": "/reports/answers/:surveyId/other/:questionId",
-      "description": "Shows all free-text 'Other' option responses for a specific question in a survey report. Accessible from any report page that has open-ended or 'other' answer options.",
-      "how_to_access": "Click on 'Other' answer option in any report chart or question breakdown.",
-      "key_actions": [
-        "Browse all 'other' text responses",
-        "Filter by date or participant group"
-      ],
-      "tips": [
-        "Useful for discovering unexpected themes not captured by fixed answer options"
-      ],
-      "x": 377.5,
-      "y": 348
-    },
-    {
-      "id": "exit_survey_publish",
-      "name": "Exit Survey — Publish",
-      "module_id": "exit_survey",
-      "path": "/surveys/builder/exit-survey-publish",
-      "description": "Configuration and publish step specific to exit surveys. Sets up automated sending rules for departing employees.",
-      "how_to_access": "Click 'Send Exit Survey' button on the Exit Survey Report page.",
-      "key_actions": [
-        "Configure exit survey sending rules",
-        "Set notification timing",
-        "Publish exit survey"
-      ],
-      "tips": [
-        "Exit surveys are sent automatically when an employee is marked as departing in People"
-      ],
-      "connections": [
-        "exit_survey_update"
-      ],
-      "x": 324,
-      "y": 1788
-    },
-    {
-      "id": "exit_survey_update",
-      "name": "Exit Survey — Update",
-      "module_id": "exit_survey",
-      "path": "/surveys/builder/exit-survey-update",
-      "description": "Update and modify an already-published exit survey configuration.",
-      "how_to_access": "Navigated to automatically after publishing an exit survey.",
-      "key_actions": [
-        "Update exit survey questions",
-        "Modify sending schedule",
-        "Save changes"
-      ],
-      "tips": [],
-      "x": 324,
-      "y": 1944
+      "id": "167b1b97-e998-461b-afc1-877bf6a7f428",
+      "title": "3",
+      "description": "fvsd",
+      "tag_ids": [],
+      "context": {
+        "type": "page",
+        "node_id": "1d8b3067-7a82-4714-9204-a09a6b267cdb"
+      }
     }
   ],
   "glossary": [
@@ -746,18 +1207,6 @@
       "definition": "A short, frequent survey (typically 1–5 questions) used to track employee sentiment in real-time."
     }
   ],
-  "global_rules": {
-    "anonymity_limit": {
-      "value": 5,
-      "description": "Minimum number of respondents required before individual answers are shown in reports."
-    },
-    "reporting_limit": {
-      "value": 3,
-      "description": "Minimum number of responses required for statistical significance in reports."
-    },
-    "other_rules": []
-  },
-  "faq": [],
   "agent_behavior": {
     "tone": "Helpful, clear, and friendly",
     "fallback_message": "I'm sorry, I couldn't find an answer to that. Please contact your HR team for help.",
@@ -770,9 +1219,5 @@
       "harassment",
       "discrimination"
     ]
-  },
-  "map": {
-    "nodes": [],
-    "edges": []
   }
 }
