@@ -1,6 +1,6 @@
 'use client';
 import { useKbStore } from '@/stores/kbStore';
-import type { KbComponent, ComponentType } from '@/lib/types';
+import type { KbComponent } from '@/lib/types';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -67,27 +67,12 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
           />
         </div>
 
-        {isPrimitive ? (
+        {isPrimitive && (
           <div className="flex items-center gap-2">
             <span className="text-xs px-2.5 py-1 rounded-md border border-border text-muted-foreground bg-muted/40 flex items-center gap-1">
               <IconLock size={11} /> atom
             </span>
             <span className="text-xs text-muted-foreground">Standart primitive — düzenlenemez</span>
-          </div>
-        ) : (
-          <div className="flex gap-1.5">
-            {(['composite', 'section'] as ComponentType[]).map(t => (
-              <button key={t} type="button"
-                onClick={() => upsertComponent({ ...comp, component_type: t })}
-                className={cn(
-                  'text-xs px-2.5 py-1 rounded-md border transition-colors',
-                  (comp.component_type ?? 'composite') === t
-                    ? 'bg-primary text-primary-foreground border-primary'
-                    : 'border-border text-muted-foreground hover:border-muted-foreground'
-                )}>
-                {t}
-              </button>
-            ))}
           </div>
         )}
       </div>

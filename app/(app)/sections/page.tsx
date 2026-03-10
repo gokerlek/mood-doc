@@ -17,7 +17,7 @@ export default function SectionsPage() {
   const handleCreate = () => {
     const comp = { ...emptyComponent(), component_type: 'section' as const };
     upsertComponent(comp);
-    router.push(`/components/${comp.id}`);
+    router.push(`/sections/${comp.id}`);
   };
 
   const sections = data.components.filter(c => c.component_type === 'section');

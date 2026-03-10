@@ -19,6 +19,7 @@ export function ComponentCard({ component }: ComponentCardProps) {
   const deleteComponent = useKbStore.useDeleteComponent();
 
   const isPrimitive = component.component_type === 'primitive';
+  const isSection = component.component_type === 'section';
   const tags = (data?.tags ?? []).filter(t => component.tag_ids?.includes(t.id) ?? false);
   const faqCount = component.faq_ids.length;
   const ruleCount = component.rule_ids.length;
@@ -33,7 +34,7 @@ export function ComponentCard({ component }: ComponentCardProps) {
         isPrimitive ? 'border-l-4 border-l-muted-foreground/40' : 'border-l-4 border-l-primary',
       )}>
         <Link
-          href={`/components/${component.id}`}
+          href={isSection ? `/sections/${component.id}` : `/components/${component.id}`}
           className="flex items-start gap-3 flex-1 min-w-0 p-4"
         >
           <div className={cn(
@@ -51,7 +52,7 @@ export function ComponentCard({ component }: ComponentCardProps) {
                 {component.name || 'İsimsiz Component'}
               </p>
               <Badge variant="outline" className="text-[10px] py-0 px-1.5 h-4 font-medium">
-                {isPrimitive ? 'Atom' : 'Composite'}
+                {isPrimitive ? 'Atom' : isSection ? 'Section' : 'Composite'}
               </Badge>
             </div>
             {component.description && (

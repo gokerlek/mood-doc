@@ -27,7 +27,7 @@ export default function ComponentDetailPage({ params }: PageProps) {
 
   const isPrimitive = comp.component_type === 'primitive';
   const backHref = comp.component_type === 'section' ? '/sections' : '/components';
-  const backLabel = comp.component_type === 'section' ? 'Sections' : 'Componentler';
+  const backLabel = comp.component_type === 'section' ? 'Layout Bileşenleri' : 'Componentler';
 
   const pickable = data.components.filter(
     c => c.component_type === 'primitive' || c.component_type === 'composite'
@@ -75,7 +75,7 @@ export default function ComponentDetailPage({ params }: PageProps) {
         ) : (
           <DndContext
             onDragStart={(e: DragStartEvent) =>
-              setActiveDragName(e.active.data.current?.componentName ?? '')
+              setActiveDragName((e.active.data.current?.componentName as string | undefined) ?? '')
             }
             onDragEnd={() => setActiveDragName('')}
             onDragCancel={() => setActiveDragName('')}
