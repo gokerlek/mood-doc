@@ -128,11 +128,11 @@ function MapCanvasInner() {
           <Panel position="top-left" className="flex gap-2">
             <Button size="sm" onClick={handleAddNode} className="shadow-sm gap-1.5">
               <IconPlus size={14} strokeWidth={2} />
-              Add Node
+              Node Ekle
             </Button>
             <Button size="sm" variant="outline" onClick={handleAddGroup} className="shadow-sm gap-1.5">
               <IconLayoutGrid size={14} strokeWidth={2} />
-              Add Group
+              Grup Ekle
             </Button>
           </Panel>
         </ReactFlow>

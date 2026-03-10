@@ -19,9 +19,9 @@ interface ComponentRightPanelProps {
 }
 
 const ZONE_BADGE: Record<string, string> = {
-  header: 'bg-blue-500/10 text-blue-600 border-blue-500/30',
+  header: 'bg-zone-header-bg text-zone-header-fg border-zone-header-border',
   body:   'bg-muted/60 text-muted-foreground border-border',
-  footer: 'bg-amber-500/10 text-amber-600 border-amber-500/30',
+  footer: 'bg-zone-footer-bg text-zone-footer-fg border-zone-footer-border',
 };
 
 export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: ComponentRightPanelProps) {
@@ -120,7 +120,7 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
                 className={cn(
                   'text-xs px-2.5 py-1 rounded-md border transition-colors',
                   comp.has_header
-                    ? 'bg-blue-500/10 text-blue-600 border-blue-500/40'
+                    ? 'bg-zone-header-bg text-zone-header-fg border-zone-header-border'
                     : 'border-border text-muted-foreground hover:border-muted-foreground'
                 )}
               >
@@ -139,7 +139,7 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
                 className={cn(
                   'text-xs px-2.5 py-1 rounded-md border transition-colors',
                   comp.has_footer
-                    ? 'bg-amber-500/10 text-amber-600 border-amber-500/40'
+                    ? 'bg-zone-footer-bg text-zone-footer-fg border-zone-footer-border'
                     : 'border-border text-muted-foreground hover:border-muted-foreground'
                 )}
               >

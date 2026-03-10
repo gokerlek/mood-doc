@@ -42,26 +42,26 @@ export function NodeDrawer({ node, onClose, onSave }: NodeDrawerProps) {
     <Drawer open={!!node} onOpenChange={(open) => { if (!open) onClose(); }} direction="right">
       <DrawerContent className="w-80 sm:max-w-80 flex flex-col">
         <DrawerHeader className="border-b border-border pb-3">
-          <DrawerTitle>Edit Node</DrawerTitle>
+          <DrawerTitle>Node Düzenle</DrawerTitle>
         </DrawerHeader>
 
         <div className="flex-1 overflow-y-auto p-4 space-y-5">
           {/* Label */}
           <div className="space-y-1.5">
-            <label className="text-xs font-medium text-foreground">Name</label>
+            <label className="text-xs font-medium text-foreground">Ad</label>
             <input
               type="text"
               value={label}
               onChange={(e) => setLabel(e.target.value)}
               className="w-full h-8 px-3 rounded-md border border-input bg-background text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-              placeholder="Node name"
+              placeholder="Node adı"
               autoFocus
             />
           </div>
 
           {/* Color */}
           <div className="space-y-2">
-            <label className="text-xs font-medium text-foreground">Color</label>
+            <label className="text-xs font-medium text-foreground">Renk</label>
             <div className="flex gap-2 flex-wrap">
               {PRESET_COLORS.map((c) => (
                 <button
@@ -81,7 +81,7 @@ export function NodeDrawer({ node, onClose, onSave }: NodeDrawerProps) {
                 <button
                   onClick={() => setColor(undefined)}
                   className="w-7 h-7 rounded-full border border-dashed border-border text-muted-foreground text-[10px] font-bold hover:bg-muted transition-colors"
-                  title="Remove color"
+                  title="Rengi kaldır"
                 >
                   x
                 </button>
@@ -97,7 +97,7 @@ export function NodeDrawer({ node, onClose, onSave }: NodeDrawerProps) {
                 className="inline-flex items-center gap-1 text-xs text-primary hover:underline font-medium"
                 onClick={onClose}
               >
-                Sayfa Detayini Duzenle &rarr;
+                Sayfa Detayını Düzenle &rarr;
               </Link>
             </div>
           )}
@@ -105,10 +105,10 @@ export function NodeDrawer({ node, onClose, onSave }: NodeDrawerProps) {
 
         <DrawerFooter className="border-t border-border flex-row gap-2 pt-3">
           <Button variant="outline" size="sm" onClick={onClose} className="flex-1">
-            Cancel
+            İptal
           </Button>
           <Button size="sm" onClick={handleSave} className="flex-1">
-            Save
+            Kaydet
           </Button>
         </DrawerFooter>
       </DrawerContent>

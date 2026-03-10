@@ -37,13 +37,18 @@ export default function PagesPage() {
       />
 
       {leafNodes.length === 0 ? (
-        <div className="text-center py-12 bg-muted/30 rounded-2xl border border-dashed border-border">
-          <IconLayoutDashboard size={28} className="text-muted-foreground/40 mx-auto mb-2" />
-          <p className="text-sm text-muted-foreground">
-            Henüz sayfa yok.
+        <div className="text-center py-16 bg-muted/30 rounded-2xl border border-dashed border-border">
+          <IconLayoutDashboard size={32} className="text-muted-foreground/30 mx-auto mb-3" />
+          <p className="text-sm font-medium text-foreground mb-1">Henüz sayfa yok.</p>
+          <p className="text-xs text-muted-foreground max-w-xs mx-auto mb-4">
+            Sayfalar, haritadaki leaf node&apos;lardan (başka node&apos;ların parent&apos;ı olmayan node&apos;lar) otomatik oluşur.
           </p>
-          <Link href="/map" className={cn(buttonVariants({ variant: 'link' }), 'mt-1 h-auto p-0 text-sm')}>
-            Map&apos;e git ve node ekle →
+          <Link
+            href="/map"
+            className={cn(buttonVariants({ variant: 'default' }), 'gap-1.5')}
+          >
+            <IconSitemap size={14} />
+            Haritaya Git
           </Link>
         </div>
       ) : (

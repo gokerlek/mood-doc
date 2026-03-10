@@ -5,6 +5,7 @@ import type { KbFaq, MapNodeData, KbComponent } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { contextLabel } from '@/lib/context-utils';
+import { useKbStore } from '@/stores/kbStore';
 
 export interface FaqRowProps {
   faq: KbFaq;
@@ -18,6 +19,8 @@ export interface FaqRowProps {
 }
 
 export function FaqRow({ faq, leafNodes, components, onEdit, onDelete, editingId, onSave, onCancelEdit }: FaqRowProps) {
+  const data = useKbStore.useData();
+
   if (editingId === faq.id) {
     return (
       <FaqForm
@@ -32,6 +35,11 @@ export function FaqRow({ faq, leafNodes, components, onEdit, onDelete, editingId
 
   const ctxLabel = contextLabel(faq.context, leafNodes, components);
 
+  const tagLabels = data ? faq.tag_ids.map(tagId => {
+    const tag = data.tags.find(t => t.id === tagId);
+    return tag ? tag.label : null;
+  }).filter((label): label is string => label !== null) : [];
+
   return (
     <div className="bg-card border border-border border-l-4 border-l-primary/50 rounded-xl shadow-sm hover:shadow-md transition-all duration-150 group">
       <div className="flex items-start gap-3 px-5 py-4">
@@ -44,8 +52,8 @@ export function FaqRow({ faq, leafNodes, components, onEdit, onDelete, editingId
                 {ctxLabel}
               </Badge>
             )}
-            {faq.tag_ids.map(t => (
-              <Badge key={t} variant="outline" className="text-[10px]">#{t}</Badge>
+            {tagLabels.map((label, idx) => (
+              <Badge key={`${faq.id}-tag-${idx}`} variant="outline" className="text-[10px]">{label}</Badge>
             ))}
           </div>
         </div>

@@ -4,6 +4,7 @@ import { useKbStore } from '@/stores/kbStore';
 import type { TagCategory, KbTag } from '@/lib/types';
 import { emptyTag } from '@/lib/defaults';
 import { TagBadge } from './TagBadge';
+import { ConfirmModal } from '@/components/shared/ConfirmModal';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { IconPlus, IconTrash, IconEdit, IconCheck } from '@tabler/icons-react';
@@ -17,6 +18,7 @@ export function TagCategorySection({ category, tags }: TagCategorySectionProps) 
   const [newTagLabel, setNewTagLabel] = useState('');
   const [isEditingLabel, setIsEditingLabel] = useState(false);
   const [catLabel, setCatLabel] = useState(category.label);
+  const [confirmOpen, setConfirmOpen] = useState(false);
 
   const upsertTag = useKbStore.useUpsertTag();
   const deleteTag = useKbStore.useDeleteTag();
@@ -69,7 +71,7 @@ export function TagCategorySection({ category, tags }: TagCategorySectionProps) 
         )}
         <button
           type="button"
-          onClick={() => deleteTagCategory(category.id)}
+          onClick={() => setConfirmOpen(true)}
           className="text-muted-foreground hover:text-destructive transition-colors"
           aria-label="Kategoriyi sil"
         >
@@ -102,6 +104,15 @@ export function TagCategorySection({ category, tags }: TagCategorySectionProps) 
           <IconPlus size={13} />
         </Button>
       </div>
+
+      <ConfirmModal
+        open={confirmOpen}
+        title={`"${category.label}" kategorisi silinsin mi?`}
+        description={tags.length > 0 ? `Bu kategori ve içindeki ${tags.length} tag kalıcı olarak silinir.` : undefined}
+        confirmLabel="Sil"
+        onConfirm={() => deleteTagCategory(category.id)}
+        onCancel={() => setConfirmOpen(false)}
+      />
     </div>
   );
 }

@@ -41,11 +41,15 @@ export function FaqForm({ initial, leafNodes, components, onSave, onCancel }: Fa
   const [selectedComponentId, setSelectedComponentId] = useState<string>(
     initial.context.type === 'component' ? initial.context.component_id : ''
   );
+  const [saveAttempted, setSaveAttempted] = useState(false);
 
   const canSave = f.question.trim() !== '' && f.answer.trim() !== '';
 
   const handleSave = () => {
-    if (!canSave) return;
+    if (!canSave) {
+      setSaveAttempted(true);
+      return;
+    }
     const context = buildContext(contextType, selectedNodeId, selectedComponentId);
     onSave({ ...f, context });
   };
@@ -60,6 +64,9 @@ export function FaqForm({ initial, leafNodes, components, onSave, onCancel }: Fa
             value={f.question}
             onChange={e => setF(p => ({ ...p, question: e.target.value }))}
           />
+          {saveAttempted && !f.question.trim() && (
+            <p className="text-xs text-destructive">Question is required.</p>
+          )}
         </div>
         <div className="space-y-1">
           <Label>Answer</Label>
@@ -68,6 +75,9 @@ export function FaqForm({ initial, leafNodes, components, onSave, onCancel }: Fa
             value={f.answer}
             onChange={e => setF(p => ({ ...p, answer: e.target.value }))}
           />
+          {saveAttempted && !f.answer.trim() && (
+            <p className="text-xs text-destructive">Answer is required.</p>
+          )}
         </div>
 
         {/* Context selector */}
@@ -86,6 +96,12 @@ export function FaqForm({ initial, leafNodes, components, onSave, onCancel }: Fa
               <SelectItem value="component">Component</SelectItem>
             </SelectContent>
           </Select>
+
+          <p className="text-xs text-muted-foreground">
+            {contextType === 'global' && 'Tüm sayfalarda geçerli.'}
+            {contextType === 'page' && 'Sadece seçili sayfada görünür.'}
+            {contextType === 'component' && 'Sadece bu component\'te görünür.'}
+          </p>
 
           {contextType === 'page' && (
             <Select

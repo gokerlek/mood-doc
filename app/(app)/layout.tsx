@@ -20,7 +20,7 @@ const NAV_GROUPS = [
     items: [
       { label: 'Harita', icon: IconSitemap, href: '/map' },
       { label: 'Sayfalar', icon: IconLayoutDashboard, href: '/pages' },
-      { label: 'Sections', icon: IconLayoutColumns, href: '/sections' },
+      { label: 'Layout Bileşenleri', icon: IconLayoutColumns, href: '/sections' },
       { label: 'Componentler', icon: IconPuzzle, href: '/components' },
     ],
   },
@@ -118,7 +118,7 @@ function Sidebar() {
           {isPending ? (
             <><IconLoader2 size={13} className="animate-spin" />Kaydediliyor...</>
           ) : isDirty ? (
-            <><IconDeviceFloppy size={13} />GitHub'a Kaydet</>
+            <><IconDeviceFloppy size={13} />GitHub&#39;a Kaydet</>
           ) : (
             <><IconBrandGithub size={13} className="text-muted-foreground" />Kaydedildi</>
           )}

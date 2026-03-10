@@ -41,11 +41,15 @@ export function RuleForm({ initial, leafNodes, components, onSave, onCancel }: R
   const [selectedComponentId, setSelectedComponentId] = useState<string>(
     initial.context.type === 'component' ? initial.context.component_id : ''
   );
+  const [saveAttempted, setSaveAttempted] = useState(false);
 
   const canSave = r.title.trim() !== '' && r.description.trim() !== '';
 
   const handleSave = () => {
-    if (!canSave) return;
+    if (!canSave) {
+      setSaveAttempted(true);
+      return;
+    }
     const context = buildContext(contextType, selectedNodeId, selectedComponentId);
     onSave({ ...r, context });
   };
@@ -60,6 +64,9 @@ export function RuleForm({ initial, leafNodes, components, onSave, onCancel }: R
             value={r.title}
             onChange={e => setR(p => ({ ...p, title: e.target.value }))}
           />
+          {saveAttempted && !r.title.trim() && (
+            <p className="text-xs text-destructive">Başlık zorunludur.</p>
+          )}
         </div>
         <div className="space-y-1">
           <Label>Açıklama</Label>
@@ -69,6 +76,9 @@ export function RuleForm({ initial, leafNodes, components, onSave, onCancel }: R
             value={r.description}
             onChange={e => setR(p => ({ ...p, description: e.target.value }))}
           />
+          {saveAttempted && !r.description.trim() && (
+            <p className="text-xs text-destructive">Açıklama zorunludur.</p>
+          )}
         </div>
 
         {/* Context selector */}
@@ -87,6 +97,12 @@ export function RuleForm({ initial, leafNodes, components, onSave, onCancel }: R
               <SelectItem value="component">Component</SelectItem>
             </SelectContent>
           </Select>
+
+          <p className="text-xs text-muted-foreground">
+            {contextType === 'global' && 'Tüm sayfalarda geçerli.'}
+            {contextType === 'page' && 'Sadece seçili sayfada görünür.'}
+            {contextType === 'component' && 'Sadece bu component\'te görünür.'}
+          </p>
 
           {contextType === 'page' && (
             <Select

@@ -5,6 +5,7 @@ import type { KbRule, MapNodeData, KbComponent } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { contextLabel } from '@/lib/context-utils';
+import { useKbStore } from '@/stores/kbStore';
 
 export interface RuleRowProps {
   rule: KbRule;
@@ -18,6 +19,8 @@ export interface RuleRowProps {
 }
 
 export function RuleRow({ rule, leafNodes, components, onEdit, onDelete, editingId, onSave, onCancelEdit }: RuleRowProps) {
+  const data = useKbStore.useData();
+
   if (editingId === rule.id) {
     return (
       <RuleForm
@@ -32,6 +35,11 @@ export function RuleRow({ rule, leafNodes, components, onEdit, onDelete, editing
 
   const ctxLabel = contextLabel(rule.context, leafNodes, components);
 
+  const tagLabels = data ? rule.tag_ids.map(tagId => {
+    const tag = data.tags.find(t => t.id === tagId);
+    return tag ? tag.label : null;
+  }).filter((label): label is string => label !== null) : [];
+
   return (
     <div className="bg-card border border-border border-l-4 border-l-amber-500/60 rounded-xl shadow-sm hover:shadow-md transition-all duration-150 group">
       <div className="flex items-start gap-3 px-5 py-4">
@@ -42,8 +50,8 @@ export function RuleRow({ rule, leafNodes, components, onEdit, onDelete, editing
             {ctxLabel && (
               <Badge variant="outline">{ctxLabel}</Badge>
             )}
-            {rule.tag_ids.map(t => (
-              <Badge key={t} variant="secondary">#{t}</Badge>
+            {tagLabels.map((label, idx) => (
+              <Badge key={`${rule.id}-tag-${idx}`} variant="secondary">{label}</Badge>
             ))}
           </div>
         </div>

@@ -26,12 +26,12 @@ export default function SectionsPage() {
     <div className="p-6 max-w-5xl space-y-8">
       <PageHeader
         icon={<IconLayoutColumns size={22} className="text-primary" />}
-        title="Sections"
-        description="Sayfa bölümlerini (section) buradan tanımlayın."
+        title="Layout Bileşenleri"
+        description="Sayfaya yerleştirilen header, footer ve body bölümlerini (section) yönetin."
         action={
           <Button onClick={handleCreate}>
             <IconPlus size={14} />
-            Yeni Section
+            Yeni Layout Bileşeni
           </Button>
         }
       />
@@ -40,7 +40,7 @@ export default function SectionsPage() {
         <div className="flex items-center gap-2 mb-4">
           <IconLayoutColumns size={14} className="text-primary" />
           <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.08em]">
-            Sections
+            Layout Bileşenleri
           </p>
           <span className="text-[10px] text-muted-foreground ml-1">{sections.length}</span>
         </div>
@@ -54,10 +54,10 @@ export default function SectionsPage() {
           <div className="text-center py-12 bg-muted/30 rounded-2xl border border-dashed border-border">
             <IconLayoutColumns size={28} className="text-muted-foreground/40 mx-auto mb-2" />
             <p className="text-sm text-muted-foreground">
-              Henüz section yok.
+              Henüz layout bileşeni yok.
             </p>
             <Button variant="link" onClick={handleCreate} className="mt-1 h-auto p-0 text-sm">
-              İlk section&apos;ı ekle →
+              İlk layout bileşenini ekle →
             </Button>
           </div>
         )}
