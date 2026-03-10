@@ -8,6 +8,8 @@ import { ConfirmModal } from '@/components/shared/ConfirmModal';
 import { Badge } from '@/components/ui/badge';
 import { IconAtom, IconChevronRight, IconPuzzle, IconTrash } from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { toast } from 'sonner';
 
 interface ComponentCardProps {
   component: KbComponent;
@@ -77,14 +79,16 @@ export function ComponentCard({ component }: ComponentCardProps) {
         </Link>
         <div className="flex items-center gap-1 pr-3 opacity-0 group-hover:opacity-100 transition-opacity">
           {!isPrimitive && (
-            <button
+            <Button
               type="button"
+              variant="ghost"
+              size="sm"
               onClick={() => setConfirmOpen(true)}
-              className="p-1.5 text-muted-foreground hover:text-destructive transition-colors rounded-md hover:bg-destructive/10"
               aria-label="Component sil"
+              className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
             >
               <IconTrash size={14} />
-            </button>
+            </Button>
           )}
           <IconChevronRight size={14} className="text-muted-foreground" />
         </div>
@@ -97,6 +101,7 @@ export function ComponentCard({ component }: ComponentCardProps) {
           onConfirm={() => {
             deleteComponent(component.id);
             setConfirmOpen(false);
+            toast.success('Silindi');
           }}
           title="Component silinsin mi?"
           description="Bu işlem geri alınamaz. Bu component'e ait FAQ ve kurallar listede kalır."

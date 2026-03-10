@@ -5,7 +5,9 @@ import { TagSelector } from '@/components/tags/TagSelector';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Card } from '@/components/ui/card';
 import { IconPlus, IconTrash } from '@tabler/icons-react';
+import { toast } from 'sonner';
 
 interface ComponentFaqSectionProps {
   componentId: string;
@@ -34,6 +36,7 @@ export function ComponentFaqSection({ componentId, faqIds }: ComponentFaqSection
     if (!comp) return;
     deleteFaq(faqId);
     upsertComponent({ ...comp, faq_ids: comp.faq_ids.filter(id => id !== faqId) });
+    toast.success('Silindi');
   };
 
   return (
@@ -50,7 +53,7 @@ export function ComponentFaqSection({ componentId, faqIds }: ComponentFaqSection
         <p className="text-xs text-muted-foreground">Henüz FAQ yok.</p>
       ) : (
         faqs.map(faq => (
-          <div key={faq.id} className="border border-border rounded-lg p-3 space-y-2">
+          <Card key={faq.id} className="p-3 space-y-2">
             <Input
               value={faq.question}
               onChange={e => upsertFaq({ ...faq, question: e.target.value })}
@@ -67,16 +70,18 @@ export function ComponentFaqSection({ componentId, faqIds }: ComponentFaqSection
                 selectedIds={faq.tag_ids}
                 onChange={tag_ids => upsertFaq({ ...faq, tag_ids })}
               />
-              <button
+              <Button
                 type="button"
+                variant="ghost"
+                size="sm"
                 onClick={() => handleDelete(faq.id)}
-                className="text-muted-foreground hover:text-destructive transition-colors"
+                className="text-muted-foreground hover:text-destructive"
                 aria-label="FAQ sil"
               >
                 <IconTrash size={14} />
-              </button>
+              </Button>
             </div>
-          </div>
+          </Card>
         ))
       )}
     </div>

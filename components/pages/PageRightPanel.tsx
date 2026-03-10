@@ -11,6 +11,9 @@ import { PagePropEditList } from './PagePropEditList';
 import { IconX } from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
 import { useSlotBindings } from '@/hooks/useSlotBindings';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Button } from '@/components/ui/button';
 
 interface PageRightPanelProps {
   nodeId: string;
@@ -47,7 +50,8 @@ export function PageRightPanel({
   );
 
   return (
-    <div className="flex flex-col gap-4 overflow-y-auto h-full px-4 py-4">
+    <ScrollArea className="h-full">
+    <div className="flex flex-col gap-4 px-4 py-4">
       {/* Sayfa adı + açıklama + taglar */}
       <div className="space-y-3">
         <Input
@@ -117,13 +121,15 @@ export function PageRightPanel({
                       {childComp.name}
                     </span>
                   )}
-                  <button
+                  <Button
                     type="button"
-                    className="shrink-0 text-muted-foreground/50 hover:text-destructive transition-colors"
+                    variant="ghost"
+                    size="icon"
+                    className="shrink-0 h-5 w-5 text-muted-foreground/50 hover:text-destructive"
                     onClick={e => { e.stopPropagation(); deleteSlot(slot.id); }}
                   >
                     <IconX size={12} />
-                  </button>
+                  </Button>
                 </div>
                 {childProps.map(prop => {
                   const bound = (slot.prop_bindings ?? []).find(b => b.childPropName === prop.name);
@@ -133,17 +139,20 @@ export function PageRightPanel({
                         {prop.name}
                       </span>
                       <span className="text-muted-foreground/40 text-[10px]">──►</span>
-                      <select
+                      <Select
                         value={bound?.parentPropId ?? ''}
-                        onChange={e => updateBinding(slot.id, prop.name, e.target.value)}
-                        onClick={e => e.stopPropagation()}
-                        className="flex-1 text-[11px] border border-border rounded px-1 py-0.5 bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+                        onValueChange={val => updateBinding(slot.id, prop.name, val ?? '')}
                       >
-                        <option value="">Bağlama yok</option>
-                        {pageProps.map(p => (
-                          <option key={p.id} value={p.id}>{p.name}</option>
-                        ))}
-                      </select>
+                        <SelectTrigger className="flex-1 h-6 text-xs" onClick={e => e.stopPropagation()}>
+                          <SelectValue placeholder="Bağlama yok" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="">Bağlama yok</SelectItem>
+                          {pageProps.map(p => (
+                            <SelectItem key={p.id} value={p.id}>{p.name}</SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
                   );
                 })}
@@ -168,5 +177,6 @@ export function PageRightPanel({
         </TabsContent>
       </Tabs>
     </div>
+    </ScrollArea>
   );
 }

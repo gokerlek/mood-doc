@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { Card } from '@/components/ui/card';
 
 interface QuickAddFaqProps {
   context?: KbItemContext;
@@ -49,7 +50,7 @@ export function QuickAddFaq({ context = { type: 'global' } }: QuickAddFaqProps) 
   }
 
   return (
-    <div className="mt-3 bg-secondary border border-border rounded-lg p-3 space-y-2.5">
+    <Card className="mt-3 p-3 space-y-2.5">
       <Input
         autoFocus
         placeholder="Question..."
@@ -81,6 +82,6 @@ export function QuickAddFaq({ context = { type: 'global' } }: QuickAddFaqProps) 
           <IconX size={11} />Cancel
         </Button>
       </div>
-    </div>
+    </Card>
   );
 }

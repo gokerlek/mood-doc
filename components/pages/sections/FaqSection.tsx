@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { IconPlus, IconTrash } from '@tabler/icons-react';
+import { toast } from 'sonner';
 import type { PageSection } from '@/lib/types';
 
 interface FaqSectionProps {
@@ -32,6 +33,7 @@ export function FaqSection({ section, nodeId }: FaqSectionProps) {
   const handleDelete = (faqId: string) => {
     deleteFaq(faqId);
     upsertPageSection(nodeId, { ...section, faq_ids: section.faq_ids.filter(id => id !== faqId) });
+    toast.success('Silindi');
   };
 
   return (
@@ -65,14 +67,16 @@ export function FaqSection({ section, nodeId }: FaqSectionProps) {
               selectedIds={faq.tag_ids}
               onChange={tag_ids => upsertFaq({ ...faq, tag_ids })}
             />
-            <button
+            <Button
               type="button"
+              variant="ghost"
+              size="sm"
               onClick={() => handleDelete(faq.id)}
-              className="text-muted-foreground hover:text-destructive transition-colors"
+              className="text-muted-foreground hover:text-destructive"
               aria-label="FAQ sil"
             >
               <IconTrash size={12} />
-            </button>
+            </Button>
           </div>
         </div>
       ))}

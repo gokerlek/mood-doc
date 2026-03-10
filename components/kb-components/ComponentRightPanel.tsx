@@ -9,8 +9,12 @@ import { ComponentFaqSection } from './ComponentFaqSection';
 import { ComponentRuleSection } from './ComponentRuleSection';
 import { ComponentPropEditList } from './ComponentPropEditList';
 import { IconLock, IconX } from '@tabler/icons-react';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useSlotBindings } from '@/hooks/useSlotBindings';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { Separator } from '@/components/ui/separator';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 interface ComponentRightPanelProps {
   comp: KbComponent;
@@ -42,7 +46,8 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
   );
 
   return (
-    <div className="flex flex-col gap-4 overflow-y-auto h-full px-4 py-4 rounded-2xl shadow-lg">
+    <ScrollArea className="h-full rounded-2xl shadow-lg">
+    <div className="flex flex-col gap-4 px-4 py-4">
       {/* Ad + Açıklama + Tags + Type */}
       <div className="space-y-3">
         <Input
@@ -77,7 +82,7 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
         )}
       </div>
 
-      <div className="h-px bg-border" />
+      <Separator />
 
       {/* Tabs */}
       <Tabs defaultValue={isPrimitive ? 'faq' : 'yapi'} className="flex-1 min-h-0">
@@ -92,8 +97,10 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
           <TabsContent value="yapi" className="mt-3 space-y-2">
             {/* Header / Footer zone toggles */}
             <div className="flex gap-1.5 mb-3">
-              <button
+              <Button
                 type="button"
+                variant="outline"
+                size="sm"
                 onClick={() => {
                   const adding = !(comp.has_header ?? false);
                   const hh = comp.header_height ?? 200;
@@ -103,16 +110,17 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
                   });
                 }}
                 className={cn(
-                  'text-xs px-2.5 py-1 rounded-md border transition-colors',
                   comp.has_header
                     ? 'bg-zone-header-bg text-zone-header-fg border-zone-header-border'
-                    : 'border-border text-muted-foreground hover:border-muted-foreground'
+                    : ''
                 )}
               >
                 Header {comp.has_header ? '●' : '○'}
-              </button>
-              <button
+              </Button>
+              <Button
                 type="button"
+                variant="outline"
+                size="sm"
                 onClick={() => {
                   const adding = !(comp.has_footer ?? false);
                   const fh = comp.footer_height ?? 200;
@@ -122,14 +130,13 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
                   });
                 }}
                 className={cn(
-                  'text-xs px-2.5 py-1 rounded-md border transition-colors',
                   comp.has_footer
                     ? 'bg-zone-footer-bg text-zone-footer-fg border-zone-footer-border'
-                    : 'border-border text-muted-foreground hover:border-muted-foreground'
+                    : ''
                 )}
               >
                 Footer {comp.has_footer ? '●' : '○'}
-              </button>
+              </Button>
             </div>
 
             {slots.length === 0 && (
@@ -169,13 +176,15 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
                         {childComp.name}
                       </span>
                     )}
-                    <button
+                    <Button
                       type="button"
-                      className="shrink-0 text-muted-foreground/50 hover:text-destructive transition-colors"
+                      variant="ghost"
+                      size="icon"
+                      className="shrink-0 h-5 w-5 text-muted-foreground/50 hover:text-destructive"
                       onClick={e => { e.stopPropagation(); deleteSlot(slot.id); }}
                     >
                       <IconX size={12} />
-                    </button>
+                    </Button>
                   </div>
                   {childProps.map(prop => {
                     const bound = (slot.prop_bindings ?? []).find(b => b.childPropName === prop.name);
@@ -185,17 +194,20 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
                           {prop.name}
                         </span>
                         <span className="text-muted-foreground/40 text-[10px]">──►</span>
-                        <select
+                        <Select
                           value={bound?.parentPropId ?? ''}
-                          onChange={e => updateBinding(slot.id, prop.name, e.target.value)}
-                          onClick={e => e.stopPropagation()}
-                          className="flex-1 text-[11px] border border-border rounded px-1 py-0.5 bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+                          onValueChange={val => updateBinding(slot.id, prop.name, val ?? '')}
                         >
-                          <option value="">Bağlama yok</option>
-                          {(comp.props ?? []).map(p => (
-                            <option key={p.id} value={p.id}>{p.name}</option>
-                          ))}
-                        </select>
+                          <SelectTrigger className="flex-1 h-6 text-xs" onClick={e => e.stopPropagation()}>
+                            <SelectValue placeholder="Bağlama yok" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="">Bağlama yok</SelectItem>
+                            {(comp.props ?? []).map(p => (
+                              <SelectItem key={p.id} value={p.id}>{p.name}</SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                       </div>
                     );
                   })}
@@ -220,5 +232,6 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
         </TabsContent>
       </Tabs>
     </div>
+    </ScrollArea>
   );
 }

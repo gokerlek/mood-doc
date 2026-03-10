@@ -2,6 +2,7 @@
 import { useKbStore } from '@/stores/kbStore';
 import { TagBadge } from './TagBadge';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Button } from '@/components/ui/button';
 import { IconTags } from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
 
@@ -53,19 +54,16 @@ export function TagSelector({ selectedIds, onChange, className }: TagSelectorPro
                   </p>
                   <div className="flex flex-wrap gap-1">
                     {catTags.map(tag => (
-                      <button
+                      <Button
                         key={tag.id}
                         type="button"
+                        variant={selectedIds.includes(tag.id) ? 'default' : 'outline'}
+                        size="sm"
                         onClick={() => toggle(tag.id)}
-                        className={cn(
-                          'px-2 py-0.5 rounded-full text-xs transition-colors',
-                          selectedIds.includes(tag.id)
-                            ? 'bg-primary text-primary-foreground'
-                            : 'bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary'
-                        )}
+                        className="rounded-full text-xs px-2 py-0.5 h-auto"
                       >
                         #{tag.label}
-                      </button>
+                      </Button>
                     ))}
                   </div>
                 </div>

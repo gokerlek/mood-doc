@@ -10,6 +10,8 @@ import {
   DrawerFooter,
 } from '@/components/ui/drawer';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import type { MapNodeData } from '@/lib/types';
 
 const PRESET_COLORS = [
@@ -48,12 +50,11 @@ export function NodeDrawer({ node, onClose, onSave }: NodeDrawerProps) {
         <div className="flex-1 overflow-y-auto p-4 space-y-5">
           {/* Label */}
           <div className="space-y-1.5">
-            <label className="text-xs font-medium text-foreground">Ad</label>
-            <input
+            <Label className="text-xs">Ad</Label>
+            <Input
               type="text"
               value={label}
               onChange={(e) => setLabel(e.target.value)}
-              className="w-full h-8 px-3 rounded-md border border-input bg-background text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-ring"
               placeholder="Node adı"
               autoFocus
             />
@@ -61,7 +62,7 @@ export function NodeDrawer({ node, onClose, onSave }: NodeDrawerProps) {
 
           {/* Color */}
           <div className="space-y-2">
-            <label className="text-xs font-medium text-foreground">Renk</label>
+            <Label className="text-xs">Renk</Label>
             <div className="flex gap-2 flex-wrap">
               {PRESET_COLORS.map((c) => (
                 <button

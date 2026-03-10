@@ -1,5 +1,6 @@
 import { IconX } from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 interface TagBadgeProps {
   label: string;
@@ -15,14 +16,16 @@ export function TagBadge({ label, onRemove, className }: TagBadgeProps) {
     )}>
       #{label}
       {onRemove && (
-        <button
+        <Button
           type="button"
+          variant="ghost"
+          size="icon"
           onClick={onRemove}
-          className="hover:text-destructive transition-colors"
+          className="hover:text-destructive h-auto w-auto p-0"
           aria-label={`${label} tagını kaldır`}
         >
           <IconX size={10} />
-        </button>
+        </Button>
       )}
     </span>
   );

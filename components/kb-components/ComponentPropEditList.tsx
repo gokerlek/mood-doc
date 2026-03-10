@@ -5,6 +5,7 @@ import type { KbComponent, ComponentPropDef } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
+import { Card } from '@/components/ui/card';
 import { IconPlus, IconTrash } from '@tabler/icons-react';
 
 const PROP_TYPE_OPTIONS = ['string', 'boolean', 'ReactNode', 'fn'] as const;
@@ -26,7 +27,7 @@ export function ComponentPropEditList({ comp }: ComponentPropEditListProps) {
   return (
     <div className="space-y-3">
       {props.map(prop => (
-        <div key={prop.id} className="space-y-1.5 border border-border rounded-md p-2">
+        <Card key={prop.id} className="p-2 space-y-1.5">
           <div className="flex gap-1.5">
             <Input
               value={prop.name}
@@ -34,28 +35,29 @@ export function ComponentPropEditList({ comp }: ComponentPropEditListProps) {
               placeholder="propAdı"
               className="font-mono text-xs"
             />
-            <button type="button"
+            <Button type="button" variant="ghost" size="sm"
               onClick={() => updateProp(prop.id, { required: !prop.required })}
-              className="shrink-0 focus:outline-none">
+              className="shrink-0 p-0 h-auto">
               <Badge variant={prop.required ? 'default' : 'outline'} className="text-xs">
                 {prop.required ? 'Zorunlu' : 'Ops.'}
               </Badge>
-            </button>
-            <button type="button" onClick={() => deleteProp(prop.id)}
-              className="text-muted-foreground hover:text-destructive transition-colors shrink-0">
+            </Button>
+            <Button type="button" variant="ghost" size="sm"
+              onClick={() => deleteProp(prop.id)}
+              className="text-muted-foreground hover:text-destructive shrink-0">
               <IconTrash size={13} />
-            </button>
+            </Button>
           </div>
           <div className="flex flex-wrap gap-1">
             {PROP_TYPE_OPTIONS.map(opt => (
-              <button key={opt} type="button"
+              <Button key={opt} type="button" variant="ghost" size="sm"
                 onClick={() => updateProp(prop.id, { type: opt })}
-                className="focus:outline-none">
+                className="p-0 h-auto">
                 <Badge variant={prop.type === opt ? 'default' : 'outline'}
                   className="cursor-pointer text-xs px-1.5 py-0">
                   {opt}
                 </Badge>
-              </button>
+              </Button>
             ))}
           </div>
           <Input
@@ -64,7 +66,7 @@ export function ComponentPropEditList({ comp }: ComponentPropEditListProps) {
             placeholder="Ne yapar, ne zaman görünür..."
             className="text-xs"
           />
-        </div>
+        </Card>
       ))}
       {props.length === 0 && (
         <p className="text-xs text-muted-foreground">Henüz prop yok.</p>

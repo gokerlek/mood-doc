@@ -27,13 +27,15 @@ export function TagInput({ tags, onChange, compact = false }: TagInputProps) {
         {tags.map(t => (
           <Badge key={t} variant="secondary" className="gap-1 pr-1">
             #{t}
-            <button
+            <Button
               type="button"
+              variant="ghost"
+              size="sm"
               onClick={() => onChange(tags.filter(x => x !== t))}
-              className="hover:text-destructive"
+              className="hover:text-destructive p-0 h-auto"
             >
               <IconX size={compact ? 9 : 10} />
-            </button>
+            </Button>
           </Badge>
         ))}
       </div>

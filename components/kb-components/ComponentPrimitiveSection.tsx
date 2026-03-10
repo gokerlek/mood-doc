@@ -5,6 +5,7 @@ import type { KbComponent, ComponentPropDef, ComponentVariant, ComponentConditio
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { IconPlus, IconTrash } from '@tabler/icons-react';
 
 interface ComponentPrimitiveSectionProps { comp: KbComponent; }
@@ -73,35 +74,36 @@ export function ComponentPrimitiveSection({ comp }: ComponentPrimitiveSectionPro
               />
               <div className="flex flex-wrap gap-1">
                 {PROP_TYPE_OPTIONS.map(opt => (
-                  <button key={opt} type="button"
+                  <Button key={opt} type="button" variant="ghost" size="sm"
                     onClick={() => updateProp(prop.id, { type: opt })}
-                    className="focus:outline-none">
+                    className="p-0 h-auto">
                     <Badge variant={prop.type === opt ? 'default' : 'outline'}
                       className="cursor-pointer text-xs px-1.5 py-0">
                       {opt}
                     </Badge>
-                  </button>
+                  </Button>
                 ))}
               </div>
             </div>
-            <button type="button"
+            <Button type="button" variant="ghost" size="sm"
               onClick={() => updateProp(prop.id, { required: !prop.required })}
-              className="shrink-0 focus:outline-none mt-1">
+              className="shrink-0 mt-1 p-0 h-auto">
               <Badge variant={prop.required ? 'default' : 'outline'}>
                 {prop.required ? 'Zorunlu' : 'Opsiyonel'}
               </Badge>
-            </button>
+            </Button>
             <Input
               value={prop.description}
               onChange={e => updateProp(prop.id, { description: e.target.value })}
               placeholder="Ne yapar, ne zaman görünür..."
               className="flex-1 text-xs"
             />
-            <button type="button" onClick={() => deleteProp(prop.id)}
-              className="text-muted-foreground hover:text-destructive transition-colors mt-1 shrink-0"
+            <Button type="button" variant="ghost" size="sm"
+              onClick={() => deleteProp(prop.id)}
+              className="text-muted-foreground hover:text-destructive mt-1 shrink-0"
               aria-label="Prop sil">
               <IconTrash size={14} />
-            </button>
+            </Button>
           </div>
         ))}
 
@@ -133,11 +135,12 @@ export function ComponentPrimitiveSection({ comp }: ComponentPrimitiveSectionPro
               placeholder="Bu variant görsel olarak nasıl görünür..."
               className="flex-1 text-xs"
             />
-            <button type="button" onClick={() => deleteVariant(variant.id)}
-              className="text-muted-foreground hover:text-destructive transition-colors shrink-0"
+            <Button type="button" variant="ghost" size="sm"
+              onClick={() => deleteVariant(variant.id)}
+              className="text-muted-foreground hover:text-destructive shrink-0"
               aria-label="Variant sil">
               <IconTrash size={14} />
-            </button>
+            </Button>
           </div>
         ))}
 
@@ -156,20 +159,22 @@ export function ComponentPrimitiveSection({ comp }: ComponentPrimitiveSectionPro
         </div>
 
         {conditions.map(condition => {
-          const propName = props.find(p => p.id === condition.propId)?.name ?? '—';
           return (
             <div key={condition.id} className="flex items-center gap-2">
-              <select
-                value={condition.propId}
-                onChange={e => updateCondition(condition.id, { propId: e.target.value })}
-                className="w-32 shrink-0 rounded-md border border-input bg-background px-2 py-1.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                title={propName}
+              <Select
+                value={condition.propId ?? ''}
+                onValueChange={val => updateCondition(condition.id, { propId: val ?? '' })}
               >
-                <option value="">Prop seç...</option>
-                {props.map(p => (
-                  <option key={p.id} value={p.id}>{p.name || '(isimsiz)'}</option>
-                ))}
-              </select>
+                <SelectTrigger className="w-32 shrink-0 h-8 text-xs">
+                  <SelectValue placeholder="Prop seç..." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="">Prop seç...</SelectItem>
+                  {props.map(p => (
+                    <SelectItem key={p.id} value={p.id}>{p.name || '(isimsiz)'}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
               <span className="text-xs text-muted-foreground shrink-0">=</span>
               <Input
                 value={condition.propValue}
@@ -184,11 +189,12 @@ export function ComponentPrimitiveSection({ comp }: ComponentPrimitiveSectionPro
                 placeholder="Spinner gösterilir, metin gizlenir..."
                 className="flex-1 text-xs"
               />
-              <button type="button" onClick={() => deleteCondition(condition.id)}
-                className="text-muted-foreground hover:text-destructive transition-colors shrink-0"
+              <Button type="button" variant="ghost" size="sm"
+                onClick={() => deleteCondition(condition.id)}
+                className="text-muted-foreground hover:text-destructive shrink-0"
                 aria-label="Koşul sil">
                 <IconTrash size={14} />
-              </button>
+              </Button>
             </div>
           );
         })}

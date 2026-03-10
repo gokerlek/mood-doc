@@ -7,6 +7,7 @@ import { TagBadge } from './TagBadge';
 import { ConfirmModal } from '@/components/shared/ConfirmModal';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Card } from '@/components/ui/card';
 import { IconPlus, IconTrash, IconEdit, IconCheck } from '@tabler/icons-react';
 
 interface TagCategorySectionProps {
@@ -38,7 +39,7 @@ export function TagCategorySection({ category, tags }: TagCategorySectionProps) 
   };
 
   return (
-    <div className="border border-border rounded-lg p-4 space-y-3">
+    <Card className="p-4 space-y-3">
       <div className="flex items-center justify-between">
         {isEditingLabel ? (
           <div className="flex items-center gap-2">
@@ -59,24 +60,28 @@ export function TagCategorySection({ category, tags }: TagCategorySectionProps) 
         ) : (
           <div className="flex items-center gap-2">
             <span className="font-medium text-sm">{category.label}</span>
-            <button
+            <Button
               type="button"
+              variant="ghost"
+              size="sm"
               onClick={() => setIsEditingLabel(true)}
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground p-1 h-auto"
               aria-label="Kategori adını düzenle"
             >
               <IconEdit size={13} />
-            </button>
+            </Button>
           </div>
         )}
-        <button
+        <Button
           type="button"
+          variant="ghost"
+          size="sm"
           onClick={() => setConfirmOpen(true)}
-          className="text-muted-foreground hover:text-destructive transition-colors"
+          className="text-muted-foreground hover:text-destructive p-1 h-auto"
           aria-label="Kategoriyi sil"
         >
           <IconTrash size={14} />
-        </button>
+        </Button>
       </div>
 
       <div className="flex flex-wrap gap-1.5 min-h-6">
@@ -113,6 +118,6 @@ export function TagCategorySection({ category, tags }: TagCategorySectionProps) 
         onConfirm={() => deleteTagCategory(category.id)}
         onCancel={() => setConfirmOpen(false)}
       />
-    </div>
+    </Card>
   );
 }

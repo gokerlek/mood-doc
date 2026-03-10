@@ -5,7 +5,9 @@ import { TagSelector } from '@/components/tags/TagSelector';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Card } from '@/components/ui/card';
 import { IconPlus, IconTrash } from '@tabler/icons-react';
+import { toast } from 'sonner';
 
 interface ComponentRuleSectionProps {
   componentId: string;
@@ -34,6 +36,7 @@ export function ComponentRuleSection({ componentId, ruleIds }: ComponentRuleSect
     if (!comp) return;
     deleteRule(ruleId);
     upsertComponent({ ...comp, rule_ids: comp.rule_ids.filter(id => id !== ruleId) });
+    toast.success('Silindi');
   };
 
   return (
@@ -50,7 +53,7 @@ export function ComponentRuleSection({ componentId, ruleIds }: ComponentRuleSect
         <p className="text-xs text-muted-foreground">Henüz kural yok.</p>
       ) : (
         rules.map(rule => (
-          <div key={rule.id} className="border border-border rounded-lg p-3 space-y-2">
+          <Card key={rule.id} className="p-3 space-y-2">
             <Input
               value={rule.title}
               onChange={e => upsertRule({ ...rule, title: e.target.value })}
@@ -67,16 +70,18 @@ export function ComponentRuleSection({ componentId, ruleIds }: ComponentRuleSect
                 selectedIds={rule.tag_ids}
                 onChange={tag_ids => upsertRule({ ...rule, tag_ids })}
               />
-              <button
+              <Button
                 type="button"
+                variant="ghost"
+                size="sm"
                 onClick={() => handleDelete(rule.id)}
-                className="text-muted-foreground hover:text-destructive transition-colors"
+                className="text-muted-foreground hover:text-destructive"
                 aria-label="Kural sil"
               >
                 <IconTrash size={14} />
-              </button>
+              </Button>
             </div>
-          </div>
+          </Card>
         ))
       )}
     </div>

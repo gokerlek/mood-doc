@@ -2,6 +2,7 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useKbStore } from '@/stores/kbStore';
 import type { KnowledgeBase } from '@/lib/types';
+import { toast } from 'sonner';
 
 export function useLoadKb() {
   return useQuery<KnowledgeBase>({
@@ -53,6 +54,10 @@ export function useSaveKb() {
     onSuccess: () => {
       useKbStore.getState().resetDirty();
       void queryClient.invalidateQueries({ queryKey: ['kb'] });
+      toast.success("GitHub'a kaydedildi");
+    },
+    onError: () => {
+      toast.error('Kaydetme başarısız');
     },
   });
 }

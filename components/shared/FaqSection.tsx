@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
+import { Card } from '@/components/ui/card';
 
 // ── Inline FAQ form ───────────────────────────────────────────────────────────
 
@@ -37,7 +38,7 @@ function InlineForm({ initial, context, onSave, onCancel }: InlineFormProps) {
   };
 
   return (
-    <div className="bg-secondary border border-border rounded-lg p-3 space-y-2.5">
+    <Card className="p-3 space-y-2.5">
       <Input
         autoFocus
         placeholder="Question..."
@@ -64,7 +65,7 @@ function InlineForm({ initial, context, onSave, onCancel }: InlineFormProps) {
           <IconX size={11} />Cancel
         </Button>
       </div>
-    </div>
+    </Card>
   );
 }
 
