@@ -1,10 +1,12 @@
 'use client';
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { useKbStore } from '@/stores/kbStore';
 import { emptyComponent } from '@/lib/defaults';
 import { ComponentCard } from '@/components/kb-components/ComponentCard';
 import { PageHeader } from '@/components/shared/PageHeader';
+import { SearchBar } from '@/components/shared/SearchBar';
+import { useSearchParam } from '@/hooks/useSearchParam';
 import { Button } from '@/components/ui/button';
 import { IconAtom, IconLock, IconPlus, IconPuzzle } from '@tabler/icons-react';
 
@@ -13,7 +15,8 @@ export default function ComponentsPage() {
   const upsertComponent = useKbStore.useUpsertComponent();
   const router = useRouter();
 
-  const [activeTag, setActiveTag] = useState<string | null>(null);
+  const [search] = useSearchParam('q');
+  const [activeTag, setActiveTag] = useSearchParam('tag');
 
   const allTags = useMemo(() => {
     if (!data) return [];
@@ -33,17 +36,17 @@ export default function ComponentsPage() {
   const allPrimitives = data.components.filter(c => (c.component_type ?? 'composite') === 'primitive');
   const allComposites = data.components.filter(c => (c.component_type ?? 'composite') === 'composite');
 
-  const primitives = activeTag
-    ? allPrimitives.filter(c => c.tag_ids.includes(activeTag))
-    : allPrimitives;
-  const composites = activeTag
-    ? allComposites.filter(c => c.tag_ids.includes(activeTag))
-    : allComposites;
+  const q = search.toLowerCase().trim();
+  const primitives = allPrimitives
+    .filter(c => !activeTag || c.tag_ids.includes(activeTag))
+    .filter(c => !q || c.name.toLowerCase().includes(q) || (c.description ?? '').toLowerCase().includes(q));
+  const composites = allComposites
+    .filter(c => !activeTag || c.tag_ids.includes(activeTag))
+    .filter(c => !q || c.name.toLowerCase().includes(q) || (c.description ?? '').toLowerCase().includes(q));
 
   return (
     <div className="flex flex-col min-h-full">
       {/* Full-width header */}
-      <div className="px-6 py-6 border-b border-border">
         <PageHeader
           icon={<IconPuzzle size={22} className="text-primary" />}
           title="Componentler"
@@ -54,39 +57,40 @@ export default function ComponentsPage() {
               Yeni Component
             </Button>
           }
-          className="pb-0 mb-0 border-b-0"
         />
-      </div>
 
       {/* Centered content */}
       <div className="px-6 py-6 w-full max-w-5xl mx-auto space-y-8">
-        {/* Tag filter */}
-        {allTags.length > 0 && (
-          <div className="flex flex-wrap gap-1.5">
-            <Button
-              size="sm"
-              variant={!activeTag ? 'default' : 'outline'}
-              onClick={() => setActiveTag(null)}
-              className="rounded-full"
-            >
-              Tümü
-            </Button>
-            {allTags.map(tagId => {
-              const tag = data.tags.find(t => t.id === tagId);
-              return tag ? (
-                <Button
-                  key={tagId}
-                  size="sm"
-                  variant={activeTag === tagId ? 'default' : 'outline'}
-                  onClick={() => setActiveTag(activeTag === tagId ? null : tagId)}
-                  className="rounded-full"
-                >
-                  {tag.label}
-                </Button>
-              ) : null;
-            })}
-          </div>
-        )}
+        {/* Search + tag filter */}
+        <div className="flex flex-col gap-3">
+          <SearchBar placeholder="Component ara..." />
+          {allTags.length > 0 && (
+            <div className="flex flex-wrap gap-1.5">
+              <Button
+                size="sm"
+                variant={!activeTag ? 'default' : 'outline'}
+                onClick={() => setActiveTag('')}
+                className="rounded-full"
+              >
+                Tümü
+              </Button>
+              {allTags.map(tagId => {
+                const tag = data.tags.find(t => t.id === tagId);
+                return tag ? (
+                  <Button
+                    key={tagId}
+                    size="sm"
+                    variant={activeTag === tagId ? 'default' : 'outline'}
+                    onClick={() => setActiveTag(activeTag === tagId ? '' : tagId)}
+                    className="rounded-full"
+                  >
+                    {tag.label}
+                  </Button>
+                ) : null;
+              })}
+            </div>
+          )}
+        </div>
 
         {primitives.length > 0 && (
           <div>
@@ -123,7 +127,7 @@ export default function ComponentsPage() {
           ) : allComposites.length > 0 && activeTag ? (
             <p className="text-center py-8 text-sm text-muted-foreground">
               Bu etikete ait component yok.{' '}
-              <Button variant="link" onClick={() => setActiveTag(null)} className="p-0 h-auto">
+              <Button variant="link" onClick={() => setActiveTag('')} className="p-0 h-auto">
                 Filtreyi temizle
               </Button>
             </p>

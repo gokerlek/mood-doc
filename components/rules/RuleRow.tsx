@@ -4,6 +4,7 @@ import { RuleForm } from './RuleForm';
 import type { KbRule, MapNodeData, KbComponent } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Card } from '@/components/ui/card';
 import { contextLabel } from '@/lib/context-utils';
 import { useKbStore } from '@/stores/kbStore';
 
@@ -41,29 +42,41 @@ export function RuleRow({ rule, leafNodes, components, onEdit, onDelete, editing
   }).filter((label): label is string => label !== null) : [];
 
   return (
-    <div className="bg-card border border-border border-l-4 border-l-amber-500/60 rounded-xl shadow-sm hover:shadow-md transition-all duration-150 group">
+    <Card className="group py-0 gap-0 hover:shadow-md transition-all duration-150">
       <div className="flex items-start gap-3 px-5 py-4">
-        <div className="flex-1 min-w-0">
-          <p className="font-medium text-foreground text-sm">{rule.title}</p>
-          <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{rule.description}</p>
-          <div className="flex flex-wrap gap-1 mt-2">
-            {ctxLabel && (
-              <Badge variant="outline">{ctxLabel}</Badge>
-            )}
-            {tagLabels.map((label, idx) => (
-              <Badge key={`${rule.id}-tag-${idx}`} variant="secondary">{label}</Badge>
-            ))}
-          </div>
+        <div className="flex-1 min-w-0 space-y-1.5">
+          <p className="font-semibold text-foreground text-sm">{rule.title}</p>
+          <p className="text-sm text-muted-foreground leading-relaxed">{rule.description}</p>
+          {(ctxLabel || tagLabels.length > 0) && (
+            <div className="flex flex-wrap gap-1.5 pt-0.5">
+              {ctxLabel && (
+                <Badge variant="secondary" className="text-xs font-medium">{ctxLabel}</Badge>
+              )}
+              {tagLabels.map((label, idx) => (
+                <Badge key={`${rule.id}-tag-${idx}`} variant="outline" className="text-xs">{label}</Badge>
+              ))}
+            </div>
+          )}
         </div>
-        <div className="flex gap-1 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
-          <Button variant="ghost" size="icon-sm" onClick={onEdit}>
+        <div className="flex gap-0.5 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={onEdit}
+            className="h-auto p-1.5 text-muted-foreground hover:text-foreground"
+          >
             <IconPencil size={14} />
           </Button>
-          <Button variant="destructive" size="icon-sm" onClick={onDelete}>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={onDelete}
+            className="h-auto p-1.5 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+          >
             <IconTrash size={14} />
           </Button>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }
