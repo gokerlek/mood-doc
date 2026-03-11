@@ -11,8 +11,8 @@ import {
   Sidebar, SidebarContent, SidebarHeader, SidebarFooter,
   SidebarGroup, SidebarGroupLabel, SidebarGroupContent,
   SidebarMenu, SidebarMenuItem, SidebarMenuButton,
+  SidebarRail,
 } from '@/components/ui/sidebar';
-import { Button } from '@/components/ui/button';
 import { useKbStore } from '@/stores/kbStore';
 import { useSaveKb } from '@/hooks/useKb';
 
@@ -43,19 +43,21 @@ export function AppSidebar() {
     href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   return (
-    <Sidebar collapsible="offcanvas" >
+    <Sidebar collapsible="icon">
       <SidebarHeader>
-        <div className="px-1 pt-1 pb-2">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-primary flex items-center justify-center shrink-0">
-              <IconBook2 size={16} className="text-primary-foreground" />
-            </div>
-            <div className="min-w-0">
-              <p className="font-bold tracking-tight text-sidebar-foreground text-sm leading-tight">Moodivation</p>
-              <p className="text-[10px] font-medium text-muted-foreground leading-tight mt-0.5">KB Manager</p>
-            </div>
-          </div>
-        </div>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton size="lg" render={<Link href="/" />}>
+              <div className="flex aspect-square size-8 items-center justify-center rounded-xl bg-primary text-primary-foreground shrink-0">
+                <IconBook2 size={16} />
+              </div>
+              <div className="flex flex-col leading-tight min-w-0">
+                <span className="font-bold text-sm text-sidebar-foreground tracking-tight truncate">Moodivation</span>
+                <span className="text-xs text-muted-foreground truncate">KB Manager</span>
+              </div>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </SidebarHeader>
 
       <SidebarContent>
@@ -66,9 +68,9 @@ export function AppSidebar() {
               <SidebarMenu>
                 {group.items.map(({ label, icon: Icon, href }) => (
                   <SidebarMenuItem key={href}>
-                    <SidebarMenuButton render={<Link href={href} />} isActive={isActive(href)}>
+                    <SidebarMenuButton render={<Link href={href} />} isActive={isActive(href)} tooltip={label}>
                       <Icon size={15} />
-                      {label}
+                      <span>{label}</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
@@ -79,30 +81,31 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter>
-        <div className="space-y-2">
-          {isDirty && (
-            <div className="flex items-center gap-1.5 px-0.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0 animate-pulse" />
-              <p className="text-[11px] text-amber-600">Kaydedilmemiş değişiklik</p>
-            </div>
-          )}
-          <Button
-            onClick={() => isDirty && save('KB updated')}
-            disabled={!isDirty || isPending}
-            variant={isDirty ? 'default' : 'ghost'}
-            size="sm"
-            className="w-full justify-start gap-2 rounded-lg"
-          >
-            {isPending ? (
-              <><IconLoader2 size={13} className="animate-spin" />Kaydediliyor...</>
-            ) : isDirty ? (
-              <><IconDeviceFloppy size={13} />GitHub&#39;a Kaydet</>
-            ) : (
-              <><IconBrandGithub size={13} className="text-muted-foreground" />Kaydedildi</>
-            )}
-          </Button>
-        </div>
+        <SidebarMenu>
+          <SidebarMenuItem className="relative">
+            <SidebarMenuButton
+              onClick={() => isDirty && save('KB updated')}
+              tooltip={isPending ? 'Kaydediliyor...' : isDirty ? "GitHub'a Kaydet" : 'Kaydedildi'}
+              className={isDirty
+                ? 'bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground font-medium'
+                : 'text-muted-foreground'
+              }
+            >
+              {isPending
+                ? <IconLoader2 size={15} className="animate-spin shrink-0" />
+                : isDirty
+                  ? <IconDeviceFloppy size={15} className="shrink-0" />
+                  : <IconBrandGithub size={15} className="shrink-0" />
+              }
+              <span>
+                {isPending ? 'Kaydediliyor...' : isDirty ? 'Kaydet' : 'Kaydedildi'}
+              </span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </SidebarFooter>
+
+      <SidebarRail />
     </Sidebar>
   );
 }
