@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-10T21:07:48.164Z",
+    "last_updated": "2026-03-11T06:39:38.751Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -994,7 +994,23 @@
           "description": "",
           "tag_ids": [],
           "sections": [],
-          "canvas_slots": [],
+          "canvas_slots": [
+            {
+              "id": "3e1e5f68-9d6d-42d7-875b-ccafe781d11b",
+              "name": "İsimsiz",
+              "description": "",
+              "props": [],
+              "component_ids": [
+                "3a1a00b8-bc67-405a-9519-d76407432bd5"
+              ],
+              "prop_bindings": [],
+              "zone": "body",
+              "x": 86,
+              "y": 149,
+              "w": 160,
+              "h": 36
+            }
+          ],
           "frame_width": 480,
           "frame_height": 320,
           "faq_ids": [],
