@@ -10,7 +10,7 @@
 
 7 liste sayfasında (`pages`, `sections`, `components`, `faq`, `rules`, `glossary`, `tags`) aşağıdaki tekrarlar tespit edildi:
 
-1. **Sayfa iskeleti** — Her sayfa 3-katmanlı wrapper + `PageHeader` override oyununu kendisi yazıyor
+1. **Sayfa iskeleti** — Her sayfa `flex flex-col min-h-full` + `px-6 py-6 max-w-Xkl mx-auto` wrapper iskeletini tekrarlıyor; bazı sayfalar (`pages/page.tsx`) ek olarak `PageHeader`'ın border'ını override ediyor
 2. **`EmptyState` kullanılmıyor** — `components/shared/EmptyState.tsx` var ama 7 sayfa kendi inline empty state'ini yazıyor; tasarımlar da birbirinden farklı
 3. **"No results" mesajı** — 5 sayfada kelimesi kelimesine aynı JSX
 4. **Grup başlığı** — icon + uppercase label + count pattern'ı 3 sayfada inline
@@ -33,13 +33,14 @@
 ### `ListPageLayout` — `components/shared/ListPageLayout.tsx`
 
 ```tsx
-interface ListPageLayoutProps extends PageHeaderProps {
+interface ListPageLayoutProps extends Omit<PageHeaderProps, 'className'> {
   maxWidth?: '4xl' | '5xl';
   children: ReactNode;
 }
 ```
 
-- `PageHeader` prop'larını (`icon`, `title`, `description`, `action`) alır, doğrudan render eder
+- **Önkoşul:** `PageHeaderProps` `PageHeader.tsx`'te `export interface` olarak işaretlenmeli (şu an sadece `interface`)
+- `PageHeader` prop'larını (`icon`, `title`, `description`, `action`) alır, `className` hariç (iç layout bozulmasın diye)
 - `border-b` border'ını kendi yönetir — sayfalardaki `className="pb-0 mb-0 border-b-0"` override kargaşası ortadan kalkar
 - `maxWidth` prop'u: `'4xl'` (FAQ, Rules, Glossary, Tags) veya `'5xl'` (Pages, Sections, Components)
 - `children` content zone'una render edilir
@@ -77,8 +78,13 @@ py-12 · bg-muted/30 · rounded-2xl · border border-dashed border-border · tex
 interface NoResultsProps {
   message?: string;  // default: "Eşleşen sonuç bulunamadı."
   onClear: () => void;
+  clearLabel?: string;  // default: "Temizle"
 }
 ```
+
+`onClear` callback'i sayfaya göre farklı davranır:
+- Çoğu sayfa: `() => setSearch('')` — sadece arama temizlenir
+- `faq/page.tsx`: `() => router.replace(pathname, { scroll: false })` — hem `?q=` hem `?tag=` temizlenir
 
 5 sayfadaki şu bloğun yerini alır:
 ```tsx
@@ -117,6 +123,8 @@ interface TagFilterBarProps {
 
 `faq/page.tsx` ve `components/page.tsx`'teki "Tümü + tag butonları" satırını karşılar.
 
+> **Davranış notu:** `faq/page.tsx` şu an tag butonlarında ham `tag_id` string'ini gösteriyor (`#{tag}`). `TagFilterBar` `tags: KbTag[]` alarak `tag.label` gösterir — bu `components/page.tsx` ile tutarlı hale getirir ve kasıtlı bir iyileştirmedir.
+
 ---
 
 ## Yeni Hook'lar
@@ -134,13 +142,17 @@ function useLeafNodes(): MapNodeData[]
 ### `useContextSplit` — `hooks/useContextSplit.ts`
 
 ```ts
+import type { KbItemContext } from '@/lib/types';
+
 function useContextSplit<T>(
   items: T[],
-  getType: (item: T) => string
+  getType: (item: T) => KbItemContext['type']
 ): { global: T[]; page: T[]; component: T[] }
 ```
 
 `faq/page.tsx` ve `rules/page.tsx`'teki `filtered.filter(f => f.context.type === 'global')` üçlüsünü karşılar. `useMemo` ile sarılır.
+
+`getType` dönüş tipi `string` değil `KbItemContext['type']` union'ı kullanılır — tip güvenliği sağlar, `KbItemContext`'e yeni varyant eklenirse derleyici uyarır.
 
 ---
 
@@ -150,7 +162,10 @@ function useContextSplit<T>(
 |---|---|---|---|
 | `pages/page.tsx` | wrapper, inline empty, group header | `ListPageLayout`, `EmptyState`, `SectionListHeader`, `useLeafNodes` | ~99 → ~55 |
 | `sections/page.tsx` | wrapper, inline empty, group header | `ListPageLayout`, `EmptyState`, `SectionListHeader`, `NoResults` | ~92 → ~50 |
-| `components/page.tsx` | wrapper, inline empty, group header ×2, tag filter | `ListPageLayout`, `EmptyState`, `SectionListHeader`, `TagFilterBar`, `NoResults` | ~149 → ~75 |
+| `components/page.tsx` | wrapper, inline empty (global), group header ×2, tag filter | `ListPageLayout`, `EmptyState`, `SectionListHeader`, `TagFilterBar`, `NoResults` | ~149 → ~75 |
+
+> **Not:** `components/page.tsx`'in composite grubunda iki farklı "boş" durumu var: (1) genel boş durum → `EmptyState`, (2) tag filtresi aktifken boş → `NoResults` ile `clearLabel="Filtreyi temizle"`. Primitives grubu boşsa görünmez (empty state yok). Bu per-group mantık sayfada kalır, `EmptyState`/`NoResults` yalnızca composite grubunu karşılar.
+
 | `faq/page.tsx` | inline empty, tag filter, leafNodes, context split | `EmptyState`, `TagFilterBar`, `NoResults`, `useLeafNodes`, `useContextSplit` | ~182 → ~105 |
 | `rules/page.tsx` | wrapper, inline empty, leafNodes, context split | `ListPageLayout`, `EmptyState`, `NoResults`, `useLeafNodes`, `useContextSplit` | ~149 → ~80 |
 | `glossary/page.tsx` | inline empty | `EmptyState`, `NoResults` | ~141 → ~115 |
@@ -178,6 +193,7 @@ function useContextSplit<T>(
 - `hooks/useContextSplit.ts`
 
 **Güncellenen dosyalar:**
+- `components/shared/PageHeader.tsx` (`PageHeaderProps` interface'ini export et — önkoşul)
 - `components/shared/EmptyState.tsx` (stil güncelleme)
 - `app/(app)/pages/page.tsx`
 - `app/(app)/sections/page.tsx`
