@@ -62,7 +62,6 @@ export default function RulesPage() {
   return (
     <div className="flex flex-col min-h-full">
       {/* Full-width header */}
-      <div className="px-6 py-6 border-b border-border">
         <PageHeader
           icon={<IconShieldCheck size={22} className="text-primary" />}
           title="Kurallar"
@@ -75,9 +74,7 @@ export default function RulesPage() {
               </Button>
             ) : undefined
           }
-          className="pb-0 mb-0 border-b-0"
         />
-      </div>
 
       {/* Centered content */}
       <div className="px-6 py-6 w-full max-w-4xl mx-auto space-y-5">

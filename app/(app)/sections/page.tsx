@@ -32,7 +32,6 @@ export default function SectionsPage() {
   return (
     <div className="flex flex-col min-h-full">
       {/* Full-width header */}
-      <div className="px-6 py-6 border-b border-border">
         <PageHeader
           icon={<IconLayoutColumns size={22} className="text-primary" />}
           title="Layout Bileşenleri"
@@ -43,9 +42,7 @@ export default function SectionsPage() {
               Yeni Layout Bileşeni
             </Button>
           }
-          className="pb-0 mb-0 border-b-0"
         />
-      </div>
 
       {/* Centered content */}
       <div className="px-6 py-6 w-full max-w-5xl mx-auto space-y-5">
