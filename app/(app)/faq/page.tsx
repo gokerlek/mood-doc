@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useKbStore } from '@/stores/kbStore';
 import { IconPlus, IconHelp } from '@tabler/icons-react';
 import { usePathname, useRouter } from 'next/navigation';
-import { PageHeader } from '@/components/shared/PageHeader';
+import { ListPageLayout } from '@/components/shared/ListPageLayout';
 import { ConfirmModal } from '@/components/shared/ConfirmModal';
 import { EmptyState } from '@/components/shared/EmptyState';
 import { NoResults } from '@/components/shared/NoResults';
@@ -66,81 +66,78 @@ export default function FaqPage() {
   });
 
   return (
-    <div className="flex flex-col min-h-full">
-      <PageHeader
-        icon={<IconHelp size={22} className="text-primary" />}
-        title="FAQ"
-        description={`${data.faq.length} soru toplam`}
-        action={
-          !adding ? (
-            <Button onClick={() => { setAdding(true); setEditingId(null); }}>
-              <IconPlus size={15} />
-              FAQ Ekle
-            </Button>
-          ) : undefined
-        }
-      />
-
-      <div className="px-6 py-6 w-full max-w-4xl mx-auto space-y-5">
-        <div className="flex flex-col sm:flex-row gap-3">
-          <SearchBar placeholder="Soru veya cevap ara..." className="flex-1" />
-          <TagFilterBar
-            tagIds={allTagIds}
-            tags={data.tags}
-            activeTag={activeTag}
-            onSelect={setActiveTag}
-          />
-        </div>
-
-        {adding && (
-          <FaqForm
-            initial={emptyFaq()}
-            leafNodes={leafNodes}
-            components={data.components}
-            onSave={handleSave}
-            onCancel={() => setAdding(false)}
-          />
-        )}
-
-        {data.faq.length === 0 && !adding && (
-          <EmptyState
-            icon={<IconHelp size={28} />}
-            title="Henüz FAQ yok."
-            action={
-              <Button variant="link" onClick={() => setAdding(true)} className="mt-1 h-auto p-0 text-sm">
-                İlk soruyu ekle →
-              </Button>
-            }
-          />
-        )}
-
-        {filtered.length > 0 && (
-          <div className="space-y-4">
-            {globalFaqs.length > 0 && (
-              <CollapsibleSection title="Global" count={globalFaqs.length}>
-                {globalFaqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
-              </CollapsibleSection>
-            )}
-            {pageFaqs.length > 0 && (
-              <CollapsibleSection title="Sayfaya Bağlı" count={pageFaqs.length}>
-                {pageFaqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
-              </CollapsibleSection>
-            )}
-            {componentFaqs.length > 0 && (
-              <CollapsibleSection title="Component'e Bağlı" count={componentFaqs.length}>
-                {componentFaqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
-              </CollapsibleSection>
-            )}
-          </div>
-        )}
-
-        {filtered.length === 0 && data.faq.length > 0 && (
-          <NoResults
-            message="Eşleşen FAQ bulunamadı."
-            onClear={() => router.replace(pathname, { scroll: false })}
-          />
-        )}
+    <ListPageLayout
+      icon={<IconHelp size={22} className="text-primary" />}
+      title="FAQ"
+      description={`${data.faq.length} soru toplam`}
+      action={
+        !adding ? (
+          <Button onClick={() => { setAdding(true); setEditingId(null); }}>
+            <IconPlus size={15} />
+            FAQ Ekle
+          </Button>
+        ) : undefined
+      }
+      maxWidth="4xl"
+    >
+      <div className="flex flex-col sm:flex-row gap-3">
+        <SearchBar placeholder="Soru veya cevap ara..." className="flex-1" />
+        <TagFilterBar
+          tagIds={allTagIds}
+          tags={data.tags}
+          activeTag={activeTag}
+          onSelect={setActiveTag}
+        />
       </div>
+
+      {adding && (
+        <FaqForm
+          initial={emptyFaq()}
+          leafNodes={leafNodes}
+          components={data.components}
+          onSave={handleSave}
+          onCancel={() => setAdding(false)}
+        />
+      )}
+
+      {data.faq.length === 0 && !adding && (
+        <EmptyState
+          icon={<IconHelp size={28} />}
+          title="Henüz FAQ yok."
+          action={
+            <Button variant="link" onClick={() => setAdding(true)} className="mt-1 h-auto p-0 text-sm">
+              İlk soruyu ekle →
+            </Button>
+          }
+        />
+      )}
+
+      {filtered.length > 0 && (
+        <div className="space-y-4">
+          {globalFaqs.length > 0 && (
+            <CollapsibleSection title="Global" count={globalFaqs.length}>
+              {globalFaqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
+            </CollapsibleSection>
+          )}
+          {pageFaqs.length > 0 && (
+            <CollapsibleSection title="Sayfaya Bağlı" count={pageFaqs.length}>
+              {pageFaqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
+            </CollapsibleSection>
+          )}
+          {componentFaqs.length > 0 && (
+            <CollapsibleSection title="Component'e Bağlı" count={componentFaqs.length}>
+              {componentFaqs.map(faq => <FaqRow key={faq.id} {...rowProps(faq)} />)}
+            </CollapsibleSection>
+          )}
+        </div>
+      )}
+
+      {filtered.length === 0 && data.faq.length > 0 && (
+        <NoResults
+          message="Eşleşen FAQ bulunamadı."
+          onClear={() => router.replace(pathname, { scroll: false })}
+        />
+      )}
 
       <ConfirmModal
         open={!!pendingDelete}
@@ -149,6 +146,6 @@ export default function FaqPage() {
         onConfirm={() => { if (pendingDelete) deleteFaq(pendingDelete.id); }}
         onCancel={() => setPendingDelete(null)}
       />
-    </div>
+    </ListPageLayout>
   );
 }
