@@ -34,7 +34,7 @@ describe('storeNodeToFlow', () => {
     const result = storeNodeToFlow(node, cbs);
     expect(result.type).toBe('groupNode');
     expect(result.style).toEqual({ width: 400, height: 250 });
-    expect((result as any).zIndex).toBe(-1);
+    expect((result as { zIndex?: number }).zIndex).toBe(-1);
   });
 
   it('uses default width/height for group node when not provided', () => {
@@ -46,13 +46,13 @@ describe('storeNodeToFlow', () => {
   it('includes parentId when parent_id is set', () => {
     const node: MapNodeData = { id: 'child', label: 'Child', color: '#fff', x: 5, y: 5, parent_id: 'g1' };
     const result = storeNodeToFlow(node, cbs);
-    expect((result as any).parentId).toBe('g1');
+    expect((result as { parentId?: string }).parentId).toBe('g1');
   });
 
   it('does not include parentId when parent_id is absent', () => {
     const node: MapNodeData = { id: 'n2', label: 'Top', color: '#fff', x: 0, y: 0 };
     const result = storeNodeToFlow(node, cbs);
-    expect((result as any).parentId).toBeUndefined();
+    expect((result as { parentId?: string }).parentId).toBeUndefined();
   });
 
   it('attaches onEdit and onDelete callbacks to data', () => {
@@ -65,8 +65,8 @@ describe('storeNodeToFlow', () => {
   it('attaches onResize and onAutoArrange to group node data', () => {
     const node: MapNodeData = { id: 'g3', label: 'G', color: '#fff', x: 0, y: 0, node_type: 'group' };
     const result = storeNodeToFlow(node, cbs);
-    expect((result.data as any).onResize).toBe(cbs.onResize);
-    expect((result.data as any).onAutoArrange).toBe(cbs.onAutoArrange);
+    expect((result.data as { onResize?: unknown }).onResize).toBe(cbs.onResize);
+    expect((result.data as { onAutoArrange?: unknown }).onAutoArrange).toBe(cbs.onAutoArrange);
   });
 });
 
@@ -126,6 +126,6 @@ describe('storeEdgeToFlow', () => {
   it('attaches onDelete callback to edge data', () => {
     const edge: MapEdgeData = { id: 'e6', source: 's6', target: 't6' };
     const result = storeEdgeToFlow(edge, edgeCbs);
-    expect((result.data as any).onDelete).toBe(edgeCbs.onDelete);
+    expect((result.data as { onDelete?: unknown }).onDelete).toBe(edgeCbs.onDelete);
   });
 });

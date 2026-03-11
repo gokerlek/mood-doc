@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import type { Node } from "@xyflow/react";
 import type { Dispatch, SetStateAction, MutableRefObject } from "react";
 import { useKbStore } from "@/stores/kbStore";
@@ -24,7 +24,7 @@ export function useNodeSync({
   onAutoArrange,
 }: Options): MapNodeData[] {
   const kbData = useKbStore.useData();
-  const storeNodes: MapNodeData[] = kbData?.map?.nodes ?? [];
+  const storeNodes = useMemo(() => kbData?.map?.nodes ?? [], [kbData]);
 
   useEffect(() => {
     if (!hydrated.current) return;

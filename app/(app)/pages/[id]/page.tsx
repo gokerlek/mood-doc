@@ -28,6 +28,7 @@ export default function PageDetailPage({ params }: PageDetailProps) {
   const updatePageData = useKbStore.useUpdatePageData();
   const [selectedSlotId, setSelectedSlotId] = useState<string | null>(null);
   const [activeDragName, setActiveDragName] = useState<string>('');
+  const sensors = useSensors(useSensor(PointerSensor));
 
   if (!data) return null;
 
@@ -42,8 +43,6 @@ export default function PageDetailPage({ params }: PageDetailProps) {
   const pickable = data.components.filter(
     c => c.component_type === 'primitive' || c.component_type === 'composite' || c.component_type === 'section'
   );
-
-  const sensors = useSensors(useSensor(PointerSensor));
 
   const handleDragStart = (event: DragStartEvent) => {
     const name = event.active.data.current?.componentName as string | undefined;

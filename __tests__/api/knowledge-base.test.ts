@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/consistent-type-imports */
 import { describe, it, expect, vi, beforeEach, beforeAll } from 'vitest';
 import type { KnowledgeBase } from '@/lib/types';
 
@@ -67,7 +68,7 @@ describe('GET handler (config present)', () => {
     mockFetch.mockResolvedValue({ content: fakeKB, sha: 'abc123' });
 
     const res = await GET();
-    const body = await res.json();
+    const body: unknown = await res.json();
 
     expect(mockFetch).toHaveBeenCalledOnce();
     expect(body).toEqual(fakeKB);
@@ -80,7 +81,7 @@ describe('GET handler (config present)', () => {
     mockFetch.mockRejectedValue(new AppError('FILE_NOT_FOUND', 404));
 
     const res = await GET();
-    const body = await res.json();
+    const body: unknown = await res.json();
 
     expect(res.status).toBe(404);
     expect(body).toEqual({ error: 'FILE_NOT_FOUND' });
@@ -90,7 +91,7 @@ describe('GET handler (config present)', () => {
     mockFetch.mockRejectedValue(new Error('network failure'));
 
     const res = await GET();
-    const body = await res.json();
+    const body: unknown = await res.json();
 
     expect(res.status).toBe(500);
     expect(body).toEqual({ error: 'network failure' });
@@ -142,7 +143,7 @@ describe('POST handler (config present)', () => {
 
     const req = makeRequest({ content: fakeKB, message: 'update knowledge base' });
     const res = await POST(req);
-    const body = await res.json();
+    const body: unknown = await res.json();
 
     expect(res.status).toBe(200);
     expect(body).toEqual({ sha: 'new-sha-xyz' });
@@ -158,7 +159,7 @@ describe('POST handler (config present)', () => {
   it('returns 400 when body has no message field', async () => {
     const req = makeRequest({ content: fakeKB });
     const res = await POST(req);
-    const body = await res.json();
+    const body: unknown = await res.json();
 
     expect(res.status).toBe(400);
     expect(body).toEqual({ error: 'Invalid request body' });
@@ -168,7 +169,7 @@ describe('POST handler (config present)', () => {
   it('returns 400 when body is null', async () => {
     const req = makeRequest(null);
     const res = await POST(req);
-    const body = await res.json();
+    const body: unknown = await res.json();
 
     expect(res.status).toBe(400);
     expect(body).toEqual({ error: 'Invalid request body' });
@@ -177,7 +178,7 @@ describe('POST handler (config present)', () => {
   it('returns 400 when body is a plain string (not an object)', async () => {
     const req = makeRequest('just a string');
     const res = await POST(req);
-    const body = await res.json();
+    const body: unknown = await res.json();
 
     expect(res.status).toBe(400);
     expect(body).toEqual({ error: 'Invalid request body' });
@@ -186,7 +187,7 @@ describe('POST handler (config present)', () => {
   it('returns 400 when message field is not a string', async () => {
     const req = makeRequest({ content: fakeKB, message: 42 });
     const res = await POST(req);
-    const body = await res.json();
+    const body: unknown = await res.json();
 
     expect(res.status).toBe(400);
     expect(body).toEqual({ error: 'Invalid request body' });
@@ -198,7 +199,7 @@ describe('POST handler (config present)', () => {
 
     const req = makeRequest({ content: fakeKB, message: 'update' });
     const res = await POST(req);
-    const body = await res.json();
+    const body: unknown = await res.json();
 
     expect(res.status).toBe(409);
     expect(body).toEqual({ error: 'CONFLICT' });
@@ -210,7 +211,7 @@ describe('POST handler (config present)', () => {
 
     const req = makeRequest({ content: fakeKB, message: 'update' });
     const res = await POST(req);
-    const body = await res.json();
+    const body: unknown = await res.json();
 
     expect(res.status).toBe(500);
     expect(body).toEqual({ error: 'unexpected failure' });
@@ -247,7 +248,7 @@ describe('when GitHub config is missing', () => {
     const res = await GET_no_config();
 
     expect(res.status).toBe(200);
-    const body = await res.json();
+    const body: unknown = await res.json();
     expect(body).toMatchObject({ _meta: { schema_version: '3.0' } });
     expect(res.headers.get('Cache-Control')).toBe('no-store');
     expect(res.headers.get('Access-Control-Allow-Origin')).toBe('*');
@@ -256,7 +257,7 @@ describe('when GitHub config is missing', () => {
   it('POST returns 503 when config is missing', async () => {
     const req = makeRequest({ content: fakeKB, message: 'update' });
     const res = await POST_no_config(req);
-    const body = await res.json();
+    const body: unknown = await res.json();
 
     expect(res.status).toBe(503);
     expect(body).toEqual({ error: 'GitHub config missing' });

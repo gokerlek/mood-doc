@@ -1,5 +1,5 @@
 'use client';
-import { useRef } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import type { KbComponent, ComponentSlot } from '@/lib/types';
 import { cn } from '@/lib/utils';
 import { IconGripVertical, IconX } from '@tabler/icons-react';
@@ -34,7 +34,7 @@ export function ComponentSketchCanvas({
 
   const slots: ComponentSlot[] = comp.slots ?? [];
   const slotsRef = useRef(slots);
-  slotsRef.current = slots;
+  useLayoutEffect(() => { slotsRef.current = slots; });
 
   const frameWidth   = comp.frame_width   ?? 480;
   const frameHeight  = comp.frame_height  ?? 320;
@@ -104,7 +104,7 @@ export function ComponentSketchCanvas({
         ...emptySlot(),
         name: componentName || '',
         component_ids: [componentId],
-        zone: zone as 'body' | 'header' | 'footer',
+        zone,
         x,
         y,
         w: newW,

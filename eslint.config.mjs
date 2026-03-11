@@ -9,6 +9,7 @@ export default defineConfig([
     '.next/**',
     'out/**',
     'build/**',
+    'coverage/**',
     'next-env.d.ts',
     // shadcn auto-generated UI components and boilerplate
     'components/ui/**',

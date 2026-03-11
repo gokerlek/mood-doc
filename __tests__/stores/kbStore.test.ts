@@ -9,7 +9,6 @@ import {
   emptyGlossaryTerm,
   emptyComponent,
   emptyPageData,
-  emptyPageSection,
 } from '@/lib/defaults';
 import type { MapNodeData, MapEdgeData, PageSection, PageData } from '@/lib/types';
 
@@ -63,7 +62,7 @@ describe('setData', () => {
   it('applies frame_width default of 480 when missing', () => {
     const kb = emptyKnowledgeBase();
     const comp = { ...emptyComponent(), id: 'c1' };
-    (comp as any).frame_width = undefined;
+    (comp as Record<string, unknown>).frame_width = undefined;
     kb.components = [comp];
     useKbStore.getState().setData(kb);
     const stored = useKbStore.getState().data!.components.find((c) => c.id === 'c1');
@@ -73,7 +72,7 @@ describe('setData', () => {
   it('applies frame_height default of 320 when missing', () => {
     const kb = emptyKnowledgeBase();
     const comp = { ...emptyComponent(), id: 'c2' };
-    (comp as any).frame_height = undefined;
+    (comp as Record<string, unknown>).frame_height = undefined;
     kb.components = [comp];
     useKbStore.getState().setData(kb);
     const stored = useKbStore.getState().data!.components.find((c) => c.id === 'c2');
@@ -156,7 +155,7 @@ describe('setData', () => {
       frame_height: 320,
       slots: [{
         id: 's1', name: 'main', description: '', props: [], component_ids: [],
-        prop_bindings: [], zone: undefined as any, x: 50, y: 50, w: 160, h: 36,
+        prop_bindings: [], zone: undefined as unknown as 'body', x: 50, y: 50, w: 160, h: 36,
       }],
     }];
     useKbStore.getState().setData(kb);
@@ -422,7 +421,7 @@ describe('upsertPageSection', () => {
     const node = useKbStore.getState().data!.map.nodes.find((n) => n.id === 'n1');
     const sections = node?.page_data?.sections ?? [];
     expect(sections.filter((s) => s.id === 'sec-1').length).toBe(1);
-    expect((sections.find((s) => s.id === 'sec-1') as any).content).toBe('New');
+    expect((sections.find((s) => s.id === 'sec-1')! as Record<string, unknown>).content).toBe('New');
   });
 });
 

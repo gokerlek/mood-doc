@@ -1,5 +1,5 @@
 'use client';
-import { useRef } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import type { ComponentSlot } from '@/lib/types';
 import { cn } from '@/lib/utils';
 import { IconGripVertical, IconX } from '@tabler/icons-react';
@@ -32,7 +32,7 @@ export function PageSketchCanvas({
 }: PageSketchCanvasProps) {
   const bodyZoneRef = useRef<HTMLDivElement | null>(null);
   const slotsRef = useRef(slots);
-  slotsRef.current = slots;
+  useLayoutEffect(() => { slotsRef.current = slots; });
 
   const { setNodeRef: setBodyDropRef, isOver: isOverBody } = useDroppable({
     id: 'page-canvas-body-zone',

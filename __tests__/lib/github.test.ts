@@ -108,7 +108,7 @@ describe('saveGitHubFile', () => {
     vi.stubGlobal('fetch', fetchMock);
     await saveGitHubFile(config, 'existing-sha', { key: 'val' }, 'commit msg');
     const [, options] = fetchMock.mock.calls[0] as [string, RequestInit];
-    const body = JSON.parse(options.body as string);
+    const body = JSON.parse(options.body as string) as Record<string, string>;
     expect(body.sha).toBe('existing-sha');
     expect(body.message).toBe('commit msg');
     expect(body.branch).toBe('main');
@@ -122,8 +122,8 @@ describe('saveGitHubFile', () => {
     const data = { hello: 'world' };
     await saveGitHubFile(config, 'sha', data, 'msg');
     const [, options] = fetchMock.mock.calls[0] as [string, RequestInit];
-    const body = JSON.parse(options.body as string);
-    const decoded = JSON.parse(Buffer.from(body.content, 'base64').toString('utf-8'));
+    const body = JSON.parse(options.body as string) as { content: string };
+    const decoded: unknown = JSON.parse(Buffer.from(body.content, 'base64').toString('utf-8'));
     expect(decoded).toEqual(data);
   });
 });
