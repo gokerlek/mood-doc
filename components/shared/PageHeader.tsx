@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
-interface PageHeaderProps {
+export interface PageHeaderProps {
   icon: ReactNode;
   title: string;
   description?: string;
