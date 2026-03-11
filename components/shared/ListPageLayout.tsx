@@ -15,9 +15,7 @@ export function ListPageLayout({
 }: ListPageLayoutProps) {
   return (
     <div className="flex flex-col min-h-full">
-      <div className="border-b border-border">
-        <PageHeader {...headerProps} className="pb-0 mb-0 border-b-0" />
-      </div>
+        <PageHeader {...headerProps} />
       <div
         className={cn(
           'px-6 py-6 w-full mx-auto space-y-5',
