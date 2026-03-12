@@ -95,9 +95,12 @@ export function QuestionSettingsPanel({ question }: QuestionSettingsPanelProps) 
             <Input
               type="number"
               min={2}
-              max={10}
+              max={question.type === 'emoji' ? 7 : 10}
               value={question.scale_max ?? 5}
-              onChange={e => update({ scale_max: Math.min(10, Math.max(2, Number(e.target.value))) })}
+              onChange={e => {
+                const maxVal = question.type === 'emoji' ? 7 : 10;
+                update({ scale_max: Math.min(maxVal, Math.max(2, Number(e.target.value))) });
+              }}
               className="h-8 text-xs"
             />
           </div>

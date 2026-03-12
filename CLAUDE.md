@@ -56,8 +56,8 @@ const data = useKbStore.useData();
 
 **Store mutation — immer ile:** Store action'ları `immer` produce kullanıyor, `state.data` üzerinde doğrudan mutasyon yapılabilir.
 
-**localStorage persist key:** `moodivation-kb-v3`
-(v2'den fark: slot koordinatları normalize oran → pixel cinsine geçti)
+**localStorage persist key:** `moodivation-kb-v4`
+(v3'den fark: survey_templates, survey_questions, survey_drivers, survey_question_types alanları eklendi)
 
 ## Test Notları
 
