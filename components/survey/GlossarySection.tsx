@@ -35,7 +35,7 @@ export function GlossarySection({ glossaryIds, onAddId, onRemoveId }: GlossarySe
       {available.length > 0 && (
         <Combobox
           value={null}
-          onValueChange={(id) => { if (id) onAddId(id as string); }}
+          onValueChange={(id) => { if (id) onAddId(id); }}
         >
           <ComboboxInput placeholder="Terim ekle..." showClear={false} />
           <ComboboxContent>
