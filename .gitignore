@@ -44,3 +44,7 @@ next-env.d.ts
 knowledge_base.json
 .omc
 .idea
+/docs
+
+# git worktrees
+.worktrees
