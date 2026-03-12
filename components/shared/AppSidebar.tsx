@@ -6,6 +6,7 @@ import {
   IconBook2, IconAlphabetLatin, IconShieldCheck, IconHelp,
   IconRobot, IconDeviceFloppy, IconLoader2, IconBrandGithub,
   IconSitemap, IconLayoutDashboard, IconPuzzle, IconTags, IconLayoutColumns,
+  IconListDetails,
 } from '@tabler/icons-react';
 import {
   Sidebar, SidebarContent, SidebarHeader, SidebarFooter,
@@ -28,6 +29,9 @@ const NAV_GROUPS = [
     { label: 'Kurallar', icon: IconShieldCheck, href: '/rules' },
     { label: 'Sözlük', icon: IconAlphabetLatin, href: '/glossary' },
     { label: 'Taglar', icon: IconTags, href: '/tags' },
+  ]},
+  { label: 'Anketler', items: [
+    { label: 'Soru Tipleri', icon: IconListDetails, href: '/question-types' },
   ]},
   { label: 'Sistem', items: [
     { label: 'Agent', icon: IconRobot, href: '/agent' },
