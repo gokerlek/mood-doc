@@ -349,6 +349,10 @@ export const emptyKnowledgeBase = (): KnowledgeBase => ({
   faq: [],
   rules: [],
   glossary: [],
+  survey_question_types: [],
+  survey_drivers: [],
+  survey_templates: [],
+  survey_questions: [],
   agent_behavior: {
     tone: 'friendly',
     fallback_message: '',

@@ -128,8 +128,11 @@ export interface KbComponent {
 
 export type KbItemContext =
   | { type: 'global' }
-  | { type: 'page'; node_id: string }
-  | { type: 'component'; component_id: string };
+  | { type: 'page';          node_id: string }
+  | { type: 'component';     component_id: string }
+  | { type: 'template';      template_id: string }
+  | { type: 'driver';        driver_id: string }
+  | { type: 'question_type'; question_type_key: string };
 
 // --- FAQ ---
 
@@ -159,6 +162,64 @@ export interface KbGlossaryTerm {
   definition: string;
 }
 
+// --- Survey ---
+
+export type QuestionType =
+  | 'likert'
+  | 'yes_no'
+  | 'single_choice'
+  | 'multiple_choice'
+  | 'star'
+  | 'emoji'
+  | 'text';
+
+// Sabit 7 tip — key is primary identifier (intentional exception to id convention)
+export interface SurveyQuestionTypeDef {
+  key: QuestionType;
+  name: string;
+  description: string;
+  tag_ids: string[];
+  faq_ids: string[];
+  rule_ids: string[];
+}
+
+export interface SurveyDriver {
+  id: string;
+  name: string;
+  description: string;
+  tag_ids: string[];
+  faq_ids: string[];
+  rule_ids: string[];
+}
+
+export interface SurveyQuestion {
+  id: string;
+  text: string;
+  description?: string;
+  type: QuestionType;
+  required: boolean;
+  is_pool_question: boolean;
+  has_comment: boolean;
+  scale_min?: number;
+  scale_max?: number;
+  driver_id?: string | null;
+  options?: string[];
+  multi_min?: number | null;
+  multi_max?: number | null;
+}
+
+export interface SurveyTemplate {
+  id: string;
+  name: string;
+  description: string;
+  purpose: string;
+  tag_ids: string[];
+  faq_ids: string[];
+  rule_ids: string[];
+  glossary_ids: string[];
+  question_ids: string[];
+}
+
 // --- Knowledge Base Root ---
 
 export interface KbMeta {
@@ -178,6 +239,10 @@ export interface KnowledgeBase {
   faq: KbFaq[];
   rules: KbRule[];
   glossary: KbGlossaryTerm[];
+  survey_question_types: SurveyQuestionTypeDef[];
+  survey_drivers: SurveyDriver[];
+  survey_templates: SurveyTemplate[];
+  survey_questions: SurveyQuestion[];
   agent_behavior: {
     tone: string;
     fallback_message: string;

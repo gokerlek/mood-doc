@@ -100,15 +100,19 @@ const useKbStoreBase = create<KbState>()(
         const defaults = emptyKnowledgeBase();
         // Sadece bilinen alanları al — eski/gereksiz alanlar (pages, modules vb.) atılır
         const normalized: KnowledgeBase = {
-          _meta:          data._meta          ?? defaults._meta,
-          tag_categories: data.tag_categories ?? defaults.tag_categories,
-          tags:           data.tags           ?? defaults.tags,
-          components:     Array.isArray(data.components) ? data.components : defaults.components,
-          map:            data.map            ?? defaults.map,
-          faq:            data.faq            ?? defaults.faq,
-          rules:          data.rules          ?? defaults.rules,
-          glossary:       data.glossary       ?? defaults.glossary,
-          agent_behavior: data.agent_behavior ?? defaults.agent_behavior,
+          _meta:                  data._meta                  ?? defaults._meta,
+          tag_categories:         data.tag_categories         ?? defaults.tag_categories,
+          tags:                   data.tags                   ?? defaults.tags,
+          components:             Array.isArray(data.components) ? data.components : defaults.components,
+          map:                    data.map                    ?? defaults.map,
+          faq:                    data.faq                    ?? defaults.faq,
+          rules:                  data.rules                  ?? defaults.rules,
+          glossary:               data.glossary               ?? defaults.glossary,
+          survey_question_types:  data.survey_question_types  ?? defaults.survey_question_types,
+          survey_drivers:         data.survey_drivers         ?? defaults.survey_drivers,
+          survey_templates:       data.survey_templates       ?? defaults.survey_templates,
+          survey_questions:       data.survey_questions       ?? defaults.survey_questions,
+          agent_behavior:         data.agent_behavior         ?? defaults.agent_behavior,
         };
         normalized.components = normalized.components
           .filter(

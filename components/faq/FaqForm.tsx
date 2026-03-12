@@ -29,7 +29,11 @@ function buildContext(type: ContextType, nodeId: string, componentId: string): K
 }
 
 function getContextType(context: KbItemContext): ContextType {
-  return context.type;
+  if (context.type === 'page' || context.type === 'component' || context.type === 'global') {
+    return context.type;
+  }
+  // Default to global for survey-related contexts
+  return 'global';
 }
 
 export function FaqForm({ initial, leafNodes, components, onSave, onCancel }: FaqFormProps) {
