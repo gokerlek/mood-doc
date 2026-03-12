@@ -490,12 +490,20 @@ const useKbStoreBase = create<KbState>()(
         }),
 
       deleteSurveyTemplate: (id) =>
-        set((s) =>
-          s.data ? {
+        set((s) => {
+          if (!s.data) return s;
+          const deleted = s.data.survey_templates.find(t => t.id === id);
+          const orphanIds = new Set(deleted?.question_ids ?? []);
+          return {
             isDirty: true,
-            data: { ...s.data, survey_templates: s.data.survey_templates.filter(t => t.id !== id) },
-          } : s
-        ),
+            data: {
+              ...s.data,
+              survey_templates: s.data.survey_templates.filter(t => t.id !== id),
+              // CASCADE: remove questions that belonged only to this template
+              survey_questions: s.data.survey_questions.filter(q => !orphanIds.has(q.id)),
+            },
+          };
+        }),
 
       upsertSurveyQuestion: (question) =>
         set((s) => {

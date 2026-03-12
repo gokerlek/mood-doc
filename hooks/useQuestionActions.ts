@@ -1,4 +1,4 @@
-import { useKbStore } from '@/stores/kbStore';
+import { useKbStore, useKbStoreBase } from '@/stores/kbStore';
 import { emptyQuestion } from '@/lib/defaults';
 import type { QuestionType, SurveyTemplate } from '@/lib/types';
 import { toast } from 'sonner';
@@ -12,7 +12,9 @@ export function useQuestionActions(template: SurveyTemplate) {
   const addQuestion = (type: QuestionType) => {
     const q = emptyQuestion(type);
     upsertQuestion(q);
-    upsertTemplate({ ...template, question_ids: [...template.question_ids, q.id] });
+    // Read live template from store to avoid stale question_ids on rapid adds
+    const liveTemplate = useKbStoreBase.getState().data?.survey_templates.find(t => t.id === template.id);
+    upsertTemplate({ ...(liveTemplate ?? template), question_ids: [...(liveTemplate ?? template).question_ids, q.id] });
     return q;
   };
 

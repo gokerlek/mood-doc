@@ -1,5 +1,6 @@
 'use client';
 import { useKbStore } from '@/stores/kbStore';
+import { emptyQuestion } from '@/lib/defaults';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -51,7 +52,19 @@ export function QuestionSettingsPanel({ question }: QuestionSettingsPanelProps) 
           <Label className="text-xs">Soru Tipi</Label>
           <Select
             value={question.type}
-            onValueChange={val => update({ type: val as QuestionType })}
+            onValueChange={val => {
+              const newType = val as QuestionType;
+              const base = emptyQuestion(newType);
+              upsert({
+                ...base,
+                id: question.id,
+                text: question.text,
+                description: question.description,
+                required: question.required,
+                is_pool_question: question.is_pool_question,
+                has_comment: question.has_comment,
+              });
+            }}
           >
             <SelectTrigger className="h-8 text-xs">
               <SelectValue />

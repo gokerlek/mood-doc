@@ -83,6 +83,21 @@ describe('Survey store actions', () => {
     });
   });
 
+  describe('deleteSurveyTemplate', () => {
+    it('removes questions that belonged to the deleted template (cascade)', () => {
+      const q1 = emptyQuestion('text');
+      const q2 = emptyQuestion('likert');
+      getStore().upsertSurveyQuestion(q1);
+      getStore().upsertSurveyQuestion(q2);
+      const tmpl = emptyTemplate();
+      tmpl.question_ids = [q1.id, q2.id];
+      getStore().upsertSurveyTemplate(tmpl);
+      getStore().deleteSurveyTemplate(tmpl.id);
+      expect(getStore().data?.survey_templates).toHaveLength(0);
+      expect(getStore().data?.survey_questions).toHaveLength(0);
+    });
+  });
+
   describe('reorderTemplateQuestions', () => {
     it('updates question_ids order', () => {
       const tmpl = emptyTemplate();
