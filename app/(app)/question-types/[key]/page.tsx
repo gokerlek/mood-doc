@@ -12,7 +12,6 @@ import { SurveyFaqSection } from '@/components/survey/SurveyFaqSection';
 import { SurveyRuleSection } from '@/components/survey/SurveyRuleSection';
 import { QuestionTypeBadge } from '@/components/survey/QuestionTypeBadge';
 import { IconArrowLeft } from '@tabler/icons-react';
-import type { QuestionType } from '@/lib/types';
 
 interface PageProps {
   params: Promise<{ key: string }>;
@@ -43,7 +42,7 @@ export default function QuestionTypeDetailPage({ params }: PageProps) {
         {/* Left: Info */}
         <div className="w-72 shrink-0 border-r border-border overflow-y-auto p-4 space-y-4">
           <div className="flex items-center gap-2">
-            <QuestionTypeBadge type={typeDef.key as QuestionType} />
+            <QuestionTypeBadge type={typeDef.key} />
             <span className="text-xs text-muted-foreground">sabit tip</span>
           </div>
           <Input
