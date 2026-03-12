@@ -315,8 +315,8 @@ describe('SEED_PRIMITIVES', () => {
 });
 
 describe('emptyKnowledgeBase', () => {
-  it('schema_version is "3.0"', () => {
-    expect(emptyKnowledgeBase()._meta.schema_version).toBe('3.0');
+  it('schema_version is "4.0"', () => {
+    expect(emptyKnowledgeBase()._meta.schema_version).toBe('4.0');
   });
 
   it('components equals SEED_PRIMITIVES (same length and ids)', () => {
