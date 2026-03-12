@@ -1,7 +1,16 @@
 // __tests__/stores/surveyStore.test.ts
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, beforeAll, vi } from 'vitest';
 import { useKbStoreBase } from '@/stores/kbStore';
-import { emptyDriver, emptyTemplate, emptyQuestion, SEED_QUESTION_TYPES } from '@/lib/defaults';
+import { emptyKnowledgeBase, emptyDriver, emptyTemplate, emptyQuestion, SEED_QUESTION_TYPES } from '@/lib/defaults';
+
+// Mock localStorage for zustand persist
+beforeAll(() => {
+  vi.stubGlobal('localStorage', {
+    getItem: vi.fn().mockReturnValue(null),
+    setItem: vi.fn(),
+    removeItem: vi.fn(),
+  });
+});
 
 // Access raw store state (before createSelectorHooks wraps it)
 function getStore() {
@@ -10,17 +19,7 @@ function getStore() {
 
 describe('Survey store actions', () => {
   beforeEach(() => {
-    getStore().setData({
-      _meta: { schema_version: '3.0', last_updated: new Date().toISOString() },
-      tag_categories: [], tags: [], components: [],
-      map: { nodes: [], edges: [] },
-      faq: [], rules: [], glossary: [],
-      agent_behavior: { tone: 'friendly', fallback_message: '', escalation_message: '', max_answer_sentences: 3, escalation_triggers: [] },
-      survey_question_types: [...SEED_QUESTION_TYPES],
-      survey_drivers: [],
-      survey_templates: [],
-      survey_questions: [],
-    });
+    getStore().setData(emptyKnowledgeBase());
   });
 
   describe('upsertSurveyDriver', () => {
@@ -29,7 +28,7 @@ describe('Survey store actions', () => {
       driver.name = 'Motivasyon';
       getStore().upsertSurveyDriver(driver);
       expect(getStore().data?.survey_drivers).toHaveLength(1);
-      expect(getStore().data?.survey_drivers[0].name).toBe('Motivasyon');
+      expect(getStore().data!.survey_drivers[0]!.name).toBe('Motivasyon');
     });
 
     it('updates an existing driver', () => {
@@ -37,7 +36,7 @@ describe('Survey store actions', () => {
       getStore().upsertSurveyDriver(driver);
       getStore().upsertSurveyDriver({ ...driver, name: 'Updated' });
       expect(getStore().data?.survey_drivers).toHaveLength(1);
-      expect(getStore().data?.survey_drivers[0].name).toBe('Updated');
+      expect(getStore().data!.survey_drivers[0]!.name).toBe('Updated');
     });
 
     it('sets isDirty', () => {
@@ -61,7 +60,7 @@ describe('Survey store actions', () => {
       q.driver_id = driver.id;
       getStore().upsertSurveyQuestion(q);
       getStore().deleteSurveyDriver(driver.id);
-      expect(getStore().data?.survey_questions[0].driver_id).toBeNull();
+      expect(getStore().data!.survey_questions[0]!.driver_id).toBeNull();
     });
   });
 
@@ -80,7 +79,7 @@ describe('Survey store actions', () => {
       getStore().upsertSurveyTemplate(tmpl);
       getStore().deleteSurveyQuestion(q.id);
       expect(getStore().data?.survey_questions).toHaveLength(0);
-      expect(getStore().data?.survey_templates[0].question_ids).toHaveLength(0);
+      expect(getStore().data!.survey_templates[0]!.question_ids).toHaveLength(0);
     });
   });
 
@@ -90,7 +89,7 @@ describe('Survey store actions', () => {
       tmpl.question_ids = ['a', 'b', 'c'];
       getStore().upsertSurveyTemplate(tmpl);
       getStore().reorderTemplateQuestions(tmpl.id, ['c', 'a', 'b']);
-      expect(getStore().data?.survey_templates[0].question_ids).toEqual(['c', 'a', 'b']);
+      expect(getStore().data!.survey_templates[0]!.question_ids).toEqual(['c', 'a', 'b']);
     });
   });
 
