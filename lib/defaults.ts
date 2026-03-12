@@ -2,7 +2,8 @@
 import type {
   KbFaq, KbRule, KbGlossaryTerm, KbComponent,
   TagCategory, KbTag, PageSection, PageData, KnowledgeBase,
-  ComponentSlot, ComponentPropDef, ComponentVariant, ComponentCondition
+  ComponentSlot, ComponentPropDef, ComponentVariant, ComponentCondition,
+  SurveyQuestionTypeDef, SurveyDriver, SurveyQuestion, SurveyTemplate, QuestionType
 } from './types';
 
 export const emptyFaq = (context: KbFaq['context'] = { type: 'global' }): KbFaq => ({
@@ -25,6 +26,41 @@ export const emptyGlossaryTerm = (): KbGlossaryTerm => ({
   id: crypto.randomUUID(),
   term: '',
   definition: '',
+});
+
+export const emptyDriver = (): SurveyDriver => ({
+  id: crypto.randomUUID(),
+  name: '',
+  description: '',
+  tag_ids: [],
+  faq_ids: [],
+  rule_ids: [],
+});
+
+export const emptyTemplate = (): SurveyTemplate => ({
+  id: crypto.randomUUID(),
+  name: '',
+  description: '',
+  purpose: '',
+  tag_ids: [],
+  faq_ids: [],
+  rule_ids: [],
+  glossary_ids: [],
+  question_ids: [],
+});
+
+export const emptyQuestion = (type: QuestionType): SurveyQuestion => ({
+  id: crypto.randomUUID(),
+  text: '',
+  type,
+  required: true,
+  is_pool_question: false,
+  has_comment: false,
+  ...(type === 'likert'          ? { scale_min: 1, scale_max: 5, driver_id: null } : {}),
+  ...(type === 'star'            ? { scale_min: 1, scale_max: 5 }                  : {}),
+  ...(type === 'emoji'           ? { scale_min: 1, scale_max: 5 }                  : {}),
+  ...(type === 'single_choice'   ? { options: [] }                                 : {}),
+  ...(type === 'multiple_choice' ? { options: [], multi_min: null, multi_max: null }: {}),
 });
 
 export const emptyPropDef = (): ComponentPropDef => ({
@@ -337,9 +373,54 @@ export const SEED_PRIMITIVES: KbComponent[] = [
   },
 ];
 
+export const SEED_QUESTION_TYPES: SurveyQuestionTypeDef[] = [
+  {
+    key: 'likert',
+    name: 'Likert Ölçeği',
+    description: 'Sayısal derecelendirme skalası. Ölçek aralığı yapılandırılabilir (1-4, 1-5, 1-7, 1-10). Her soru bir driver ile ilişkilendirilebilir.',
+    tag_ids: [], faq_ids: [], rule_ids: [],
+  },
+  {
+    key: 'yes_no',
+    name: 'Evet / Hayır',
+    description: 'Sabit üç seçenek: Evet, Kararsızım, Hayır. Özel seçenek tanımlanamaz.',
+    tag_ids: [], faq_ids: [], rule_ids: [],
+  },
+  {
+    key: 'single_choice',
+    name: 'Tek Seçim',
+    description: 'Kullanıcı tanımlı seçenekler listesi; yalnızca bir seçenek seçilebilir.',
+    tag_ids: [], faq_ids: [], rule_ids: [],
+  },
+  {
+    key: 'multiple_choice',
+    name: 'Çoklu Seçim',
+    description: 'Kullanıcı tanımlı seçenekler; birden fazla seçilebilir. Min/max seçim sayısı kısıtlanabilir.',
+    tag_ids: [], faq_ids: [], rule_ids: [],
+  },
+  {
+    key: 'star',
+    name: 'Yıldız',
+    description: 'Yıldız ikonlarıyla derecelendirme. Yıldız sayısı yapılandırılabilir (min 2).',
+    tag_ids: [], faq_ids: [], rule_ids: [],
+  },
+  {
+    key: 'emoji',
+    name: 'Emoji',
+    description: 'Emoji ikonlarıyla derecelendirme. Seçenek sayısı yapılandırılabilir (min 2).',
+    tag_ids: [], faq_ids: [], rule_ids: [],
+  },
+  {
+    key: 'text',
+    name: 'Açık Metin',
+    description: 'Kullanıcı serbest metin yazar. Seçenek veya ölçek yoktur.',
+    tag_ids: [], faq_ids: [], rule_ids: [],
+  },
+];
+
 export const emptyKnowledgeBase = (): KnowledgeBase => ({
   _meta: {
-    schema_version: '3.0',
+    schema_version: '4.0',
     last_updated: new Date().toISOString(),
   },
   tag_categories: [],
@@ -349,6 +430,10 @@ export const emptyKnowledgeBase = (): KnowledgeBase => ({
   faq: [],
   rules: [],
   glossary: [],
+  survey_question_types: [...SEED_QUESTION_TYPES],
+  survey_drivers: [],
+  survey_templates: [],
+  survey_questions: [],
   agent_behavior: {
     tone: 'friendly',
     fallback_message: '',

@@ -14,8 +14,12 @@ import type {
   MapEdgeData,
   PageData,
   PageSection,
+  SurveyQuestionTypeDef,
+  SurveyDriver,
+  SurveyQuestion,
+  SurveyTemplate,
 } from "@/lib/types";
-import { emptyKnowledgeBase, SEED_PRIMITIVES } from "@/lib/defaults";
+import { emptyKnowledgeBase, SEED_PRIMITIVES, SEED_QUESTION_TYPES } from "@/lib/defaults";
 import type { ComponentSlot } from "@/lib/types";
 
 function migrateSlots(
@@ -87,6 +91,22 @@ interface KbState {
   updateAgentBehavior: (
     patch: Partial<KnowledgeBase["agent_behavior"]>,
   ) => void;
+
+  // Survey Question Types
+  upsertSurveyQuestionType: (qt: SurveyQuestionTypeDef) => void;
+
+  // Survey Drivers
+  upsertSurveyDriver: (driver: SurveyDriver) => void;
+  deleteSurveyDriver: (id: string) => void;
+
+  // Survey Templates
+  upsertSurveyTemplate: (template: SurveyTemplate) => void;
+  deleteSurveyTemplate: (id: string) => void;
+
+  // Survey Questions
+  upsertSurveyQuestion: (question: SurveyQuestion) => void;
+  deleteSurveyQuestion: (id: string) => void;
+  reorderTemplateQuestions: (templateId: string, question_ids: string[]) => void;
 }
 
 const useKbStoreBase = create<KbState>()(
@@ -100,15 +120,19 @@ const useKbStoreBase = create<KbState>()(
         const defaults = emptyKnowledgeBase();
         // Sadece bilinen alanları al — eski/gereksiz alanlar (pages, modules vb.) atılır
         const normalized: KnowledgeBase = {
-          _meta:          data._meta          ?? defaults._meta,
-          tag_categories: data.tag_categories ?? defaults.tag_categories,
-          tags:           data.tags           ?? defaults.tags,
-          components:     Array.isArray(data.components) ? data.components : defaults.components,
-          map:            data.map            ?? defaults.map,
-          faq:            data.faq            ?? defaults.faq,
-          rules:          data.rules          ?? defaults.rules,
-          glossary:       data.glossary       ?? defaults.glossary,
-          agent_behavior: data.agent_behavior ?? defaults.agent_behavior,
+          _meta:                  data._meta                  ?? defaults._meta,
+          tag_categories:         data.tag_categories         ?? defaults.tag_categories,
+          tags:                   data.tags                   ?? defaults.tags,
+          components:             Array.isArray(data.components) ? data.components : defaults.components,
+          map:                    data.map                    ?? defaults.map,
+          faq:                    data.faq                    ?? defaults.faq,
+          rules:                  data.rules                  ?? defaults.rules,
+          glossary:               data.glossary               ?? defaults.glossary,
+          survey_question_types:  data.survey_question_types  ?? defaults.survey_question_types,
+          survey_drivers:         data.survey_drivers         ?? defaults.survey_drivers,
+          survey_templates:       data.survey_templates       ?? defaults.survey_templates,
+          survey_questions:       data.survey_questions       ?? defaults.survey_questions,
+          agent_behavior:         data.agent_behavior         ?? defaults.agent_behavior,
         };
         normalized.components = normalized.components
           .filter(
@@ -418,9 +442,107 @@ const useKbStoreBase = create<KbState>()(
               }
             : s,
         ),
+
+      upsertSurveyQuestionType: (qt) =>
+        set((s) => {
+          if (!s.data) return s;
+          const exists = s.data.survey_question_types.findIndex(t => t.key === qt.key);
+          const survey_question_types = exists >= 0
+            ? s.data.survey_question_types.map(t => t.key === qt.key ? qt : t)
+            : [...s.data.survey_question_types, qt];
+          return { isDirty: true, data: { ...s.data, survey_question_types } };
+        }),
+
+      upsertSurveyDriver: (driver) =>
+        set((s) => {
+          if (!s.data) return s;
+          const exists = s.data.survey_drivers.findIndex(d => d.id === driver.id);
+          const survey_drivers = exists >= 0
+            ? s.data.survey_drivers.map(d => d.id === driver.id ? driver : d)
+            : [...s.data.survey_drivers, driver];
+          return { isDirty: true, data: { ...s.data, survey_drivers } };
+        }),
+
+      deleteSurveyDriver: (id) =>
+        set((s) => {
+          if (!s.data) return s;
+          return {
+            isDirty: true,
+            data: {
+              ...s.data,
+              survey_drivers: s.data.survey_drivers.filter(d => d.id !== id),
+              // CASCADE: null out driver_id on related questions
+              survey_questions: s.data.survey_questions.map(q =>
+                q.driver_id === id ? { ...q, driver_id: null } : q
+              ),
+            },
+          };
+        }),
+
+      upsertSurveyTemplate: (template) =>
+        set((s) => {
+          if (!s.data) return s;
+          const exists = s.data.survey_templates.findIndex(t => t.id === template.id);
+          const survey_templates = exists >= 0
+            ? s.data.survey_templates.map(t => t.id === template.id ? template : t)
+            : [...s.data.survey_templates, template];
+          return { isDirty: true, data: { ...s.data, survey_templates } };
+        }),
+
+      deleteSurveyTemplate: (id) =>
+        set((s) => {
+          if (!s.data) return s;
+          const deleted = s.data.survey_templates.find(t => t.id === id);
+          const orphanIds = new Set(deleted?.question_ids ?? []);
+          return {
+            isDirty: true,
+            data: {
+              ...s.data,
+              survey_templates: s.data.survey_templates.filter(t => t.id !== id),
+              // CASCADE: remove questions that belonged only to this template
+              survey_questions: s.data.survey_questions.filter(q => !orphanIds.has(q.id)),
+            },
+          };
+        }),
+
+      upsertSurveyQuestion: (question) =>
+        set((s) => {
+          if (!s.data) return s;
+          const exists = s.data.survey_questions.findIndex(q => q.id === question.id);
+          const survey_questions = exists >= 0
+            ? s.data.survey_questions.map(q => q.id === question.id ? question : q)
+            : [...s.data.survey_questions, question];
+          return { isDirty: true, data: { ...s.data, survey_questions } };
+        }),
+
+      deleteSurveyQuestion: (id) =>
+        set((s) => {
+          if (!s.data) return s;
+          return {
+            isDirty: true,
+            data: {
+              ...s.data,
+              survey_questions: s.data.survey_questions.filter(q => q.id !== id),
+              // CASCADE: remove from all templates
+              survey_templates: s.data.survey_templates.map(t => ({
+                ...t,
+                question_ids: t.question_ids.filter(qid => qid !== id),
+              })),
+            },
+          };
+        }),
+
+      reorderTemplateQuestions: (templateId, question_ids) =>
+        set((s) => {
+          if (!s.data) return s;
+          const survey_templates = s.data.survey_templates.map(t =>
+            t.id === templateId ? { ...t, question_ids } : t
+          );
+          return { isDirty: true, data: { ...s.data, survey_templates } };
+        }),
     }),
     {
-      name: "moodivation-kb-v3",
+      name: "moodivation-kb-v4",
       partialize: (state) => ({ data: state.data, isDirty: state.isDirty }),
       merge: (persisted, current) => {
         const p = persisted as Partial<KbState>;
@@ -445,6 +567,20 @@ const useKbStoreBase = create<KbState>()(
           if (missing.length > 0) {
             p.data.components = [...missing, ...p.data.components];
           }
+          // Inject missing seed question types
+          if (!Array.isArray(p.data.survey_question_types)) {
+            p.data.survey_question_types = defaults.survey_question_types;
+          } else {
+            const existingKeys = new Set(p.data.survey_question_types.map((qt: SurveyQuestionTypeDef) => qt.key));
+            const missingTypes = SEED_QUESTION_TYPES.filter(qt => !existingKeys.has(qt.key));
+            if (missingTypes.length > 0) {
+              p.data.survey_question_types = [...missingTypes, ...p.data.survey_question_types];
+            }
+          }
+          // Initialize missing survey arrays
+          if (!Array.isArray(p.data.survey_drivers))   p.data.survey_drivers   = defaults.survey_drivers;
+          if (!Array.isArray(p.data.survey_templates)) p.data.survey_templates = defaults.survey_templates;
+          if (!Array.isArray(p.data.survey_questions)) p.data.survey_questions = defaults.survey_questions;
         }
         return { ...current, ...p };
       },
@@ -452,4 +588,5 @@ const useKbStoreBase = create<KbState>()(
   ),
 );
 
+export { useKbStoreBase };
 export const useKbStore = createSelectorHooks(useKbStoreBase);
