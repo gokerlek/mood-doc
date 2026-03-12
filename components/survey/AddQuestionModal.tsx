@@ -44,7 +44,7 @@ export function AddQuestionModal({ open, onClose, onAdd }: AddQuestionModalProps
   };
 
   return (
-    <Dialog open={open} onOpenChange={v => { if (!v) onClose(); }}>
+    <Dialog open={open} onOpenChange={v => { if (!v) { setSelected(null); onClose(); } }}>
       <DialogContent className="max-w-lg">
         <DialogHeader>
           <DialogTitle>Soru Tipi Seç</DialogTitle>
