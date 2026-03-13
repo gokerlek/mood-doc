@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-13T10:41:02.462Z",
+    "last_updated": "2026-03-13T10:55:12.946Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1114,7 +1114,7 @@
           "sections": [],
           "canvas_slots": [
             {
-              "id": "1950e27b-14fc-4184-bda9-4b3948642aa7",
+              "id": "697d1f17-6c5e-4cfa-97f2-dc9ac7c4d0e5",
               "name": "Title",
               "description": "",
               "props": [],
@@ -1123,8 +1123,8 @@
               ],
               "prop_bindings": [],
               "zone": "body",
-              "x": 23,
-              "y": 22,
+              "x": 24,
+              "y": 11,
               "w": 160,
               "h": 36
             }
@@ -1316,9 +1316,52 @@
       "rule_ids": []
     }
   ],
-  "survey_drivers": [],
-  "survey_templates": [],
-  "survey_questions": [],
+  "survey_drivers": [
+    {
+      "id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "name": "Aidiyet",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "name": "Eğitim ve Gelişim",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    }
+  ],
+  "survey_templates": [
+    {
+      "id": "1b1c16d9-32f3-4120-9290-36178d0f418d",
+      "name": "Kariyer ve Kişisel Gelişim",
+      "description": "Kariyer ve Kişisel Gelişim Anketi, çalışanlarınızın mevcut pozisyonlarındaki tatmin düzeylerini, kariyer hedeflerine ulaşma olanaklarını ve kişisel gelişim süreçlerini değerlendirmek için tasarlanmış kapsamlı bir araçtır. ",
+      "purpose": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": [
+        "f22e727a-8e9a-470e-9f76-14b7e54183e7"
+      ]
+    }
+  ],
+  "survey_questions": [
+    {
+      "id": "f22e727a-8e9a-470e-9f76-14b7e54183e7",
+      "text": "Şirketin sunduğu gelişim fırsatlarını yeterli buluyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555"
+    }
+  ],
   "agent_behavior": {
     "tone": "Helpful, clear, and friendly",
     "fallback_message": "I'm sorry, I couldn't find an answer to that. Please contact your HR team for help.",
