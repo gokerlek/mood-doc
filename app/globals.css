@@ -76,6 +76,21 @@
   --color-zone-footer-bg: var(--zone-footer-bg);
   --color-zone-footer-fg: var(--zone-footer-fg);
   --color-zone-footer-border: var(--zone-footer-border);
+  --color-qt-likert-bg:  var(--qt-likert-bg);
+  --color-qt-likert-fg:  var(--qt-likert-fg);
+  --color-qt-yesno-bg:   var(--qt-yesno-bg);
+  --color-qt-yesno-fg:   var(--qt-yesno-fg);
+  --color-qt-single-bg:  var(--qt-single-bg);
+  --color-qt-single-fg:  var(--qt-single-fg);
+  --color-qt-multi-bg:   var(--qt-multi-bg);
+  --color-qt-multi-fg:   var(--qt-multi-fg);
+  --color-qt-star-bg:    var(--qt-star-bg);
+  --color-qt-star-fg:    var(--qt-star-fg);
+  --color-qt-emoji-bg:   var(--qt-emoji-bg);
+  --color-qt-emoji-fg:   var(--qt-emoji-fg);
+  --color-qt-text-bg:    var(--qt-text-bg);
+  --color-qt-text-fg:    var(--qt-text-fg);
+  --node-color: var(--node-color);
 }
 
 :root {
@@ -129,6 +144,21 @@
   --zone-footer-bg: oklch(0.97 0.04 80 / 0.6);
   --zone-footer-fg: oklch(0.55 0.15 57);
   --zone-footer-border: oklch(0.77 0.17 74 / 0.35);
+  /* Question type badge colors */
+  --qt-likert-bg:  oklch(0.93 0.05 260 / 0.6);
+  --qt-likert-fg:  oklch(0.42 0.18 260);
+  --qt-yesno-bg:   oklch(0.95 0.06 80 / 0.6);
+  --qt-yesno-fg:   oklch(0.50 0.15 65);
+  --qt-single-bg:  oklch(0.93 0.05 300 / 0.6);
+  --qt-single-fg:  oklch(0.42 0.16 300);
+  --qt-multi-bg:   oklch(0.95 0.06 40 / 0.6);
+  --qt-multi-fg:   oklch(0.48 0.16 40);
+  --qt-star-bg:    oklch(0.96 0.07 90 / 0.6);
+  --qt-star-fg:    oklch(0.50 0.16 80);
+  --qt-emoji-bg:   oklch(0.94 0.06 340 / 0.6);
+  --qt-emoji-fg:   oklch(0.45 0.17 340);
+  --qt-text-bg:    oklch(0.94 0.04 155 / 0.6);
+  --qt-text-fg:    oklch(0.42 0.14 155);
   --font-sans: Inter, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: JetBrains Mono, monospace;
@@ -140,6 +170,7 @@
   --shadow-offset-y: 2px;
   --letter-spacing: -0.01em;
   --spacing: 0.22rem;
+  --node-color: oklch(0.6642 0.0885 303.8300);
   --shadow-2xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.00);
   --shadow-xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.00);
   --shadow-sm: 0px 2px 4px 0px hsl(0 0% 0% / 0.00), 0px 1px 2px -1px hsl(0 0% 0% / 0.00);
@@ -201,6 +232,21 @@
   --zone-footer-bg: oklch(0.35 0.06 70 / 0.5);
   --zone-footer-fg: oklch(0.80 0.15 68);
   --zone-footer-border: oklch(0.75 0.16 72 / 0.45);
+  /* Question type badge colors */
+  --qt-likert-bg:  oklch(0.30 0.07 260 / 0.5);
+  --qt-likert-fg:  oklch(0.78 0.14 255);
+  --qt-yesno-bg:   oklch(0.32 0.07 75 / 0.5);
+  --qt-yesno-fg:   oklch(0.80 0.13 70);
+  --qt-single-bg:  oklch(0.30 0.07 295 / 0.5);
+  --qt-single-fg:  oklch(0.78 0.13 295);
+  --qt-multi-bg:   oklch(0.32 0.07 38 / 0.5);
+  --qt-multi-fg:   oklch(0.80 0.14 38);
+  --qt-star-bg:    oklch(0.33 0.08 85 / 0.5);
+  --qt-star-fg:    oklch(0.82 0.14 82);
+  --qt-emoji-bg:   oklch(0.30 0.07 340 / 0.5);
+  --qt-emoji-fg:   oklch(0.78 0.14 340);
+  --qt-text-bg:    oklch(0.30 0.05 155 / 0.5);
+  --qt-text-fg:    oklch(0.75 0.12 155);
   --radius: 0.45rem;
   --font-sans: Inter, sans-serif;
   --font-serif: Georgia, serif;
@@ -213,6 +259,7 @@
   --shadow-offset-y: 4px;
   --letter-spacing: 0.01em;
   --spacing: 0.22rem;
+  --node-color: oklch(0.6642 0.0885 303.8300);
   --shadow-2xs: 0px 4px 10px 0px hsl(0 0% 0% / 0.00);
   --shadow-xs: 0px 4px 10px 0px hsl(0 0% 0% / 0.00);
   --shadow-sm: 0px 4px 10px 0px hsl(0 0% 0% / 0.00), 0px 1px 2px -1px hsl(0 0% 0% / 0.00);
@@ -237,14 +284,14 @@
   .page-node-card {
     border: 1.5px solid color-mix(in oklab, var(--node-color) 22%, transparent);
     box-shadow:
-      0 2px 8px color-mix(in oklab, var(--node-color) 10%, transparent),
-      0 1px 3px color-mix(in oklab, var(--foreground) 6%, transparent);
+            0 2px 8px color-mix(in oklab, var(--node-color) 10%, transparent),
+            0 1px 3px color-mix(in oklab, var(--foreground) 6%, transparent);
   }
   .page-node-header {
     background: linear-gradient(
-      135deg,
-      color-mix(in oklab, var(--node-color) 11%, transparent) 0%,
-      color-mix(in oklab, var(--node-color) 3%, transparent) 100%
+            135deg,
+            color-mix(in oklab, var(--node-color) 11%, transparent) 0%,
+            color-mix(in oklab, var(--node-color) 3%, transparent) 100%
     );
   }
   .page-node-dot {
