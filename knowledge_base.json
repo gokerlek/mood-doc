@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-11T06:39:38.751Z",
+    "last_updated": "2026-03-13T10:41:02.462Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1109,10 +1109,26 @@
         "x": 768.6332765452272,
         "y": 336.1649937588852,
         "page_data": {
-          "description": "",
+          "description": "Kariyer ve Kişisel gelişim\n",
           "tag_ids": [],
           "sections": [],
-          "canvas_slots": [],
+          "canvas_slots": [
+            {
+              "id": "1950e27b-14fc-4184-bda9-4b3948642aa7",
+              "name": "Title",
+              "description": "",
+              "props": [],
+              "component_ids": [
+                "seed-prim-title"
+              ],
+              "prop_bindings": [],
+              "zone": "body",
+              "x": 23,
+              "y": 22,
+              "w": 160,
+              "h": 36
+            }
+          ],
           "frame_width": 480,
           "frame_height": 320,
           "faq_ids": [],
@@ -1242,6 +1258,67 @@
       "definition": "A short, frequent survey (typically 1–5 questions) used to track employee sentiment in real-time."
     }
   ],
+  "survey_question_types": [
+    {
+      "key": "likert",
+      "name": "Likert Ölçeği",
+      "description": "Sayısal derecelendirme skalası. Ölçek aralığı yapılandırılabilir (1-4, 1-5, 1-7, 1-10). Her soru bir driver ile ilişkilendirilebilir.",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "key": "yes_no",
+      "name": "Evet / Hayır",
+      "description": "Sabit üç seçenek: Evet, Kararsızım, Hayır. Özel seçenek tanımlanamaz.",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "key": "single_choice",
+      "name": "Tek Seçim",
+      "description": "Kullanıcı tanımlı seçenekler listesi; yalnızca bir seçenek seçilebilir.",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "key": "multiple_choice",
+      "name": "Çoklu Seçim",
+      "description": "Kullanıcı tanımlı seçenekler; birden fazla seçilebilir. Min/max seçim sayısı kısıtlanabilir.",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "key": "star",
+      "name": "Yıldız",
+      "description": "Yıldız ikonlarıyla derecelendirme. Yıldız sayısı yapılandırılabilir (min 2).",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "key": "emoji",
+      "name": "Emoji",
+      "description": "Emoji ikonlarıyla derecelendirme. Seçenek sayısı yapılandırılabilir (min 2).",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "key": "text",
+      "name": "Açık Metin",
+      "description": "Kullanıcı serbest metin yazar. Seçenek veya ölçek yoktur.",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    }
+  ],
+  "survey_drivers": [],
+  "survey_templates": [],
+  "survey_questions": [],
   "agent_behavior": {
     "tone": "Helpful, clear, and friendly",
     "fallback_message": "I'm sorry, I couldn't find an answer to that. Please contact your HR team for help.",
