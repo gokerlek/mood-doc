@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-16T08:35:03.436Z",
+    "last_updated": "2026-03-16T08:35:20.812Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1737,7 +1737,7 @@
     },
     {
       "id": "94f38e74-fd6f-4152-9c7a-ac98501253e3",
-      "text": "Çaprazx eğitim ve projeler gibi gelişim fırsatlarını yeterli buluyorum.",
+      "text": "Çapraz eğitim ve projeler gibi gelişim fırsatlarını yeterli buluyorum.",
       "type": "likert",
       "required": true,
       "is_pool_question": false,
