@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-16T09:17:41.917Z",
+    "last_updated": "2026-03-16T09:20:35.976Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1495,7 +1495,7 @@
     },
     {
       "id": "40afd564-434c-4e05-b2af-816c883a8dd2",
-      "name": "Aidiyet",
+      "name": "Adalet",
       "description": "",
       "tag_ids": [],
       "faq_ids": [],
@@ -1528,6 +1528,30 @@
     {
       "id": "2d902084-7087-4bdb-987b-ddee37804717",
       "name": "Esenlik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2",
+      "name": "Kültür",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "3a884203-f4e9-4500-8d8b-5bfb8dd02862",
+      "name": "İş Tatmini",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "358c619e-fe32-4f22-8762-9f8aa96e2548",
+      "name": "Takım",
       "description": "",
       "tag_ids": [],
       "faq_ids": [],
@@ -1612,6 +1636,17 @@
         "ecd8e538-dc46-497d-9228-5057109c68d7",
         "58f61a84-ed04-4635-b5ed-36ea1201627a"
       ]
+    },
+    {
+      "id": "cdb2576b-5905-4c24-81f2-a7d8b539698d",
+      "name": "Şube Satış Performans ve Verimlilik Analizi",
+      "description": "Şube satış ekiplerinin performansını, iş birliğini ve genel verimliliğini değerlendirmek için tasarlanmış kapsamlı bir analiz aracıdır. Bu set, şubenizdeki operasyonel süreçleri optimize etmenize, ekiplerin ihtiyaçlarını belirlemenize ve müşteri memnuniyetini artırmanıza yardımcı olur.",
+      "purpose": "Çalışanların motivasyon ve iş tatmin düzeyleri\nİş yükü, stres yönetimi ve esenlik\nEğitim ve gelişim ihtiyaçları\nŞubedeki takım ruhu, iş birliği ve iletişim kalitesi\nŞube yönetiminin destek ve yönlendirme etkinliği\nMüşteri memnuniyetini artıran süreçler ve araçlar\nSatış hedeflerine ulaşma düzeyi ve engeller",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": []
     }
   ],
   "survey_questions": [
