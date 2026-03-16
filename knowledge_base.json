@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-16T08:35:20.812Z",
+    "last_updated": "2026-03-16T08:51:20.087Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1272,6 +1272,26 @@
         "type": "driver",
         "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62"
       }
+    },
+    {
+      "id": "eccca645-0cfa-4045-bcda-5f0181d1e935",
+      "question": "",
+      "answer": "",
+      "tag_ids": [],
+      "context": {
+        "type": "driver",
+        "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+      }
+    },
+    {
+      "id": "51acfb79-ac46-4b74-b908-ba9999288ed8",
+      "question": "",
+      "answer": "",
+      "tag_ids": [],
+      "context": {
+        "type": "driver",
+        "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+      }
     }
   ],
   "rules": [
@@ -1429,6 +1449,81 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "name": "Memnuniyet",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [
+        "eccca645-0cfa-4045-bcda-5f0181d1e935",
+        "51acfb79-ac46-4b74-b908-ba9999288ed8"
+      ],
+      "rule_ids": []
+    },
+    {
+      "id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2",
+      "name": "Yönetici",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "02f59076-32a9-4038-8a42-26c734dd7466",
+      "name": "Gelişim",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "f6e02558-1e5f-4eee-a632-4aedc37faca2",
+      "name": "Performans",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "82009759-b969-46a8-a27e-d166ac84659b",
+      "name": "Takdir",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "name": "Aidiyet",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "7a2ca2b0-341f-4d52-8bdf-86a08a2ba412",
+      "name": "Özerklik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "69c2834a-d642-4889-b8f1-388553f0f28b",
+      "name": "İş birliği",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "205fa8e8-a5c6-4422-91b4-f68c7350a7ee",
+      "name": "İş yükü",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -1467,6 +1562,31 @@
         "7e6ee142-62f6-4a93-9901-0c68dafda743",
         "eac6e87f-eefc-4bff-89ae-d06d6e63ef7a",
         "94f38e74-fd6f-4152-9c7a-ac98501253e3"
+      ]
+    },
+    {
+      "id": "c121dba0-de26-4985-a9be-b0edbe36633f",
+      "name": "Saha Satış Ekibi Performans ve Verimlilik Analizi",
+      "description": "Saha Satış Ekipleri Performans ve Verimlilik Analizi, tüm saha ekiplerinizin performansını, verimliliğini ve ihtiyaçlarını değerlendirerek süreçlerinizi iyileştirmenize ve iş hedeflerinize ulaşmanıza yardımcı olur. Bu set, çalışanların ihtiyaçlarını ve motivasyon düzeylerini belirleyerek daha etkili bir iş ortamı oluşturmanıza yardımcı olur.",
+      "purpose": "Neleri Ölçümlüyoruz?\nÇalışanların stres yönetimi, motivasyon düzeyi ve genel memnuniyeti.\nÇalışanların eğitim ihtiyaçları ve gelişim fırsatlarına erişimi.\nSatış hedeflerinin gerçekleştirilmesi ve verimliliği artıracak etkenler.\nSatış süreçlerini destekleyen araçların etkinliği.\nİş birliği, takım ruhu ve iletişim.",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": [
+        "b72279fb-8197-4480-9ba8-d75a6f17d191",
+        "d0cf0c1b-0f65-4ad6-b5b0-2eb703f2c02e",
+        "73f1aafc-17ac-4287-a65b-13ad22b4428e",
+        "f42dbe60-a00a-4fd7-b09c-9a9abc446013",
+        "d848257a-106e-4847-a56a-1e5b387f7170",
+        "cd495fe7-1a8e-44b8-b3f0-5c5dd2ebca6d",
+        "ad3df8e9-7a45-4ef1-9888-422643c5ee50",
+        "1c34d9a6-ccb0-4183-8f66-cebe5866a7d4",
+        "79f9b0d0-5935-4297-b15c-477b99b61275",
+        "e76dc6aa-8072-442a-8de1-707f97fcfffd",
+        "f14ea40e-e182-4f8d-8071-5f698ecd018f",
+        "4a8487b3-953c-4ec1-b134-32661f40f64a",
+        "f0c0fab8-d2d0-43bd-b827-ec6776282609"
       ]
     }
   ],
@@ -1745,6 +1865,149 @@
       "scale_min": 1,
       "scale_max": 5,
       "driver_id": "ffb0f999-6da8-4576-a926-8746c60d9929"
+    },
+    {
+      "id": "b72279fb-8197-4480-9ba8-d75a6f17d191",
+      "text": "Bana sağlanan maddi imkanlardan (maaş, bonus, prim, vs.) memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+    },
+    {
+      "id": "d0cf0c1b-0f65-4ad6-b5b0-2eb703f2c02e",
+      "text": "Bana sağlanan yan haklardan (özel sigorta, izin, vs.) memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+    },
+    {
+      "id": "73f1aafc-17ac-4287-a65b-13ad22b4428e",
+      "text": "Bana sağlanan araçlar işimi daha iyi yapmama yardımcı olur.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+    },
+    {
+      "id": "f42dbe60-a00a-4fd7-b09c-9a9abc446013",
+      "text": "Satış hedeflerimi gerçekleştirmemde yöneticimin desteğinden memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+    },
+    {
+      "id": "d848257a-106e-4847-a56a-1e5b387f7170",
+      "text": "Yöneticimle pozitif bir iş ilikisine sahibim.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+    },
+    {
+      "id": "cd495fe7-1a8e-44b8-b3f0-5c5dd2ebca6d",
+      "text": "Yöneticimden performansımla ilgili zamanında geribildirim alabiliyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+    },
+    {
+      "id": "ad3df8e9-7a45-4ef1-9888-422643c5ee50",
+      "text": "Satış birimi içerisinde bana sağlanan kariyer fırsatlarından memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "02f59076-32a9-4038-8a42-26c734dd7466"
+    },
+    {
+      "id": "1c34d9a6-ccb0-4183-8f66-cebe5866a7d4",
+      "text": "Bana verilen satış hedefleri makul ve gerçekleştirilebilirdir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "f6e02558-1e5f-4eee-a632-4aedc37faca2"
+    },
+    {
+      "id": "79f9b0d0-5935-4297-b15c-477b99b61275",
+      "text": "Şirketime yaptığım katkılar ve gösterdiğim performans takdir edilir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "82009759-b969-46a8-a27e-d166ac84659b"
+    },
+    {
+      "id": "e76dc6aa-8072-442a-8de1-707f97fcfffd",
+      "text": "Görüş ve önerilerime şirket tarafından değer verilir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "82009759-b969-46a8-a27e-d166ac84659b"
+    },
+    {
+      "id": "f14ea40e-e182-4f8d-8071-5f698ecd018f",
+      "text": "Hedeflerimi gerçekleştirmek için motiveyim.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+    },
+    {
+      "id": "4a8487b3-953c-4ec1-b134-32661f40f64a",
+      "text": "Şirketimi müşterilerimize karşı temsil etmekten gurur duyuyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+    },
+    {
+      "id": "f0c0fab8-d2d0-43bd-b827-ec6776282609",
+      "text": "Yaptığım katkıların şirket başarısına hizmet ettiğine inanıyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": null
     }
   ],
   "agent_behavior": {
