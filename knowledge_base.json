@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-16T09:27:39.068Z",
+    "last_updated": "2026-03-16T09:31:41.754Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1664,7 +1664,11 @@
         "78ff1da6-db12-42ee-a524-5f9b868f848b",
         "0b7cc63a-0484-46ce-9edb-b8a2984efa7e",
         "40511038-b993-41d4-af29-c14b90395770",
-        "18bce87b-10de-4cb9-a636-508119c63bfe"
+        "18bce87b-10de-4cb9-a636-508119c63bfe",
+        "e0d87877-517e-4e3b-b170-460fa298d102",
+        "5018ad1a-6bee-49d1-861d-54863c0e0320",
+        "0b31975f-bf81-41d2-8653-ecfca3e9c5d8",
+        "a1b12428-94d3-430b-905e-c67df934be84"
       ]
     }
   ],
@@ -2440,6 +2444,50 @@
     },
     {
       "id": "18bce87b-10de-4cb9-a636-508119c63bfe",
+      "text": "Performansım hakkında düzenli ve yapıcı geri bildirim alıyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+    },
+    {
+      "id": "e0d87877-517e-4e3b-b170-460fa298d102",
+      "text": "Yöneticimle olumlu bir çalışma ilişkisine sahibim.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+    },
+    {
+      "id": "5018ad1a-6bee-49d1-861d-54863c0e0320",
+      "text": "Şube yöneticimin çalışanlar için doğru kararlar alacağına inanıyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+    },
+    {
+      "id": "0b31975f-bf81-41d2-8653-ecfca3e9c5d8",
+      "text": "Yöneticim endişelerinimi dinleyip bunlar hakkında harekete geçer.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+    },
+    {
+      "id": "a1b12428-94d3-430b-905e-c67df934be84",
       "text": "",
       "type": "likert",
       "required": true,
