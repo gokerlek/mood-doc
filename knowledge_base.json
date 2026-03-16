@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-16T08:05:33.588Z",
+    "last_updated": "2026-03-16T08:20:23.936Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1222,6 +1222,36 @@
         "type": "page",
         "node_id": "1d8b3067-7a82-4714-9204-a09a6b267cdb"
       }
+    },
+    {
+      "id": "7117c1ea-d5de-4d3f-b88d-1f6b98567e72",
+      "question": "",
+      "answer": "",
+      "tag_ids": [],
+      "context": {
+        "type": "driver",
+        "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
+      }
+    },
+    {
+      "id": "f57dae19-cb8c-4349-acef-c16b48e278da",
+      "question": "",
+      "answer": "",
+      "tag_ids": [],
+      "context": {
+        "type": "driver",
+        "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
+      }
+    },
+    {
+      "id": "fd524de5-443d-40aa-a3e5-a77c18cbadf6",
+      "question": "",
+      "answer": "",
+      "tag_ids": [],
+      "context": {
+        "type": "driver",
+        "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
+      }
     }
   ],
   "rules": [
@@ -1332,6 +1362,18 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4",
+      "name": "Terfi ve Kariyer",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [
+        "7117c1ea-d5de-4d3f-b88d-1f6b98567e72",
+        "f57dae19-cb8c-4349-acef-c16b48e278da",
+        "fd524de5-443d-40aa-a3e5-a77c18cbadf6"
+      ],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -1346,9 +1388,12 @@
       "glossary_ids": [],
       "question_ids": [
         "f22e727a-8e9a-470e-9f76-14b7e54183e7",
-        "18b98b9a-b4e8-4f40-878b-aa1b2ef3ff80",
-        "084a61cd-52c3-4b4c-b714-8fd67847fa0e",
-        "e9fcf65b-4ce0-45e4-b0ae-1c846dd1edec"
+        "e5aa661b-276c-45c1-bd86-231375714314",
+        "0ba17052-bc8d-4220-b3a1-24ced8f729e7",
+        "27dbe326-34bb-4410-a063-7f257ff24884",
+        "acd429b6-d7a9-4dc5-b133-376f2014f374",
+        "6346de1e-25ca-4754-b1d7-05c3ad10e6b8",
+        "96df9511-0dfb-47f1-8239-b83aa37bcd73"
       ]
     }
   ],
@@ -1365,10 +1410,10 @@
       "driver_id": "586d6854-492c-4927-8616-52a0fcafe555"
     },
     {
-      "id": "18b98b9a-b4e8-4f40-878b-aa1b2ef3ff80",
+      "id": "e5aa661b-276c-45c1-bd86-231375714314",
       "text": "Gelişim hedeflerimi destekleyen eğitim programlarına erişim sağlayabiliyorum.",
       "type": "likert",
-      "required": true,
+      "required": false,
       "is_pool_question": false,
       "has_comment": false,
       "scale_min": 1,
@@ -1376,10 +1421,10 @@
       "driver_id": "586d6854-492c-4927-8616-52a0fcafe555"
     },
     {
-      "id": "084a61cd-52c3-4b4c-b714-8fd67847fa0e",
+      "id": "0ba17052-bc8d-4220-b3a1-24ced8f729e7",
       "text": "Şirketin gelişim programları, kişisel hedeflerimle uyumludur. ",
       "type": "likert",
-      "required": true,
+      "required": false,
       "is_pool_question": false,
       "has_comment": false,
       "scale_min": 1,
@@ -1387,15 +1432,48 @@
       "driver_id": "586d6854-492c-4927-8616-52a0fcafe555"
     },
     {
-      "id": "e9fcf65b-4ce0-45e4-b0ae-1c846dd1edec",
-      "text": "",
+      "id": "27dbe326-34bb-4410-a063-7f257ff24884",
+      "text": "Şirket içindeki terfi süreçlerinin adil ve şeffaf olduğunu düşünüyorum.",
       "type": "likert",
-      "required": true,
+      "required": false,
       "is_pool_question": false,
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": null
+      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
+    },
+    {
+      "id": "acd429b6-d7a9-4dc5-b133-376f2014f374",
+      "text": "Kariyer hedeflerim doğrultusunda ilerleme fırsatlarına sahibim.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
+    },
+    {
+      "id": "6346de1e-25ca-4754-b1d7-05c3ad10e6b8",
+      "text": "Şirketimin sunduğu kariyer planlama destekleriniden memnunum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
+    },
+    {
+      "id": "96df9511-0dfb-47f1-8239-b83aa37bcd73",
+      "text": "Kariyerim açısından doğru zamanda doğru yerde olduğuma inanıyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
     }
   ],
   "agent_behavior": {
