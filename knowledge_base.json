@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-16T08:20:23.936Z",
+    "last_updated": "2026-03-16T08:20:50.353Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1252,6 +1252,26 @@
         "type": "driver",
         "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
       }
+    },
+    {
+      "id": "4d64f6bb-6bf1-492e-b94c-9618a6f3d0f4",
+      "question": "",
+      "answer": "",
+      "tag_ids": [],
+      "context": {
+        "type": "driver",
+        "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62"
+      }
+    },
+    {
+      "id": "5e4112f2-24a2-448c-9e69-7ef527b36bca",
+      "question": "",
+      "answer": "",
+      "tag_ids": [],
+      "context": {
+        "type": "driver",
+        "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62"
+      }
     }
   ],
   "rules": [
@@ -1372,6 +1392,17 @@
         "7117c1ea-d5de-4d3f-b88d-1f6b98567e72",
         "f57dae19-cb8c-4349-acef-c16b48e278da",
         "fd524de5-443d-40aa-a3e5-a77c18cbadf6"
+      ],
+      "rule_ids": []
+    },
+    {
+      "id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62",
+      "name": "Performans Değerlendirme",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [
+        "4d64f6bb-6bf1-492e-b94c-9618a6f3d0f4",
+        "5e4112f2-24a2-448c-9e69-7ef527b36bca"
       ],
       "rule_ids": []
     }
