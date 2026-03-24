@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T06:40:39.169Z",
+    "last_updated": "2026-03-24T06:42:59.611Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1691,7 +1691,10 @@
         "3625b1db-23af-46a7-8b2e-c9b8e6784264",
         "4138fcfd-5900-4259-adab-b850605e4631",
         "9c513e5f-043a-4f53-8d33-cf77e5c7eca1",
-        "da61acb7-45f0-4e5c-a047-5cbe38e20818"
+        "da61acb7-45f0-4e5c-a047-5cbe38e20818",
+        "258149cc-963e-4f32-a0ea-9f4552e507c2",
+        "47b79f7e-b97c-4f43-a9c2-60bc46c26f81",
+        "6e2e8655-916e-4f78-87bc-94c8722d2440"
       ]
     }
   ],
@@ -2680,6 +2683,33 @@
       "type": "text",
       "required": true,
       "is_pool_question": false,
+      "has_comment": false
+    },
+    {
+      "id": "258149cc-963e-4f32-a0ea-9f4552e507c2",
+      "text": "Şube yöneticim kariyer hedeflerimi destekliyor.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+    },
+    {
+      "id": "47b79f7e-b97c-4f43-a9c2-60bc46c26f81",
+      "text": "Şubenizde çalışırken en çok sevdiğiniz şey nedir?",
+      "type": "text",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false
+    },
+    {
+      "id": "6e2e8655-916e-4f78-87bc-94c8722d2440",
+      "text": "Burada çalışmakla ilgili paylaşmak istediğiniz başka bir şey var mı?",
+      "type": "text",
+      "required": false,
+      "is_pool_question": true,
       "has_comment": false
     }
   ],
