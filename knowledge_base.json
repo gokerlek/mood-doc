@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T09:55:55.531Z",
+    "last_updated": "2026-03-24T12:52:04.724Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -3660,8 +3660,8 @@
       "id": "1703a0a2-16af-4982-ab6b-6380524f7b22",
       "text": "Şirketimizin sosyal sorumluluk projelerine çok önem verir. ",
       "type": "likert",
-      "required": true,
-      "is_pool_question": false,
+      "required": false,
+      "is_pool_question": true,
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
