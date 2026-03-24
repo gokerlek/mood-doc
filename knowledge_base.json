@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T07:00:18.143Z",
+    "last_updated": "2026-03-24T07:01:53.226Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1768,7 +1768,9 @@
         "45a5f3d7-b796-4958-aff1-f1c4700e6b8b",
         "57aaf261-05d9-4093-ae6c-3c9d635d884f",
         "a4ccf66b-685a-4b83-abf7-030b2e0408b1",
-        "593f8707-e077-4a45-9b2c-8764ff052e5c"
+        "593f8707-e077-4a45-9b2c-8764ff052e5c",
+        "d65db563-270a-4caf-9e4b-29730dc6648a",
+        "7caf4651-a513-481d-939b-c89dc6036551"
       ]
     }
   ],
@@ -3022,6 +3024,25 @@
       "type": "yes_no",
       "required": true,
       "is_pool_question": false,
+      "has_comment": false
+    },
+    {
+      "id": "d65db563-270a-4caf-9e4b-29730dc6648a",
+      "text": "Buranın değerleriyle kişisel değerlerim örtüşüyor.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+    },
+    {
+      "id": "7caf4651-a513-481d-939b-c89dc6036551",
+      "text": "Burada edindiğin deneyimlerin gelecekteki kariyerine katkı sağlayacağını düşünüyor musun?",
+      "type": "yes_no",
+      "required": false,
+      "is_pool_question": true,
       "has_comment": false
     }
   ],
