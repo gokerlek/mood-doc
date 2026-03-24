@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T07:24:02.711Z",
+    "last_updated": "2026-03-24T07:27:31.468Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1830,7 +1830,14 @@
         "fc2cc9cf-9eda-4106-b96c-50c1b97ad6d3",
         "27a0af62-9024-4a5e-b895-7cae03c4e1e1",
         "0177715a-9c39-4ca5-b063-942c81b0da2b",
-        "4b098eaa-0a84-4e59-bf78-f07fc1f02da3"
+        "4b098eaa-0a84-4e59-bf78-f07fc1f02da3",
+        "cfd89046-fbe8-48c4-a215-f2ba8f0dfd3e",
+        "77d46a1f-69ac-4784-a563-e59957e61960",
+        "412ef578-f5af-44ef-8c29-836346d1e252",
+        "2e1b688b-9490-456b-b2bb-c63277526b08",
+        "6a041557-c711-4e87-b50b-9cddfc0b7210",
+        "5b4279e7-da10-44fb-9d59-09e4c5096844",
+        "13e9eca5-968d-4631-8900-8a6a5a0235d9"
       ]
     }
   ],
@@ -3280,6 +3287,83 @@
       "scale_min": 1,
       "scale_max": 5,
       "driver_id": "233e530a-7824-4820-81c0-ac060e2ae022"
+    },
+    {
+      "id": "cfd89046-fbe8-48c4-a215-f2ba8f0dfd3e",
+      "text": "Şirketimin izin politika ve prosedürlerinden memnunum. ",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "233e530a-7824-4820-81c0-ac060e2ae022"
+    },
+    {
+      "id": "77d46a1f-69ac-4784-a563-e59957e61960",
+      "text": "Şirketin ücret politikasından memnunum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "2c511754-0377-4efd-aa17-846ed140872b"
+    },
+    {
+      "id": "412ef578-f5af-44ef-8c29-836346d1e252",
+      "text": "İş yerim sağlığım ve güvenliğim için gerekli tüm tedbirleri alır.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+    },
+    {
+      "id": "2e1b688b-9490-456b-b2bb-c63277526b08",
+      "text": "Sağlanan yemekhane hizmetinden memnunum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+    },
+    {
+      "id": "6a041557-c711-4e87-b50b-9cddfc0b7210",
+      "text": "Şirket tarafından sağlanan araç imkanından memnunum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+    },
+    {
+      "id": "5b4279e7-da10-44fb-9d59-09e4c5096844",
+      "text": "Şirketin sunduğu prim ve bonus olanaklarından memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+    },
+    {
+      "id": "13e9eca5-968d-4631-8900-8a6a5a0235d9",
+      "text": "Sunulan eğitim ödeneklerinden ve olanaklarından memnunum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
     }
   ],
   "agent_behavior": {
