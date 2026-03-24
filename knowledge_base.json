@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T06:42:59.611Z",
+    "last_updated": "2026-03-24T06:45:16.623Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1564,6 +1564,22 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "46deaf1b-82f9-4dbe-888f-64544695db7d",
+      "name": "Onboarding Süreci",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "a52f7e50-f0b5-4d0c-9cf2-a55dd64c837a",
+      "name": "Rol ve Beklentiler",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -1696,6 +1712,17 @@
         "47b79f7e-b97c-4f43-a9c2-60bc46c26f81",
         "6e2e8655-916e-4f78-87bc-94c8722d2440"
       ]
+    },
+    {
+      "id": "7df84cee-98ec-48f7-a886-fe28ace9c97a",
+      "name": "Stajyer ve Yeni Mezun Deneyimi",
+      "description": "Bu anket seti, stajyerler ve yeni mezun çalışanların şirketinizdeki ilk deneyimlerini değerlendirmek ve memnuniyet düzeylerini ölçmek için tasarlanmıştır. Çalışanlarınızın işe adaptasyon sürecini, beklentilerinin karşılanma oranını ve genel deneyimlerini anlamanıza yardımcı olur.",
+      "purpose": "Çalışma ortamına uyum düzeylerini ölçmek ve olası zorlukları tespit etmek.\nEğitim ve gelişim ihtiyaçlarını anlamak.\nStajyer ve yeni mezunların işe alım ve oryantasyon süreçlerini değerlendirmek.\nŞirket kültürünün yeni başlayan çalışanlar üzerindeki etkisini analiz etmek.",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": []
     }
   ],
   "survey_questions": [
