@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T07:41:53.427Z",
+    "last_updated": "2026-03-24T09:55:55.531Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1902,7 +1902,8 @@
         "324fc745-15aa-4d68-8240-316f31077647",
         "0c775831-d248-41b9-9222-0ea83549bdf4",
         "11c8d003-cc21-4e83-80e4-c08e74fdc956",
-        "56d81260-626a-4749-8c69-0e79910348bc"
+        "56d81260-626a-4749-8c69-0e79910348bc",
+        "1703a0a2-16af-4982-ab6b-6380524f7b22"
       ]
     }
   ],
@@ -3654,6 +3655,17 @@
       "required": true,
       "is_pool_question": false,
       "has_comment": false
+    },
+    {
+      "id": "1703a0a2-16af-4982-ab6b-6380524f7b22",
+      "text": "Şirketimizin sosyal sorumluluk projelerine çok önem verir. ",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
     }
   ],
   "agent_behavior": {
