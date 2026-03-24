@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T06:49:31.181Z",
+    "last_updated": "2026-03-24T06:56:17.872Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1588,22 +1588,6 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
-    },
-    {
-      "id": "496b6cb7-3d0e-46a4-a77a-d19892152d0b",
-      "name": "",
-      "description": "",
-      "tag_ids": [],
-      "faq_ids": [],
-      "rule_ids": []
-    },
-    {
-      "id": "8981fbc1-bb75-405d-b9c0-dd6f5434a5bd",
-      "name": "Genel Memnuniyet",
-      "description": "",
-      "tag_ids": [],
-      "faq_ids": [],
-      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -1747,19 +1731,19 @@
       "rule_ids": [],
       "glossary_ids": [],
       "question_ids": [
-        "567d6b99-1669-49c5-9daf-d8f5eb479b49",
-        "4d8a50c1-c473-49c1-8bf2-c1d31c0f1359",
-        "4c24de50-b5fa-4a54-afa4-cf6a02d5aa4e",
-        "ec579523-78fd-4b0f-9844-e888d8f30b99",
-        "f2787ef3-4b74-4af1-897f-a86ea4e11b6b",
-        "8c1874e0-249b-444c-bdb2-3a87d89b75ac",
-        "d9f3f575-454e-48d1-942a-e41e52fc727d",
-        "48d3cc9e-6116-41ce-b424-70e3f3522b99",
-        "eea757b8-736e-4020-9818-b83f9bf61133",
-        "3326e5e7-fa01-47b2-a773-8ab4221b3bc7",
-        "9c7ae5c0-a5db-4522-b114-fad18bccf71b",
-        "773e328c-e849-43a1-af29-03701a579236",
-        "5f845bc3-dd62-4b4d-930c-cb0c30c10454"
+        "38818ce7-d684-4261-8d14-807494b9c9a5",
+        "519e3b36-d039-4fcf-936d-046ab9061510",
+        "fe0be8b8-cdf2-418b-ab11-65d4cfbb0db3",
+        "f40336df-3a22-48c6-afd3-7bab9c446324",
+        "d2742f5b-cf73-46f1-8ca0-5a41ca0f0af0",
+        "c55f025f-7970-4d09-9c7b-161cf2b3d863",
+        "8cb85ee2-8c12-4a99-b6ea-f8e49885948e",
+        "55ea6086-8ae9-4989-9dc1-dd717bf05fbb",
+        "29b8a91c-1402-4324-a882-41f2bd73033b",
+        "d6995468-a5b6-409c-a547-1996116c7399",
+        "84c773f0-9078-4512-9113-a478ecd24034",
+        "b1cb00d3-4a1f-4210-ad1d-71c344a04d9f",
+        "13fef5a8-42d3-41b1-86fd-5fc7a59eaddb"
       ]
     }
   ],
@@ -2778,7 +2762,7 @@
       "has_comment": false
     },
     {
-      "id": "567d6b99-1669-49c5-9daf-d8f5eb479b49",
+      "id": "38818ce7-d684-4261-8d14-807494b9c9a5",
       "text": "İşe alım ve oryantasyon sürecinden memnunum.",
       "type": "likert",
       "required": true,
@@ -2789,7 +2773,7 @@
       "driver_id": "46deaf1b-82f9-4dbe-888f-64544695db7d"
     },
     {
-      "id": "4d8a50c1-c473-49c1-8bf2-c1d31c0f1359",
+      "id": "519e3b36-d039-4fcf-936d-046ab9061510",
       "text": "Buranın çalışma kültürüne uyum sağladığımı düşünüyorum.",
       "type": "likert",
       "required": true,
@@ -2797,10 +2781,10 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "46deaf1b-82f9-4dbe-888f-64544695db7d"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
     },
     {
-      "id": "4c24de50-b5fa-4a54-afa4-cf6a02d5aa4e",
+      "id": "fe0be8b8-cdf2-418b-ab11-65d4cfbb0db3",
       "text": "İşe başladığımda ne yapmam gerektiğiyle ilgili yeterli bilgi sağlandı.",
       "type": "likert",
       "required": true,
@@ -2811,7 +2795,7 @@
       "driver_id": "46deaf1b-82f9-4dbe-888f-64544695db7d"
     },
     {
-      "id": "ec579523-78fd-4b0f-9844-e888d8f30b99",
+      "id": "f40336df-3a22-48c6-afd3-7bab9c446324",
       "text": "Ne yapmam gerektiği bana açık bir şekilde iletildi.",
       "type": "likert",
       "required": true,
@@ -2822,7 +2806,7 @@
       "driver_id": "a52f7e50-f0b5-4d0c-9cf2-a55dd64c837a"
     },
     {
-      "id": "f2787ef3-4b74-4af1-897f-a86ea4e11b6b",
+      "id": "d2742f5b-cf73-46f1-8ca0-5a41ca0f0af0",
       "text": "İşimi yaparken yeterli destek alabiliyorum.",
       "type": "likert",
       "required": true,
@@ -2833,7 +2817,7 @@
       "driver_id": "a52f7e50-f0b5-4d0c-9cf2-a55dd64c837a"
     },
     {
-      "id": "8c1874e0-249b-444c-bdb2-3a87d89b75ac",
+      "id": "c55f025f-7970-4d09-9c7b-161cf2b3d863",
       "text": "Yapmam gereken işlerin, yeteneklerime ve kariyer hedeflerime uygun olduğunu düşünüyorum.",
       "type": "likert",
       "required": true,
@@ -2844,7 +2828,7 @@
       "driver_id": "a52f7e50-f0b5-4d0c-9cf2-a55dd64c837a"
     },
     {
-      "id": "d9f3f575-454e-48d1-942a-e41e52fc727d",
+      "id": "8cb85ee2-8c12-4a99-b6ea-f8e49885948e",
       "text": "Çalışma ortamı beni motive ediyor.",
       "type": "likert",
       "required": true,
@@ -2855,7 +2839,7 @@
       "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
     },
     {
-      "id": "48d3cc9e-6116-41ce-b424-70e3f3522b99",
+      "id": "55ea6086-8ae9-4989-9dc1-dd717bf05fbb",
       "text": "İş arkadaşlarımla iyi anlaşıyorum. ",
       "type": "likert",
       "required": true,
@@ -2866,7 +2850,7 @@
       "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
     },
     {
-      "id": "eea757b8-736e-4020-9818-b83f9bf61133",
+      "id": "29b8a91c-1402-4324-a882-41f2bd73033b",
       "text": "Burada kendimi şirketin bir parçası olarak hissediyorum.",
       "type": "likert",
       "required": true,
@@ -2877,7 +2861,7 @@
       "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
     },
     {
-      "id": "3326e5e7-fa01-47b2-a773-8ab4221b3bc7",
+      "id": "d6995468-a5b6-409c-a547-1996116c7399",
       "text": "Buradaki şirket kültürü tam da hayal ettiğim gibi.",
       "type": "likert",
       "required": true,
@@ -2888,7 +2872,7 @@
       "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
     },
     {
-      "id": "9c7ae5c0-a5db-4522-b114-fad18bccf71b",
+      "id": "84c773f0-9078-4512-9113-a478ecd24034",
       "text": "Burada takdir edildiğimi düşünüyorum. ",
       "type": "likert",
       "required": true,
@@ -2899,7 +2883,7 @@
       "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
     },
     {
-      "id": "773e328c-e849-43a1-af29-03701a579236",
+      "id": "b1cb00d3-4a1f-4210-ad1d-71c344a04d9f",
       "text": "Yeni ve farklı fikirler paylaşabiliyorum.",
       "type": "likert",
       "required": true,
@@ -2910,8 +2894,8 @@
       "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
     },
     {
-      "id": "5f845bc3-dd62-4b4d-930c-cb0c30c10454",
-      "text": "",
+      "id": "13fef5a8-42d3-41b1-86fd-5fc7a59eaddb",
+      "text": "İşe başlamak için buranın doğru bir yer olduğunu düşünüyorum.",
       "type": "likert",
       "required": true,
       "is_pool_question": false,
