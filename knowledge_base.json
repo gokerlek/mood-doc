@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-16T09:31:41.754Z",
+    "last_updated": "2026-03-24T06:40:39.169Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1556,6 +1556,14 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "79fd31b1-a377-4e88-85fa-bd5c4a259f8f",
+      "name": "Liderlik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -1668,7 +1676,22 @@
         "e0d87877-517e-4e3b-b170-460fa298d102",
         "5018ad1a-6bee-49d1-861d-54863c0e0320",
         "0b31975f-bf81-41d2-8653-ecfca3e9c5d8",
-        "a1b12428-94d3-430b-905e-c67df934be84"
+        "a1b12428-94d3-430b-905e-c67df934be84",
+        "df18f230-7a33-4024-9879-e7c3634dd301",
+        "6fccd375-5670-4480-8dd2-6a0f2e97710e",
+        "2865a100-ab0d-4a41-88a2-232e6ac43a98",
+        "9136a124-49b4-4d6f-bd8e-84e3a40c6f48",
+        "583c620c-a588-43d6-abdb-5bcf5d5d70fb",
+        "99cea6ad-d51a-4bdf-8502-38e5fc242b5a",
+        "e9721c69-1a33-4722-a7a9-9e2b7d478a94",
+        "195e5610-9d65-458e-9546-fb31d0fbf21a",
+        "da282292-a223-44a3-af3f-7e5c4d017ed9",
+        "91886e04-c2cc-47c6-a97c-664003f0d3f4",
+        "2a95a3a3-c293-43bb-b87e-3cb8f01db692",
+        "3625b1db-23af-46a7-8b2e-c9b8e6784264",
+        "4138fcfd-5900-4259-adab-b850605e4631",
+        "9c513e5f-043a-4f53-8d33-cf77e5c7eca1",
+        "da61acb7-45f0-4e5c-a047-5cbe38e20818"
       ]
     }
   ],
@@ -2488,14 +2511,176 @@
     },
     {
       "id": "a1b12428-94d3-430b-905e-c67df934be84",
-      "text": "",
+      "text": "Bu şubede terfi, iş yükü ve çalışma saatleriyle ilgili verilen kararların adil olduğunu düşünüyorum.",
       "type": "likert",
       "required": true,
       "is_pool_question": false,
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": null
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2"
+    },
+    {
+      "id": "df18f230-7a33-4024-9879-e7c3634dd301",
+      "text": "Şubemdeki meslektaşlarım ve yöneticilerim tarafından saygı gördüğümü hissediyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2"
+    },
+    {
+      "id": "6fccd375-5670-4480-8dd2-6a0f2e97710e",
+      "text": "Şubemizin kültürü, kapsayıcı ve hoşgörülüdür.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2"
+    },
+    {
+      "id": "2865a100-ab0d-4a41-88a2-232e6ac43a98",
+      "text": "Şube olarak motivasyonumuz her zaman yüksektir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2"
+    },
+    {
+      "id": "9136a124-49b4-4d6f-bd8e-84e3a40c6f48",
+      "text": "Şirketin tepe yönetiminin, çalışanlar için doğru kararlar alacaklarına inanıyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "79fd31b1-a377-4e88-85fa-bd5c4a259f8f"
+    },
+    {
+      "id": "583c620c-a588-43d6-abdb-5bcf5d5d70fb",
+      "text": "Yaptığım iş için sağlanan ücret paketinden memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+    },
+    {
+      "id": "99cea6ad-d51a-4bdf-8502-38e5fc242b5a",
+      "text": "Şubem, sektördeki benzer rollere kıyasla rekabetçi bir ücret paketi sunar.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+    },
+    {
+      "id": "e9721c69-1a33-4722-a7a9-9e2b7d478a94",
+      "text": "Şirketimin sunduğu yan haklardan (ör. sağlık sigortası, izinler, emeklilik planları) memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+    },
+    {
+      "id": "195e5610-9d65-458e-9546-fb31d0fbf21a",
+      "text": "Şubem, işimi etkili bir şekilde yapmam için gerekli araçları ve kaynakları sağlıyor.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+    },
+    {
+      "id": "da282292-a223-44a3-af3f-7e5c4d017ed9",
+      "text": "Şube içerisinde zor müşteri durumlarıyla başa çıkarken aldığım destekten memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "69c2834a-d642-4889-b8f1-388553f0f28b"
+    },
+    {
+      "id": "91886e04-c2cc-47c6-a97c-664003f0d3f4",
+      "text": "Merkezden veya diğer birimlerden zor müşteri durumlarıyla başa çıkarken aldığım destekten memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "69c2834a-d642-4889-b8f1-388553f0f28b"
+    },
+    {
+      "id": "2a95a3a3-c293-43bb-b87e-3cb8f01db692",
+      "text": "Hem iş hem de kişisel sorumluluklarımı yerine getirmek için gerekli esnekliğe sahibim.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "7a2ca2b0-341f-4d52-8bdf-86a08a2ba412"
+    },
+    {
+      "id": "3625b1db-23af-46a7-8b2e-c9b8e6784264",
+      "text": "Müşteri sorunlarını etkili bir şekilde çözmek için sorumluluk alabiliyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "7a2ca2b0-341f-4d52-8bdf-86a08a2ba412"
+    },
+    {
+      "id": "4138fcfd-5900-4259-adab-b850605e4631",
+      "text": "İşimde benden ne beklendiğini açıkça anlıyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "f6e02558-1e5f-4eee-a632-4aedc37faca2"
+    },
+    {
+      "id": "9c513e5f-043a-4f53-8d33-cf77e5c7eca1",
+      "text": "Şubemdeki sistemler ve süreçler, verimli ve etkili bir çalışma ortamını destekliyor.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "f6e02558-1e5f-4eee-a632-4aedc37faca2"
+    },
+    {
+      "id": "da61acb7-45f0-4e5c-a047-5cbe38e20818",
+      "text": "Şubenizde değiştirmek veya geliştirmek istediğiniz neler var?",
+      "type": "text",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false
     }
   ],
   "agent_behavior": {
