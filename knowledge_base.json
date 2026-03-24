@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T07:11:08.003Z",
+    "last_updated": "2026-03-24T07:11:59.707Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1608,6 +1608,30 @@
     {
       "id": "2c511754-0377-4efd-aa17-846ed140872b",
       "name": "Ücretlendirme",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "893b96e2-9354-47f8-9512-11f65d8ece20",
+      "name": "Yan Haklar",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "0c6c892f-1d46-4355-9762-efff07b0eaa9",
+      "name": "Çalışma Ortamı",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "233e530a-7824-4820-81c0-ac060e2ae022",
+      "name": "İzin Politikası",
       "description": "",
       "tag_ids": [],
       "faq_ids": [],
