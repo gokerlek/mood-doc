@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T07:13:14.819Z",
+    "last_updated": "2026-03-24T07:24:02.711Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1814,7 +1814,24 @@
       "faq_ids": [],
       "rule_ids": [],
       "glossary_ids": [],
-      "question_ids": []
+      "question_ids": [
+        "42f9c0dc-8ea3-46da-81e1-e4c40aaea2ad",
+        "d55ee5e4-daa3-493d-84f4-c1bdf94de912",
+        "6483979f-d407-4783-aa3c-c02a9a8109f9",
+        "73829bef-2167-4ab6-a46a-8818bee757a8",
+        "26d2d91b-0a20-4b20-bc9f-ab9aaa8a489d",
+        "c11995c7-6617-451c-87cc-26038fd44ad0",
+        "1761ff70-dc54-4b27-8bc1-d0ecbc1c9f2c",
+        "1b76caf2-a054-4738-a5de-07816b0b6579",
+        "c3eccf82-e47b-4cdd-85a8-5eeb8b1bed38",
+        "cbd53ecc-c835-4b32-95ae-959062a35f09",
+        "4e955c05-c4e7-4880-9f76-9186da8aba5c",
+        "2f60539d-49d0-4acf-b89f-c4942f984bb4",
+        "fc2cc9cf-9eda-4106-b96c-50c1b97ad6d3",
+        "27a0af62-9024-4a5e-b895-7cae03c4e1e1",
+        "0177715a-9c39-4ca5-b063-942c81b0da2b",
+        "4b098eaa-0a84-4e59-bf78-f07fc1f02da3"
+      ]
     }
   ],
   "survey_questions": [
@@ -3087,6 +3104,182 @@
       "required": false,
       "is_pool_question": true,
       "has_comment": false
+    },
+    {
+      "id": "42f9c0dc-8ea3-46da-81e1-e4c40aaea2ad",
+      "text": "Burada emeğimin karşılığını aldığımı düşünüyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "2c511754-0377-4efd-aa17-846ed140872b"
+    },
+    {
+      "id": "d55ee5e4-daa3-493d-84f4-c1bdf94de912",
+      "text": "Aldığım maaş ve yan hakların farklı şirketlerdeki benzer rollere kıyasla adil olduğunu düşünüyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "2c511754-0377-4efd-aa17-846ed140872b"
+    },
+    {
+      "id": "6483979f-d407-4783-aa3c-c02a9a8109f9",
+      "text": "Çalışma saatlerinden memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+    },
+    {
+      "id": "73829bef-2167-4ab6-a46a-8818bee757a8",
+      "text": "İş yerimde rahat çalışabiliyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+    },
+    {
+      "id": "26d2d91b-0a20-4b20-bc9f-ab9aaa8a489d",
+      "text": "Şirketimin genel çalışma ortamından memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+    },
+    {
+      "id": "c11995c7-6617-451c-87cc-26038fd44ad0",
+      "text": "İş yerim rahat ve güvende çalışabilmem için gereken olanakları sunar.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+    },
+    {
+      "id": "1761ff70-dc54-4b27-8bc1-d0ecbc1c9f2c",
+      "text": "İş yerimin lokasyonundan memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+    },
+    {
+      "id": "1b76caf2-a054-4738-a5de-07816b0b6579",
+      "text": "İş yerimin temizliği ve hijyenik koşullarından memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+    },
+    {
+      "id": "c3eccf82-e47b-4cdd-85a8-5eeb8b1bed38",
+      "text": "Şirketimin sunduğu yan haklar ve faydalar (ör. sağlık sigortası, yemek kartı) beklentilerimi karşılıyor.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+    },
+    {
+      "id": "cbd53ecc-c835-4b32-95ae-959062a35f09",
+      "text": "Sağlanan ulaşım olanaklarından memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+    },
+    {
+      "id": "4e955c05-c4e7-4880-9f76-9186da8aba5c",
+      "text": "Sağlanan yemek olanaklarından memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+    },
+    {
+      "id": "2f60539d-49d0-4acf-b89f-c4942f984bb4",
+      "text": "Şirketim işimi en iyi şekilde yapabilmem için bana gerekli araçları sağlar.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+    },
+    {
+      "id": "fc2cc9cf-9eda-4106-b96c-50c1b97ad6d3",
+      "text": "İyi günde kötü günde şirketim yanımdadır.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+    },
+    {
+      "id": "27a0af62-9024-4a5e-b895-7cae03c4e1e1",
+      "text": "Şirketimi çalışılacak iyi bir iş yeri olarak tanıdıklarıma tavsiye ederim.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+    },
+    {
+      "id": "0177715a-9c39-4ca5-b063-942c81b0da2b",
+      "text": "Önümüzdeki en az 12 ay boyunca şirketimde kalmayı istiyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+    },
+    {
+      "id": "4b098eaa-0a84-4e59-bf78-f07fc1f02da3",
+      "text": "Gerektiği zaman işimden rahatlıkla izin alabiliyorum. ",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "233e530a-7824-4820-81c0-ac060e2ae022"
     }
   ],
   "agent_behavior": {
