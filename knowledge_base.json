@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T07:11:59.707Z",
+    "last_updated": "2026-03-24T07:13:14.819Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1804,6 +1804,17 @@
         "d65db563-270a-4caf-9e4b-29730dc6648a",
         "7caf4651-a513-481d-939b-c89dc6036551"
       ]
+    },
+    {
+      "id": "ed7ab522-98d4-4e90-bda6-680c17ecfe3f",
+      "name": "Çalışan Memnuniyet Analizi",
+      "description": "Çalışan Memnuniyet Analizi seti, çalışanların ihtiyaçlarını, beklentilerini ve memnuniyet düzeylerini ortaya çıkaran değerli bir geri bildirim aracıdır. Çalışanların mutluluğu, bağlılığı ve motivasyonu üzerinde etkili faktörleri analiz ederek iş yerinizi daha güçlü bir hale getirmek için temel bir rehber sunar.",
+      "purpose": "İş yerinde verimliliği ve iş birliğini güçlendirecek alanlar.\nGenel çalışan memnuniyeti ve tavsiye etme oranı.\nÇalışanların motivasyon kaynaklarını ve zorluklarını tespit etme.\nÇalışma ortamıyla alakalı geri bildirimler.",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": []
     }
   ],
   "survey_questions": [
