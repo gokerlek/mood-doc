@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T07:34:09.781Z",
+    "last_updated": "2026-03-24T07:37:58.157Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1882,7 +1882,14 @@
       "rule_ids": [],
       "glossary_ids": [],
       "question_ids": [
-        "c9f8afdd-b66d-41db-8154-669bc57dc633"
+        "c9f8afdd-b66d-41db-8154-669bc57dc633",
+        "cea2d485-268e-4eab-a355-5f2fca99d865",
+        "6841b90a-f823-4c73-ae1a-99463c14f970",
+        "c48aba11-a1ed-4301-9257-36a1af2824b9",
+        "060164fa-d205-4a9a-9603-c2900dddf6d8",
+        "1bb793c9-3d02-4319-82c0-d402739c9baf",
+        "76d356d9-d68c-4050-943a-22aa895c0e30",
+        "e16007d7-ae23-4b8f-b35b-c5fc54741d2e"
       ]
     }
   ],
@@ -3412,6 +3419,83 @@
     },
     {
       "id": "c9f8afdd-b66d-41db-8154-669bc57dc633",
+      "text": "Burası sektördeki itibarı yüksek bir şirkettir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
+    },
+    {
+      "id": "cea2d485-268e-4eab-a355-5f2fca99d865",
+      "text": "Şirketimiz, iyi bir işveren olarak algılanır.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
+    },
+    {
+      "id": "6841b90a-f823-4c73-ae1a-99463c14f970",
+      "text": "Şirketimiz, müşterilerimiz tarafından iyi bir şirket olarak algılanır.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
+    },
+    {
+      "id": "c48aba11-a1ed-4301-9257-36a1af2824b9",
+      "text": "Şirketimden bugün tekrardan iş teklifi alsam yine kabul ederdim.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
+    },
+    {
+      "id": "060164fa-d205-4a9a-9603-c2900dddf6d8",
+      "text": "Şirketimiz kariyer gelişimi için yeterli fırsatlar sunar.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf"
+    },
+    {
+      "id": "1bb793c9-3d02-4319-82c0-d402739c9baf",
+      "text": "Çalışanlar için terfi olanakları mevcuttur. ",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf"
+    },
+    {
+      "id": "76d356d9-d68c-4050-943a-22aa895c0e30",
+      "text": "Şirketimiz yeni yetenekleri çekmek için cazip bir iş yeridir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf"
+    },
+    {
+      "id": "e16007d7-ae23-4b8f-b35b-c5fc54741d2e",
       "text": "",
       "type": "likert",
       "required": true,
