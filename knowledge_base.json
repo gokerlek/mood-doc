@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T06:57:01.685Z",
+    "last_updated": "2026-03-24T07:00:18.143Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1759,7 +1759,16 @@
         "d6995468-a5b6-409c-a547-1996116c7399",
         "84c773f0-9078-4512-9113-a478ecd24034",
         "b1cb00d3-4a1f-4210-ad1d-71c344a04d9f",
-        "13fef5a8-42d3-41b1-86fd-5fc7a59eaddb"
+        "13fef5a8-42d3-41b1-86fd-5fc7a59eaddb",
+        "71bc5343-66e3-426f-aa43-0ff8c464ed2f",
+        "5f4ab62c-4e20-4674-9043-99ad836cdf4a",
+        "126468cf-a368-4a1b-903e-61dcfd42d30d",
+        "5d0f6539-9929-44a6-972f-3ba6a69a0c94",
+        "9f1257ac-c0e7-419b-9556-2b4d6005133e",
+        "45a5f3d7-b796-4958-aff1-f1c4700e6b8b",
+        "57aaf261-05d9-4093-ae6c-3c9d635d884f",
+        "a4ccf66b-685a-4b83-abf7-030b2e0408b1",
+        "593f8707-e077-4a45-9b2c-8764ff052e5c"
       ]
     }
   ],
@@ -2918,7 +2927,102 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": null
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076"
+    },
+    {
+      "id": "71bc5343-66e3-426f-aa43-0ff8c464ed2f",
+      "text": "Burayı çalışılacak iyi bir iş yeri olarak tanıdıklarıma tavsiye ederim.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076"
+    },
+    {
+      "id": "5f4ab62c-4e20-4674-9043-99ad836cdf4a",
+      "text": "Burada beklentilerimin karşılandığını düşünüyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076"
+    },
+    {
+      "id": "126468cf-a368-4a1b-903e-61dcfd42d30d",
+      "text": "Burada kendimi geliştirebildiğimi düşünüyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555"
+    },
+    {
+      "id": "5d0f6539-9929-44a6-972f-3ba6a69a0c94",
+      "text": "Bana sağlanan araçlar(laptop, telefon, vb.) işimi kolaylaştırıyor.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "246919ac-eac6-4001-a4b6-1d383e5fce52"
+    },
+    {
+      "id": "9f1257ac-c0e7-419b-9556-2b4d6005133e",
+      "text": "Genel olarak neleri daha iyi yapabiliriz, önerilerin var mı? ",
+      "type": "text",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false
+    },
+    {
+      "id": "45a5f3d7-b796-4958-aff1-f1c4700e6b8b",
+      "text": "Çalışma ortamında seni zorlayan bir durum var mı?",
+      "type": "text",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false
+    },
+    {
+      "id": "57aaf261-05d9-4093-ae6c-3c9d635d884f",
+      "text": "Şirketimizdeki genel deneyimini nasıl değerlendirirsin?",
+      "type": "text",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false
+    },
+    {
+      "id": "a4ccf66b-685a-4b83-abf7-030b2e0408b1",
+      "text": "Burayı tercih etmeni sağlayan en önemli sebepler nelerdi? ",
+      "type": "multiple_choice",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "options": [
+        "Ücret",
+        "Yan Haklar(Yol, yemek, sağlık sigortası vb)",
+        "Ofis lokasyonu",
+        "Şirket itibarı",
+        "Çalışma arkadaşlarım",
+        "Çalışma ortamı",
+        "Yöneticiler"
+      ],
+      "multi_min": null,
+      "multi_max": null
+    },
+    {
+      "id": "593f8707-e077-4a45-9b2c-8764ff052e5c",
+      "text": "Burada uzun vadeli çalışmayı düşünür müsünüz?",
+      "type": "yes_no",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false
     }
   ],
   "agent_behavior": {
