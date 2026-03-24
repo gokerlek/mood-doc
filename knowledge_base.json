@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T07:31:23.638Z",
+    "last_updated": "2026-03-24T07:33:25.304Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1871,6 +1871,17 @@
         "5b4279e7-da10-44fb-9d59-09e4c5096844",
         "13e9eca5-968d-4631-8900-8a6a5a0235d9"
       ]
+    },
+    {
+      "id": "48f86bd5-ca06-468e-a861-85faa2a3541a",
+      "name": "İşveren Marka Algısı",
+      "description": "Bu set ile, çalışanlarınızın şirketinize dair algılarını, hissettikleri bağlılığı ve işveren markanızın güçlü yönlerini anlamanızı sağlayan stratejik bir ölçüm aracıdır. Çalışanlarınızın şirketinize nasıl baktığını keşfederek, işveren markanızı güçlendirmek için gereken adımları belirlemenize yardımcı olur.",
+      "purpose": "Müşterilerin şirkete olan güveni ve algıları.\nÇalışanların şirketin itibarına dair algıları.\nÇalışma ortamı, kültür ve değerlerin çalışanlar üzerindeki etkisi.\nÇalışanların şirketi tavsiye etme eğilimleri.\n",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": []
     }
   ],
   "survey_questions": [
