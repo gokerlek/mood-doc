@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T07:29:49.392Z",
+    "last_updated": "2026-03-24T07:31:08.010Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1638,15 +1638,15 @@
       "rule_ids": []
     },
     {
-      "id": "eb5a9b92-49fc-4dfd-bb5b-f8d6ab533fcc",
-      "name": "DEI",
+      "id": "6f4e5292-f5e4-421a-92ab-772ac3db4aa8",
+      "name": " DEI",
       "description": "",
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
     },
     {
-      "id": "1447c712-a3ee-4521-9384-e4024db6d99e",
+      "id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf",
       "name": "İş ve Kariyer Fırsatları",
       "description": "",
       "tag_ids": [],
@@ -1654,16 +1654,8 @@
       "rule_ids": []
     },
     {
-      "id": "aac9a5b2-e56a-47a2-a080-43668b52dc50",
+      "id": "764eff68-1e62-4d07-a462-d68a29903bf3",
       "name": "Şirket İtibarı ve Algısı",
-      "description": "",
-      "tag_ids": [],
-      "faq_ids": [],
-      "rule_ids": []
-    },
-    {
-      "id": "5719e93b-e519-4c92-9727-23a774cbe9e2",
-      "name": "İşveren Güvenirliliği",
       "description": "",
       "tag_ids": [],
       "faq_ids": [],
