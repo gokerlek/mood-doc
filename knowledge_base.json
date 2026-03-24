@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-24T07:37:58.157Z",
+    "last_updated": "2026-03-24T07:40:35.981Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1889,7 +1889,16 @@
         "060164fa-d205-4a9a-9603-c2900dddf6d8",
         "1bb793c9-3d02-4319-82c0-d402739c9baf",
         "76d356d9-d68c-4050-943a-22aa895c0e30",
-        "e16007d7-ae23-4b8f-b35b-c5fc54741d2e"
+        "e16007d7-ae23-4b8f-b35b-c5fc54741d2e",
+        "75c214d1-5a1e-47d3-83f9-b6f8a0b6e7d9",
+        "8176cc0c-66a6-46a9-8f0b-d2d0359dce8f",
+        "d5d61aff-ba90-4ac8-b64a-63ee33ee6a58",
+        "baadedcf-62eb-4b10-bb4e-150979ba4784",
+        "1f396b9b-42aa-4c44-874d-5ae7b0066bcb",
+        "3e210b7e-997f-41ba-b83c-b1664d02dc3a",
+        "083b4c91-b646-4984-a6d7-d5fc5f83b99d",
+        "5eb65695-63fa-43ef-bdba-55d5085e347e",
+        "c6f86988-f0cb-4aca-b3c4-9fb5d4c4fef3"
       ]
     }
   ],
@@ -3496,6 +3505,105 @@
     },
     {
       "id": "e16007d7-ae23-4b8f-b35b-c5fc54741d2e",
+      "text": "Şirketimizin çalışma ortamı motive edici ve destekleyicidir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+    },
+    {
+      "id": "75c214d1-5a1e-47d3-83f9-b6f8a0b6e7d9",
+      "text": "Şirketin değerleri ile benim kişisel değerlerim uyumludur.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+    },
+    {
+      "id": "8176cc0c-66a6-46a9-8f0b-d2d0359dce8f",
+      "text": "Takım çalışması ve iş birliği kültürüne önem verilir. ",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+    },
+    {
+      "id": "d5d61aff-ba90-4ac8-b64a-63ee33ee6a58",
+      "text": "Şirketimdeki yöneticiler samimi ve iyi niyetlidir. ",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+    },
+    {
+      "id": "baadedcf-62eb-4b10-bb4e-150979ba4784",
+      "text": "Burada takımlar destekleyici ve yardımseverdir. ",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+    },
+    {
+      "id": "1f396b9b-42aa-4c44-874d-5ae7b0066bcb",
+      "text": "Şirketimizin vizyonu ve hedefleri bana güven veriyor.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "1fac6cd7-77f6-47cf-b8cd-77eef3126cbf"
+    },
+    {
+      "id": "3e210b7e-997f-41ba-b83c-b1664d02dc3a",
+      "text": "Şirket yönetimi açık ve şeffaf bir iletişim sağlar.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "1fac6cd7-77f6-47cf-b8cd-77eef3126cbf"
+    },
+    {
+      "id": "083b4c91-b646-4984-a6d7-d5fc5f83b99d",
+      "text": "Tepe yönetime olan güvenim tamdır.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "1fac6cd7-77f6-47cf-b8cd-77eef3126cbf"
+    },
+    {
+      "id": "5eb65695-63fa-43ef-bdba-55d5085e347e",
+      "text": "Burada kimse dışlanmaz. ",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "6f4e5292-f5e4-421a-92ab-772ac3db4aa8"
+    },
+    {
+      "id": "c6f86988-f0cb-4aca-b3c4-9fb5d4c4fef3",
       "text": "",
       "type": "likert",
       "required": true,
