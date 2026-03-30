@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-30T09:05:54.283Z",
+    "last_updated": "2026-03-30T09:08:42.016Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1908,25 +1908,15 @@
       ]
     },
     {
-      "id": "026506b1-496f-4a34-9fc1-f76b603f75cd",
-      "name": "İşveren Marka Algısı",
-      "description": "Bu set ile, çalışanlarınızın şirketinize dair algılarını, hissettikleri bağlılığı ve işveren markanızın güçlü yönlerini anlamanızı sağlayan stratejik bir ölçüm aracıdır. Çalışanlarınızın şirketinize nasıl baktığını keşfederek, işveren markanızı güçlendirmek için gereken adımları belirlemenize yardımcı olur.",
+      "id": "cf48d219-753a-42b5-bc2b-b31ea4318e8a",
+      "name": "Çalışan Bağlılığı Analizi",
+      "description": "Çalışan Bağlılığı Analizi, kritik bağlılık boyutları hakkında geri bildirim toplayarak, verimliliği artıracak, çalışan bağlılığını güçlendirecek ve işten ayrılma oranlarını azaltacak etkili stratejiler geliştirmenize olanak sağlar",
       "purpose": "",
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": [],
       "glossary_ids": [],
-      "question_ids": [
-        "09d2bc7d-ee6b-413e-bb11-a358f40a0853",
-        "f571c642-9c70-4bae-9392-867b51d5cb72",
-        "3c428fb2-beea-44d1-ab40-ef392d5d9ae3",
-        "6b584a75-0a6b-4f77-808a-b69cb695c302",
-        "ae80f4e6-d9f1-4308-9bbb-807b5db112e7",
-        "8b9ea9f1-52b7-43a4-9eed-ada829072007",
-        "a277a85c-17ac-4f4d-a52a-dcabdacb71a7",
-        "31ef21f6-440f-4c5b-b93b-1fb53c534217",
-        "61d3d819-a33b-4a15-b18b-47a2d90c7bcc"
-      ]
+      "question_ids": []
     }
   ],
   "survey_questions": [
@@ -3696,105 +3686,6 @@
       "required": true,
       "is_pool_question": false,
       "has_comment": false
-    },
-    {
-      "id": "09d2bc7d-ee6b-413e-bb11-a358f40a0853",
-      "text": "Burası sektördeki itibarı yüksek bir şirkettir.",
-      "type": "likert",
-      "required": true,
-      "is_pool_question": false,
-      "has_comment": false,
-      "scale_min": 1,
-      "scale_max": 5,
-      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
-    },
-    {
-      "id": "f571c642-9c70-4bae-9392-867b51d5cb72",
-      "text": "Şirketimiz, iyi bir işveren olarak algılanır.",
-      "type": "likert",
-      "required": true,
-      "is_pool_question": false,
-      "has_comment": false,
-      "scale_min": 1,
-      "scale_max": 5,
-      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
-    },
-    {
-      "id": "3c428fb2-beea-44d1-ab40-ef392d5d9ae3",
-      "text": "Şirketimiz, müşterilerimiz tarafından iyi bir şirket olarak algılanır.",
-      "type": "likert",
-      "required": true,
-      "is_pool_question": false,
-      "has_comment": false,
-      "scale_min": 1,
-      "scale_max": 5,
-      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
-    },
-    {
-      "id": "6b584a75-0a6b-4f77-808a-b69cb695c302",
-      "text": "Şirketimden bugün tekrardan iş teklifi alsam yine kabul ederdim.",
-      "type": "likert",
-      "required": true,
-      "is_pool_question": false,
-      "has_comment": false,
-      "scale_min": 1,
-      "scale_max": 5,
-      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
-    },
-    {
-      "id": "ae80f4e6-d9f1-4308-9bbb-807b5db112e7",
-      "text": "Şirketimiz kariyer gelişimi için yeterli fırsatlar sunar.",
-      "type": "likert",
-      "required": true,
-      "is_pool_question": false,
-      "has_comment": false,
-      "scale_min": 1,
-      "scale_max": 5,
-      "driver_id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf"
-    },
-    {
-      "id": "8b9ea9f1-52b7-43a4-9eed-ada829072007",
-      "text": "Çalışanlar için terfi olanakları mevcuttur. ",
-      "type": "likert",
-      "required": true,
-      "is_pool_question": false,
-      "has_comment": false,
-      "scale_min": 1,
-      "scale_max": 5,
-      "driver_id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf"
-    },
-    {
-      "id": "a277a85c-17ac-4f4d-a52a-dcabdacb71a7",
-      "text": "Şirketimiz yeni yetenekleri çekmek için cazip bir iş yeridir.",
-      "type": "likert",
-      "required": true,
-      "is_pool_question": false,
-      "has_comment": false,
-      "scale_min": 1,
-      "scale_max": 5,
-      "driver_id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf"
-    },
-    {
-      "id": "31ef21f6-440f-4c5b-b93b-1fb53c534217",
-      "text": "Şirketimizin çalışma ortamı motive edici ve destekleyicidir.",
-      "type": "likert",
-      "required": true,
-      "is_pool_question": false,
-      "has_comment": false,
-      "scale_min": 1,
-      "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
-    },
-    {
-      "id": "61d3d819-a33b-4a15-b18b-47a2d90c7bcc",
-      "text": "",
-      "type": "likert",
-      "required": true,
-      "is_pool_question": false,
-      "has_comment": false,
-      "scale_min": 1,
-      "scale_max": 5,
-      "driver_id": null
     }
   ],
   "agent_behavior": {
