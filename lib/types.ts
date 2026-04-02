@@ -203,6 +203,7 @@ export interface SurveyQuestion {
   scale_min?: number;
   scale_max?: number;
   driver_id?: string | null;
+  is_enps?: boolean;
   options?: string[];
   multi_min?: number | null;
   multi_max?: number | null;
@@ -213,6 +214,11 @@ export interface SurveyTemplate {
   name: string;
   description: string;
   purpose: string;
+  survey_title: string;
+  survey_description: string;
+  measured_topics: string[];
+  why_take_survey: string;
+  short_description: string;
   tag_ids: string[];
   faq_ids: string[];
   rule_ids: string[];

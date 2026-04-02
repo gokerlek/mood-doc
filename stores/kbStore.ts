@@ -22,6 +22,33 @@ import type {
 import { emptyKnowledgeBase, SEED_PRIMITIVES, SEED_QUESTION_TYPES } from "@/lib/defaults";
 import type { ComponentSlot } from "@/lib/types";
 
+function sanitizeSurveyQuestion(question: SurveyQuestion): SurveyQuestion {
+  if (question.type === "likert") {
+    return {
+      ...question,
+      driver_id: question.driver_id ?? null,
+      is_enps: question.is_enps ?? false,
+    };
+  }
+
+  const { driver_id, is_enps, ...rest } = question;
+  return rest;
+}
+
+function sanitizeSurveyTemplate(template: SurveyTemplate): SurveyTemplate {
+  return {
+    ...template,
+    survey_title: template.survey_title ?? template.name ?? "",
+    survey_description:
+      template.survey_description ?? template.description ?? "",
+    measured_topics: Array.isArray(template.measured_topics)
+      ? template.measured_topics
+      : [],
+    why_take_survey: template.why_take_survey ?? template.purpose ?? "",
+    short_description: template.short_description ?? "",
+  };
+}
+
 function migrateSlots(
   slots: ComponentSlot[],
   frameW = 480,
@@ -130,8 +157,8 @@ const useKbStoreBase = create<KbState>()(
           glossary:               data.glossary               ?? defaults.glossary,
           survey_question_types:  data.survey_question_types  ?? defaults.survey_question_types,
           survey_drivers:         data.survey_drivers         ?? defaults.survey_drivers,
-          survey_templates:       data.survey_templates       ?? defaults.survey_templates,
-          survey_questions:       data.survey_questions       ?? defaults.survey_questions,
+          survey_templates:       (data.survey_templates ?? defaults.survey_templates).map(sanitizeSurveyTemplate),
+          survey_questions:       (data.survey_questions ?? defaults.survey_questions).map(sanitizeSurveyQuestion),
           agent_behavior:         data.agent_behavior         ?? defaults.agent_behavior,
         };
         normalized.components = normalized.components
@@ -482,10 +509,11 @@ const useKbStoreBase = create<KbState>()(
       upsertSurveyTemplate: (template) =>
         set((s) => {
           if (!s.data) return s;
-          const exists = s.data.survey_templates.findIndex(t => t.id === template.id);
+          const sanitizedTemplate = sanitizeSurveyTemplate(template);
+          const exists = s.data.survey_templates.findIndex(t => t.id === sanitizedTemplate.id);
           const survey_templates = exists >= 0
-            ? s.data.survey_templates.map(t => t.id === template.id ? template : t)
-            : [...s.data.survey_templates, template];
+            ? s.data.survey_templates.map(t => t.id === sanitizedTemplate.id ? sanitizedTemplate : t)
+            : [...s.data.survey_templates, sanitizedTemplate];
           return { isDirty: true, data: { ...s.data, survey_templates } };
         }),
 
@@ -508,10 +536,11 @@ const useKbStoreBase = create<KbState>()(
       upsertSurveyQuestion: (question) =>
         set((s) => {
           if (!s.data) return s;
-          const exists = s.data.survey_questions.findIndex(q => q.id === question.id);
+          const sanitizedQuestion = sanitizeSurveyQuestion(question);
+          const exists = s.data.survey_questions.findIndex(q => q.id === sanitizedQuestion.id);
           const survey_questions = exists >= 0
-            ? s.data.survey_questions.map(q => q.id === question.id ? question : q)
-            : [...s.data.survey_questions, question];
+            ? s.data.survey_questions.map(q => q.id === sanitizedQuestion.id ? sanitizedQuestion : q)
+            : [...s.data.survey_questions, sanitizedQuestion];
           return { isDirty: true, data: { ...s.data, survey_questions } };
         }),
 
@@ -579,8 +608,16 @@ const useKbStoreBase = create<KbState>()(
           }
           // Initialize missing survey arrays
           if (!Array.isArray(p.data.survey_drivers))   p.data.survey_drivers   = defaults.survey_drivers;
-          if (!Array.isArray(p.data.survey_templates)) p.data.survey_templates = defaults.survey_templates;
-          if (!Array.isArray(p.data.survey_questions)) p.data.survey_questions = defaults.survey_questions;
+          if (!Array.isArray(p.data.survey_templates)) {
+            p.data.survey_templates = defaults.survey_templates;
+          } else {
+            p.data.survey_templates = p.data.survey_templates.map(sanitizeSurveyTemplate);
+          }
+          if (!Array.isArray(p.data.survey_questions)) {
+            p.data.survey_questions = defaults.survey_questions;
+          } else {
+            p.data.survey_questions = p.data.survey_questions.map(sanitizeSurveyQuestion);
+          }
         }
         return { ...current, ...p };
       },
