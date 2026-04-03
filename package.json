@@ -2,6 +2,7 @@
   "name": "mood-doc",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@10.9.3",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -59,10 +60,6 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.0.18"
-  },
-  "optionalDependencies": {
-    "lightningcss-linux-x64-gnu": "1.31.1",
-    "lightningcss-linux-arm64-gnu": "1.31.1"
   },
   "ignoreScripts": [
     "sharp",
