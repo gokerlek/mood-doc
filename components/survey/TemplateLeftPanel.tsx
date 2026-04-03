@@ -5,7 +5,6 @@ import { useQuestionActions } from "@/hooks/useQuestionActions";
 import { QuestionList } from "@/components/survey/QuestionList";
 import { SurveyFaqSection } from "@/components/survey/SurveyFaqSection";
 import { SurveyRuleSection } from "@/components/survey/SurveyRuleSection";
-import { GlossarySection } from "@/components/survey/GlossarySection";
 import { AddQuestionModal } from "@/components/survey/AddQuestionModal";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -47,9 +46,6 @@ export function TemplateLeftPanel({
           </TabsTrigger>
           <TabsTrigger value="rules" className="flex-1 text-xs h-7">
             Kurallar
-          </TabsTrigger>
-          <TabsTrigger value="glossary" className="flex-1 text-xs h-7">
-            Sözlük
           </TabsTrigger>
         </TabsList>
 
@@ -119,20 +115,6 @@ export function TemplateLeftPanel({
             }
             onRemoveRuleId={(id) =>
               update({ rule_ids: template.rule_ids.filter((r) => r !== id) })
-            }
-          />
-        </TabsContent>
-
-        <TabsContent value="glossary" className="flex-1 overflow-y-auto p-3">
-          <GlossarySection
-            glossaryIds={template.glossary_ids}
-            onAddId={(id) =>
-              update({ glossary_ids: [...template.glossary_ids, id] })
-            }
-            onRemoveId={(id) =>
-              update({
-                glossary_ids: template.glossary_ids.filter((g) => g !== id),
-              })
             }
           />
         </TabsContent>

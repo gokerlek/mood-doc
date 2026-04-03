@@ -314,7 +314,7 @@ export function ComponentSketchCanvas({
 
   return (
     <div
-      className="w-full rounded-lg overflow-auto flex items-start justify-center p-10 bg-muted/40"
+      className="w-full h-full rounded-lg overflow-auto flex items-center justify-center p-10 bg-muted/40"
       style={{
         minHeight: 400,
         backgroundImage:

@@ -188,6 +188,13 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
                   </div>
                   {childProps.map(prop => {
                     const bound = (slot.prop_bindings ?? []).find(b => b.childPropName === prop.name);
+                    const parentPropOptions = [
+                      { label: 'Bağlama yok', value: '__none__' },
+                      ...(comp.props ?? []).map(parentProp => ({
+                        label: parentProp.name || '(isimsiz)',
+                        value: parentProp.id,
+                      })),
+                    ];
                     return (
                       <div key={prop.id} className="flex items-center gap-1.5 mb-1">
                         <span className="text-[11px] text-muted-foreground w-20 shrink-0 truncate">
@@ -195,16 +202,29 @@ export function ComponentRightPanel({ comp, selectedSlotId, onSelectSlot }: Comp
                         </span>
                         <span className="text-muted-foreground/40 text-[10px]">──►</span>
                         <Select
-                          value={bound?.parentPropId ?? ''}
-                          onValueChange={val => updateBinding(slot.id, prop.name, val ?? '')}
+                          items={parentPropOptions}
+                          value={bound?.parentPropId ?? '__none__'}
+                          onValueChange={val =>
+                            updateBinding(
+                              slot.id,
+                              prop.name,
+                              !val || val === '__none__' ? '' : val
+                            )
+                          }
                         >
                           <SelectTrigger className="flex-1 h-6 text-xs" onClick={e => e.stopPropagation()}>
                             <SelectValue placeholder="Bağlama yok" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="">Bağlama yok</SelectItem>
-                            {(comp.props ?? []).map(p => (
-                              <SelectItem key={p.id} value={p.id}>{p.name}</SelectItem>
+                            <SelectItem value="__none__" className="text-xs text-muted-foreground">
+                              Bağlama yok
+                            </SelectItem>
+                            {parentPropOptions
+                              .filter(option => option.value !== '__none__')
+                              .map(option => (
+                              <SelectItem key={option.value} value={option.value} className="text-xs">
+                                {option.label}
+                              </SelectItem>
                             ))}
                           </SelectContent>
                         </Select>
