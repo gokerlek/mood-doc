@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-03-30T09:08:42.016Z",
+    "last_updated": "2026-04-03T07:34:00.796Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1706,7 +1706,10 @@
         "7e6ee142-62f6-4a93-9901-0c68dafda743",
         "eac6e87f-eefc-4bff-89ae-d06d6e63ef7a",
         "94f38e74-fd6f-4152-9c7a-ac98501253e3"
-      ]
+      ],
+      "measured_topics": [],
+      "short_description": "",
+      "survey_title": "Kariyer ve Kişisel Gelişim"
     },
     {
       "id": "c121dba0-de26-4985-a9be-b0edbe36633f",
@@ -1747,7 +1750,9 @@
         "e951edff-8a9c-4d68-949c-af4e44199e0c",
         "ecd8e538-dc46-497d-9228-5057109c68d7",
         "58f61a84-ed04-4635-b5ed-36ea1201627a"
-      ]
+      ],
+      "measured_topics": [],
+      "short_description": ""
     },
     {
       "id": "cdb2576b-5905-4c24-81f2-a7d8b539698d",
@@ -1799,7 +1804,9 @@
         "258149cc-963e-4f32-a0ea-9f4552e507c2",
         "47b79f7e-b97c-4f43-a9c2-60bc46c26f81",
         "6e2e8655-916e-4f78-87bc-94c8722d2440"
-      ]
+      ],
+      "measured_topics": [],
+      "short_description": ""
     },
     {
       "id": "7df84cee-98ec-48f7-a886-fe28ace9c97a",
@@ -1835,7 +1842,9 @@
         "593f8707-e077-4a45-9b2c-8764ff052e5c",
         "d65db563-270a-4caf-9e4b-29730dc6648a",
         "7caf4651-a513-481d-939b-c89dc6036551"
-      ]
+      ],
+      "measured_topics": [],
+      "short_description": ""
     },
     {
       "id": "ed7ab522-98d4-4e90-bda6-680c17ecfe3f",
@@ -1870,7 +1879,9 @@
         "6a041557-c711-4e87-b50b-9cddfc0b7210",
         "5b4279e7-da10-44fb-9d59-09e4c5096844",
         "13e9eca5-968d-4631-8900-8a6a5a0235d9"
-      ]
+      ],
+      "measured_topics": [],
+      "short_description": ""
     },
     {
       "id": "16472a35-e819-4e33-865e-f3869779dae4",
@@ -1905,7 +1916,9 @@
         "56d81260-626a-4749-8c69-0e79910348bc",
         "1703a0a2-16af-4982-ab6b-6380524f7b22",
         "ea7fdf9f-7137-4e6d-a527-9355a2a68bdc"
-      ]
+      ],
+      "measured_topics": [],
+      "short_description": ""
     },
     {
       "id": "cf48d219-753a-42b5-bc2b-b31ea4318e8a",
@@ -1916,7 +1929,9 @@
       "faq_ids": [],
       "rule_ids": [],
       "glossary_ids": [],
-      "question_ids": []
+      "question_ids": [],
+      "measured_topics": [],
+      "short_description": ""
     }
   ],
   "survey_questions": [
@@ -1929,7 +1944,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555"
+      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "is_enps": false
     },
     {
       "id": "e5aa661b-276c-45c1-bd86-231375714314",
@@ -1940,7 +1956,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555"
+      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "is_enps": false
     },
     {
       "id": "0ba17052-bc8d-4220-b3a1-24ced8f729e7",
@@ -1951,7 +1968,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555"
+      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "is_enps": false
     },
     {
       "id": "27dbe326-34bb-4410-a063-7f257ff24884",
@@ -1962,7 +1980,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
+      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4",
+      "is_enps": false
     },
     {
       "id": "acd429b6-d7a9-4dc5-b133-376f2014f374",
@@ -1973,7 +1992,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
+      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4",
+      "is_enps": false
     },
     {
       "id": "6346de1e-25ca-4754-b1d7-05c3ad10e6b8",
@@ -1984,7 +2004,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
+      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4",
+      "is_enps": false
     },
     {
       "id": "96df9511-0dfb-47f1-8239-b83aa37bcd73",
@@ -1995,7 +2016,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
+      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4",
+      "is_enps": false
     },
     {
       "id": "a3b68ea2-a709-475d-8aaa-05b5f2181f78",
@@ -2006,7 +2028,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62"
+      "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62",
+      "is_enps": false
     },
     {
       "id": "40ab7d35-0928-4402-81f9-fbf79ffc4a21",
@@ -2017,7 +2040,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62"
+      "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62",
+      "is_enps": false
     },
     {
       "id": "8f864064-1841-4574-896d-8bf49ccdbbe8",
@@ -2028,7 +2052,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62"
+      "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62",
+      "is_enps": false
     },
     {
       "id": "b3c009aa-cd7e-4f93-9738-31aa9119ffa7",
@@ -2039,7 +2064,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62"
+      "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62",
+      "is_enps": false
     },
     {
       "id": "70c30e63-f699-4c31-9ee8-a288a7bba2f6",
@@ -2050,7 +2076,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "a9452a58-8b6d-4a69-8666-73116e4fae3f"
+      "driver_id": "a9452a58-8b6d-4a69-8666-73116e4fae3f",
+      "is_enps": false
     },
     {
       "id": "5afedb03-77af-406f-b488-7fed4d03ded8",
@@ -2061,7 +2088,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "a9452a58-8b6d-4a69-8666-73116e4fae3f"
+      "driver_id": "a9452a58-8b6d-4a69-8666-73116e4fae3f",
+      "is_enps": false
     },
     {
       "id": "458930d9-f891-4de4-901a-8512b4c4bbca",
@@ -2072,7 +2100,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "a9452a58-8b6d-4a69-8666-73116e4fae3f"
+      "driver_id": "a9452a58-8b6d-4a69-8666-73116e4fae3f",
+      "is_enps": false
     },
     {
       "id": "3c97ede4-564b-40c6-b5ef-22b16bb35f81",
@@ -2083,7 +2112,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "89ca004f-dad2-4d24-a40c-5428a8866371"
+      "driver_id": "89ca004f-dad2-4d24-a40c-5428a8866371",
+      "is_enps": false
     },
     {
       "id": "442f3d27-0deb-461f-bb7f-64ec01a0f464",
@@ -2094,7 +2124,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "89ca004f-dad2-4d24-a40c-5428a8866371"
+      "driver_id": "89ca004f-dad2-4d24-a40c-5428a8866371",
+      "is_enps": false
     },
     {
       "id": "a1248126-e066-444f-874b-4db7a0c7d095",
@@ -2105,7 +2136,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "89ca004f-dad2-4d24-a40c-5428a8866371"
+      "driver_id": "89ca004f-dad2-4d24-a40c-5428a8866371",
+      "is_enps": false
     },
     {
       "id": "2bf27335-4536-40f0-8b7e-bddc3007833b",
@@ -2116,7 +2148,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "89ca004f-dad2-4d24-a40c-5428a8866371"
+      "driver_id": "89ca004f-dad2-4d24-a40c-5428a8866371",
+      "is_enps": false
     },
     {
       "id": "32f2f232-cbf9-4c46-aaca-bf0e793d4f28",
@@ -2127,7 +2160,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "89ca004f-dad2-4d24-a40c-5428a8866371"
+      "driver_id": "89ca004f-dad2-4d24-a40c-5428a8866371",
+      "is_enps": false
     },
     {
       "id": "43796f2b-0554-4939-8d06-ea7a008942f7",
@@ -2138,7 +2172,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555"
+      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "is_enps": false
     },
     {
       "id": "33683624-9ee6-44f7-9bf4-72dcf4476993",
@@ -2149,7 +2184,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555"
+      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "is_enps": false
     },
     {
       "id": "b7c2a470-d4ac-4588-acff-b9d5c7da9f1d",
@@ -2160,7 +2196,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4"
+      "driver_id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4",
+      "is_enps": false
     },
     {
       "id": "7e6ee142-62f6-4a93-9901-0c68dafda743",
@@ -2171,7 +2208,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62"
+      "driver_id": "5c6ab686-7102-4bb7-941c-8c22d1ff0c62",
+      "is_enps": false
     },
     {
       "id": "eac6e87f-eefc-4bff-89ae-d06d6e63ef7a",
@@ -2182,7 +2220,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "ffb0f999-6da8-4576-a926-8746c60d9929"
+      "driver_id": "ffb0f999-6da8-4576-a926-8746c60d9929",
+      "is_enps": false
     },
     {
       "id": "94f38e74-fd6f-4152-9c7a-ac98501253e3",
@@ -2193,7 +2232,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "ffb0f999-6da8-4576-a926-8746c60d9929"
+      "driver_id": "ffb0f999-6da8-4576-a926-8746c60d9929",
+      "is_enps": false
     },
     {
       "id": "b72279fb-8197-4480-9ba8-d75a6f17d191",
@@ -2204,7 +2244,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
     },
     {
       "id": "d0cf0c1b-0f65-4ad6-b5b0-2eb703f2c02e",
@@ -2215,7 +2256,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
     },
     {
       "id": "73f1aafc-17ac-4287-a65b-13ad22b4428e",
@@ -2226,7 +2268,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
     },
     {
       "id": "f42dbe60-a00a-4fd7-b09c-9a9abc446013",
@@ -2237,7 +2280,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2",
+      "is_enps": false
     },
     {
       "id": "d848257a-106e-4847-a56a-1e5b387f7170",
@@ -2248,7 +2292,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2",
+      "is_enps": false
     },
     {
       "id": "cd495fe7-1a8e-44b8-b3f0-5c5dd2ebca6d",
@@ -2259,7 +2304,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2",
+      "is_enps": false
     },
     {
       "id": "ad3df8e9-7a45-4ef1-9888-422643c5ee50",
@@ -2270,7 +2316,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "02f59076-32a9-4038-8a42-26c734dd7466"
+      "driver_id": "02f59076-32a9-4038-8a42-26c734dd7466",
+      "is_enps": false
     },
     {
       "id": "1c34d9a6-ccb0-4183-8f66-cebe5866a7d4",
@@ -2281,7 +2328,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "f6e02558-1e5f-4eee-a632-4aedc37faca2"
+      "driver_id": "f6e02558-1e5f-4eee-a632-4aedc37faca2",
+      "is_enps": false
     },
     {
       "id": "79f9b0d0-5935-4297-b15c-477b99b61275",
@@ -2292,7 +2340,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "82009759-b969-46a8-a27e-d166ac84659b"
+      "driver_id": "82009759-b969-46a8-a27e-d166ac84659b",
+      "is_enps": false
     },
     {
       "id": "e76dc6aa-8072-442a-8de1-707f97fcfffd",
@@ -2303,7 +2352,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "82009759-b969-46a8-a27e-d166ac84659b"
+      "driver_id": "82009759-b969-46a8-a27e-d166ac84659b",
+      "is_enps": false
     },
     {
       "id": "f14ea40e-e182-4f8d-8071-5f698ecd018f",
@@ -2314,7 +2364,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "4a8487b3-953c-4ec1-b134-32661f40f64a",
@@ -2325,7 +2376,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "f0c0fab8-d2d0-43bd-b827-ec6776282609",
@@ -2336,7 +2388,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": null
+      "driver_id": null,
+      "is_enps": false
     },
     {
       "id": "42abde39-3eb3-46d9-9bef-98694b43074b",
@@ -2347,7 +2400,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "4aa30cc6-defb-408e-a00d-0080b08e6c82",
@@ -2358,7 +2412,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "2155d0fd-2a93-42ae-9425-cf2074a85c4e",
@@ -2369,7 +2424,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "7a2ca2b0-341f-4d52-8bdf-86a08a2ba412"
+      "driver_id": "7a2ca2b0-341f-4d52-8bdf-86a08a2ba412",
+      "is_enps": false
     },
     {
       "id": "0c47b5c7-6c2e-4954-946d-cf33dc98ac80",
@@ -2380,7 +2436,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "69c2834a-d642-4889-b8f1-388553f0f28b"
+      "driver_id": "69c2834a-d642-4889-b8f1-388553f0f28b",
+      "is_enps": false
     },
     {
       "id": "ed52d03e-03d9-4b6e-893c-b7eb6e7c77dc",
@@ -2391,7 +2448,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "02f59076-32a9-4038-8a42-26c734dd7466"
+      "driver_id": "02f59076-32a9-4038-8a42-26c734dd7466",
+      "is_enps": false
     },
     {
       "id": "e596f6a7-185f-43b0-9744-6dc2ea3ce4d9",
@@ -2402,7 +2460,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717"
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
     },
     {
       "id": "73ddda80-4b21-4eec-9301-0418b4449016",
@@ -2413,7 +2472,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717"
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
     },
     {
       "id": "85cefacd-0758-49db-8ed1-37e67379dda6",
@@ -2424,7 +2484,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "7a2ca2b0-341f-4d52-8bdf-86a08a2ba412"
+      "driver_id": "7a2ca2b0-341f-4d52-8bdf-86a08a2ba412",
+      "is_enps": false
     },
     {
       "id": "5047d0bc-9e96-4692-94a4-d4e60ff3e01f",
@@ -2435,7 +2496,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "205fa8e8-a5c6-4422-91b4-f68c7350a7ee"
+      "driver_id": "205fa8e8-a5c6-4422-91b4-f68c7350a7ee",
+      "is_enps": false
     },
     {
       "id": "cac6b219-9b18-4df5-b3e7-af2ffac781e1",
@@ -2446,7 +2508,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "205fa8e8-a5c6-4422-91b4-f68c7350a7ee"
+      "driver_id": "205fa8e8-a5c6-4422-91b4-f68c7350a7ee",
+      "is_enps": false
     },
     {
       "id": "26738bf3-f4d9-480a-b205-070dc060981f",
@@ -2457,7 +2520,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "64eb2ae6-59e1-4e81-9d31-e830399ea8ff",
@@ -2468,7 +2532,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717"
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
     },
     {
       "id": "22b3a23e-2e51-4006-a02c-ddd719bda118",
@@ -2511,7 +2576,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "6017e1e2-f2ef-4460-a2c0-4944601795f2",
@@ -2522,7 +2588,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "1c627de1-e88f-412b-830e-42fd11a6e636",
@@ -2533,7 +2600,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "adcb7fdd-b516-4e80-b9d3-2678932d1b68",
@@ -2544,7 +2612,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "5a30fa3a-6888-442a-9daa-555a65650cf3",
@@ -2555,7 +2624,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "205fa8e8-a5c6-4422-91b4-f68c7350a7ee"
+      "driver_id": "205fa8e8-a5c6-4422-91b4-f68c7350a7ee",
+      "is_enps": false
     },
     {
       "id": "4e7fb4e0-f8a4-4c9b-8d46-e1006adcae40",
@@ -2566,7 +2636,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "82009759-b969-46a8-a27e-d166ac84659b"
+      "driver_id": "82009759-b969-46a8-a27e-d166ac84659b",
+      "is_enps": false
     },
     {
       "id": "3a6a3031-f327-44e5-ba9a-9f0b653a7a09",
@@ -2577,7 +2648,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "82009759-b969-46a8-a27e-d166ac84659b"
+      "driver_id": "82009759-b969-46a8-a27e-d166ac84659b",
+      "is_enps": false
     },
     {
       "id": "3d82d27e-6f17-49ca-9f71-1144fecc769a",
@@ -2588,7 +2660,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "3a884203-f4e9-4500-8d8b-5bfb8dd02862"
+      "driver_id": "3a884203-f4e9-4500-8d8b-5bfb8dd02862",
+      "is_enps": false
     },
     {
       "id": "94e08abc-b8e3-4bbf-a597-0e6f4cb2c950",
@@ -2599,7 +2672,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "358c619e-fe32-4f22-8762-9f8aa96e2548"
+      "driver_id": "358c619e-fe32-4f22-8762-9f8aa96e2548",
+      "is_enps": false
     },
     {
       "id": "6d7b12d4-a402-4754-bf63-5bf310ab27ff",
@@ -2610,7 +2684,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "02f59076-32a9-4038-8a42-26c734dd7466"
+      "driver_id": "02f59076-32a9-4038-8a42-26c734dd7466",
+      "is_enps": false
     },
     {
       "id": "04319be0-7825-4f7b-953f-7c5325d21c0e",
@@ -2621,7 +2696,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "02f59076-32a9-4038-8a42-26c734dd7466"
+      "driver_id": "02f59076-32a9-4038-8a42-26c734dd7466",
+      "is_enps": false
     },
     {
       "id": "fde3a706-08bc-4261-a5e8-087249843cb9",
@@ -2632,7 +2708,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717"
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
     },
     {
       "id": "32c074ea-a6fc-4fa7-8669-b642e87ebb5f",
@@ -2643,7 +2720,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717"
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
     },
     {
       "id": "5dbbaff9-074d-49f8-a692-ba2b17d8d6ad",
@@ -2654,7 +2732,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717"
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
     },
     {
       "id": "78ff1da6-db12-42ee-a524-5f9b868f848b",
@@ -2665,7 +2744,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717"
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
     },
     {
       "id": "0b7cc63a-0484-46ce-9edb-b8a2984efa7e",
@@ -2676,7 +2756,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717"
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
     },
     {
       "id": "40511038-b993-41d4-af29-c14b90395770",
@@ -2687,7 +2768,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2",
+      "is_enps": false
     },
     {
       "id": "18bce87b-10de-4cb9-a636-508119c63bfe",
@@ -2698,7 +2780,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2",
+      "is_enps": false
     },
     {
       "id": "e0d87877-517e-4e3b-b170-460fa298d102",
@@ -2709,7 +2792,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2",
+      "is_enps": false
     },
     {
       "id": "5018ad1a-6bee-49d1-861d-54863c0e0320",
@@ -2720,7 +2804,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2",
+      "is_enps": false
     },
     {
       "id": "0b31975f-bf81-41d2-8653-ecfca3e9c5d8",
@@ -2731,7 +2816,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2",
+      "is_enps": false
     },
     {
       "id": "a1b12428-94d3-430b-905e-c67df934be84",
@@ -2742,7 +2828,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2"
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "is_enps": false
     },
     {
       "id": "df18f230-7a33-4024-9879-e7c3634dd301",
@@ -2753,7 +2840,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2"
+      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2",
+      "is_enps": false
     },
     {
       "id": "6fccd375-5670-4480-8dd2-6a0f2e97710e",
@@ -2764,7 +2852,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2"
+      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2",
+      "is_enps": false
     },
     {
       "id": "2865a100-ab0d-4a41-88a2-232e6ac43a98",
@@ -2775,7 +2864,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2"
+      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2",
+      "is_enps": false
     },
     {
       "id": "9136a124-49b4-4d6f-bd8e-84e3a40c6f48",
@@ -2786,7 +2876,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "79fd31b1-a377-4e88-85fa-bd5c4a259f8f"
+      "driver_id": "79fd31b1-a377-4e88-85fa-bd5c4a259f8f",
+      "is_enps": false
     },
     {
       "id": "583c620c-a588-43d6-abdb-5bcf5d5d70fb",
@@ -2797,7 +2888,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
     },
     {
       "id": "99cea6ad-d51a-4bdf-8502-38e5fc242b5a",
@@ -2808,7 +2900,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
     },
     {
       "id": "e9721c69-1a33-4722-a7a9-9e2b7d478a94",
@@ -2819,7 +2912,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
     },
     {
       "id": "195e5610-9d65-458e-9546-fb31d0fbf21a",
@@ -2830,7 +2924,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588"
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
     },
     {
       "id": "da282292-a223-44a3-af3f-7e5c4d017ed9",
@@ -2841,7 +2936,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "69c2834a-d642-4889-b8f1-388553f0f28b"
+      "driver_id": "69c2834a-d642-4889-b8f1-388553f0f28b",
+      "is_enps": false
     },
     {
       "id": "91886e04-c2cc-47c6-a97c-664003f0d3f4",
@@ -2852,7 +2948,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "69c2834a-d642-4889-b8f1-388553f0f28b"
+      "driver_id": "69c2834a-d642-4889-b8f1-388553f0f28b",
+      "is_enps": false
     },
     {
       "id": "2a95a3a3-c293-43bb-b87e-3cb8f01db692",
@@ -2863,7 +2960,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "7a2ca2b0-341f-4d52-8bdf-86a08a2ba412"
+      "driver_id": "7a2ca2b0-341f-4d52-8bdf-86a08a2ba412",
+      "is_enps": false
     },
     {
       "id": "3625b1db-23af-46a7-8b2e-c9b8e6784264",
@@ -2874,7 +2972,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "7a2ca2b0-341f-4d52-8bdf-86a08a2ba412"
+      "driver_id": "7a2ca2b0-341f-4d52-8bdf-86a08a2ba412",
+      "is_enps": false
     },
     {
       "id": "4138fcfd-5900-4259-adab-b850605e4631",
@@ -2885,7 +2984,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "f6e02558-1e5f-4eee-a632-4aedc37faca2"
+      "driver_id": "f6e02558-1e5f-4eee-a632-4aedc37faca2",
+      "is_enps": false
     },
     {
       "id": "9c513e5f-043a-4f53-8d33-cf77e5c7eca1",
@@ -2896,7 +2996,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "f6e02558-1e5f-4eee-a632-4aedc37faca2"
+      "driver_id": "f6e02558-1e5f-4eee-a632-4aedc37faca2",
+      "is_enps": false
     },
     {
       "id": "da61acb7-45f0-4e5c-a047-5cbe38e20818",
@@ -2915,7 +3016,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2"
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2",
+      "is_enps": false
     },
     {
       "id": "47b79f7e-b97c-4f43-a9c2-60bc46c26f81",
@@ -2942,7 +3044,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "46deaf1b-82f9-4dbe-888f-64544695db7d"
+      "driver_id": "46deaf1b-82f9-4dbe-888f-64544695db7d",
+      "is_enps": false
     },
     {
       "id": "519e3b36-d039-4fcf-936d-046ab9061510",
@@ -2953,7 +3056,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "fe0be8b8-cdf2-418b-ab11-65d4cfbb0db3",
@@ -2964,7 +3068,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "46deaf1b-82f9-4dbe-888f-64544695db7d"
+      "driver_id": "46deaf1b-82f9-4dbe-888f-64544695db7d",
+      "is_enps": false
     },
     {
       "id": "f40336df-3a22-48c6-afd3-7bab9c446324",
@@ -2975,7 +3080,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "a52f7e50-f0b5-4d0c-9cf2-a55dd64c837a"
+      "driver_id": "a52f7e50-f0b5-4d0c-9cf2-a55dd64c837a",
+      "is_enps": false
     },
     {
       "id": "d2742f5b-cf73-46f1-8ca0-5a41ca0f0af0",
@@ -2986,7 +3092,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "a52f7e50-f0b5-4d0c-9cf2-a55dd64c837a"
+      "driver_id": "a52f7e50-f0b5-4d0c-9cf2-a55dd64c837a",
+      "is_enps": false
     },
     {
       "id": "c55f025f-7970-4d09-9c7b-161cf2b3d863",
@@ -2997,7 +3104,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "a52f7e50-f0b5-4d0c-9cf2-a55dd64c837a"
+      "driver_id": "a52f7e50-f0b5-4d0c-9cf2-a55dd64c837a",
+      "is_enps": false
     },
     {
       "id": "8cb85ee2-8c12-4a99-b6ea-f8e49885948e",
@@ -3008,7 +3116,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "55ea6086-8ae9-4989-9dc1-dd717bf05fbb",
@@ -3019,7 +3128,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "29b8a91c-1402-4324-a882-41f2bd73033b",
@@ -3030,7 +3140,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "d6995468-a5b6-409c-a547-1996116c7399",
@@ -3041,7 +3152,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "84c773f0-9078-4512-9113-a478ecd24034",
@@ -3052,7 +3164,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "b1cb00d3-4a1f-4210-ad1d-71c344a04d9f",
@@ -3063,7 +3176,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "13fef5a8-42d3-41b1-86fd-5fc7a59eaddb",
@@ -3074,7 +3188,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076"
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076",
+      "is_enps": false
     },
     {
       "id": "71bc5343-66e3-426f-aa43-0ff8c464ed2f",
@@ -3085,7 +3200,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076"
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076",
+      "is_enps": false
     },
     {
       "id": "5f4ab62c-4e20-4674-9043-99ad836cdf4a",
@@ -3096,7 +3212,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076"
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076",
+      "is_enps": false
     },
     {
       "id": "126468cf-a368-4a1b-903e-61dcfd42d30d",
@@ -3107,7 +3224,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555"
+      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "is_enps": false
     },
     {
       "id": "5d0f6539-9929-44a6-972f-3ba6a69a0c94",
@@ -3118,7 +3236,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "246919ac-eac6-4001-a4b6-1d383e5fce52"
+      "driver_id": "246919ac-eac6-4001-a4b6-1d383e5fce52",
+      "is_enps": false
     },
     {
       "id": "9f1257ac-c0e7-419b-9556-2b4d6005133e",
@@ -3180,7 +3299,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "7caf4651-a513-481d-939b-c89dc6036551",
@@ -3199,7 +3319,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "2c511754-0377-4efd-aa17-846ed140872b"
+      "driver_id": "2c511754-0377-4efd-aa17-846ed140872b",
+      "is_enps": false
     },
     {
       "id": "d55ee5e4-daa3-493d-84f4-c1bdf94de912",
@@ -3210,7 +3331,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "2c511754-0377-4efd-aa17-846ed140872b"
+      "driver_id": "2c511754-0377-4efd-aa17-846ed140872b",
+      "is_enps": false
     },
     {
       "id": "6483979f-d407-4783-aa3c-c02a9a8109f9",
@@ -3221,7 +3343,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9",
+      "is_enps": false
     },
     {
       "id": "73829bef-2167-4ab6-a46a-8818bee757a8",
@@ -3232,7 +3355,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9",
+      "is_enps": false
     },
     {
       "id": "26d2d91b-0a20-4b20-bc9f-ab9aaa8a489d",
@@ -3243,7 +3367,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9",
+      "is_enps": false
     },
     {
       "id": "c11995c7-6617-451c-87cc-26038fd44ad0",
@@ -3254,7 +3379,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9",
+      "is_enps": false
     },
     {
       "id": "1761ff70-dc54-4b27-8bc1-d0ecbc1c9f2c",
@@ -3265,7 +3391,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9",
+      "is_enps": false
     },
     {
       "id": "1b76caf2-a054-4738-a5de-07816b0b6579",
@@ -3276,7 +3403,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9",
+      "is_enps": false
     },
     {
       "id": "c3eccf82-e47b-4cdd-85a8-5eeb8b1bed38",
@@ -3287,7 +3415,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20",
+      "is_enps": false
     },
     {
       "id": "cbd53ecc-c835-4b32-95ae-959062a35f09",
@@ -3298,7 +3427,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20",
+      "is_enps": false
     },
     {
       "id": "4e955c05-c4e7-4880-9f76-9186da8aba5c",
@@ -3309,7 +3439,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20",
+      "is_enps": false
     },
     {
       "id": "2f60539d-49d0-4acf-b89f-c4942f984bb4",
@@ -3320,7 +3451,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20",
+      "is_enps": false
     },
     {
       "id": "fc2cc9cf-9eda-4106-b96c-50c1b97ad6d3",
@@ -3331,7 +3463,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "27a0af62-9024-4a5e-b895-7cae03c4e1e1",
@@ -3342,7 +3475,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "0177715a-9c39-4ca5-b063-942c81b0da2b",
@@ -3353,7 +3487,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "4b098eaa-0a84-4e59-bf78-f07fc1f02da3",
@@ -3364,7 +3499,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "233e530a-7824-4820-81c0-ac060e2ae022"
+      "driver_id": "233e530a-7824-4820-81c0-ac060e2ae022",
+      "is_enps": false
     },
     {
       "id": "cfd89046-fbe8-48c4-a215-f2ba8f0dfd3e",
@@ -3375,7 +3511,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "233e530a-7824-4820-81c0-ac060e2ae022"
+      "driver_id": "233e530a-7824-4820-81c0-ac060e2ae022",
+      "is_enps": false
     },
     {
       "id": "77d46a1f-69ac-4784-a563-e59957e61960",
@@ -3386,7 +3523,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "2c511754-0377-4efd-aa17-846ed140872b"
+      "driver_id": "2c511754-0377-4efd-aa17-846ed140872b",
+      "is_enps": false
     },
     {
       "id": "412ef578-f5af-44ef-8c29-836346d1e252",
@@ -3397,7 +3535,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9"
+      "driver_id": "0c6c892f-1d46-4355-9762-efff07b0eaa9",
+      "is_enps": false
     },
     {
       "id": "2e1b688b-9490-456b-b2bb-c63277526b08",
@@ -3408,7 +3547,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20",
+      "is_enps": false
     },
     {
       "id": "6a041557-c711-4e87-b50b-9cddfc0b7210",
@@ -3419,7 +3559,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20",
+      "is_enps": false
     },
     {
       "id": "5b4279e7-da10-44fb-9d59-09e4c5096844",
@@ -3430,7 +3571,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20",
+      "is_enps": false
     },
     {
       "id": "13e9eca5-968d-4631-8900-8a6a5a0235d9",
@@ -3441,7 +3583,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20"
+      "driver_id": "893b96e2-9354-47f8-9512-11f65d8ece20",
+      "is_enps": false
     },
     {
       "id": "c9f8afdd-b66d-41db-8154-669bc57dc633",
@@ -3452,7 +3595,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
+      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3",
+      "is_enps": false
     },
     {
       "id": "cea2d485-268e-4eab-a355-5f2fca99d865",
@@ -3463,7 +3607,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
+      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3",
+      "is_enps": false
     },
     {
       "id": "6841b90a-f823-4c73-ae1a-99463c14f970",
@@ -3474,7 +3619,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
+      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3",
+      "is_enps": false
     },
     {
       "id": "c48aba11-a1ed-4301-9257-36a1af2824b9",
@@ -3485,7 +3631,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
+      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3",
+      "is_enps": false
     },
     {
       "id": "060164fa-d205-4a9a-9603-c2900dddf6d8",
@@ -3496,7 +3643,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf"
+      "driver_id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf",
+      "is_enps": false
     },
     {
       "id": "1bb793c9-3d02-4319-82c0-d402739c9baf",
@@ -3507,7 +3655,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf"
+      "driver_id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf",
+      "is_enps": false
     },
     {
       "id": "76d356d9-d68c-4050-943a-22aa895c0e30",
@@ -3518,7 +3667,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf"
+      "driver_id": "188dbf2c-0d93-4c9f-a498-2e5705cc4fbf",
+      "is_enps": false
     },
     {
       "id": "e16007d7-ae23-4b8f-b35b-c5fc54741d2e",
@@ -3529,7 +3679,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "75c214d1-5a1e-47d3-83f9-b6f8a0b6e7d9",
@@ -3540,7 +3691,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "8176cc0c-66a6-46a9-8f0b-d2d0359dce8f",
@@ -3551,7 +3703,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "d5d61aff-ba90-4ac8-b64a-63ee33ee6a58",
@@ -3562,7 +3715,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "baadedcf-62eb-4b10-bb4e-150979ba4784",
@@ -3573,7 +3727,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86"
+      "driver_id": "613f5aa1-1666-4525-9c64-452ec1c88c86",
+      "is_enps": false
     },
     {
       "id": "1f396b9b-42aa-4c44-874d-5ae7b0066bcb",
@@ -3584,7 +3739,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "1fac6cd7-77f6-47cf-b8cd-77eef3126cbf"
+      "driver_id": "1fac6cd7-77f6-47cf-b8cd-77eef3126cbf",
+      "is_enps": false
     },
     {
       "id": "3e210b7e-997f-41ba-b83c-b1664d02dc3a",
@@ -3595,7 +3751,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "1fac6cd7-77f6-47cf-b8cd-77eef3126cbf"
+      "driver_id": "1fac6cd7-77f6-47cf-b8cd-77eef3126cbf",
+      "is_enps": false
     },
     {
       "id": "083b4c91-b646-4984-a6d7-d5fc5f83b99d",
@@ -3606,7 +3763,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "1fac6cd7-77f6-47cf-b8cd-77eef3126cbf"
+      "driver_id": "1fac6cd7-77f6-47cf-b8cd-77eef3126cbf",
+      "is_enps": false
     },
     {
       "id": "5eb65695-63fa-43ef-bdba-55d5085e347e",
@@ -3617,7 +3775,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6f4e5292-f5e4-421a-92ab-772ac3db4aa8"
+      "driver_id": "6f4e5292-f5e4-421a-92ab-772ac3db4aa8",
+      "is_enps": false
     },
     {
       "id": "c6f86988-f0cb-4aca-b3c4-9fb5d4c4fef3",
@@ -3628,7 +3787,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6f4e5292-f5e4-421a-92ab-772ac3db4aa8"
+      "driver_id": "6f4e5292-f5e4-421a-92ab-772ac3db4aa8",
+      "is_enps": false
     },
     {
       "id": "324fc745-15aa-4d68-8240-316f31077647",
@@ -3639,7 +3799,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6f4e5292-f5e4-421a-92ab-772ac3db4aa8"
+      "driver_id": "6f4e5292-f5e4-421a-92ab-772ac3db4aa8",
+      "is_enps": false
     },
     {
       "id": "0c775831-d248-41b9-9222-0ea83549bdf4",
@@ -3650,7 +3811,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68"
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
     },
     {
       "id": "11c8d003-cc21-4e83-80e4-c08e74fdc956",
@@ -3677,7 +3839,8 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3"
+      "driver_id": "764eff68-1e62-4d07-a462-d68a29903bf3",
+      "is_enps": false
     },
     {
       "id": "ea7fdf9f-7137-4e6d-a527-9355a2a68bdc",
