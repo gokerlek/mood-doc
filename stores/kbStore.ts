@@ -35,20 +35,6 @@ function sanitizeSurveyQuestion(question: SurveyQuestion): SurveyQuestion {
   return rest;
 }
 
-function sanitizeSurveyTemplate(template: SurveyTemplate): SurveyTemplate {
-  return {
-    ...template,
-    survey_title: template.survey_title ?? template.name ?? "",
-    survey_description:
-      template.survey_description ?? template.description ?? "",
-    measured_topics: Array.isArray(template.measured_topics)
-      ? template.measured_topics
-      : [],
-    why_take_survey: template.why_take_survey ?? template.purpose ?? "",
-    short_description: template.short_description ?? "",
-  };
-}
-
 function migrateSlots(
   slots: ComponentSlot[],
   frameW = 480,
@@ -157,7 +143,7 @@ const useKbStoreBase = create<KbState>()(
           glossary:               data.glossary               ?? defaults.glossary,
           survey_question_types:  data.survey_question_types  ?? defaults.survey_question_types,
           survey_drivers:         data.survey_drivers         ?? defaults.survey_drivers,
-          survey_templates:       (data.survey_templates ?? defaults.survey_templates).map(sanitizeSurveyTemplate),
+          survey_templates:       data.survey_templates ?? defaults.survey_templates,
           survey_questions:       (data.survey_questions ?? defaults.survey_questions).map(sanitizeSurveyQuestion),
           agent_behavior:         data.agent_behavior         ?? defaults.agent_behavior,
         };
@@ -509,11 +495,10 @@ const useKbStoreBase = create<KbState>()(
       upsertSurveyTemplate: (template) =>
         set((s) => {
           if (!s.data) return s;
-          const sanitizedTemplate = sanitizeSurveyTemplate(template);
-          const exists = s.data.survey_templates.findIndex(t => t.id === sanitizedTemplate.id);
+          const exists = s.data.survey_templates.findIndex(t => t.id === template.id);
           const survey_templates = exists >= 0
-            ? s.data.survey_templates.map(t => t.id === sanitizedTemplate.id ? sanitizedTemplate : t)
-            : [...s.data.survey_templates, sanitizedTemplate];
+            ? s.data.survey_templates.map(t => t.id === template.id ? template : t)
+            : [...s.data.survey_templates, template];
           return { isDirty: true, data: { ...s.data, survey_templates } };
         }),
 
@@ -610,8 +595,6 @@ const useKbStoreBase = create<KbState>()(
           if (!Array.isArray(p.data.survey_drivers))   p.data.survey_drivers   = defaults.survey_drivers;
           if (!Array.isArray(p.data.survey_templates)) {
             p.data.survey_templates = defaults.survey_templates;
-          } else {
-            p.data.survey_templates = p.data.survey_templates.map(sanitizeSurveyTemplate);
           }
           if (!Array.isArray(p.data.survey_questions)) {
             p.data.survey_questions = defaults.survey_questions;
