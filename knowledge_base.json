@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T08:37:09.485Z",
+    "last_updated": "2026-04-06T08:46:55.891Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1511,7 +1511,7 @@
     },
     {
       "id": "69c2834a-d642-4889-b8f1-388553f0f28b",
-      "name": "İş birliği",
+      "name": "İş Birliği",
       "description": "",
       "tag_ids": [],
       "faq_ids": [],
@@ -1519,7 +1519,7 @@
     },
     {
       "id": "205fa8e8-a5c6-4422-91b4-f68c7350a7ee",
-      "name": "İş yükü",
+      "name": "İş Yükü",
       "description": "",
       "tag_ids": [],
       "faq_ids": [],
@@ -1736,6 +1736,30 @@
     {
       "id": "e2d652ca-c380-4b91-affe-1a879d85dcda",
       "name": "Güven Ortamı",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "ce620da2-9f9e-4b98-8b20-5c12185d189b",
+      "name": "Takım Performans",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "05340f1b-7de3-4c85-a1e5-d5b75957eef4",
+      "name": "Destek ve Büyüme",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "c95b758c-3751-46bf-882e-174a0fd38042",
+      "name": "Güven Endeksi",
       "description": "",
       "tag_ids": [],
       "faq_ids": [],
@@ -2223,19 +2247,31 @@
     },
     {
       "id": "36dbcead-316b-430e-b959-8c0f874c0717",
-      "name": "",
-      "description": "",
+      "name": "Takım Uyumu ve Verimliliği Analizi\n",
+      "description": "Bireysel yetenekler ve başarılar çok önemli olsa da şirketler takım çalışmalarıyla yükselirler. Moodivation Takım Uyumu Anketi, takım üyelerinin düşüncelerinden yola çıkarak takım uyumunu analiz eder. Güçlü ve gelişmeye açık yönleri ortaya koyarak başarılı takımlar oluşturulmasına destekler.\n\n",
       "purpose": "",
-      "survey_title": "",
-      "survey_description": "",
-      "measured_topics": [],
-      "why_take_survey": "",
-      "short_description": "",
+      "survey_title": "Takım Uyumu ve Verimliliği Analizi",
+      "survey_description": "Kısa bir zaman ayırarak yanıtlayacağınız Takım Uyumu Anketi ile, takımınızın güçlü ve gelişime açık yönlerini saptamamız, takım içindeki işbirliği ortamını geliştirmemiz ve takım performansını artırmamız mümkün. Takımınızın başarısını desteklemek için anketimize katılımınızı bekliyoruz!",
+      "measured_topics": [
+        "Gelişim",
+        "Takım Performansı",
+        "Güven Endeksi",
+        "İş birliği",
+        "Yetkinlik"
+      ],
+      "why_take_survey": "Takımların uyumu şirket verimliliği için kritik önem taşır. Takım Uyumu Anketi ile her bir takım üyesinin takımla ve takım arkadaşlığı ile ilgili duygu ve düşüncelerini öğrenme, gelişim alanlarını saptama ve takım performansı bozulmadan gerekli önlemleri alma şansı elde edersiniz.\n",
+      "short_description": "Ekiplerin birbirleriyle uyum içerisinde çalışması, takım duygusunu hissetmeleri hem çalışan bağlılığı hem de iş verimliliği için oldukça önemli. Moodivation Takım Uyumu anketiyle sorunları büyümeden çözün, gelişin.\n",
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": [],
       "glossary_ids": [],
-      "question_ids": []
+      "question_ids": [
+        "fd5c2cb4-7662-4faa-bffc-df73252b90c8",
+        "a2b3f744-dc21-4d03-a64a-743dd70e7515",
+        "b2765a3a-ed86-4c19-8ed1-9e2543e2f366",
+        "ff9dcc62-3712-471c-905a-622fddfc1e1b",
+        "63518230-1d92-4e34-bd0f-8427be2e8c59"
+      ]
     }
   ],
   "survey_questions": [
@@ -5524,6 +5560,66 @@
       "scale_min": 1,
       "scale_max": 5,
       "driver_id": "e2d652ca-c380-4b91-affe-1a879d85dcda",
+      "is_enps": false
+    },
+    {
+      "id": "fd5c2cb4-7662-4faa-bffc-df73252b90c8",
+      "text": "Takım arkadaşlarım, ortak hedeflere ulaşmak için uyumlu bir şekilde birlikte çalışır.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ce620da2-9f9e-4b98-8b20-5c12185d189b",
+      "is_enps": false
+    },
+    {
+      "id": "a2b3f744-dc21-4d03-a64a-743dd70e7515",
+      "text": "Ekibin karar alma süreci hem etkili hem de kapsayıcıdır.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ce620da2-9f9e-4b98-8b20-5c12185d189b",
+      "is_enps": false
+    },
+    {
+      "id": "b2765a3a-ed86-4c19-8ed1-9e2543e2f366",
+      "text": "Takım, çatışmaları doğru bir şekilde yönetir ve çözüme kavuşturur.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ce620da2-9f9e-4b98-8b20-5c12185d189b",
+      "is_enps": false
+    },
+    {
+      "id": "ff9dcc62-3712-471c-905a-622fddfc1e1b",
+      "text": "Ekip içinde liderlik rolü, takım dinamikleri ve gereksinimlerine göre paylaşılır.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "69c2834a-d642-4889-b8f1-388553f0f28b",
+      "is_enps": false
+    },
+    {
+      "id": "63518230-1d92-4e34-bd0f-8427be2e8c59",
+      "text": "Takım arkadaşlarımla birbirimizin çabalarını sık sık takdir ederiz.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "69c2834a-d642-4889-b8f1-388553f0f28b",
       "is_enps": false
     }
   ],
