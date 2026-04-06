@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T08:32:49.619Z",
+    "last_updated": "2026-04-06T08:37:09.485Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -2206,7 +2206,19 @@
         "50dec941-12e5-4623-88a3-46dbd4dd372c",
         "9a3210ad-bc3e-49fd-93d2-2d307131007f",
         "e3407d63-170e-411e-8c52-11a370361739",
-        "cd267550-5532-436f-9b5a-e055264e7c8b"
+        "cd267550-5532-436f-9b5a-e055264e7c8b",
+        "fccb9f66-6458-4098-bda5-bd2857661339",
+        "967d22a4-34d5-458c-be72-986f778d6763",
+        "23641f8e-8ef0-467e-a376-0c6ede89f32b",
+        "a59bb093-8d51-489d-b34e-a51c2de6ff20",
+        "2fd18437-ec60-42c3-adaf-1a669fa14d8e",
+        "a5024857-5f1a-4dbc-96ae-c6460a356b43",
+        "da0b8524-66e9-4c75-a0bb-94ffd286a1ed",
+        "e4772ba8-fd3a-4cf5-84c4-6a0a95823ff8",
+        "172f3acc-0421-4a77-9df3-9c0de3bf841f",
+        "9579f2ca-d17b-437c-afd9-77b7f45cb7a8",
+        "8d184ba3-a136-46c0-9d04-6c568f49b6f1",
+        "897470fd-9222-45f1-94da-526de1834acf"
       ]
     },
     {
@@ -5360,14 +5372,158 @@
     },
     {
       "id": "cd267550-5532-436f-9b5a-e055264e7c8b",
-      "text": "",
+      "text": "İş yerimde, çalışma ortamı çalışanların farklı ihtiyaçlarına göre donatılmıştır. ",
       "type": "likert",
-      "required": true,
-      "is_pool_question": false,
+      "required": false,
+      "is_pool_question": true,
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": null,
+      "driver_id": "807aa7ef-b790-4b36-97aa-fdc83e9e8a18",
+      "is_enps": false
+    },
+    {
+      "id": "fccb9f66-6458-4098-bda5-bd2857661339",
+      "text": "İş yerim engelsiz çalışma ortam sağlanması için çalışmalar yapmaktadır. ",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "807aa7ef-b790-4b36-97aa-fdc83e9e8a18",
+      "is_enps": false
+    },
+    {
+      "id": "967d22a4-34d5-458c-be72-986f778d6763",
+      "text": "İş yerimde yaşım nedeniyle haksızlığa uğramıyorum. ",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "is_enps": false
+    },
+    {
+      "id": "23641f8e-8ef0-467e-a376-0c6ede89f32b",
+      "text": "İş yerimde cinsiyetim nedeniyle haksızlığa uğramıyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "is_enps": false
+    },
+    {
+      "id": "a59bb093-8d51-489d-b34e-a51c2de6ff20",
+      "text": "İş yerimde mezun olduğum okul nedeniyle haksızlığa uğramıyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "is_enps": false
+    },
+    {
+      "id": "2fd18437-ec60-42c3-adaf-1a669fa14d8e",
+      "text": "İşyerimde dini inancımdan dolayı haksızlığa uğramıyorum.  ",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "is_enps": false
+    },
+    {
+      "id": "a5024857-5f1a-4dbc-96ae-c6460a356b43",
+      "text": "İş yerimde doğum yerimden veya etnik kökenimden dolayı haksızlığa uğramıyorum. ",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "is_enps": false
+    },
+    {
+      "id": "da0b8524-66e9-4c75-a0bb-94ffd286a1ed",
+      "text": "İş yerimde bedensel farklılıklarımla ilgili olarak haksızlığa uğramıyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "is_enps": false
+    },
+    {
+      "id": "e4772ba8-fd3a-4cf5-84c4-6a0a95823ff8",
+      "text": "İş yerimde cinsel yönelimim/cinsel kimliğim nedeniyle haksızlığa uğramıyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "is_enps": false
+    },
+    {
+      "id": "172f3acc-0421-4a77-9df3-9c0de3bf841f",
+      "text": "Yaş, cinsiyet, yaşam tarzı açısından farklılıklar içeren ekiplerle çalışıyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "32971d8b-5daf-43c3-8527-4935196939d6",
+      "is_enps": false
+    },
+    {
+      "id": "9579f2ca-d17b-437c-afd9-77b7f45cb7a8",
+      "text": "İşyerimde toplumsal cinsiyet eşitliği, çeşitlilik ve kapsayıcılık ile ilgili eğitim ve kişisel gelişime önem verilmektedir. ",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "32971d8b-5daf-43c3-8527-4935196939d6",
+      "is_enps": false
+    },
+    {
+      "id": "8d184ba3-a136-46c0-9d04-6c568f49b6f1",
+      "text": "Şirketimizde tüm çalışanlar düşüncelerini ifade etmeye teşvik edilir.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "e2d652ca-c380-4b91-affe-1a879d85dcda",
+      "is_enps": false
+    },
+    {
+      "id": "897470fd-9222-45f1-94da-526de1834acf",
+      "text": "İş yerimde bir misillemeye uğrarsam, beni koruyacak mekanizmalar düzenlenmiştir.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "e2d652ca-c380-4b91-affe-1a879d85dcda",
       "is_enps": false
     }
   ],
