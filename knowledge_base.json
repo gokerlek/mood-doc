@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T07:01:14.513Z",
+    "last_updated": "2026-04-06T07:02:50.843Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1846,7 +1846,7 @@
     {
       "id": "7df84cee-98ec-48f7-a886-fe28ace9c97a",
       "name": "Stajyer ve Yeni Mezun Deneyimi",
-      "description": "Bu anket seti, stajyerler ve yeni mezun çalışanların şirketinizdeki ilk deneyimlerini değerlendirmek ve memnuniyet düzeylerini ölçmek için tasarlanmıştır. Çalışanlarınızın işe adaptasyon sürecini, beklentilerinin karşılanma oranını ve genel deneyimlerini anlamanıza yardımcı olur.",
+      "description": "Şube satış ekiplerinin performansını, iş birliğini ve genel verimliliğini değerlendirmek için tasarlanmış kapsamlı bir analiz aracıdır. Bu set, şubenizdeki operasyonel süreçleri optimize etmenize, ekiplerin ihtiyaçlarını belirlemenize ve müşteri memnuniyetini artırmanıza yardımcı olur.\n\n",
       "purpose": "Çalışma ortamına uyum düzeylerini ölçmek ve olası zorlukları tespit etmek.\nEğitim ve gelişim ihtiyaçlarını anlamak.\nStajyer ve yeni mezunların işe alım ve oryantasyon süreçlerini değerlendirmek.\nŞirket kültürünün yeni başlayan çalışanlar üzerindeki etkisini analiz etmek.",
       "tag_ids": [],
       "faq_ids": [],
@@ -1877,7 +1877,20 @@
         "593f8707-e077-4a45-9b2c-8764ff052e5c",
         "d65db563-270a-4caf-9e4b-29730dc6648a",
         "7caf4651-a513-481d-939b-c89dc6036551"
-      ]
+      ],
+      "short_description": "Şube satış ekiplerinin performansını, iş birliğini ve genel verimliliğini değerlendirmek için tasarlanmış kapsamlı bir analiz aracıdır. Bu set, şubenizdeki operasyonel süreçleri optimize etmenize, ekiplerin ihtiyaçlarını belirlemenize ve müşteri memnuniyetini artırmanıza yardımcı olur.\n\n",
+      "why_take_survey": "Şube Satış Analizi, ekiplerinizin güçlü yönlerini ve geliştirilmesi gereken alanları anlamanızı sağlar. Çalışanlarınıza uygun araçlar ve eğitim fırsatları sunarak bağlılıklarını artırabilir, süreçlerinizi optimize ederek satış hedeflerinize daha hızlı ulaşabilirsiniz. Aynı zamanda, müşteriye dokunan süreçlerde iyileştirme yaparak hem çalışan hem de müşteri memnuniyetini üst seviyeye çıkarabilirsiniz.\n",
+      "measured_topics": [
+        "Çalışanların motivasyon ve iş tatmin düzeyleri",
+        "İş yükü, stres yönetimi ve esenlik",
+        "Eğitim ve gelişim ihtiyaçları",
+        "Şubedeki takım ruhu, iş birliği ve iletişim kalitesi",
+        "Şube yönetiminin destek ve yönlendirme etkinliği",
+        "Müşteri memnuniyetini artıran süreçler ve araçlar",
+        "Satış hedeflerine ulaşma düzeyi ve engeller"
+      ],
+      "survey_title": "Şube Satış Ekibi Performans ve Verimlilik Analizi",
+      "survey_description": "Bu ankete vereceğiniz katkı, iş yerimizi geliştirmemiz ve daha iyi bir çalışma ortamı sunmamız için oldukça önemli rol oynayacak. Katılımınız çok değerli, zaman ayırdığınız için şimdiden teşekkür ederiz!"
     },
     {
       "id": "ed7ab522-98d4-4e90-bda6-680c17ecfe3f",
