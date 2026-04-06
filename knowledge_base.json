@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T07:58:22.319Z",
+    "last_updated": "2026-04-06T08:03:16.298Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1684,6 +1684,14 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "14e5a975-c34d-4977-90b4-8b1511fedf61",
+      "name": "Gurur",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -2052,7 +2060,14 @@
         "11831954-478f-4e2e-9f6d-37bb07eb9d35",
         "60298aeb-98c0-404a-b6f9-69958f90187a",
         "c5f1747d-e405-4d30-880d-d6965202ea0d",
-        "bf7e2f13-099e-4ce4-9134-5dcb4e009cc7"
+        "bf7e2f13-099e-4ce4-9134-5dcb4e009cc7",
+        "c68a2745-56cf-4cb9-96a9-999c7a6c82b9",
+        "350b77dd-b0c0-46d2-b1db-92f7086e9d47",
+        "0d49dee9-eb15-4dd9-bbeb-75547ab1f72b",
+        "d2ca99fe-7b28-449a-b587-df3cb8b0b827",
+        "440fe12f-b02e-4719-9be0-6948b53b1c22",
+        "c07b244f-49b0-4b21-b926-3c5462ceadb0",
+        "5b2ee321-2d2c-41ec-b999-5aec3a75f38a"
       ],
       "short_description": "Çalışan Bağlılığı Analizi, kritik bağlılık boyutları hakkında geri bildirim toplayarak, verimliliği artıracak, çalışan bağlılığını güçlendirecek ve işten ayrılma oranlarını azaltacak etkili stratejiler geliştirmenize olanak sağlar.\n\n",
       "survey_description": "Çalışan bağlılığı anketi, çalışan deneyimini etkileyen faktörleri anlamanızı ve gelişim gerektiren alanları belirlemenizi sağlar. Daha verimli ve pozitif bir iş ortamı oluşturmak için bağlılığı oluşturan tüm boyutları analiz edin.\n",
@@ -4620,6 +4635,90 @@
       "scale_min": 1,
       "scale_max": 5,
       "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
+    },
+    {
+      "id": "c68a2745-56cf-4cb9-96a9-999c7a6c82b9",
+      "text": "Şirketin ücret politikasından memnunum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": null,
+      "is_enps": false
+    },
+    {
+      "id": "350b77dd-b0c0-46d2-b1db-92f7086e9d47",
+      "text": "Sağlanan sosyal olanak ve yan haklardan memnunum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
+    },
+    {
+      "id": "0d49dee9-eb15-4dd9-bbeb-75547ab1f72b",
+      "text": "Şirketimle gurur duyuyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "14e5a975-c34d-4977-90b4-8b1511fedf61",
+      "is_enps": false
+    },
+    {
+      "id": "d2ca99fe-7b28-449a-b587-df3cb8b0b827",
+      "text": "Bu şirkette yer almaktan gurur duyuyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "14e5a975-c34d-4977-90b4-8b1511fedf61",
+      "is_enps": false
+    },
+    {
+      "id": "440fe12f-b02e-4719-9be0-6948b53b1c22",
+      "text": "Şirketimin başarılı olacağına inanıyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "14e5a975-c34d-4977-90b4-8b1511fedf61",
+      "is_enps": false
+    },
+    {
+      "id": "c07b244f-49b0-4b21-b926-3c5462ceadb0",
+      "text": "İşimi nasıl yapacağıma karar vermem için yeterli özgürlüğüm var.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "7a2ca2b0-341f-4d52-8bdf-86a08a2ba412",
+      "is_enps": false
+    },
+    {
+      "id": "5b2ee321-2d2c-41ec-b999-5aec3a75f38a",
+      "text": "Çalışma programımın esnekliğinden memnunum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "14e5a975-c34d-4977-90b4-8b1511fedf61",
       "is_enps": false
     }
   ],
