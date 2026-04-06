@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T06:56:51.223Z",
+    "last_updated": "2026-04-06T06:59:18.854Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1765,6 +1765,17 @@
         "e951edff-8a9c-4d68-949c-af4e44199e0c",
         "ecd8e538-dc46-497d-9228-5057109c68d7",
         "58f61a84-ed04-4635-b5ed-36ea1201627a"
+      ],
+      "short_description": "Saha Satış Ekipleri Performans ve Verimlilik Analizi, tüm saha ekiplerinizin performansını, verimliliğini ve ihtiyaçlarını değerlendirerek süreçlerinizi iyileştirmenize ve iş hedeflerinize ulaşmanıza yardımcı olur. Bu set, çalışanların ihtiyaçlarını ve motivasyon düzeylerini belirleyerek daha etkili bir iş ortamı oluşturmanıza yardımcı olur.",
+      "why_take_survey": "Saha Satış Ekipleri Performans ve Verimlilik Analizi, ekiplerinizin güçlü ve geliştirilmesi gereken yönlerini anlamanızı sağlar. Performansı etkileyen boyutlara dayalı verilerle satış hedeflerinizi daha hızlı gerçekleştirebilir, ekiplerinize uygun eğitim ve kaynak desteği sağlayarak bağlılığı ve verimliliği artırabilirsiniz.\n",
+      "survey_title": "Saha Satış Ekibi Performans ve Verimlilik Analizi",
+      "survey_description": "Bu ankete vereceğiniz katkı, iş yerimizi geliştirmemiz ve daha iyi bir çalışma ortamı sunmamız için oldukça önemli rol oynayacak. Katılımınız çok değerli, zaman ayırdığınız için şimdiden teşekkür ederiz!",
+      "measured_topics": [
+        "Çalışanların stres yönetimi, motivasyon düzeyi ve genel memnuniyeti.",
+        "Çalışanların eğitim ihtiyaçları ve gelişim fırsatlarına erişimi.",
+        "Satış hedeflerinin gerçekleştirilmesi ve verimliliği artıracak etkenler.",
+        "Satış süreçlerini destekleyen araçların etkinliği.",
+        "İş birliği, takım ruhu ve iletişim."
       ]
     },
     {
