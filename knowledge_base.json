@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T08:03:16.298Z",
+    "last_updated": "2026-04-06T08:14:27.783Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1692,6 +1692,46 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "70d8d469-7b3c-4257-9b3e-b2c8c0e488d6",
+      "name": "Güvenilirlik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "798fb7b6-eb23-44e0-bf25-c21d2e5bf8cc",
+      "name": "Yetkinlik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "807aa7ef-b790-4b36-97aa-fdc83e9e8a18",
+      "name": "Kapsayıcılık",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "3a056b49-e30f-467e-903d-1c90186536ab",
+      "name": "",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "cd40194e-ae21-4274-bfb9-cb5c07e475c6",
+      "name": "Gelişim ve Destek",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -2075,14 +2115,26 @@
     },
     {
       "id": "944e4943-8272-4d8e-bd43-086612f5ee95",
-      "name": "",
-      "description": "",
+      "name": "Liderlik Analizi\n",
+      "description": "Kurum içi tüm süreçlerin mükemmel işlediğini düşünseniz de çalışanların liderlerine yönelik düşünceleri bağlılık konusunda çok belirleyici. Liderlik anketinden elde edeceğiniz öngörülere şirketinizin liderlik profilini belirler, gelişim alanlarını güçlendirir, çalışanların liderleriyle ilgili görüşlerine somut aksiyonlarla yanıt verebilirsiniz.\n\n",
       "purpose": "",
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": [],
       "glossary_ids": [],
-      "question_ids": []
+      "question_ids": [
+        "88695bcd-99dc-4b02-96c3-c9c4671c0786"
+      ],
+      "short_description": "Yüksek çalışan devir hızının en önemli faktörlerinden biri olan “liderlik” içgörülerine öncelik verin. Gelişim alanlarınızı düzenli olarak analiz edin, “gizli gerçekleri” belirleyin.\n",
+      "survey_title": "Liderlik Analizi Anketi\n",
+      "measured_topics": [
+        "Yetkinlik",
+        "Gelişim",
+        "Kapsayıcılık",
+        "Güvenilirlik"
+      ],
+      "why_take_survey": "Çalışanların işyerlerini değil liderlerini terk ediyor olmaları birçok örnekte geçerliliği kanıtlanmış bir görüş. Prosedürleriniz ne kadar güvenilir, liderlerinizin yetkinliği ne kadar yüksek olursa olsun, çalışan görüşlerini mutlaka değerlendirin. Küçük bir düzenleme ve değişiklik ile değerlendirebileceğiniz bir yeteneği öngörülemeyen nedenlerle kaybetmeyin.\n",
+      "survey_description": "(Şirketi Adı) içerisindeki yönetim, liderlik hakkında düşüncelerinizi ve bakış açınızı anlamak için sizlere birkaç soru sormak istiyoruz. Katılımınız çok değerli, zaman ayırdığınız için şimdiden teşekkür ederiz!"
     }
   ],
   "survey_questions": [
@@ -4719,6 +4771,18 @@
       "scale_min": 1,
       "scale_max": 5,
       "driver_id": "14e5a975-c34d-4977-90b4-8b1511fedf61",
+      "is_enps": false
+    },
+    {
+      "id": "88695bcd-99dc-4b02-96c3-c9c4671c0786",
+      "text": "Yöneticim sözleri ve hareketleriyle tutarlı bir insandır.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": null,
       "is_enps": false
     }
   ],
