@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T07:31:37.475Z",
+    "last_updated": "2026-04-06T07:33:16.599Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -2040,10 +2040,16 @@
         "f8853e75-74f3-4d73-a6e7-0a714ed09e1c",
         "172fc258-f77a-4d6f-b0e7-a39d901e75b2",
         "c0e68342-2c34-44ae-9485-3d09f212334c",
-        "2713db73-eef6-4201-9a21-3856fca30d59"
+        "2713db73-eef6-4201-9a21-3856fca30d59",
+        "0aa579f6-7613-4c1c-9e44-23ad1935cbc5",
+        "7d33e2a8-9431-4d03-80f2-37f2010eee8a",
+        "7af6047f-db5b-457a-8323-dd9c46898588",
+        "5817bb28-bcbb-49cc-8ee5-68a32229a593",
+        "3a584001-f130-4c68-9441-e20d8c730ba7"
       ],
       "short_description": "Çalışan Bağlılığı Analizi, kritik bağlılık boyutları hakkında geri bildirim toplayarak, verimliliği artıracak, çalışan bağlılığını güçlendirecek ve işten ayrılma oranlarını azaltacak etkili stratejiler geliştirmenize olanak sağlar.\n\n",
-      "survey_description": "Çalışan bağlılığı anketi, çalışan deneyimini etkileyen faktörleri anlamanızı ve gelişim gerektiren alanları belirlemenizi sağlar. Daha verimli ve pozitif bir iş ortamı oluşturmak için bağlılığı oluşturan tüm boyutları analiz edin.\n"
+      "survey_description": "Çalışan bağlılığı anketi, çalışan deneyimini etkileyen faktörleri anlamanızı ve gelişim gerektiren alanları belirlemenizi sağlar. Daha verimli ve pozitif bir iş ortamı oluşturmak için bağlılığı oluşturan tüm boyutları analiz edin.\n",
+      "survey_title": "Çalışan Bağlılığı Analizi\n"
     },
     {
       "id": "944e4943-8272-4d8e-bd43-086612f5ee95",
@@ -4456,6 +4462,66 @@
     {
       "id": "2713db73-eef6-4201-9a21-3856fca30d59",
       "text": "Yaptığım işi anlamlı buluyorum. ",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "03f2b373-fe0c-4b9b-9332-4a42eb1b2de8",
+      "is_enps": false
+    },
+    {
+      "id": "0aa579f6-7613-4c1c-9e44-23ad1935cbc5",
+      "text": "Şirketimin amacını ve uzun vadeli hedeflerini anlıyorum",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "03f2b373-fe0c-4b9b-9332-4a42eb1b2de8",
+      "is_enps": false
+    },
+    {
+      "id": "7d33e2a8-9431-4d03-80f2-37f2010eee8a",
+      "text": "Kendimi şirketimin amaç ve değerlerine yakın hissediyorum. ",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "03f2b373-fe0c-4b9b-9332-4a42eb1b2de8",
+      "is_enps": false
+    },
+    {
+      "id": "7af6047f-db5b-457a-8323-dd9c46898588",
+      "text": "Şirketimin misyonu ve vizyonu işimi önemli hissettiriyor. ",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "03f2b373-fe0c-4b9b-9332-4a42eb1b2de8",
+      "is_enps": false
+    },
+    {
+      "id": "5817bb28-bcbb-49cc-8ee5-68a32229a593",
+      "text": "Gerekli durumlarda işten rahatlıkla izin alabiliyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
+    },
+    {
+      "id": "3a584001-f130-4c68-9441-e20d8c730ba7",
+      "text": "",
       "type": "likert",
       "required": true,
       "is_pool_question": false,
