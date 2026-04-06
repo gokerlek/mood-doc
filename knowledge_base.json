@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T08:22:45.088Z",
+    "last_updated": "2026-04-06T08:25:15.045Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -4025,7 +4025,7 @@
       "scale_min": 1,
       "scale_max": 5,
       "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
-      "is_enps": false
+      "is_enps": true
     },
     {
       "id": "11c8d003-cc21-4e83-80e4-c08e74fdc956",
@@ -4059,8 +4059,8 @@
       "id": "ea7fdf9f-7137-4e6d-a527-9355a2a68bdc",
       "text": "Şirketimizin güçlü yönleri nelerdir?",
       "type": "text",
-      "required": true,
-      "is_pool_question": false,
+      "required": false,
+      "is_pool_question": true,
       "has_comment": false
     },
     {
