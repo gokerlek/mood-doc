@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T07:06:03.553Z",
+    "last_updated": "2026-04-06T07:06:23.373Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1979,7 +1979,8 @@
         "Çalışanların şirketin itibarına dair algıları.",
         "Çalışma ortamı, kültür ve değerlerin çalışanlar üzerindeki etkisi.",
         "Çalışanların şirketi tavsiye etme eğilimleri."
-      ]
+      ],
+      "survey_description": "Bu ankete vereceğiniz katkı, iş yerimizi geliştirmemiz ve daha iyi bir çalışma ortamı sunmamız için oldukça önemli rol oynayacak. Katılımınız çok değerli, zaman ayırdığınız için şimdiden teşekkür ederiz!"
     },
     {
       "id": "cf48d219-753a-42b5-bc2b-b31ea4318e8a",
