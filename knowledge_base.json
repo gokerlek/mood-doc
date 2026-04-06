@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T06:59:18.854Z",
+    "last_updated": "2026-04-06T07:01:14.513Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1828,7 +1828,20 @@
         "258149cc-963e-4f32-a0ea-9f4552e507c2",
         "47b79f7e-b97c-4f43-a9c2-60bc46c26f81",
         "6e2e8655-916e-4f78-87bc-94c8722d2440"
-      ]
+      ],
+      "short_description": "Şube satış ekiplerinin performansını, iş birliğini ve genel verimliliğini değerlendirmek için tasarlanmış kapsamlı bir analiz aracıdır. Bu set, şubenizdeki operasyonel süreçleri optimize etmenize, ekiplerin ihtiyaçlarını belirlemenize ve müşteri memnuniyetini artırmanıza yardımcı olur.",
+      "why_take_survey": "Şube Satış Analizi, ekiplerinizin güçlü yönlerini ve geliştirilmesi gereken alanları anlamanızı sağlar. Çalışanlarınıza uygun araçlar ve eğitim fırsatları sunarak bağlılıklarını artırabilir, süreçlerinizi optimize ederek satış hedeflerinize daha hızlı ulaşabilirsiniz. Aynı zamanda, müşteriye dokunan süreçlerde iyileştirme yaparak hem çalışan hem de müşteri memnuniyetini üst seviyeye çıkarabilirsiniz.\n",
+      "measured_topics": [
+        "Çalışanların motivasyon ve iş tatmin düzeyleri",
+        "İş yükü, stres yönetimi ve esenlik",
+        "Eğitim ve gelişim ihtiyaçları",
+        "Şubedeki takım ruhu, iş birliği ve iletişim kalitesi",
+        "Şube yönetiminin destek ve yönlendirme etkinliği",
+        "Müşteri memnuniyetini artıran süreçler ve araçlar",
+        "Satış hedeflerine ulaşma düzeyi ve engeller"
+      ],
+      "survey_title": "Şube Satış Ekibi Performans ve Verimlilik Analizi",
+      "survey_description": "Bu ankete vereceğiniz katkı, iş yerimizi geliştirmemiz ve daha iyi bir çalışma ortamı sunmamız için oldukça önemli rol oynayacak. Katılımınız çok değerli, zaman ayırdığınız için şimdiden teşekkür ederiz!"
     },
     {
       "id": "7df84cee-98ec-48f7-a886-fe28ace9c97a",
