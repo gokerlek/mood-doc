@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-03T07:34:00.796Z",
+    "last_updated": "2026-04-06T06:56:51.223Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1668,13 +1668,21 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "38255b22-0e6f-4680-a99f-915e5fdf8d66",
+      "name": "",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
     {
       "id": "1b1c16d9-32f3-4120-9290-36178d0f418d",
       "name": "Kariyer ve Kişisel Gelişim",
-      "description": "Kariyer ve Kişisel Gelişim Anketi, çalışanlarınızın mevcut pozisyonlarındaki tatmin düzeylerini, kariyer hedeflerine ulaşma olanaklarını ve kişisel gelişim süreçlerini değerlendirmek için tasarlanmış kapsamlı bir araçtır. ",
+      "description": "Kariyer ve Kişisel Gelişim Anketi, çalışanlarınızın mevcut pozisyonlarındaki tatmin düzeylerini, kariyer hedeflerine ulaşma olanaklarını ve kişisel gelişim süreçlerini değerlendirmek için tasarlanmış kapsamlı bir araçtır. Bu set, çalışanların potansiyellerini tam anlamıyla ortaya koymalarına ve iş yerinde daha anlamlı bir yolculuk yapmalarına yardımcı olur.",
       "purpose": "",
       "tag_ids": [],
       "faq_ids": [],
@@ -1707,9 +1715,16 @@
         "eac6e87f-eefc-4bff-89ae-d06d6e63ef7a",
         "94f38e74-fd6f-4152-9c7a-ac98501253e3"
       ],
-      "measured_topics": [],
-      "short_description": "",
-      "survey_title": "Kariyer ve Kişisel Gelişim"
+      "measured_topics": [
+        "Şirket içindeki kariyer ilerleme süreçlerini değerlendirmek ve şeffaflık sağlamak.",
+        "Çalışanların güçlü yanlarını ve gelişim ihtiyaçlarını anlamak.",
+        "Performans değerlendirme süreçlerinin adil ve etkili olup olmadığını analiz etmek.",
+        "Çalışanların eğitim ve gelişim olanaklarına erişimini ölçmek."
+      ],
+      "why_take_survey": "Bu anket seti, çalışanlarınızın sadece bugün değil, gelecekte de şirketinize anlamlı katkılar sunmasını sağlamak için bir rehber niteliği taşır. Geri bildirimlerle, şirketinizin yetenek yönetim stratejisini geliştirin ve sürdürülebilir başarı için güçlü bir temel oluşturun.\n",
+      "short_description": "Kariyer ve Kişisel Gelişim Anketi, çalışanlarınızın mevcut pozisyonlarındaki tatmin düzeylerini, kariyer hedeflerine ulaşma olanaklarını ve kişisel gelişim süreçlerini değerlendirmek için tasarlanmış kapsamlı bir araçtır. ",
+      "survey_title": "Kariyer ve Kişisel Gelişim",
+      "survey_description": "Bu ankete vereceğiniz katkı, iş yerimizi geliştirmemiz ve daha iyi bir çalışma ortamı sunmamız için oldukça önemli rol oynayacak. Katılımınız çok değerli, zaman ayırdığınız için şimdiden teşekkür ederiz!"
     },
     {
       "id": "c121dba0-de26-4985-a9be-b0edbe36633f",
@@ -1750,9 +1765,7 @@
         "e951edff-8a9c-4d68-949c-af4e44199e0c",
         "ecd8e538-dc46-497d-9228-5057109c68d7",
         "58f61a84-ed04-4635-b5ed-36ea1201627a"
-      ],
-      "measured_topics": [],
-      "short_description": ""
+      ]
     },
     {
       "id": "cdb2576b-5905-4c24-81f2-a7d8b539698d",
@@ -1804,9 +1817,7 @@
         "258149cc-963e-4f32-a0ea-9f4552e507c2",
         "47b79f7e-b97c-4f43-a9c2-60bc46c26f81",
         "6e2e8655-916e-4f78-87bc-94c8722d2440"
-      ],
-      "measured_topics": [],
-      "short_description": ""
+      ]
     },
     {
       "id": "7df84cee-98ec-48f7-a886-fe28ace9c97a",
@@ -1842,9 +1853,7 @@
         "593f8707-e077-4a45-9b2c-8764ff052e5c",
         "d65db563-270a-4caf-9e4b-29730dc6648a",
         "7caf4651-a513-481d-939b-c89dc6036551"
-      ],
-      "measured_topics": [],
-      "short_description": ""
+      ]
     },
     {
       "id": "ed7ab522-98d4-4e90-bda6-680c17ecfe3f",
@@ -1879,9 +1888,7 @@
         "6a041557-c711-4e87-b50b-9cddfc0b7210",
         "5b4279e7-da10-44fb-9d59-09e4c5096844",
         "13e9eca5-968d-4631-8900-8a6a5a0235d9"
-      ],
-      "measured_topics": [],
-      "short_description": ""
+      ]
     },
     {
       "id": "16472a35-e819-4e33-865e-f3869779dae4",
@@ -1916,9 +1923,7 @@
         "56d81260-626a-4749-8c69-0e79910348bc",
         "1703a0a2-16af-4982-ab6b-6380524f7b22",
         "ea7fdf9f-7137-4e6d-a527-9355a2a68bdc"
-      ],
-      "measured_topics": [],
-      "short_description": ""
+      ]
     },
     {
       "id": "cf48d219-753a-42b5-bc2b-b31ea4318e8a",
@@ -1929,9 +1934,20 @@
       "faq_ids": [],
       "rule_ids": [],
       "glossary_ids": [],
-      "question_ids": [],
-      "measured_topics": [],
-      "short_description": ""
+      "question_ids": [
+        "7d74151c-ea78-4e7d-8ccd-9757dadb2a0a"
+      ]
+    },
+    {
+      "id": "944e4943-8272-4d8e-bd43-086612f5ee95",
+      "name": "",
+      "description": "",
+      "purpose": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": []
     }
   ],
   "survey_questions": [
@@ -3849,6 +3865,18 @@
       "required": true,
       "is_pool_question": false,
       "has_comment": false
+    },
+    {
+      "id": "7d74151c-ea78-4e7d-8ccd-9757dadb2a0a",
+      "text": "",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": null,
+      "is_enps": false
     }
   ],
   "agent_behavior": {
