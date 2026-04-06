@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T07:25:55.080Z",
+    "last_updated": "2026-04-06T07:30:25.295Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -2021,7 +2021,17 @@
         "e7ba1ccc-1cdb-418b-84a4-b2b0b7b685f2",
         "4b82d8c9-b006-4fd9-ac3c-c73f3c51492d",
         "d616e988-ccef-4e03-9d23-3f86bc39a50a",
-        "4b3a2f2b-69da-4555-b7bd-d9a99665b38d"
+        "4b3a2f2b-69da-4555-b7bd-d9a99665b38d",
+        "b28e6375-62e2-4d26-97d9-13f9b5e0b429",
+        "34ef4ea0-98b6-418b-ab54-20ff3bea6e7e",
+        "10330a88-3c04-4a44-8299-84d246b3eb7d",
+        "df4e729e-73ef-4612-a361-445809499bad",
+        "e34307b2-b0f2-4875-a976-d1418450ad0b",
+        "633b7b2a-3902-44c7-8b96-e7a8399244ef",
+        "92958607-7358-4567-8630-91609f6137bd",
+        "f8853e75-74f3-4d73-a6e7-0a714ed09e1c",
+        "172fc258-f77a-4d6f-b0e7-a39d901e75b2",
+        "c0e68342-2c34-44ae-9485-3d09f212334c"
       ],
       "short_description": "Çalışan Bağlılığı Analizi, kritik bağlılık boyutları hakkında geri bildirim toplayarak, verimliliği artıracak, çalışan bağlılığını güçlendirecek ve işten ayrılma oranlarını azaltacak etkili stratejiler geliştirmenize olanak sağlar.\n\n",
       "survey_description": "Çalışan bağlılığı anketi, çalışan deneyimini etkileyen faktörleri anlamanızı ve gelişim gerektiren alanları belirlemenizi sağlar. Daha verimli ve pozitif bir iş ortamı oluşturmak için bağlılığı oluşturan tüm boyutları analiz edin.\n"
@@ -4304,6 +4314,126 @@
     },
     {
       "id": "4b3a2f2b-69da-4555-b7bd-d9a99665b38d",
+      "text": "İyi günde kötü günde şirketim yanımdadır.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
+    },
+    {
+      "id": "b28e6375-62e2-4d26-97d9-13f9b5e0b429",
+      "text": "Çalıştığım işyerinden bugün aynı şekilde iş teklifi alsam yine kabul ederim",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "6b6a44ca-925e-426d-a59d-bf31ff1bcf68",
+      "is_enps": false
+    },
+    {
+      "id": "34ef4ea0-98b6-418b-ab54-20ff3bea6e7e",
+      "text": "Liderlik ekibine, karşılaşılan zorlukları etkili bir şekilde yönetebileceklerine dair güveniyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "79fd31b1-a377-4e88-85fa-bd5c4a259f8f",
+      "is_enps": false
+    },
+    {
+      "id": "10330a88-3c04-4a44-8299-84d246b3eb7d",
+      "text": "Yöneticim ekipteki tüm arkadaşlarımıza hakkaniyetli davranır",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "is_enps": false
+    },
+    {
+      "id": "df4e729e-73ef-4612-a361-445809499bad",
+      "text": "Burada yükselme ve gelişim fırsatları hak edenlere verilir.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "is_enps": false
+    },
+    {
+      "id": "e34307b2-b0f2-4875-a976-d1418450ad0b",
+      "text": "Yöneticim şirketle ilgili önemli bilgileri etkin bir şekilde aktarır.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2",
+      "is_enps": false
+    },
+    {
+      "id": "633b7b2a-3902-44c7-8b96-e7a8399244ef",
+      "text": "Yöneticim, işimiz ve şirketle ilgili önemli gelişmeler hakkında bizi düzenli olarak bilgilendirir.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "ed4ef954-b34b-4974-a8fb-cb3c04fef9b2",
+      "is_enps": false
+    },
+    {
+      "id": "92958607-7358-4567-8630-91609f6137bd",
+      "text": "Özel hayatıma yeteri kadar vakit ayırabiliyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
+    },
+    {
+      "id": "f8853e75-74f3-4d73-a6e7-0a714ed09e1c",
+      "text": "İş yerimde yalnızlık çekmiyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
+    },
+    {
+      "id": "172fc258-f77a-4d6f-b0e7-a39d901e75b2",
+      "text": "Takımım içerisinde kendimi rahatça ifade edebiliyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "358c619e-fe32-4f22-8762-9f8aa96e2548",
+      "is_enps": false
+    },
+    {
+      "id": "c0e68342-2c34-44ae-9485-3d09f212334c",
       "text": "",
       "type": "likert",
       "required": true,
