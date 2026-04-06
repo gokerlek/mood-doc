@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T08:26:26.115Z",
+    "last_updated": "2026-04-06T08:32:49.619Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1716,6 +1716,30 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "cb38849e-f508-492e-914b-2aca38221454",
+      "name": "Eşitlik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "32971d8b-5daf-43c3-8527-4935196939d6",
+      "name": "Çeşitlilik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "e2d652ca-c380-4b91-affe-1a879d85dcda",
+      "name": "Güven Ortamı",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -2145,6 +2169,61 @@
       ],
       "why_take_survey": "Çalışanların işyerlerini değil liderlerini terk ediyor olmaları birçok örnekte geçerliliği kanıtlanmış bir görüş. Prosedürleriniz ne kadar güvenilir, liderlerinizin yetkinliği ne kadar yüksek olursa olsun, çalışan görüşlerini mutlaka değerlendirin. Küçük bir düzenleme ve değişiklik ile değerlendirebileceğiniz bir yeteneği öngörülemeyen nedenlerle kaybetmeyin.\n",
       "survey_description": "(Şirketi Adı) içerisindeki yönetim, liderlik hakkında düşüncelerinizi ve bakış açınızı anlamak için sizlere birkaç soru sormak istiyoruz. Katılımınız çok değerli, zaman ayırdığınız için şimdiden teşekkür ederiz!"
+    },
+    {
+      "id": "dae5573f-24f7-468c-9c33-ccabb924f518",
+      "name": "Çeşitlilik, Eşitlik ve Kapsayıcılık (DEI)",
+      "description": "DEI (Çeşitlilik, Eşitlik ve Kapsayıcılık) anketi, organizasyonunuzun tüm çalışanlar için kapsayıcı ve adil bir ortam yaratmada ne kadar başarılı olduğunu değerlendirmenize yardımcı olur. Çalışanların algılarını ve deneyimlerini ölçerek, gelişim alanlarını belirleyebilir ve daha destekleyici bir iş yeri oluşturabilirsiniz.\n\n",
+      "purpose": "",
+      "survey_title": "Çeşitlilik, Eşitlik ve Kapsayıcılık",
+      "survey_description": "Şirketimizin kimliği, cinsiyeti, dili, dini, düşüncesi ne olursa olsun herkese eşit yaklaşan, eşit olanaklar sunan ve herkesi içine alan bir çatı olması çok önemli. Peki gerçekte bu hedefe ne kadar yakınız? Sizin düşüncelerinizle daha somut adımlar atabilir, çözümler oluşturabiliriz. Ankete ayıracağınız kısa bir süre büyük değişim yaratabilir.",
+      "measured_topics": [
+        "Güven Ortamı",
+        "Çeşitlilik",
+        "Adalet",
+        "Kapsayıcılık",
+        "Eşitlik"
+      ],
+      "why_take_survey": "DEI anketi yapmak, şirketinizin çalışanların bakış açısından iş yerinde nasıl deneyimler yaşadığını anlamanıza ve daha kapsayıcı bir ortam için neler yapılması gerektiğini görmenizi sağlar. Ayrıca, çalışanlar değer gördüklerinde ve seslerinin duyulduğunu hissettiklerinde, çalışan bağlılığını artırabilir ve deneyimi iyileştirebilirsiniz.\n",
+      "short_description": "Çeşitlilik ve kapsayıcılık metriklerini, gelişime açık alanları belirlemek, sorunlar büyümeden önce çalışanlarınızın düşüncelerini dinlemek, hedefler belirlemek ve aksiyonların etkisini ölçmek için kullanabilirsiniz.\n",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": [
+        "1e9f43de-3242-4344-9e8e-d86548ecf0a6",
+        "a90dc74c-20d5-4b3a-9d44-b47e078e2795",
+        "8db2ec9d-c77b-48d5-bd0a-5293412d1328",
+        "94df3897-663e-4b9a-87ef-a978c2e06125",
+        "35782067-bedd-488b-98c9-0c973e543da3",
+        "fee53868-84f3-4685-ae0a-fc2d0d7ad077",
+        "05ac0553-dcf5-4cc4-a5ec-a94cf57dff42",
+        "c90ffa42-d21b-4810-9d8e-aba1e98cb465",
+        "ecfab437-f272-451c-9182-4ec5e1dde961",
+        "9ad0fd60-4175-4901-bece-24b533ee7528",
+        "73fa14a0-9d0f-4e14-a5da-1155ca577492",
+        "7907be45-3e2c-40a1-a41c-1e5d8ff8cebe",
+        "50dec941-12e5-4623-88a3-46dbd4dd372c",
+        "9a3210ad-bc3e-49fd-93d2-2d307131007f",
+        "e3407d63-170e-411e-8c52-11a370361739",
+        "cd267550-5532-436f-9b5a-e055264e7c8b"
+      ]
+    },
+    {
+      "id": "36dbcead-316b-430e-b959-8c0f874c0717",
+      "name": "",
+      "description": "",
+      "purpose": "",
+      "survey_title": "",
+      "survey_description": "",
+      "measured_topics": [],
+      "why_take_survey": "",
+      "short_description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": []
     }
   ],
   "survey_questions": [
@@ -5098,6 +5177,198 @@
       "required": false,
       "is_pool_question": true,
       "has_comment": false
+    },
+    {
+      "id": "1e9f43de-3242-4344-9e8e-d86548ecf0a6",
+      "text": "İş yerimde bana değer verildiğini ve saygı duyulduğunu hissediyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "807aa7ef-b790-4b36-97aa-fdc83e9e8a18",
+      "is_enps": false
+    },
+    {
+      "id": "a90dc74c-20d5-4b3a-9d44-b47e078e2795",
+      "text": "Kendimi çalıştığım kurumun bir parçası olarak hissediyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "807aa7ef-b790-4b36-97aa-fdc83e9e8a18",
+      "is_enps": false
+    },
+    {
+      "id": "8db2ec9d-c77b-48d5-bd0a-5293412d1328",
+      "text": "İş yerimde bire bir çalıştığım yöneticilerim kişiliğimin farklı yönlerini tanır ve bana değer verir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "807aa7ef-b790-4b36-97aa-fdc83e9e8a18",
+      "is_enps": false
+    },
+    {
+      "id": "94df3897-663e-4b9a-87ef-a978c2e06125",
+      "text": "Şirketimde tüm farklılıklarım ile (yaş, cinsiyet, etnik köken, yaşam tarzı, eğitim, geçmiş vb.)  kendim olabilirim. ",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "807aa7ef-b790-4b36-97aa-fdc83e9e8a18",
+      "is_enps": false
+    },
+    {
+      "id": "35782067-bedd-488b-98c9-0c973e543da3",
+      "text": "Şirketimde herkesin iş dışındaki yaşam alanına ve iş dışındaki zamanına saygı gösterilir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "807aa7ef-b790-4b36-97aa-fdc83e9e8a18",
+      "is_enps": false
+    },
+    {
+      "id": "fee53868-84f3-4685-ae0a-fc2d0d7ad077",
+      "text": "İş yerim mesleki ve kişisel gelişimim için olanaklar sunar.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "807aa7ef-b790-4b36-97aa-fdc83e9e8a18",
+      "is_enps": false
+    },
+    {
+      "id": "05ac0553-dcf5-4cc4-a5ec-a94cf57dff42",
+      "text": "İş yerimin işe alım ve kariyer gelişim süreçlerinin önyargılardan arınmış olduğuna inanıyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "807aa7ef-b790-4b36-97aa-fdc83e9e8a18",
+      "is_enps": false
+    },
+    {
+      "id": "c90ffa42-d21b-4810-9d8e-aba1e98cb465",
+      "text": "İşyerimde farklılıklara bakılmaksızın herkes eşit istihdam fırsatlarına sahiptir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "cb38849e-f508-492e-914b-2aca38221454",
+      "is_enps": false
+    },
+    {
+      "id": "ecfab437-f272-451c-9182-4ec5e1dde961",
+      "text": "İşyerimde çalışan herkes için kariyer gelişim yolu vardır.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "cb38849e-f508-492e-914b-2aca38221454",
+      "is_enps": false
+    },
+    {
+      "id": "9ad0fd60-4175-4901-bece-24b533ee7528",
+      "text": "Performansım adil bir şekilde değerlendirilir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "is_enps": false
+    },
+    {
+      "id": "73fa14a0-9d0f-4e14-a5da-1155ca577492",
+      "text": "Çalışma ortamımda kişisel ilişkiler ve yakınlıklar iş süreçlerinde adaletsizliğe yol açmaz.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "40afd564-434c-4e05-b2af-816c883a8dd2",
+      "is_enps": false
+    },
+    {
+      "id": "7907be45-3e2c-40a1-a41c-1e5d8ff8cebe",
+      "text": "Bire bir çalıştığım yöneticim ekip içinde çeşitliliği sağlamaya özen gösterir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "32971d8b-5daf-43c3-8527-4935196939d6",
+      "is_enps": false
+    },
+    {
+      "id": "50dec941-12e5-4623-88a3-46dbd4dd372c",
+      "text": "Üst yönetim çalışanların çeşitliliğini sağlama ve kapsayıcı bir iş yeri yaratma konusunda kararlıdır.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": null,
+      "is_enps": false
+    },
+    {
+      "id": "9a3210ad-bc3e-49fd-93d2-2d307131007f",
+      "text": "Şirketimin ayrımcılık, şiddet ve cinsel taciz durumlarında gerekli önlemleri alacağına inanıyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "e2d652ca-c380-4b91-affe-1a879d85dcda",
+      "is_enps": false
+    },
+    {
+      "id": "e3407d63-170e-411e-8c52-11a370361739",
+      "text": "Ekip içersinde kötü bir karşılık almadan hata yapabilirim.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "e2d652ca-c380-4b91-affe-1a879d85dcda",
+      "is_enps": false
+    },
+    {
+      "id": "cd267550-5532-436f-9b5a-e055264e7c8b",
+      "text": "",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": null,
+      "is_enps": false
     }
   ],
   "agent_behavior": {
