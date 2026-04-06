@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T07:33:16.599Z",
+    "last_updated": "2026-04-06T07:58:22.319Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -2045,7 +2045,14 @@
         "7d33e2a8-9431-4d03-80f2-37f2010eee8a",
         "7af6047f-db5b-457a-8323-dd9c46898588",
         "5817bb28-bcbb-49cc-8ee5-68a32229a593",
-        "3a584001-f130-4c68-9441-e20d8c730ba7"
+        "3a584001-f130-4c68-9441-e20d8c730ba7",
+        "fc386158-b0fc-44ac-8c4c-60b1c1d4b591",
+        "6be97f13-5459-4930-a556-a7f00d21ee7c",
+        "1f039e06-c5ec-4249-a5a3-08db25468524",
+        "11831954-478f-4e2e-9f6d-37bb07eb9d35",
+        "60298aeb-98c0-404a-b6f9-69958f90187a",
+        "c5f1747d-e405-4d30-880d-d6965202ea0d",
+        "bf7e2f13-099e-4ce4-9134-5dcb4e009cc7"
       ],
       "short_description": "Çalışan Bağlılığı Analizi, kritik bağlılık boyutları hakkında geri bildirim toplayarak, verimliliği artıracak, çalışan bağlılığını güçlendirecek ve işten ayrılma oranlarını azaltacak etkili stratejiler geliştirmenize olanak sağlar.\n\n",
       "survey_description": "Çalışan bağlılığı anketi, çalışan deneyimini etkileyen faktörleri anlamanızı ve gelişim gerektiren alanları belirlemenizi sağlar. Daha verimli ve pozitif bir iş ortamı oluşturmak için bağlılığı oluşturan tüm boyutları analiz edin.\n",
@@ -4521,14 +4528,98 @@
     },
     {
       "id": "3a584001-f130-4c68-9441-e20d8c730ba7",
-      "text": "",
+      "text": "Şirketim işimi en iyi şekilde yapabilmem için bana gerekli araçları sağlar.",
       "type": "likert",
-      "required": true,
-      "is_pool_question": false,
+      "required": false,
+      "is_pool_question": true,
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": null,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
+    },
+    {
+      "id": "fc386158-b0fc-44ac-8c4c-60b1c1d4b591",
+      "text": "İşyerim rahat ve güvende çalışabilmem için gereken olanakları sunar",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
+    },
+    {
+      "id": "6be97f13-5459-4930-a556-a7f00d21ee7c",
+      "text": "Aldığım maaş ve yan hakların farklı şirketlerdeki benzer rollere kıyasla adil olduğunu düşünüyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
+    },
+    {
+      "id": "1f039e06-c5ec-4249-a5a3-08db25468524",
+      "text": "Sağlanan yemek olanaklarından memnunum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
+    },
+    {
+      "id": "11831954-478f-4e2e-9f6d-37bb07eb9d35",
+      "text": "Çalışma saatlerinden memnunum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
+    },
+    {
+      "id": "60298aeb-98c0-404a-b6f9-69958f90187a",
+      "text": "Çalışma yerinden memnunum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
+    },
+    {
+      "id": "c5f1747d-e405-4d30-880d-d6965202ea0d",
+      "text": "Çalışma düzenimden (uzaktan/hibrit/ofiste) memnunum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
+      "is_enps": false
+    },
+    {
+      "id": "bf7e2f13-099e-4ce4-9134-5dcb4e009cc7",
+      "text": "Burada emeğimin karşılığını aldığımı düşünüyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "5ee2a2a5-ddcc-47a4-8393-0c4feb63f588",
       "is_enps": false
     }
   ],
