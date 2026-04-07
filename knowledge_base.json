@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-07T10:28:13.544Z",
+    "last_updated": "2026-04-07T10:29:33.088Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -2766,6 +2766,26 @@
         "5472808a-2529-4808-9b72-6d2e369597bc",
         "44e39c6c-25a9-4b27-b369-f8016a05c9f3"
       ]
+    },
+    {
+      "id": "98f918fd-44c9-4ea8-ab32-0316dda5ca60",
+      "name": "Uzaktan Çalışma Ölçeği\n",
+      "description": "Uzaktan Çalışma Ölçeği, organizasyonunuzun uzaktan çalışanları ne kadar iyi desteklediğini ve bu çalışma ortamında verimliliği nasıl teşvik edeceğinizi değerlendirmenize yardımcı olur. Çalışan deneyimlerini ve karşılaştıkları zorlukları ölçerek, iyileştirilmesi gereken alanları belirleyebilir ve daha verimli ve destekleyici bir uzaktan çalışma kültürü oluşturabilirsiniz.\n\n",
+      "purpose": "",
+      "survey_title": "",
+      "survey_description": "",
+      "measured_topics": [
+        "İş Birliği",
+        "Esenlik",
+        ""
+      ],
+      "why_take_survey": "Uzaktan Çalışma, şirketinizin uzaktan çalışanların çalışma ortamını nasıl deneyimlediğini anlamanızı sağlar. Ayrıca zorlukları belirlemenize, iletişimi iyileştirmenize ve çalışanların kendilerini desteklenmiş hissetmelerini sağlamanıza yardımcı olur; bu da bağlılık, memnuniyet ve verimliliği artırır.\n",
+      "short_description": "Uzaktan çalışmada çalışanlarınızın hissettiklerini ve karşılaştıkları zorlukları öğrenerek etkin bir şekilde bu deneyimi yönetmek için Uzaktan Çalışma Ölçeğimizi kullanın.\n",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": []
     }
   ],
   "survey_questions": [
