@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-07T09:56:05.674Z",
+    "last_updated": "2026-04-07T10:03:23.737Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -2594,6 +2594,22 @@
         "01b5d884-30f6-4127-88da-15e959d38747",
         "9dca895e-378d-4ba6-b00f-5c8f1a246156"
       ]
+    },
+    {
+      "id": "6b5a7eb2-9489-4fef-a9e6-46fba2e7104f",
+      "name": "",
+      "description": "",
+      "purpose": "",
+      "survey_title": "",
+      "survey_description": "",
+      "measured_topics": [],
+      "why_take_survey": "",
+      "short_description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": []
     }
   ],
   "survey_questions": [
