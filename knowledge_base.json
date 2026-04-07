@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-07T10:03:23.737Z",
+    "last_updated": "2026-04-07T10:04:52.117Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -2597,14 +2597,19 @@
     },
     {
       "id": "6b5a7eb2-9489-4fef-a9e6-46fba2e7104f",
-      "name": "",
-      "description": "",
+      "name": "Etkinlik Değerlendirme\n",
+      "description": "Etkinlik değerlendirme seti, çalışanlarınızın katıldığı etkinliklerin etkisini ve başarısını ölçmek için ideal bir araçtır. Bu anket, organizasyonunuzu geliştirmenize ve gelecekteki etkinliklerin daha verimli geçmesini sağlamanıza yardımcı olur.\n\n",
       "purpose": "",
-      "survey_title": "",
-      "survey_description": "",
-      "measured_topics": [],
-      "why_take_survey": "",
-      "short_description": "",
+      "survey_title": "Etkinlik Değerlendirme",
+      "survey_description": "Etkinlik değerlendirme seti, çalışanlarınızın katıldığı etkinliklerin etkisini ve başarısını ölçmek için ideal bir araçtır. Bu anket, organizasyonunuzu geliştirmenize ve gelecekteki etkinliklerin daha verimli geçmesini sağlamanıza yardımcı olur.",
+      "measured_topics": [
+        "Zaman Yönetimi",
+        "Genel Memnuniyet",
+        "Katılım ve Etkileşim",
+        "Organizasyon ve Planlama"
+      ],
+      "why_take_survey": "Çalışanlarınızdan etkinlik hakkında doğrudan geri bildirim alarak memnuniyet düzeylerini ölçerek, etkinliklerinizi daha iyi hale getirmek için hangi alanlarda iyileştirme yapmanız gerektiğini öğrenebilirsiniz.\n",
+      "short_description": "Etkinlik değerlendirme seti, çalışanlarınızın katıldığı etkinliklerin etkisini ve başarısını ölçmek için ideal bir araçtır. Bu anket, organizasyonunuzu geliştirmenize ve gelecekteki etkinliklerin daha verimli geçmesini sağlamanıza yardımcı olur.\n",
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": [],
