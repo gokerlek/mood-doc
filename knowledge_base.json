@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-06T08:56:48.274Z",
+    "last_updated": "2026-04-07T08:03:38.954Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1764,6 +1764,46 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "20475069-0b0b-4f7b-a58e-7f01143ed21b",
+      "name": "Zihinsel Esenlik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "2fe9e2db-e146-426b-a675-265a9ace7760",
+      "name": "Fiziksel Esenlik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "130f611a-b505-4996-931f-bf6d1f6fef9d",
+      "name": "Finansal Esenlik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "042feab4-6d59-473f-a1a9-f712ea8b4f3b",
+      "name": "Sosyal Yaşam",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "4c2bdd82-02b7-4555-a4f6-675c8d23152e",
+      "name": "Tükenmişlik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -2298,6 +2338,29 @@
         "b3dc1c0a-bb10-40bb-96de-0691cb10fc22",
         "09a43f21-63f2-40d8-ab9b-5ffde4202433"
       ]
+    },
+    {
+      "id": "3749175d-d57f-412d-98a9-da23c968d379",
+      "name": "Esenlik Anketi\n",
+      "description": "Esenlik anketi ile çalışanlarınızın kendilerini farklı alanlarda ve bütünsel olarak ne kadar iyi hissettiklerini ölçebilirsiniz. Çalışanların iyi hissetmesi, iş verimliliğinden müşteri memnuniyetine her adımda en önemli konu. Unutmayın; hepimiz gerçekten iyiysek işler de iyi demektir!\n\n",
+      "purpose": "",
+      "survey_title": "Çalışan Esenliği Ölçeği",
+      "survey_description": "(Şirketi ismi) olarak sağlığınızı ve esenliğinizi çok önemsiyoruz. Bu anketle, hepimiz için daha güvenli ve sağlıklı koşullar yaratmamızı sağlayacak içgörüler almayı umuyoruz. Katılımınız çok değerli, zaman ayırdığınız için şimdiden teşekkür ederiz!",
+      "measured_topics": [
+        "Tükenmişlik",
+        "İş yeri",
+        "Zihinsel Sağlık",
+        "Finansal",
+        "Bedensel Sağlık",
+        "Sosyal Yaşam"
+      ],
+      "why_take_survey": "Çalışanın yedi ana bileşen üzerinden kendisini iyi hissetmesi işin devamlılığı için çok önemli. İşten çıkış anketlerinde karşımıza çıkan en önemli sorunlardan biri çalışanların, bedensel, zihinsel, finansal, işyeri, tükenmişlik, veya sosyal nedenlerle kendilerini iyi hissetmiyor olmaları. Bu sorunlarla ilgili öngörüler yetenek yönetiminde size büyük yarar sağlayacak.\n",
+      "short_description": "Çalışanlarınız iyi hissetmeleri, çalışan bağlılığı ve verimlilik için çok kritik önem taşır. Moodivation esenlik anketiyle, çalışanlarınızın zihinsel, sosyal ve fiziksel iyi olma halini ölçümleyebilirsiniz.\n",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": []
     }
   ],
   "survey_questions": [
