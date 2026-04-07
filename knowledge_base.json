@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-07T08:13:32.571Z",
+    "last_updated": "2026-04-07T08:51:32.167Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1820,6 +1820,38 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "10296e5c-f72a-4f09-b2f9-d2fa3b5cb537",
+      "name": "Eğitmen Etkililiği",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "44335d7e-a782-4ccb-bdcd-6040d079e2ee",
+      "name": "İçerik Kalitesi",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "d52e357e-58e1-44f7-ae93-29b2f4752604",
+      "name": "Öğrenme Çıktıları",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "4491d64a-c8f2-47ef-aeb9-f109c703b406",
+      "name": "Etkinlik Organizasyonu",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -2413,6 +2445,29 @@
         "e6f70ad4-bc56-4a92-bc86-13eb33d15206",
         "61a9202d-415b-4ac4-b593-0417ae6081ec",
         "21a2f5fe-a55c-4783-8d07-c8a068bd7f5d"
+      ]
+    },
+    {
+      "id": "bac8c605-8c87-4e41-b4e1-73de8e556e93",
+      "name": "Eğitim Değerlendirme\n",
+      "description": "Öğrenme ve gelişim ortamı çalışan bağlılığının en önemli itici güçlerinden biri. Peki, çalışanlara sunduğumuz öğrenme ve gelişim araçlarının etkisini ölçüyor musunuz? Moodivation Eğitim Değerlendirme Anketi ile her eğitim sonrası ayrıntılı bir analiz yapabilme şansınız var.\n\n\n",
+      "purpose": "",
+      "survey_title": "Eğitim Değerlendirme",
+      "survey_description": "Gelişiminiz bizim için çok önemli ve aldığınız eğitim sonrası yanıtlayacağınız bu anket ile devam eden eğitimlerinizi planlamamız mümkün olacak. Sizin için en doğru eğitim planını sizin geri bildirimlerinizden yola çıkarak oluşturacağız.",
+      "measured_topics": [
+        "Genel Memnuniyet",
+        "Eğitmen",
+        "Öğrenim ve Uygulama",
+        "İçerik Kalitesi"
+      ],
+      "why_take_survey": "Çalışanların eğitim sonrasında geri bildirim verebilmesi ve bu geri bildirimlerin analizi, gelecek planlamalarda büyük bir avantaj sağlar. Moodivation Eğitim Değerlendirme Anketi ile verimli bir öğrenme gelişim atmosferi inşa edebilirsiniz.\n",
+      "short_description": "Çalışanların eğitim sonrasında verdikleri geri bildirimler gelecek planlamalarda büyük bir avantaj sağlar. Moodivation Eğitim Değerlendirme Anketi ile verimli bir öğrenme gelişim atmosferi inşa edin.",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": [
+        "b4a5adb7-3be9-4028-8fb5-c539096a2a59"
       ]
     }
   ],
@@ -6489,6 +6544,18 @@
       "required": false,
       "is_pool_question": true,
       "has_comment": false
+    },
+    {
+      "id": "b4a5adb7-3be9-4028-8fb5-c539096a2a59",
+      "text": "Eğitmen, konu hakkında bilgiliydi.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": null,
+      "is_enps": false
     }
   ],
   "agent_behavior": {
