@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-07T10:29:33.088Z",
+    "last_updated": "2026-04-07T10:32:21.637Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1948,6 +1948,22 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "b113dc68-c305-4e50-8b50-599cff3d5c83",
+      "name": "Verimlilik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "fa7c28fc-6101-45c3-9ba4-498333eb44fd",
+      "name": "Bağlantı",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -2772,12 +2788,13 @@
       "name": "Uzaktan Çalışma Ölçeği\n",
       "description": "Uzaktan Çalışma Ölçeği, organizasyonunuzun uzaktan çalışanları ne kadar iyi desteklediğini ve bu çalışma ortamında verimliliği nasıl teşvik edeceğinizi değerlendirmenize yardımcı olur. Çalışan deneyimlerini ve karşılaştıkları zorlukları ölçerek, iyileştirilmesi gereken alanları belirleyebilir ve daha verimli ve destekleyici bir uzaktan çalışma kültürü oluşturabilirsiniz.\n\n",
       "purpose": "",
-      "survey_title": "",
-      "survey_description": "",
+      "survey_title": "Uzaktan Çalışma Ölçeği",
+      "survey_description": "Hibrit veya uzaktan çalışma sistemiyle ilgili duygu ve düşünceleriniz, şirketimizde uygulanacak çalışma sistemiyle ilgili çok değerli bir veri olacak. Birkaç dakikanızı ayırarak Uzaktan Çalışma Sistemi Anketi’mizi yanıtlayın, neleri geliştireceğimize birlikte karar verelim.",
       "measured_topics": [
         "İş Birliği",
         "Esenlik",
-        ""
+        "Bağlantı",
+        "Verimlilik"
       ],
       "why_take_survey": "Uzaktan Çalışma, şirketinizin uzaktan çalışanların çalışma ortamını nasıl deneyimlediğini anlamanızı sağlar. Ayrıca zorlukları belirlemenize, iletişimi iyileştirmenize ve çalışanların kendilerini desteklenmiş hissetmelerini sağlamanıza yardımcı olur; bu da bağlılık, memnuniyet ve verimliliği artırır.\n",
       "short_description": "Uzaktan çalışmada çalışanlarınızın hissettiklerini ve karşılaştıkları zorlukları öğrenerek etkin bir şekilde bu deneyimi yönetmek için Uzaktan Çalışma Ölçeğimizi kullanın.\n",
@@ -2785,7 +2802,13 @@
       "faq_ids": [],
       "rule_ids": [],
       "glossary_ids": [],
-      "question_ids": []
+      "question_ids": [
+        "957bbdd1-8e73-4a5a-a8bf-44cfafb6564f",
+        "d0667a03-8515-4128-a99a-40480a236eba",
+        "9e3070a1-1794-4883-9c8c-50e0ee1aefcc",
+        "25809302-919e-4ea8-8da6-f181010918d5",
+        "92e13b43-95c5-4809-b71e-2472bb2494a8"
+      ]
     }
   ],
   "survey_questions": [
@@ -8220,6 +8243,66 @@
       "scale_min": 1,
       "scale_max": 5,
       "driver_id": "5a963269-f411-43f4-ba20-bf1baf784704",
+      "is_enps": false
+    },
+    {
+      "id": "957bbdd1-8e73-4a5a-a8bf-44cfafb6564f",
+      "text": "Mesai saati sonunda işle ilişkimi kesebiliyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
+    },
+    {
+      "id": "d0667a03-8515-4128-a99a-40480a236eba",
+      "text": "Ofisten uzakta çalışırken kendimi rahat hissediyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
+    },
+    {
+      "id": "9e3070a1-1794-4883-9c8c-50e0ee1aefcc",
+      "text": "Kendimi ekibimde dışlanmış hissetmiyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "2d902084-7087-4bdb-987b-ddee37804717",
+      "is_enps": false
+    },
+    {
+      "id": "25809302-919e-4ea8-8da6-f181010918d5",
+      "text": "İş hedeflerim her gün, her hafta bellidir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "b113dc68-c305-4e50-8b50-599cff3d5c83",
+      "is_enps": false
+    },
+    {
+      "id": "92e13b43-95c5-4809-b71e-2472bb2494a8",
+      "text": "",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": null,
       "is_enps": false
     }
   ],
