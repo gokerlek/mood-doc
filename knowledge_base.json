@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-07T10:35:00.000Z",
+    "last_updated": "2026-04-07T11:23:50.627Z",
     "changelog": [
       {
         "date": "2026-04-07",
@@ -887,28 +887,28 @@
         "id": "client-ui-group-auth",
         "label": "Auth and Entry",
         "color": "#f97316",
-        "x": 40,
-        "y": 40,
+        "x": -576.628567489619,
+        "y": -1024.5681203150152,
         "node_type": "group",
-        "width": 440,
-        "height": 320
+        "width": 454,
+        "height": 347
       },
       {
         "id": "client-ui-group-survey-access",
         "label": "Survey Access",
         "color": "#eab308",
-        "x": 40,
-        "y": 400,
+        "x": 24.200075357705884,
+        "y": -5.790319116440848,
         "node_type": "group",
-        "width": 440,
+        "width": 691,
         "height": 420
       },
       {
         "id": "client-ui-group-dashboard",
         "label": "Dashboard Core",
         "color": "#3b82f6",
-        "x": 520,
-        "y": 40,
+        "x": 805.6947869752034,
+        "y": -680.6883426152892,
         "node_type": "group",
         "width": 440,
         "height": 430
@@ -917,48 +917,48 @@
         "id": "client-ui-group-reports",
         "label": "Reports",
         "color": "#22c55e",
-        "x": 1000,
-        "y": 40,
+        "x": 1336.4655003408316,
+        "y": -1108.13821547412,
         "node_type": "group",
-        "width": 560,
+        "width": 974,
         "height": 540
       },
       {
         "id": "client-ui-group-onboarding",
         "label": "Onboarding",
         "color": "#a855f7",
-        "x": 1600,
-        "y": 40,
+        "x": 1196,
+        "y": -28,
         "node_type": "group",
-        "width": 420,
+        "width": 733,
         "height": 380
       },
       {
         "id": "client-ui-group-surveys",
         "label": "Survey Builder",
         "color": "#ef4444",
-        "x": 520,
-        "y": 520,
+        "x": 1295.0109589500203,
+        "y": -477.5476478648943,
         "node_type": "group",
-        "width": 1040,
-        "height": 380
+        "width": 1263,
+        "height": 258
       },
       {
         "id": "client-ui-group-user",
         "label": "Personal User",
         "color": "#3b82f6",
-        "x": 40,
-        "y": 860,
+        "x": 223.80722712230954,
+        "y": -471.85657930721,
         "node_type": "group",
-        "width": 440,
-        "height": 220
+        "width": 267,
+        "height": 139
       },
       {
         "id": "client-ui-group-system",
         "label": "System and Utility",
         "color": "#64748b",
-        "x": 1600,
-        "y": 460,
+        "x": 1302,
+        "y": 442,
         "node_type": "group",
         "width": 420,
         "height": 320
@@ -1038,8 +1038,8 @@
       {
         "id": "client-ui-create-password",
         "label": "Create Your Password",
-        "x": 24,
-        "y": 200,
+        "x": 34.89420522847587,
+        "y": 202.153641827807,
         "parent_id": "client-ui-group-auth",
         "page_data": {
           "description": "Route: /create-your-password/:token. First-login setup page.",
@@ -1074,8 +1074,8 @@
       {
         "id": "client-ui-login-link-code",
         "label": "Token Login",
-        "x": 24,
-        "y": 260,
+        "x": 35.98887883920304,
+        "y": 277.94995477641385,
         "parent_id": "client-ui-group-auth",
         "page_data": {
           "description": "Routes: /token/:code and /t/:code. Token based entry route.",
@@ -1092,8 +1092,8 @@
       {
         "id": "client-ui-open-survey-token",
         "label": "Open Survey Token",
-        "x": 220,
-        "y": 260,
+        "x": 228.8236753807931,
+        "y": 277.68261568542766,
         "parent_id": "client-ui-group-auth",
         "page_data": {
           "description": "Routes: /p/token/:token and /p/t/:token. Public survey token gateway.",
@@ -1110,9 +1110,9 @@
       {
         "id": "client-ui-home",
         "label": "Home Redirect Hub",
-        "x": 24,
-        "y": 24,
-        "parent_id": "client-ui-group-dashboard",
+        "x": 286.1620147498204,
+        "y": -998.5405058545832,
+        "parent_id": null,
         "page_data": {
           "description": "Route: /. Not a real landing page. Redirects to /user or the first dashboardMenu route after auth and permission checks.",
           "tag_ids": [],
@@ -1150,8 +1150,8 @@
       {
         "id": "075442b7-31bd-478b-ad53-9f3cf51d8b9d",
         "label": "Onboarding Report",
-        "x": 24,
-        "y": 24,
+        "x": 12.896900264999658,
+        "y": 75.0742587810015,
         "parent_id": "client-ui-group-onboarding",
         "page_data": {
           "description": "Route: /reports/onboarding. Entry page for onboarding analytics.",
@@ -1168,8 +1168,8 @@
       {
         "id": "0a5da42b-afdc-41bf-b51d-650808f31a42",
         "label": "Exit Survey Report",
-        "x": 24,
-        "y": 116,
+        "x": 71.61860215014713,
+        "y": 95.40817204318,
         "parent_id": "client-ui-group-reports",
         "page_data": {
           "description": "Route: /reports/exit-survey. Exit survey reporting landing page.",
@@ -1186,8 +1186,8 @@
       {
         "id": "ee8c6f13-dbdd-437d-b146-da326ba7b704",
         "label": "Experience Report",
-        "x": 24,
-        "y": 208,
+        "x": 33.227405140997234,
+        "y": 385.3712321547265,
         "parent_id": "client-ui-group-reports",
         "page_data": {
           "description": "Route: /experience. Experience report landing page.",
@@ -1204,8 +1204,8 @@
       {
         "id": "b28f4d2a-c112-4aaa-905a-ab11282b7458",
         "label": "Survey Templates",
-        "x": 24,
-        "y": 24,
+        "x": 310.31790586761554,
+        "y": 26.053081298913412,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/templates. Template list used as the builder entry library.",
@@ -1222,8 +1222,8 @@
       {
         "id": "947f8728-e036-4963-9987-1973bf552542",
         "label": "Feedbacks",
-        "x": 24,
-        "y": 116,
+        "x": 32.54243566324021,
+        "y": 146.32070566713526,
         "parent_id": "client-ui-group-dashboard",
         "page_data": {
           "description": "Route: /feedbacks. Feedback management page in the dashboard shell.",
@@ -1240,8 +1240,8 @@
       {
         "id": "8c25e34f-dbfe-48d4-8371-7c7e45c56787",
         "label": "Settings",
-        "x": 24,
-        "y": 300,
+        "x": 27.76581597384802,
+        "y": 205.85460065380198,
         "parent_id": "client-ui-group-dashboard",
         "page_data": {
           "description": "Route: /settings. Settings page inside DefaultLayout.",
@@ -1274,8 +1274,8 @@
       {
         "id": "0263a5ab-1173-4609-8ba9-486097238e27",
         "label": "People",
-        "x": 220,
-        "y": 116,
+        "x": 32.06569965509698,
+        "y": 88.75488223973753,
         "parent_id": "client-ui-group-dashboard",
         "page_data": {
           "description": "Route: /people. Employee list and people management.",
@@ -1310,8 +1310,8 @@
       {
         "id": "69606afa-1d0c-4335-8af3-93982a359e44",
         "label": "Comments",
-        "x": 264,
-        "y": 300,
+        "x": 746.9008690455271,
+        "y": 21.1273112943029,
         "parent_id": "client-ui-group-reports",
         "page_data": {
           "description": "Route: /comments/:id/:surveyKey. Shared comments detail page.",
@@ -1328,8 +1328,8 @@
       {
         "id": "9f1ef007-d03b-4591-8721-8fcd9a394023",
         "label": "Create New Survey",
-        "x": 24,
-        "y": 116,
+        "x": 17.997325828117482,
+        "y": 23.56128229673203,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/create-new-survey. Survey creation entry point.",
@@ -1346,8 +1346,8 @@
       {
         "id": "052e46a8-7add-4320-b91b-5a9bc0409276",
         "label": "Other Answers",
-        "x": 264,
-        "y": 392,
+        "x": 752.0272052349696,
+        "y": 80.31875968186796,
         "parent_id": "client-ui-group-reports",
         "page_data": {
           "description": "Route: /reports/answers/:surveyId/other/:questionId. Open-ended answer detail page.",
@@ -1364,8 +1364,8 @@
       {
         "id": "405922fd-c383-47aa-b3f5-8d5ef0eaef1b",
         "label": "Template Preview",
-        "x": 220,
-        "y": 24,
+        "x": 635.405716604826,
+        "y": 18.51701129862363,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/template-preview/:id. Template preview before entering the builder.",
@@ -1398,8 +1398,8 @@
       {
         "id": "client-ui-my-requests",
         "label": "My Requests",
-        "x": 220,
-        "y": 300,
+        "x": 233.90528400426956,
+        "y": 45.503086320606485,
         "parent_id": "client-ui-group-dashboard",
         "page_data": {
           "description": "Route: /my-requests. Request tracking page in DefaultLayout.",
@@ -1416,8 +1416,8 @@
       {
         "id": "client-ui-survey-overview",
         "label": "Survey Overview",
-        "x": 24,
-        "y": 24,
+        "x": 24.845572287377536,
+        "y": 58.6684637824781,
         "parent_id": "client-ui-group-survey-access",
         "page_data": {
           "description": "Route: /survey/overview. Authenticated survey entry screen in SurveyLayout.",
@@ -1434,8 +1434,8 @@
       {
         "id": "client-ui-survey-questions",
         "label": "Survey Questions",
-        "x": 220,
-        "y": 24,
+        "x": 265.6609035183858,
+        "y": 68.81533123100827,
         "parent_id": "client-ui-group-survey-access",
         "page_data": {
           "description": "Route: /survey/questions. Main survey question flow in BlankLayout.",
@@ -1452,8 +1452,8 @@
       {
         "id": "client-ui-survey-complete",
         "label": "Survey Complete",
-        "x": 24,
-        "y": 116,
+        "x": 487.4940204012976,
+        "y": 72.9369161604693,
         "parent_id": "client-ui-group-survey-access",
         "page_data": {
           "description": "Route: /survey/complete. Completion page after an internal survey is submitted.",
@@ -1470,8 +1470,8 @@
       {
         "id": "client-ui-preview-overview",
         "label": "Preview Survey Overview",
-        "x": 24,
-        "y": 208,
+        "x": 19.25831963142616,
+        "y": 309.14028389536054,
         "parent_id": "client-ui-group-survey-access",
         "page_data": {
           "description": "Route: /survey/preview/overview/:token/:surveyId. Preview entry page.",
@@ -1488,8 +1488,8 @@
       {
         "id": "client-ui-preview-questions",
         "label": "Preview Survey Questions",
-        "x": 220,
-        "y": 208,
+        "x": 221.69114457475507,
+        "y": 307.0816454028653,
         "parent_id": "client-ui-group-survey-access",
         "page_data": {
           "description": "Route: /survey/preview/questions/:token/:surveyId. Preview question flow.",
@@ -1506,8 +1506,8 @@
       {
         "id": "client-ui-preview-complete",
         "label": "Preview Survey Complete",
-        "x": 24,
-        "y": 300,
+        "x": 488.49713487394445,
+        "y": 307.256107731658,
         "parent_id": "client-ui-group-survey-access",
         "page_data": {
           "description": "Route: /survey/preview/complete/:token/:surveyId. Preview completion state.",
@@ -1524,8 +1524,8 @@
       {
         "id": "client-ui-public-survey-overview",
         "label": "Public Survey Overview",
-        "x": 220,
-        "y": 116,
+        "x": 26.786726717079887,
+        "y": 210.22568013902438,
         "parent_id": "client-ui-group-survey-access",
         "page_data": {
           "description": "Route: /p/:surveyId/. Public survey opening screen.",
@@ -1542,8 +1542,8 @@
       {
         "id": "client-ui-demographic-questions",
         "label": "Demographic Questions",
-        "x": 220,
-        "y": 300,
+        "x": 264.40537121971886,
+        "y": 206.67883439303307,
         "parent_id": "client-ui-group-survey-access",
         "page_data": {
           "description": "Route: /p/:surveyId/questions. Public demographic question step.",
@@ -1560,8 +1560,8 @@
       {
         "id": "client-ui-user",
         "label": "User Workspace",
-        "x": 24,
-        "y": 24,
+        "x": 18.852043010794887,
+        "y": 49.73978494602545,
         "parent_id": "client-ui-group-user",
         "page_data": {
           "description": "Route: /user. Personal employee/anonymous workspace combining survey list, feedback, tabs and chats.",
@@ -1578,8 +1578,8 @@
       {
         "id": "client-ui-experience-detail",
         "label": "Experience Detail",
-        "x": 264,
-        "y": 208,
+        "x": 339.2882197755075,
+        "y": 390.04303296411433,
         "parent_id": "client-ui-group-reports",
         "page_data": {
           "description": "Route: /experience/:id/:surveyKey. Detail view for an experience report.",
@@ -1596,8 +1596,8 @@
       {
         "id": "client-ui-exit-good-sides",
         "label": "Exit Good Sides of Working",
-        "x": 264,
-        "y": 116,
+        "x": 406.5712660389845,
+        "y": 123.74888478083585,
         "parent_id": "client-ui-group-reports",
         "page_data": {
           "description": "Route: /reports/exit-survey/good-sides-of-working. Exit feedback page for positive reasons.",
@@ -1614,8 +1614,8 @@
       {
         "id": "client-ui-exit-reasons",
         "label": "Exit Reasons of Leaving",
-        "x": 264,
-        "y": 162,
+        "x": 383.4433726898201,
+        "y": 191.16125683155542,
         "parent_id": "client-ui-group-reports",
         "page_data": {
           "description": "Route: /reports/exit-survey/reasons-of-leaving. Exit feedback page for leaving reasons.",
@@ -1632,8 +1632,8 @@
       {
         "id": "client-ui-exit-employee-list",
         "label": "Exit Employee List",
-        "x": 264,
-        "y": 254,
+        "x": 372.3427929904565,
+        "y": 273.71707845816695,
         "parent_id": "client-ui-group-reports",
         "page_data": {
           "description": "Route: /reports/exit-survey/:id/employee-list/. Employee list attached to a specific exit report.",
@@ -1650,8 +1650,8 @@
       {
         "id": "client-ui-onboarding-phases",
         "label": "Onboarding Phases",
-        "x": 24,
-        "y": 116,
+        "x": 262.34654097800694,
+        "y": 73.80822100699876,
         "parent_id": "client-ui-group-onboarding",
         "page_data": {
           "description": "Route: /onboarding/phases. Lists onboarding phases.",
@@ -1668,8 +1668,8 @@
       {
         "id": "client-ui-onboarding-phase",
         "label": "Onboarding Phase Detail",
-        "x": 220,
-        "y": 116,
+        "x": 521.2641061430088,
+        "y": 68.6267744639986,
         "parent_id": "client-ui-group-onboarding",
         "page_data": {
           "description": "Route: /onboarding/phase/:phase. Single phase detail view.",
@@ -1686,8 +1686,8 @@
       {
         "id": "client-ui-onboarding-employee-list",
         "label": "Onboarding Employee List",
-        "x": 24,
-        "y": 208,
+        "x": 20.298966755000038,
+        "y": 268.69694521800176,
         "parent_id": "client-ui-group-onboarding",
         "page_data": {
           "description": "Route: /onboarding/employee-list. Employee list for onboarding analysis.",
@@ -1704,8 +1704,8 @@
       {
         "id": "client-ui-onboarding-new-employee-list",
         "label": "Onboarding New Employee List",
-        "x": 220,
-        "y": 208,
+        "x": 258.49074574800125,
+        "y": 151.7442946759983,
         "parent_id": "client-ui-group-onboarding",
         "page_data": {
           "description": "Route: /onboarding/new-employee-list. New-joiner focused onboarding list.",
@@ -1722,8 +1722,8 @@
       {
         "id": "client-ui-onboarding-employee-detail",
         "label": "Onboarding Employee Detail",
-        "x": 24,
-        "y": 292,
+        "x": 263.08674762700707,
+        "y": 272.7546271259994,
         "parent_id": "client-ui-group-onboarding",
         "page_data": {
           "description": "Route: /onboarding/employee/:id. Per-employee onboarding detail page.",
@@ -1740,8 +1740,8 @@
       {
         "id": "client-ui-builder-details",
         "label": "Builder Details",
-        "x": 416,
-        "y": 24,
+        "x": 77.49477016557353,
+        "y": 151.93640303211555,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/builder/details. First survey builder step.",
@@ -1758,8 +1758,8 @@
       {
         "id": "client-ui-builder-questions",
         "label": "Builder Questions",
-        "x": 612,
-        "y": 24,
+        "x": 360.3087579373664,
+        "y": 150.10874013165676,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/builder/questions. Question editing step.",
@@ -1776,8 +1776,8 @@
       {
         "id": "client-ui-builder-participants",
         "label": "Builder Participants and Schedule",
-        "x": 808,
-        "y": 24,
+        "x": 628.5014425054883,
+        "y": 151.9364030321156,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/builder/participants-and-schedule. Audience and timing step.",
@@ -1794,8 +1794,8 @@
       {
         "id": "client-ui-builder-summary",
         "label": "Builder Summary",
-        "x": 24,
-        "y": 208,
+        "x": 836.0908775555067,
+        "y": 145.47311679242614,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/builder/summary. Final review step before simulation or publish flows.",
@@ -1812,8 +1812,8 @@
       {
         "id": "client-ui-builder-simulation",
         "label": "Builder Simulation",
-        "x": 220,
-        "y": 208,
+        "x": 1056.5997036094554,
+        "y": 132.9264111425826,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/builder/simulation. Full-screen simulation step in BlankLayout.",
@@ -1830,9 +1830,9 @@
       {
         "id": "client-ui-exit-publish",
         "label": "Exit Survey Publish",
-        "x": 416,
-        "y": 208,
-        "parent_id": "client-ui-group-surveys",
+        "x": 27.698959903016657,
+        "y": 211.7656263437293,
+        "parent_id": "client-ui-group-reports",
         "page_data": {
           "description": "Route: /surveys/builder/exit-survey-publish. Exit survey publish flow.",
           "tag_ids": [],
@@ -1848,9 +1848,9 @@
       {
         "id": "client-ui-exit-update",
         "label": "Exit Survey Update",
-        "x": 612,
-        "y": 208,
-        "parent_id": "client-ui-group-surveys",
+        "x": 31.172054487536116,
+        "y": 307.6152061451612,
+        "parent_id": "client-ui-group-reports",
         "page_data": {
           "description": "Route: /surveys/builder/exit-survey-update. Exit survey update flow.",
           "tag_ids": [],
@@ -1866,8 +1866,8 @@
       {
         "id": "client-ui-access-denied",
         "label": "Access Denied",
-        "x": 24,
-        "y": 24,
+        "x": 20.223728479485544,
+        "y": 102.04294475730092,
         "parent_id": "client-ui-group-system",
         "page_data": {
           "description": "Route: /access-denied. Rendered when permissions or dashboard menu validation fails.",
@@ -1884,8 +1884,8 @@
       {
         "id": "client-ui-not-found",
         "label": "Not Found",
-        "x": 220,
-        "y": 24,
+        "x": 227.55254304102914,
+        "y": 102.0429447573008,
         "parent_id": "client-ui-group-system",
         "page_data": {
           "description": "Route: /404. Fallback page for unmatched routes.",
@@ -1903,7 +1903,7 @@
         "id": "client-ui-maintenance",
         "label": "Maintenance",
         "x": 24,
-        "y": 116,
+        "y": 206.63051649234933,
         "parent_id": "client-ui-group-system",
         "page_data": {
           "description": "Route: /maintenance. Maintenance / downtime page.",
@@ -1920,8 +1920,8 @@
       {
         "id": "client-ui-icons",
         "label": "Icons",
-        "x": 220,
-        "y": 116,
+        "x": 230.07005738803878,
+        "y": 204.1130021453397,
         "parent_id": "client-ui-group-system",
         "page_data": {
           "description": "Route: /icons. Internal icon reference page.",
@@ -1962,27 +1962,6 @@
         "id": "client-ui-forget-password->client-ui-new-password",
         "source": "client-ui-forget-password",
         "target": "client-ui-new-password",
-        "sourceHandle": "right",
-        "targetHandle": "left"
-      },
-      {
-        "id": "client-ui-login-link-survey->client-ui-survey-overview",
-        "source": "client-ui-login-link-survey",
-        "target": "client-ui-survey-overview",
-        "sourceHandle": "right",
-        "targetHandle": "left"
-      },
-      {
-        "id": "client-ui-login-link-code->client-ui-survey-overview",
-        "source": "client-ui-login-link-code",
-        "target": "client-ui-survey-overview",
-        "sourceHandle": "right",
-        "targetHandle": "left"
-      },
-      {
-        "id": "client-ui-open-survey-token->client-ui-public-survey-overview",
-        "source": "client-ui-open-survey-token",
-        "target": "client-ui-public-survey-overview",
         "sourceHandle": "right",
         "targetHandle": "left"
       },
@@ -2046,13 +2025,6 @@
         "id": "client-ui-home->9f1ef007-d03b-4591-8721-8fcd9a394023",
         "source": "client-ui-home",
         "target": "9f1ef007-d03b-4591-8721-8fcd9a394023",
-        "sourceHandle": "right",
-        "targetHandle": "left"
-      },
-      {
-        "id": "client-ui-home->client-ui-user",
-        "source": "client-ui-home",
-        "target": "client-ui-user",
         "sourceHandle": "right",
         "targetHandle": "left"
       },
@@ -2134,29 +2106,8 @@
         "targetHandle": "left"
       },
       {
-        "id": "075442b7-31bd-478b-ad53-9f3cf51d8b9d->client-ui-onboarding-employee-list",
-        "source": "075442b7-31bd-478b-ad53-9f3cf51d8b9d",
-        "target": "client-ui-onboarding-employee-list",
-        "sourceHandle": "right",
-        "targetHandle": "left"
-      },
-      {
-        "id": "075442b7-31bd-478b-ad53-9f3cf51d8b9d->client-ui-onboarding-new-employee-list",
-        "source": "075442b7-31bd-478b-ad53-9f3cf51d8b9d",
-        "target": "client-ui-onboarding-new-employee-list",
-        "sourceHandle": "right",
-        "targetHandle": "left"
-      },
-      {
         "id": "client-ui-onboarding-employee-list->client-ui-onboarding-employee-detail",
         "source": "client-ui-onboarding-employee-list",
-        "target": "client-ui-onboarding-employee-detail",
-        "sourceHandle": "right",
-        "targetHandle": "left"
-      },
-      {
-        "id": "client-ui-onboarding-new-employee-list->client-ui-onboarding-employee-detail",
-        "source": "client-ui-onboarding-new-employee-list",
         "target": "client-ui-onboarding-employee-detail",
         "sourceHandle": "right",
         "targetHandle": "left"
@@ -2172,13 +2123,6 @@
         "id": "b28f4d2a-c112-4aaa-905a-ab11282b7458->405922fd-c383-47aa-b3f5-8d5ef0eaef1b",
         "source": "b28f4d2a-c112-4aaa-905a-ab11282b7458",
         "target": "405922fd-c383-47aa-b3f5-8d5ef0eaef1b",
-        "sourceHandle": "right",
-        "targetHandle": "left"
-      },
-      {
-        "id": "405922fd-c383-47aa-b3f5-8d5ef0eaef1b->client-ui-builder-details",
-        "source": "405922fd-c383-47aa-b3f5-8d5ef0eaef1b",
-        "target": "client-ui-builder-details",
         "sourceHandle": "right",
         "targetHandle": "left"
       },
@@ -2207,20 +2151,6 @@
         "id": "client-ui-builder-summary->client-ui-builder-simulation",
         "source": "client-ui-builder-summary",
         "target": "client-ui-builder-simulation",
-        "sourceHandle": "right",
-        "targetHandle": "left"
-      },
-      {
-        "id": "client-ui-builder-summary->client-ui-exit-publish",
-        "source": "client-ui-builder-summary",
-        "target": "client-ui-exit-publish",
-        "sourceHandle": "right",
-        "targetHandle": "left"
-      },
-      {
-        "id": "client-ui-builder-summary->client-ui-exit-update",
-        "source": "client-ui-builder-summary",
-        "target": "client-ui-exit-update",
         "sourceHandle": "right",
         "targetHandle": "left"
       },
@@ -2258,6 +2188,118 @@
         "target": "client-ui-demographic-questions",
         "sourceHandle": "right",
         "targetHandle": "left"
+      },
+      {
+        "id": "405922fd-c383-47aa-b3f5-8d5ef0eaef1b->client-ui-builder-details",
+        "source": "405922fd-c383-47aa-b3f5-8d5ef0eaef1b",
+        "target": "client-ui-builder-details",
+        "sourceHandle": "bottom",
+        "targetHandle": "top"
+      },
+      {
+        "id": "client-ui-onboarding-new-employee-list->075442b7-31bd-478b-ad53-9f3cf51d8b9d",
+        "source": "client-ui-onboarding-new-employee-list",
+        "target": "075442b7-31bd-478b-ad53-9f3cf51d8b9d",
+        "sourceHandle": "left",
+        "targetHandle": "bottom"
+      },
+      {
+        "id": "client-ui-onboarding-new-employee-list->client-ui-onboarding-employee-detail",
+        "source": "client-ui-onboarding-new-employee-list",
+        "target": "client-ui-onboarding-employee-detail",
+        "sourceHandle": "bottom",
+        "targetHandle": "top"
+      },
+      {
+        "id": "075442b7-31bd-478b-ad53-9f3cf51d8b9d->client-ui-onboarding-employee-list",
+        "source": "075442b7-31bd-478b-ad53-9f3cf51d8b9d",
+        "target": "client-ui-onboarding-employee-list",
+        "sourceHandle": "bottom",
+        "targetHandle": "top"
+      },
+      {
+        "id": "client-ui-login-link-code->client-ui-survey-overview",
+        "source": "client-ui-login-link-code",
+        "target": "client-ui-survey-overview",
+        "sourceHandle": "bottom",
+        "targetHandle": "left"
+      },
+      {
+        "id": "client-ui-open-survey-token->client-ui-public-survey-overview",
+        "source": "client-ui-open-survey-token",
+        "target": "client-ui-public-survey-overview",
+        "sourceHandle": "bottom",
+        "targetHandle": "left"
+      },
+      {
+        "id": "client-ui-login-link-survey->client-ui-survey-overview",
+        "source": "client-ui-login-link-survey",
+        "target": "client-ui-survey-overview",
+        "sourceHandle": "right",
+        "targetHandle": "top"
+      },
+      {
+        "id": "0a5da42b-afdc-41bf-b51d-650808f31a42->client-ui-exit-publish",
+        "source": "0a5da42b-afdc-41bf-b51d-650808f31a42",
+        "target": "client-ui-exit-publish",
+        "sourceHandle": "bottom",
+        "targetHandle": "top"
+      },
+      {
+        "id": "client-ui-exit-publish->client-ui-exit-update",
+        "source": "client-ui-exit-publish",
+        "target": "client-ui-exit-update",
+        "sourceHandle": "bottom",
+        "targetHandle": "top"
+      },
+      {
+        "id": "0a5da42b-afdc-41bf-b51d-650808f31a42->69606afa-1d0c-4335-8af3-93982a359e44",
+        "source": "0a5da42b-afdc-41bf-b51d-650808f31a42",
+        "target": "69606afa-1d0c-4335-8af3-93982a359e44",
+        "sourceHandle": "right",
+        "targetHandle": "left"
+      },
+      {
+        "id": "0a5da42b-afdc-41bf-b51d-650808f31a42->052e46a8-7add-4320-b91b-5a9bc0409276",
+        "source": "0a5da42b-afdc-41bf-b51d-650808f31a42",
+        "target": "052e46a8-7add-4320-b91b-5a9bc0409276",
+        "sourceHandle": "right",
+        "targetHandle": "left"
+      },
+      {
+        "id": "b28f4d2a-c112-4aaa-905a-ab11282b7458->client-ui-builder-details",
+        "source": "b28f4d2a-c112-4aaa-905a-ab11282b7458",
+        "target": "client-ui-builder-details",
+        "sourceHandle": "bottom",
+        "targetHandle": "top"
+      },
+      {
+        "id": "9f1ef007-d03b-4591-8721-8fcd9a394023->client-ui-builder-details",
+        "source": "9f1ef007-d03b-4591-8721-8fcd9a394023",
+        "target": "client-ui-builder-details",
+        "sourceHandle": "bottom",
+        "targetHandle": "top"
+      },
+      {
+        "id": "client-ui-user->client-ui-survey-overview",
+        "source": "client-ui-user",
+        "target": "client-ui-survey-overview",
+        "sourceHandle": "bottom",
+        "targetHandle": "top"
+      },
+      {
+        "id": "client-ui-home->client-ui-user",
+        "source": "client-ui-home",
+        "target": "client-ui-user",
+        "sourceHandle": "bottom",
+        "targetHandle": "top"
+      },
+      {
+        "id": "client-ui-experience-detail->052e46a8-7add-4320-b91b-5a9bc0409276",
+        "source": "client-ui-experience-detail",
+        "target": "052e46a8-7add-4320-b91b-5a9bc0409276",
+        "sourceHandle": "right",
+        "targetHandle": "bottom"
       }
     ]
   },
