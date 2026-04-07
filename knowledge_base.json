@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-07T08:10:08.289Z",
+    "last_updated": "2026-04-07T08:13:32.571Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -2403,7 +2403,16 @@
         "e75bebb9-13f2-46c3-880f-cdadaa2b8038",
         "a7cbf72a-f55b-42d3-a738-daa01231c8a7",
         "9edb9079-7314-4616-b12f-e0ff786a07be",
-        "75e1d47d-e3cb-41a1-8754-9763d57e88b5"
+        "75e1d47d-e3cb-41a1-8754-9763d57e88b5",
+        "f308095c-c1de-4787-90dd-08371e89bc15",
+        "5d7c32d1-7b4c-4dc4-b1ee-b5cd62fff72d",
+        "eb35df63-9624-4e94-b489-9c05ddac0064",
+        "ffb07a62-c4e5-4388-9b49-f71198944650",
+        "8f4d71b2-e765-41cf-8a71-f8630a1eda3b",
+        "b1a8e916-9453-4427-9731-4a7682edfaee",
+        "e6f70ad4-bc56-4a92-bc86-13eb33d15206",
+        "61a9202d-415b-4ac4-b593-0417ae6081ec",
+        "21a2f5fe-a55c-4783-8d07-c8a068bd7f5d"
       ]
     }
   ],
@@ -6377,15 +6386,109 @@
     },
     {
       "id": "75e1d47d-e3cb-41a1-8754-9763d57e88b5",
-      "text": "",
+      "text": "Herhangi bir haftada tamamlamam beklenen iş miktarı yönetilebilir ve makul geliyor.",
       "type": "likert",
-      "required": true,
-      "is_pool_question": false,
+      "required": false,
+      "is_pool_question": true,
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": null,
+      "driver_id": "14f5ba9a-e125-455d-9908-265aacf9dc46",
       "is_enps": false
+    },
+    {
+      "id": "f308095c-c1de-4787-90dd-08371e89bc15",
+      "text": "Hiçbir zaman iş arkadaşlarım veya yöneticim tarafından haksız muameleye maruz kalmadım.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "14f5ba9a-e125-455d-9908-265aacf9dc46",
+      "is_enps": false
+    },
+    {
+      "id": "5d7c32d1-7b4c-4dc4-b1ee-b5cd62fff72d",
+      "text": "İş yerimde, fikirlerimi ve endişelerimi özgürce ifade edebiliyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "042feab4-6d59-473f-a1a9-f712ea8b4f3b",
+      "is_enps": false
+    },
+    {
+      "id": "eb35df63-9624-4e94-b489-9c05ddac0064",
+      "text": "İş yerinde hata yapmaktan korkmadan sorumluluk alabiliyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "042feab4-6d59-473f-a1a9-f712ea8b4f3b",
+      "is_enps": false
+    },
+    {
+      "id": "ffb07a62-c4e5-4388-9b49-f71198944650",
+      "text": "Öngörülebilir bir süre boyunca yaşamımı sürdürebilecek finansal birikime sahibim.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "130f611a-b505-4996-931f-bf6d1f6fef9d",
+      "is_enps": false
+    },
+    {
+      "id": "8f4d71b2-e765-41cf-8a71-f8630a1eda3b",
+      "text": "Yöneticiniz veya iş arkadaşlarınız, işinizi gereksiz yere zorlaştırıyor mu? ",
+      "type": "text",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false
+    },
+    {
+      "id": "b1a8e916-9453-4427-9731-4a7682edfaee",
+      "text": "İş yerinizde son altı ay içinde herhangi bir zorbalık veya mobbing olayına tanık oldunuz mu?",
+      "type": "single_choice",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "options": [
+        "Evet",
+        "Birçok Kez",
+        "Ara Sıra",
+        "Hayır"
+      ]
+    },
+    {
+      "id": "e6f70ad4-bc56-4a92-bc86-13eb33d15206",
+      "text": "Çocuğunuz var mı?",
+      "type": "text",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false
+    },
+    {
+      "id": "61a9202d-415b-4ac4-b593-0417ae6081ec",
+      "text": "Bakmakla yükümlü olduğunuz birisi var mı?",
+      "type": "yes_no",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false
+    },
+    {
+      "id": "21a2f5fe-a55c-4783-8d07-c8a068bd7f5d",
+      "text": "İş yükünüzün, iş arkadaşlarınıza kıyasla haksız şekilde fazla olduğunu düşünüyor musunuz?",
+      "type": "yes_no",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false
     }
   ],
   "agent_behavior": {
