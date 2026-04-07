@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-07T10:19:14.579Z",
+    "last_updated": "2026-04-07T10:24:58.555Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1924,6 +1924,30 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "87b7f5df-b0a2-4ab7-bea5-b8fdd180d582",
+      "name": "Şirket Kültürü",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "121dc52e-a045-49d6-907c-4cb0f93de377",
+      "name": "Yönetici Takdiri",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "5a963269-f411-43f4-ba20-bf1baf784704",
+      "name": "Takım Takdiri",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -2707,6 +2731,28 @@
         "1809d660-f7b9-4689-9e8a-cd4e00487a87",
         "067c411f-a97b-4a39-b4ac-463237e6e548",
         "5359da28-aa3d-4a04-b13b-734be3b4cd8e"
+      ]
+    },
+    {
+      "id": "a7522371-f02f-4b70-9645-42b92894497f",
+      "name": "Çalışana Takdir ve Değer Analizi\n",
+      "description": "Çalışanlar değer gördükleri, fark edildikleri ve yaptıkları işler görünür olduğunda daha bağlı hissediyorlar ve bu bağlılık performansı olumlu yönde etkiliyor. Çalışana Değer Anketi şirket çalışanlarının şirketteki takdir ortamını nasıl değerlendirdikleri konusunda net bir iç görü sunar.\n\n",
+      "purpose": "",
+      "survey_title": "Çalışana Takdir ve Değer Analizi",
+      "survey_description": "Hepimiz değer ve takdir görmek isteriz. Tersi durumda kendimizi fark edilmemiş ve görünmez hissetmemiz çok doğaldır. Çalışana Değer Analizi ile bu konudaki duygu ve düşüncelerinizi ortaya koyma olanağınız var. Bu ankete ayıracağınız kısacık bir zaman daha mutlu bir işyeri için gerekli önlemleri almamızı destekleyecek, şimdiden çok teşekkür ederiz.",
+      "measured_topics": [
+        "Şirket kültürü",
+        "Yönetici Takdiri",
+        "Ekip Takdiri"
+      ],
+      "why_take_survey": "Çalışana Değer Analizi şirketin takdir kültürü ve çalışanların takdir edilip değer görmek ile ilgili duygularının geniş kapsamlı bir analizini ortaya koyar. Bu analiz hayati önem taşıyan değer ve takdir görme konusunda alacağınız aksiyonlara yönelik eşsiz bir iç görü kaynağıdır.\n",
+      "short_description": "Çalışanlar değer gördükleri, fark edildikleri ve yaptıkları işler görünür olduğunda daha bağlı hissediyorlar ve bu bağlılık performansı olumlu yönde etkiliyor. Çalışana Değer Anketi şirket çalışanlarının şirketteki takdir ortamını nasıl değerlendirdikleri konusunda net bir iç görü sunar.\n",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": [
+        "25e7ac68-d09a-4d7c-9140-a31dc42e9675"
       ]
     }
   ],
@@ -7994,6 +8040,18 @@
       "scale_min": 1,
       "scale_max": 5,
       "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2",
+      "is_enps": false
+    },
+    {
+      "id": "25e7ac68-d09a-4d7c-9140-a31dc42e9675",
+      "text": "Bu şirketteki takdir kültürünü mükemmel olarak değerlendiririm.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": null,
       "is_enps": false
     }
   ],
