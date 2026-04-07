@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-07T10:14:53.613Z",
+    "last_updated": "2026-04-07T10:19:14.579Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -2676,19 +2676,38 @@
     },
     {
       "id": "31b276b1-6d1b-41dc-8ac3-6c9c4b7ba8dc",
-      "name": "",
-      "description": "",
+      "name": "Psikolojik Güvenlik Anketi\n",
+      "description": "Güven duygusu çalışan bağlılığının en önemli yapıtaşlarından biri. Psikolojik güvenlik anketi ile çalışanlarınızın güven duygusunu psikolojik açıdan analiz edebilir, gerekli önlem ve iyileştirmeleri yapabilirsiniz.\n\n",
       "purpose": "",
-      "survey_title": "",
-      "survey_description": "",
-      "measured_topics": [],
-      "why_take_survey": "",
-      "short_description": "",
+      "survey_title": "Psikolojik Güvenlik Ölçeği",
+      "survey_description": "Kendinizi iyi ve güvende hissetmeniz bizim için her şeyden daha önemli. Psikolojik güvenlik anketine ayıracağınız kısacık bir zamanla görüş ve düşüncelerinizi almak bizim için çok değerli. Anketimize katılımınız için şimdiden teşekkür ederiz!",
+      "measured_topics": [
+        "Takım",
+        "Liderlik",
+        "Kültür"
+      ],
+      "why_take_survey": "Psikolojik olarak güvende hissetmek, sadece çalışma hayatında değil yaşamın her anında en önemli ihtiyacımızdır. Çalışanlarınızın bütünsel iyilik durumlarına odaklanıyorsanız, psikolojik güvenlik algısını periyodik olarak ölçmeli, olası sorunları oluşmadan çözebilmelisiniz.\n",
+      "short_description": "İşyerinde psikolojik güvenlik, yüksek performanslı ekiplerin temelidir ve ekibinizin çalışma ortamının her zaman en iyi durumda olması için bunu sık sık ölçmek önemlidir.\n",
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": [],
       "glossary_ids": [],
-      "question_ids": []
+      "question_ids": [
+        "5e6fd6f1-6926-469a-93b1-75b37982434f",
+        "1ef12a55-2efb-4085-818a-d8d58ea2ab50",
+        "d5d0a53e-6e0b-46a5-b590-4f23fea15701",
+        "56d8d927-3c98-4fad-a1e0-1d93efaba723",
+        "f4864813-6c23-4614-88fa-6e0340fa56bf",
+        "84c8e799-81ec-43e5-9c2d-1648c4afe549",
+        "82670415-d29c-4fe5-851c-857e0970307d",
+        "6be5f9ad-920d-42eb-b705-9ec279c79be9",
+        "b73395ca-9d00-4c8f-9a2c-ee838ec25bac",
+        "928221d4-879a-4644-91eb-1d338213cd3b",
+        "79a358c8-fc7b-4624-9533-f96c7613c66c",
+        "1809d660-f7b9-4689-9e8a-cd4e00487a87",
+        "067c411f-a97b-4a39-b4ac-463237e6e548",
+        "5359da28-aa3d-4a04-b13b-734be3b4cd8e"
+      ]
     }
   ],
   "survey_questions": [
@@ -7807,6 +7826,174 @@
       "scale_min": 1,
       "scale_max": 5,
       "driver_id": null,
+      "is_enps": false
+    },
+    {
+      "id": "5e6fd6f1-6926-469a-93b1-75b37982434f",
+      "text": "Yöneticim takım ve şirket içi işbirliğini teşvik eder.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "79fd31b1-a377-4e88-85fa-bd5c4a259f8f",
+      "is_enps": false
+    },
+    {
+      "id": "1ef12a55-2efb-4085-818a-d8d58ea2ab50",
+      "text": "Yöneticim paylaştığım fikirlere değer verir.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "79fd31b1-a377-4e88-85fa-bd5c4a259f8f",
+      "is_enps": false
+    },
+    {
+      "id": "d5d0a53e-6e0b-46a5-b590-4f23fea15701",
+      "text": "Yöneticimin yaklaşımları güvende hissetmemi sağlıyor.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "79fd31b1-a377-4e88-85fa-bd5c4a259f8f",
+      "is_enps": false
+    },
+    {
+      "id": "56d8d927-3c98-4fad-a1e0-1d93efaba723",
+      "text": "Bir ekip olarak sorunları gündeme getirip zor konuları tartışabileceğimizi düşünüyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "358c619e-fe32-4f22-8762-9f8aa96e2548",
+      "is_enps": false
+    },
+    {
+      "id": "f4864813-6c23-4614-88fa-6e0340fa56bf",
+      "text": "Takım arkadaşlarımın bana karşı kullanacağından korkmadan hata yapabileceğimi hissediyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "358c619e-fe32-4f22-8762-9f8aa96e2548",
+      "is_enps": false
+    },
+    {
+      "id": "84c8e799-81ec-43e5-9c2d-1648c4afe549",
+      "text": "Takım arkadaşlarım asla birisini farklı olduğu için reddetmezler.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "358c619e-fe32-4f22-8762-9f8aa96e2548",
+      "is_enps": false
+    },
+    {
+      "id": "82670415-d29c-4fe5-851c-857e0970307d",
+      "text": "Çalışırken stres belirtileri gösterirsem, biri bana yardımcı olacak bir şey söyler veya yapar.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2",
+      "is_enps": false
+    },
+    {
+      "id": "6be5f9ad-920d-42eb-b705-9ec279c79be9",
+      "text": "Şirketimiz yeni fikirleri teşvik eder ve paylaşılmasına imkan sağlar.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2",
+      "is_enps": false
+    },
+    {
+      "id": "b73395ca-9d00-4c8f-9a2c-ee838ec25bac",
+      "text": "Birey olarak bana saygı duyulduğunu ve değer verildiğini hissediyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2",
+      "is_enps": false
+    },
+    {
+      "id": "928221d4-879a-4644-91eb-1d338213cd3b",
+      "text": "Doğrudan yöneticim fikirlerime değer veriyor.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "79fd31b1-a377-4e88-85fa-bd5c4a259f8f",
+      "is_enps": false
+    },
+    {
+      "id": "79a358c8-fc7b-4624-9533-f96c7613c66c",
+      "text": "Bu ekipte risk almaktan çekinmiyorum.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "358c619e-fe32-4f22-8762-9f8aa96e2548",
+      "is_enps": false
+    },
+    {
+      "id": "1809d660-f7b9-4689-9e8a-cd4e00487a87",
+      "text": "Ekip içinde, iş ile ilgili konular hakkında birbirimizi bilgilendiriyoruz.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "358c619e-fe32-4f22-8762-9f8aa96e2548",
+      "is_enps": false
+    },
+    {
+      "id": "067c411f-a97b-4a39-b4ac-463237e6e548",
+      "text": "Takım içerisinde, sorunları ve zor konuları rahatça konuşabiliyoruz.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "358c619e-fe32-4f22-8762-9f8aa96e2548",
+      "is_enps": false
+    },
+    {
+      "id": "5359da28-aa3d-4a04-b13b-734be3b4cd8e",
+      "text": "İş arkadaşlarımdan yardım istemekten çekinmem.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "17c4bcf5-7971-4b8b-aa54-a3daee9f65d2",
       "is_enps": false
     }
   ],
