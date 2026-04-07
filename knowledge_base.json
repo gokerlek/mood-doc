@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-07T10:04:52.117Z",
+    "last_updated": "2026-04-07T10:12:27.493Z",
     "changelog": [
       {
         "date": "2026-02-25",
@@ -1892,6 +1892,38 @@
       "tag_ids": [],
       "faq_ids": [],
       "rule_ids": []
+    },
+    {
+      "id": "1c1d5b02-3904-49af-a4b2-1b5ee0da79ba",
+      "name": "Organizasyon ve Planlama",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "37a138f7-f31d-4999-9c42-fb094653ced4",
+      "name": "Sunumlar ve Konuşmacılar",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "8a069e7b-f596-49da-80c5-26c23d9a9a27",
+      "name": "Katılım ve Etkileşim",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
+    },
+    {
+      "id": "9c353f9d-416e-4419-ae9a-90f61e3ede51",
+      "name": "Online Etkinlik",
+      "description": "",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": []
     }
   ],
   "survey_templates": [
@@ -2614,7 +2646,33 @@
       "faq_ids": [],
       "rule_ids": [],
       "glossary_ids": [],
-      "question_ids": []
+      "question_ids": [
+        "ac89132c-8ea5-41f8-a304-0f1ef404f3b0",
+        "add171a1-48d6-4265-aa32-ed90430a4efc",
+        "78bfd5c1-5ba9-4b3f-9535-75e118065301",
+        "54278698-7706-442b-94cb-22a5eb984d57",
+        "89c93d5d-3041-4def-8b7b-b522c5f3a9d3",
+        "47134f35-8dd9-4d09-873c-64ee3ba4531e",
+        "f0867f86-7ae3-4b53-9cd1-1c6e78a4b26d",
+        "8a23b4b2-bf71-4089-8df0-4dc65b1002d2",
+        "59f8f84c-99a6-425a-8939-f17987245fa9",
+        "bb7e532a-7b2b-46bb-884f-599695f8b1a9",
+        "c9127b15-5876-4d06-8d12-f9d61287d64b",
+        "b7e8eee4-63bf-47d6-ac1a-6063674b6b04",
+        "fdc426ac-266c-41fa-b76b-4eab26f6e893",
+        "e9556a4c-467e-4c4c-a9e2-2f6c0cfbaa61",
+        "4e54d066-911e-4b7e-8039-e8df91edccd7",
+        "0247d1d4-5dc1-40a1-bbd3-507f6d3d672e",
+        "a5926f6a-5a31-4d64-863a-60d107062c19",
+        "9f4ce27b-e30f-4160-bb2e-e09bb049acf4",
+        "f3772932-e320-4ba7-9851-9dd2b8e3c98a",
+        "46cae5e8-4ce1-4f1a-9a57-b6481a045035",
+        "03ca4187-2e4b-42ac-8ef7-6848fb07c05b",
+        "161e1abd-76e1-4c20-a636-d0ce1fed8a2c",
+        "bb463b87-ae50-4436-a3e4-3df7ef534dbc",
+        "bfd6d76a-af05-45df-b098-b3ae534ed943",
+        "d3a6254a-8469-4e55-92d4-2ddd350ba53e"
+      ]
     }
   ],
   "survey_questions": [
@@ -7442,6 +7500,298 @@
         "Çoğu zaman uzaktan",
         "Çoğu zaman ofi"
       ]
+    },
+    {
+      "id": "ac89132c-8ea5-41f8-a304-0f1ef404f3b0",
+      "text": "Etkinlikten önce yapılan iletişim etkiliydi. ",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "1c1d5b02-3904-49af-a4b2-1b5ee0da79ba",
+      "is_enps": false
+    },
+    {
+      "id": "add171a1-48d6-4265-aa32-ed90430a4efc",
+      "text": "Etkinlik organizasyonu iyiydi.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "1c1d5b02-3904-49af-a4b2-1b5ee0da79ba",
+      "is_enps": false
+    },
+    {
+      "id": "78bfd5c1-5ba9-4b3f-9535-75e118065301",
+      "text": "Bu etkinliğin zamanlamasının doğru olduğunu düşünüyorum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "1c1d5b02-3904-49af-a4b2-1b5ee0da79ba",
+      "is_enps": false
+    },
+    {
+      "id": "54278698-7706-442b-94cb-22a5eb984d57",
+      "text": "Bu etkinlikten çok memnun kaldım.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076",
+      "is_enps": false
+    },
+    {
+      "id": "89c93d5d-3041-4def-8b7b-b522c5f3a9d3",
+      "text": "Etkinlik, çalıştığım kuruma olan bakış açımı olumlu yönde etkiledi.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076",
+      "is_enps": false
+    },
+    {
+      "id": "47134f35-8dd9-4d09-873c-64ee3ba4531e",
+      "text": "Gelecekte benzer etkinliklere katılmayı isterim.",
+      "type": "yes_no",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false
+    },
+    {
+      "id": "f0867f86-7ae3-4b53-9cd1-1c6e78a4b26d",
+      "text": "Eklemek istediğiniz bir şey var mı? ",
+      "type": "text",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false
+    },
+    {
+      "id": "8a23b4b2-bf71-4089-8df0-4dc65b1002d2",
+      "text": "Etkinliğin organizasyonu ihtiyaçlarımı karşıladı",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "1c1d5b02-3904-49af-a4b2-1b5ee0da79ba",
+      "is_enps": false
+    },
+    {
+      "id": "59f8f84c-99a6-425a-8939-f17987245fa9",
+      "text": "Etkinlik sırasında kullanılan teknik ekipmanlar sorunsuz çalıştı.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "1c1d5b02-3904-49af-a4b2-1b5ee0da79ba",
+      "is_enps": false
+    },
+    {
+      "id": "bb7e532a-7b2b-46bb-884f-599695f8b1a9",
+      "text": "Etkinlik genel olarak beklentilerimi karşıladı",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076",
+      "is_enps": false
+    },
+    {
+      "id": "c9127b15-5876-4d06-8d12-f9d61287d64b",
+      "text": "Bu etkinliği başkalarına da tavsiye ederim.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076",
+      "is_enps": false
+    },
+    {
+      "id": "b7e8eee4-63bf-47d6-ac1a-6063674b6b04",
+      "text": "Etkinlik sırasında diğer katılımcılarla etkileşime geçme fırsatım oldu.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "8a069e7b-f596-49da-80c5-26c23d9a9a27",
+      "is_enps": false
+    },
+    {
+      "id": "fdc426ac-266c-41fa-b76b-4eab26f6e893",
+      "text": "Etkinlikte katılımcıların aktif katılımı teşvik edildi.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "8a069e7b-f596-49da-80c5-26c23d9a9a27",
+      "is_enps": false
+    },
+    {
+      "id": "e9556a4c-467e-4c4c-a9e2-2f6c0cfbaa61",
+      "text": "Etkinlik boyunca sorularımı sormak ve fikirlerimi paylaşmak için fırsatlar sunuldu.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "8a069e7b-f596-49da-80c5-26c23d9a9a27",
+      "is_enps": false
+    },
+    {
+      "id": "4e54d066-911e-4b7e-8039-e8df91edccd7",
+      "text": "Konuşmacılar konularında yetkin ve bilgilendiriciydi.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "37a138f7-f31d-4999-9c42-fb094653ced4",
+      "is_enps": false
+    },
+    {
+      "id": "0247d1d4-5dc1-40a1-bbd3-507f6d3d672e",
+      "text": "Sunumlar ilgi çekici ve anlaşılır bir şekilde yapıldı.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "37a138f7-f31d-4999-9c42-fb094653ced4",
+      "is_enps": false
+    },
+    {
+      "id": "a5926f6a-5a31-4d64-863a-60d107062c19",
+      "text": "Konuşmacılar katılımcıların sorularına yanıt vermede başarılıydı.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "37a138f7-f31d-4999-9c42-fb094653ced4",
+      "is_enps": false
+    },
+    {
+      "id": "9f4ce27b-e30f-4160-bb2e-e09bb049acf4",
+      "text": "Etkinlik süresi, içerik ve aktivitelerle uyumluydu.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "3e995a9d-dc2d-48dd-af12-cbc1ab2cca00",
+      "is_enps": false
+    },
+    {
+      "id": "f3772932-e320-4ba7-9851-9dd2b8e3c98a",
+      "text": "Etkinlikte zaman yönetimi başarılıydı ve herhangi bir gecikme yaşanmadı.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "3e995a9d-dc2d-48dd-af12-cbc1ab2cca00",
+      "is_enps": false
+    },
+    {
+      "id": "46cae5e8-4ce1-4f1a-9a57-b6481a045035",
+      "text": "Programın zamanlaması uygun ve düzenliydi.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "3e995a9d-dc2d-48dd-af12-cbc1ab2cca00",
+      "is_enps": false
+    },
+    {
+      "id": "03ca4187-2e4b-42ac-8ef7-6848fb07c05b",
+      "text": "Etkinliğin dijital platformları kolayca erişilebilirdi.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "9c353f9d-416e-4419-ae9a-90f61e3ede51",
+      "is_enps": false
+    },
+    {
+      "id": "161e1abd-76e1-4c20-a636-d0ce1fed8a2c",
+      "text": "Sunumların teknik kalitesi (görsel-işitsel) tatmin ediciydi.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "9c353f9d-416e-4419-ae9a-90f61e3ede51",
+      "is_enps": false
+    },
+    {
+      "id": "bb463b87-ae50-4436-a3e4-3df7ef534dbc",
+      "text": "Etkinlikte sunulan içerik benim için faydalıydı.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "44335d7e-a782-4ccb-bdcd-6040d079e2ee",
+      "is_enps": false
+    },
+    {
+      "id": "bfd6d76a-af05-45df-b098-b3ae534ed943",
+      "text": "Etkinlik, işimle veya ilgi alanlarımla ilgiliydi.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "44335d7e-a782-4ccb-bdcd-6040d079e2ee",
+      "is_enps": false
+    },
+    {
+      "id": "d3a6254a-8469-4e55-92d4-2ddd350ba53e",
+      "text": "Sunulan bilgiler günceldi ve uygulanabilirliği vardı",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": null,
+      "is_enps": false
     }
   ],
   "agent_behavior": {
