@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-07T11:38:22.777Z",
+    "last_updated": "2026-04-08T10:42:10.995Z",
     "changelog": [
       {
         "date": "2026-04-07",
@@ -2345,14 +2345,6 @@
       "rule_ids": []
     },
     {
-      "id": "586d6854-492c-4927-8616-52a0fcafe555",
-      "name": "Eğitim ve Gelişim",
-      "description": "",
-      "tag_ids": [],
-      "faq_ids": [],
-      "rule_ids": []
-    },
-    {
       "id": "08a1e3c8-d063-4655-ba60-90c5ef3bf2e4",
       "name": "Terfi ve Kariyer",
       "description": "",
@@ -2901,14 +2893,6 @@
     {
       "id": "14f5ba9a-e125-455d-9908-265aacf9dc46",
       "name": "İş Yeri",
-      "description": "",
-      "tag_ids": [],
-      "faq_ids": [],
-      "rule_ids": []
-    },
-    {
-      "id": "3dad9761-4c34-4475-969c-a997e8836e12",
-      "name": "",
       "description": "",
       "tag_ids": [],
       "faq_ids": [],
@@ -3507,6 +3491,45 @@
         "61a9202d-415b-4ac4-b593-0417ae6081ec",
         "21a2f5fe-a55c-4783-8d07-c8a068bd7f5d"
       ]
+    },
+    {
+      "id": "01635465-1296-43df-8074-3dde3c67b44c",
+      "name": "Eğitim Değerlendirme Anketi\n",
+      "description": "Öğrenme ve gelişim ortamı çalışan bağlılığının en önemli itici güçlerinden biri. Peki, çalışanlara sunduğumuz öğrenme ve gelişim araçlarının etkisini ölçüyor musunuz? Moodivation Eğitim Değerlendirme Anketi ile her eğitim sonrası ayrıntılı bir analiz yapabilme şansınız var.\n\n",
+      "purpose": "",
+      "survey_title": "Eğitim Değerlendirme",
+      "survey_description": "Gelişiminiz bizim için çok önemli ve aldığınız eğitim sonrası yanıtlayacağınız bu anket ile devam eden eğitimlerinizi planlamamız mümkün olacak. Sizin için en doğru eğitim planını sizin geri bildirimlerinizden yola çıkarak oluşturacağız.",
+      "measured_topics": [
+        "Genel Memnuniyet",
+        "Eğitmen",
+        "Öğrenim ve Uygulama",
+        "İçerik Kalitesi"
+      ],
+      "why_take_survey": "Çalışanların eğitim sonrasında geri bildirim verebilmesi ve bu geri bildirimlerin analizi, gelecek planlamalarda büyük bir avantaj sağlar. Moodivation Eğitim Değerlendirme Anketi ile verimli bir öğrenme gelişim atmosferi inşa edebilirsiniz.\n",
+      "short_description": "Çalışanların eğitim sonrasında verdikleri geri bildirimler gelecek planlamalarda büyük bir avantaj sağlar. Moodivation Eğitim Değerlendirme Anketi ile verimli bir öğrenme gelişim atmosferi inşa edin.\n",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": [
+        "1dcc09fc-306d-46a3-9281-ffd152a0b607",
+        "e6a77951-ce84-4b96-8efc-07b0a4fe32df",
+        "de9a428f-f775-46af-9c48-f8ff9c4d185f",
+        "2303eb78-a778-470f-9f2e-571742112276",
+        "4b69a237-3592-4732-a8de-443d4321136e",
+        "06970810-d39d-4737-8b43-64d526352b39",
+        "6f4433da-9a9c-400e-9d06-e5715466102f",
+        "58af9da3-654c-4ac4-97b1-7870a9079d92",
+        "907f9784-9ffc-4663-a6b4-4dddb6f49c61",
+        "ee84b371-f787-4868-9c16-413108f4c7c9",
+        "7a376895-a889-4139-9427-a9d4cee15636",
+        "37a1a8c2-d17c-4ad8-ae7c-43ab1579aea2",
+        "32f80f64-e624-4e2d-b930-396df1410a00",
+        "d1929f93-1733-4976-9f64-f32b92e837ef",
+        "a79de024-9747-419e-916d-840de552ee6e",
+        "33f3e4b7-76bd-4feb-95a2-f3dbc57ed17d",
+        "7b1d93a3-d0f3-4bc7-bb5b-3dea1da24737"
+      ]
     }
   ],
   "survey_questions": [
@@ -3519,7 +3542,7 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "driver_id": null,
       "is_enps": false
     },
     {
@@ -3531,7 +3554,7 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "driver_id": null,
       "is_enps": false
     },
     {
@@ -3543,7 +3566,7 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "driver_id": null,
       "is_enps": false
     },
     {
@@ -3747,7 +3770,7 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "driver_id": null,
       "is_enps": false
     },
     {
@@ -3759,7 +3782,7 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "driver_id": null,
       "is_enps": false
     },
     {
@@ -4799,7 +4822,7 @@
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": "586d6854-492c-4927-8616-52a0fcafe555",
+      "driver_id": null,
       "is_enps": false
     },
     {
@@ -7582,6 +7605,206 @@
       "required": false,
       "is_pool_question": true,
       "has_comment": false
+    },
+    {
+      "id": "1dcc09fc-306d-46a3-9281-ffd152a0b607",
+      "text": "Eğitmen, konu hakkında bilgiliydi.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "10296e5c-f72a-4f09-b2f9-d2fa3b5cb537",
+      "is_enps": false
+    },
+    {
+      "id": "e6a77951-ce84-4b96-8efc-07b0a4fe32df",
+      "text": "Eğitmen, kavramları açık ve etkili bir şekilde açıkladı.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "10296e5c-f72a-4f09-b2f9-d2fa3b5cb537",
+      "is_enps": false
+    },
+    {
+      "id": "de9a428f-f775-46af-9c48-f8ff9c4d185f",
+      "text": "Eğitmen, sorulara ve endişelere zamanında ve yardımcı bir şekilde yanıt verdi.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "10296e5c-f72a-4f09-b2f9-d2fa3b5cb537",
+      "is_enps": false
+    },
+    {
+      "id": "2303eb78-a778-470f-9f2e-571742112276",
+      "text": "Eğitim iyi organize edilmişti.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "10296e5c-f72a-4f09-b2f9-d2fa3b5cb537",
+      "is_enps": false
+    },
+    {
+      "id": "4b69a237-3592-4732-a8de-443d4321136e",
+      "text": "Eğitimde sunulan içerik işimle ilgiliydi.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "44335d7e-a782-4ccb-bdcd-6040d079e2ee",
+      "is_enps": false
+    },
+    {
+      "id": "06970810-d39d-4737-8b43-64d526352b39",
+      "text": "Eğitim materyali kolay anlaşılırdı.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "44335d7e-a782-4ccb-bdcd-6040d079e2ee",
+      "is_enps": false
+    },
+    {
+      "id": "6f4433da-9a9c-400e-9d06-e5715466102f",
+      "text": "Eğitimde sunulan bilgiler günceldi ve doğruydu.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "44335d7e-a782-4ccb-bdcd-6040d079e2ee",
+      "is_enps": false
+    },
+    {
+      "id": "58af9da3-654c-4ac4-97b1-7870a9079d92",
+      "text": "İçerik, önemli çıkarımları almama yardımcı oldu.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "44335d7e-a782-4ccb-bdcd-6040d079e2ee",
+      "is_enps": false
+    },
+    {
+      "id": "907f9784-9ffc-4663-a6b4-4dddb6f49c61",
+      "text": "Genel olarak, eğitimden memnunum.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076",
+      "is_enps": false
+    },
+    {
+      "id": "ee84b371-f787-4868-9c16-413108f4c7c9",
+      "text": "Bu eğitimi meslektaşlarıma tavsiye ederim.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076",
+      "is_enps": false
+    },
+    {
+      "id": "7a376895-a889-4139-9427-a9d4cee15636",
+      "text": "Eğitim beklentilerimi karşıladı.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076",
+      "is_enps": false
+    },
+    {
+      "id": "37a1a8c2-d17c-4ad8-ae7c-43ab1579aea2",
+      "text": "Eğitim bana işimde uygulayabileceğim pratik beceriler kazandırdı.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "d52e357e-58e1-44f7-ae93-29b2f4752604",
+      "is_enps": false
+    },
+    {
+      "id": "32f80f64-e624-4e2d-b930-396df1410a00",
+      "text": "Etkinlik organizasyonu iyi planlandı, yönetildi ve uygulandı.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "4491d64a-c8f2-47ef-aeb9-f109c703b406",
+      "is_enps": false
+    },
+    {
+      "id": "d1929f93-1733-4976-9f64-f32b92e837ef",
+      "text": "Mekan seçimi etkinlik için uygundu.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "4491d64a-c8f2-47ef-aeb9-f109c703b406",
+      "is_enps": false
+    },
+    {
+      "id": "a79de024-9747-419e-916d-840de552ee6e",
+      "text": "Eklemek istediğiniz başka bir şey var mı?",
+      "type": "text",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false
+    },
+    {
+      "id": "33f3e4b7-76bd-4feb-95a2-f3dbc57ed17d",
+      "text": "Eğitmenin uygulamaya yönelik örnekleri yeterliydi.",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "10296e5c-f72a-4f09-b2f9-d2fa3b5cb537",
+      "is_enps": false
+    },
+    {
+      "id": "7b1d93a3-d0f3-4bc7-bb5b-3dea1da24737",
+      "text": "Eğitmen, eğitim sırasında katılımı ve etkileşimi teşvik etti.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": null,
+      "is_enps": false
     }
   ],
   "agent_behavior": {
