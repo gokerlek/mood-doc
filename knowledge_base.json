@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-16T09:01:57.501Z",
+    "last_updated": "2026-04-16T09:08:09.771Z",
     "changelog": [
       {
         "date": "2026-04-07",
@@ -3546,6 +3546,27 @@
         "e63d92ad-2156-4e8a-a9ac-171eeabdecd5",
         "9ca1db18-fc72-4302-ac95-982ac68e8fcc"
       ]
+    },
+    {
+      "id": "b9c9bbbd-ff3c-4f58-8a48-3a2342f4094a",
+      "name": "Çalışma Modeli Etkinliği",
+      "description": "İş dünyası bir dönüşüm yaşıyor ve hibrit çalışma sistemi kurumların gündeminde. Peki ama hibrit çalışma sizin kurumunuz için uygun mu? Hangi departmanlar hibrit, hangileri uzaktan ya da yüzyüze çalışmalı? Moodivation Çalışma Modeli Etkinliği Anketi size çalışanlarınızdan gelen değerlendirmelerden yola çıkarak sağlıklı bir çalışma modeli analizi sunar.\n\n",
+      "purpose": "",
+      "survey_title": "Çalışma Modeli Etkinliği",
+      "survey_description": "Çalışma modelimizi sağlıkla kurgulamak senin ve tüm takım arkadaşlarımızın fikirlerinden yararlanacağız. Çalışma Modeli Etkinliği anketimize vereceğin yanıtlar çok değerli.Sadece 2 dakikanı ayırarak duygu ve düşüncelerini bizimle paylaşmanı çok isteriz.",
+      "measured_topics": [
+        "Süreçler",
+        "Teknoloji ve Araçlar",
+        "İletişim ve İş Birliği",
+        "İş Performansı"
+      ],
+      "why_take_survey": "Mevcut çalışma modelinizin etkinliğini ölçümleme ya da farklı bir çalışma modeline geçme planlarınız olabilir. Bu kararları verirken, iletişim kanallarınızdan teknolojiye, şirket içinde kullandığınız dilden liderlik stillerinize dek ayrıntılı bir değerlendirme yapmalısınız. Moodivation Çalışma Modeli Etkinliği Anketi’nin sunduğu ayrıntılı raporla sağlıklı bir çalışma modeli için verilerin gücünden yararlanın.\n",
+      "short_description": "Hangi departmanlar hibrit, hangileri uzaktan ya da yüzyüze çalışmalı? Çalışma Modeli Etkinliği Anketi size çalışanlarınızdan gelen değerlendirmelerden yola çıkarak sağlıklı bir çalışma modeli analizi sunar.",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "glossary_ids": [],
+      "question_ids": []
     }
   ],
   "survey_questions": [
