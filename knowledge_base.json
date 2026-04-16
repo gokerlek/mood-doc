@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-16T08:59:53.451Z",
+    "last_updated": "2026-04-16T09:01:57.501Z",
     "changelog": [
       {
         "date": "2026-04-07",
@@ -3537,7 +3537,14 @@
         "e8a0ff3d-4d72-42ea-8b01-33057a550dff",
         "002acc34-9d7b-43bb-81ba-6cc51dd43445",
         "d5be6081-1aeb-44b1-bef4-de6d5d84fea2",
-        "91e5e2d1-59da-4a9f-903a-75618eac74e5"
+        "91e5e2d1-59da-4a9f-903a-75618eac74e5",
+        "331e8b72-cbb5-4fa9-9092-9843d841b68d",
+        "fafb2b39-99ff-483f-9c26-3086d5d964fa",
+        "ad9f5fa3-f520-440f-a164-b024ee1e0db6",
+        "1b744bdb-4e22-4fa8-8064-50fea80d78e5",
+        "f567d838-81f8-4f20-8f9f-a952d5409f39",
+        "e63d92ad-2156-4e8a-a9ac-171eeabdecd5",
+        "9ca1db18-fc72-4302-ac95-982ac68e8fcc"
       ]
     }
   ],
@@ -7914,15 +7921,87 @@
     },
     {
       "id": "91e5e2d1-59da-4a9f-903a-75618eac74e5",
-      "text": "",
+      "text": "Eğitim yerinin temizlik ve hijyen koşullarından memnun kaldım.",
       "type": "likert",
-      "required": true,
-      "is_pool_question": false,
+      "required": false,
+      "is_pool_question": true,
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
-      "driver_id": null,
+      "driver_id": "4491d64a-c8f2-47ef-aeb9-f109c703b406",
       "is_enps": false
+    },
+    {
+      "id": "331e8b72-cbb5-4fa9-9092-9843d841b68d",
+      "text": "Eğitim gün ve saatleri uygundu.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "4491d64a-c8f2-47ef-aeb9-f109c703b406",
+      "is_enps": false
+    },
+    {
+      "id": "fafb2b39-99ff-483f-9c26-3086d5d964fa",
+      "text": "Eğitim süresi yeterliydi.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "3e995a9d-dc2d-48dd-af12-cbc1ab2cca00",
+      "is_enps": false
+    },
+    {
+      "id": "ad9f5fa3-f520-440f-a164-b024ee1e0db6",
+      "text": "Teorik ve pratik içerik arasında iyi bir denge vardı.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "3e995a9d-dc2d-48dd-af12-cbc1ab2cca00",
+      "is_enps": false
+    },
+    {
+      "id": "1b744bdb-4e22-4fa8-8064-50fea80d78e5",
+      "text": "Eğitimde verilen molalar yeterli ve zamanlaması uygundu.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "3e995a9d-dc2d-48dd-af12-cbc1ab2cca00",
+      "is_enps": false
+    },
+    {
+      "id": "f567d838-81f8-4f20-8f9f-a952d5409f39",
+      "text": "Bu eğitimi geliştirmek için biz veya eğitmen ne yapmaya başlamalıyız?",
+      "type": "text",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false
+    },
+    {
+      "id": "e63d92ad-2156-4e8a-a9ac-171eeabdecd5",
+      "text": "Bu eğitimi geliştirmek için biz veya eğitmen ne yapmayı bırakmalıyız?",
+      "type": "text",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false
+    },
+    {
+      "id": "9ca1db18-fc72-4302-ac95-982ac68e8fcc",
+      "text": "Bu eğitimi geliştirmek için biz veya eğitmen ne yapmaya devam etmeliyiz?",
+      "type": "text",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false
     }
   ],
   "agent_behavior": {
