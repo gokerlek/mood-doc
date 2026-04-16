@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-08T10:42:10.995Z",
+    "last_updated": "2026-04-16T08:59:53.451Z",
     "changelog": [
       {
         "date": "2026-04-07",
@@ -3528,7 +3528,16 @@
         "d1929f93-1733-4976-9f64-f32b92e837ef",
         "a79de024-9747-419e-916d-840de552ee6e",
         "33f3e4b7-76bd-4feb-95a2-f3dbc57ed17d",
-        "7b1d93a3-d0f3-4bc7-bb5b-3dea1da24737"
+        "7b1d93a3-d0f3-4bc7-bb5b-3dea1da24737",
+        "cdeebb16-c335-470d-91b6-0e5daaf86c25",
+        "1163f9c2-ddfc-4491-9475-f54a462b0258",
+        "5c672462-2a0b-4e7a-8c91-3c3a5cd5eeff",
+        "f5d2935d-0e2f-47a4-ac03-11074ffb435f",
+        "bbf7e44a-c80c-4343-af41-0d22d09086ae",
+        "e8a0ff3d-4d72-42ea-8b01-33057a550dff",
+        "002acc34-9d7b-43bb-81ba-6cc51dd43445",
+        "d5be6081-1aeb-44b1-bef4-de6d5d84fea2",
+        "91e5e2d1-59da-4a9f-903a-75618eac74e5"
       ]
     }
   ],
@@ -7800,6 +7809,115 @@
       "type": "likert",
       "required": false,
       "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": null,
+      "is_enps": false
+    },
+    {
+      "id": "cdeebb16-c335-470d-91b6-0e5daaf86c25",
+      "text": "Kullanılan materyaller, eğitim notları, dokümanlar yeterliydi.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "44335d7e-a782-4ccb-bdcd-6040d079e2ee",
+      "is_enps": false
+    },
+    {
+      "id": "1163f9c2-ddfc-4491-9475-f54a462b0258",
+      "text": "Eğitim, gerekli tüm konuları yeterli ayrıntıyla ele aldı.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "44335d7e-a782-4ccb-bdcd-6040d079e2ee",
+      "is_enps": false
+    },
+    {
+      "id": "5c672462-2a0b-4e7a-8c91-3c3a5cd5eeff",
+      "text": "İleride benzer bir eğitime katılmak isterim.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "84e877c6-2e7a-4704-8ec6-1b7eeff94076",
+      "is_enps": false
+    },
+    {
+      "id": "f5d2935d-0e2f-47a4-ac03-11074ffb435f",
+      "text": "Eğitim, konuya olan bilgimi artırdı.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "d52e357e-58e1-44f7-ae93-29b2f4752604",
+      "is_enps": false
+    },
+    {
+      "id": "bbf7e44a-c80c-4343-af41-0d22d09086ae",
+      "text": "Etkinlik sırasında kullanılan araçların deneyimim üzerinde olumlu bir etkisi oldu.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "4491d64a-c8f2-47ef-aeb9-f109c703b406",
+      "is_enps": false
+    },
+    {
+      "id": "e8a0ff3d-4d72-42ea-8b01-33057a550dff",
+      "text": "İkramlar iyiydi.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "4491d64a-c8f2-47ef-aeb9-f109c703b406",
+      "is_enps": false
+    },
+    {
+      "id": "002acc34-9d7b-43bb-81ba-6cc51dd43445",
+      "text": "Eğitim boyunca her şey yolunda gitti.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "4491d64a-c8f2-47ef-aeb9-f109c703b406",
+      "is_enps": false
+    },
+    {
+      "id": "d5be6081-1aeb-44b1-bef4-de6d5d84fea2",
+      "text": "Eğitimin sunulduğu fiziki ortam uygundu.",
+      "type": "likert",
+      "required": false,
+      "is_pool_question": true,
+      "has_comment": false,
+      "scale_min": 1,
+      "scale_max": 5,
+      "driver_id": "4491d64a-c8f2-47ef-aeb9-f109c703b406",
+      "is_enps": false,
+      "description": "Işık, oturma düzeni vb."
+    },
+    {
+      "id": "91e5e2d1-59da-4a9f-903a-75618eac74e5",
+      "text": "",
+      "type": "likert",
+      "required": true,
+      "is_pool_question": false,
       "has_comment": false,
       "scale_min": 1,
       "scale_max": 5,
