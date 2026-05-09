@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0.0",
-    "last_updated": "2026-04-16T14:09:25.881Z",
+    "last_updated": "2026-05-09T03:51:02.667Z",
     "changelog": [
       {
         "date": "2026-04-07",
@@ -25,8 +25,19 @@
       }
     ]
   },
-  "tag_categories": [],
-  "tags": [],
+  "tag_categories": [
+    {
+      "id": "d9a5a9f5-af93-48e1-aac2-68fde8a103f3",
+      "label": "Yeni Kategori"
+    }
+  ],
+  "tags": [
+    {
+      "id": "35210a5a-ea7e-40f2-b741-b9fb52d7f617",
+      "label": "cda",
+      "category_id": "d9a5a9f5-af93-48e1-aac2-68fde8a103f3"
+    }
+  ],
   "components": [
     {
       "id": "seed-prim-button",
@@ -77,7 +88,7 @@
         {
           "id": "seed-prim-button-p3",
           "name": "loading",
-          "type": "boolean",
+          "type": "fn",
           "required": false,
           "description": "Yükleme spinner'ı gösterir"
         },
@@ -728,6 +739,41 @@
       "has_footer": false,
       "header_height": 200,
       "footer_height": 200
+    },
+    {
+      "id": "f51c348f-efc3-4eba-bafd-4f589930843b",
+      "name": "",
+      "description": "",
+      "component_type": "section",
+      "tag_ids": [],
+      "faq_ids": [],
+      "rule_ids": [],
+      "props": [],
+      "variants": [],
+      "conditions": [],
+      "slots": [
+        {
+          "id": "ed63b2ff-bfb2-4c5b-8d92-63944ae69a04",
+          "name": "Button",
+          "description": "",
+          "props": [],
+          "component_ids": [
+            "seed-prim-button"
+          ],
+          "prop_bindings": [],
+          "zone": "body",
+          "x": 316,
+          "y": 190,
+          "w": 160,
+          "h": 36
+        }
+      ],
+      "has_header": false,
+      "has_footer": false,
+      "header_height": 200,
+      "footer_height": 200,
+      "frame_width": 480,
+      "frame_height": 320
     }
   ],
   "map": {
@@ -756,11 +802,11 @@
         "id": "client-ui-group-dashboard",
         "label": "Dashboard Core",
         "color": "#3b82f6",
-        "x": 805.6947869752034,
-        "y": -680.6883426152892,
+        "x": 530.6571549911589,
+        "y": -566.9177558909656,
         "node_type": "group",
-        "width": 440,
-        "height": 430
+        "width": 232,
+        "height": 308
       },
       {
         "id": "client-ui-group-reports",
@@ -786,11 +832,11 @@
         "id": "client-ui-group-surveys",
         "label": "Survey Builder",
         "color": "#ef4444",
-        "x": 1295.0109589500203,
-        "y": -477.5476478648943,
+        "x": 841.6219888566791,
+        "y": -659.2276645033708,
         "node_type": "group",
-        "width": 1263,
-        "height": 258
+        "width": 827,
+        "height": 560
       },
       {
         "id": "client-ui-group-user",
@@ -1053,8 +1099,8 @@
       {
         "id": "b28f4d2a-c112-4aaa-905a-ab11282b7458",
         "label": "Survey Templates",
-        "x": 310.31790586761554,
-        "y": 26.053081298913412,
+        "x": 20,
+        "y": 182,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/templates. Template list used as the builder entry library.",
@@ -1071,8 +1117,8 @@
       {
         "id": "947f8728-e036-4963-9987-1973bf552542",
         "label": "Feedbacks",
-        "x": 32.54243566324021,
-        "y": 146.32070566713526,
+        "x": 20,
+        "y": 182,
         "parent_id": "client-ui-group-dashboard",
         "page_data": {
           "description": "Route: /feedbacks. Feedback management page in the dashboard shell.",
@@ -1089,8 +1135,8 @@
       {
         "id": "8c25e34f-dbfe-48d4-8371-7c7e45c56787",
         "label": "Settings",
-        "x": 27.76581597384802,
-        "y": 205.85460065380198,
+        "x": 20,
+        "y": 245,
         "parent_id": "client-ui-group-dashboard",
         "page_data": {
           "description": "Route: /settings. Settings page inside DefaultLayout.",
@@ -1123,8 +1169,8 @@
       {
         "id": "0263a5ab-1173-4609-8ba9-486097238e27",
         "label": "People",
-        "x": 32.06569965509698,
-        "y": 88.75488223973753,
+        "x": 20,
+        "y": 119,
         "parent_id": "client-ui-group-dashboard",
         "page_data": {
           "description": "Route: /people. Employee list and people management.",
@@ -1177,8 +1223,8 @@
       {
         "id": "9f1ef007-d03b-4591-8721-8fcd9a394023",
         "label": "Create New Survey",
-        "x": 17.997325828117482,
-        "y": 23.56128229673203,
+        "x": 20,
+        "y": 119,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/create-new-survey. Survey creation entry point.",
@@ -1213,8 +1259,8 @@
       {
         "id": "405922fd-c383-47aa-b3f5-8d5ef0eaef1b",
         "label": "Template Preview",
-        "x": 635.405716604826,
-        "y": 18.51701129862363,
+        "x": 20,
+        "y": 56,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/template-preview/:id. Template preview before entering the builder.",
@@ -1247,8 +1293,8 @@
       {
         "id": "client-ui-my-requests",
         "label": "My Requests",
-        "x": 233.90528400426956,
-        "y": 45.503086320606485,
+        "x": 20,
+        "y": 56,
         "parent_id": "client-ui-group-dashboard",
         "page_data": {
           "description": "Route: /my-requests. Request tracking page in DefaultLayout.",
@@ -1589,8 +1635,8 @@
       {
         "id": "client-ui-builder-details",
         "label": "Builder Details",
-        "x": 77.49477016557353,
-        "y": 151.93640303211555,
+        "x": 20,
+        "y": 434,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/builder/details. First survey builder step.",
@@ -1607,8 +1653,8 @@
       {
         "id": "client-ui-builder-questions",
         "label": "Builder Questions",
-        "x": 360.3087579373664,
-        "y": 150.10874013165676,
+        "x": 20,
+        "y": 371,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/builder/questions. Question editing step.",
@@ -1625,8 +1671,8 @@
       {
         "id": "client-ui-builder-participants",
         "label": "Builder Participants and Schedule",
-        "x": 628.5014425054883,
-        "y": 151.9364030321156,
+        "x": 20,
+        "y": 497,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/builder/participants-and-schedule. Audience and timing step.",
@@ -1643,8 +1689,8 @@
       {
         "id": "client-ui-builder-summary",
         "label": "Builder Summary",
-        "x": 836.0908775555067,
-        "y": 145.47311679242614,
+        "x": 20,
+        "y": 308,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/builder/summary. Final review step before simulation or publish flows.",
@@ -1661,8 +1707,8 @@
       {
         "id": "client-ui-builder-simulation",
         "label": "Builder Simulation",
-        "x": 1056.5997036094554,
-        "y": 132.9264111425826,
+        "x": 20,
+        "y": 245,
         "parent_id": "client-ui-group-surveys",
         "page_data": {
           "description": "Route: /surveys/builder/simulation. Full-screen simulation step in BlankLayout.",
@@ -1783,6 +1829,59 @@
           "rule_ids": [],
           "props": []
         }
+      },
+      {
+        "id": "14c979b0-82a5-4c0b-9599-391aeb5e3a24",
+        "label": "New Group",
+        "x": 1074.705152489311,
+        "y": -273.0691077370601,
+        "node_type": "group",
+        "width": 320,
+        "height": 200
+      },
+      {
+        "id": "7730d2fe-98a1-496a-872c-4629851491d2",
+        "label": "New Node",
+        "x": 1138.705152489311,
+        "y": -203.0691077370601,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        }
+      },
+      {
+        "id": "fbb9ef80-2d6a-4dc0-b2b3-624003bc06d6",
+        "label": "New Group",
+        "x": 1795.8429091337218,
+        "y": -1783.7229102598878,
+        "node_type": "group",
+        "width": 320,
+        "height": 200
+      },
+      {
+        "id": "76b25046-b572-42fa-b5f7-bdd4d6e22725",
+        "label": "New Node",
+        "x": 52.22733427236517,
+        "y": 121.01488481975002,
+        "page_data": {
+          "description": "",
+          "tag_ids": [],
+          "sections": [],
+          "canvas_slots": [],
+          "frame_width": 480,
+          "frame_height": 320,
+          "faq_ids": [],
+          "rule_ids": [],
+          "props": []
+        },
+        "parent_id": "fbb9ef80-2d6a-4dc0-b2b3-624003bc06d6"
       }
     ],
     "edges": [
